@@ -1,0 +1,34 @@
+{
+  "name": "nova",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "node --test pipeline/__tests__/",
+    "pipeline": "node pipeline/run.mjs"
+  },
+  "dependencies": {
+    "@vis.gl/react-google-maps": "^1.10.1",
+    "leaflet": "^1.9.4",
+    "leaflet.heat": "^0.2.0",
+    "next": "16.3.6",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-leaflet": "^5.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/leaflet": "^1.9.22",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "description": "Nova - K-5 STEM after-school discovery for NYC"
+}

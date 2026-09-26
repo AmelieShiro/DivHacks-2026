@@ -1,0 +1,3227 @@
+[
+  {
+    "provider": "YMCA of Greater New York/Corporate",
+    "siteCount": 33,
+    "boroughs": [
+      "Bronx",
+      "Brooklyn",
+      "Manhattan",
+      "Queens",
+      "Staten Island"
+    ],
+    "website": "https://ymcanyc.org/",
+    "resolvedVia": "ymcanyc.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "ymcagreaternewyorkcorporate.org",
+      "ymcagreaternewyorkcorporate.com",
+      "ymcagreaternewyorkcorporate.nyc",
+      "ymcagreaternewyork.org",
+      "ymcagreaternewyork.com",
+      "ymcagreaternewyork.nyc",
+      "ymcagreaternew.org",
+      "ymcagreaternew.com",
+      "ymcagreaternew.nyc",
+      "ymcagreater.org",
+      "ymcagreater.com",
+      "ymcagreater.nyc",
+      "ygny.org",
+      "ygny.com",
+      "ygny.nyc"
+    ],
+    "signals": [
+      "ymca",
+      "greater",
+      "york"
+    ]
+  },
+  {
+    "provider": "New York Edge, Inc.",
+    "siteCount": 30,
+    "boroughs": [
+      "Bronx",
+      "Brooklyn",
+      "Manhattan",
+      "Queens"
+    ],
+    "website": "https://newyorkedge.org/",
+    "resolvedVia": "newyorkedge.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "newyorkedge.org",
+      "newyorkedge.com",
+      "newyorkedge.nyc",
+      "newyork.org",
+      "newyork.com",
+      "newyork.nyc",
+      "nye.org",
+      "nye.com",
+      "nye.nyc"
+    ],
+    "signals": [
+      "york",
+      "edge"
+    ]
+  },
+  {
+    "provider": "CAMBA, Inc.",
+    "siteCount": 22,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": "https://camba.org/",
+    "resolvedVia": "camba.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "camba.org",
+      "camba.com",
+      "camba.nyc"
+    ],
+    "signals": [
+      "camba"
+    ]
+  },
+  {
+    "provider": "The Child Center of NY Inc",
+    "siteCount": 21,
+    "boroughs": [
+      "Manhattan",
+      "Queens"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "childcenterny.org",
+      "childcenterny.com",
+      "childcenterny.nyc",
+      "childcenter.org",
+      "childcenter.com",
+      "childcenter.nyc",
+      "ccn.org",
+      "ccn.com",
+      "ccn.nyc"
+    ],
+    "signals": [
+      "child"
+    ]
+  },
+  {
+    "provider": "Child Development Ctr of the Mosholu Montefiore Comm Center",
+    "siteCount": 18,
+    "boroughs": [
+      "Bronx",
+      "Manhattan"
+    ],
+    "website": "https://www.mmcc.org/",
+    "resolvedVia": "mmcc.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "childdevelopmentctrmosholu.org",
+      "childdevelopmentctrmosholu.com",
+      "childdevelopmentctrmosholu.nyc",
+      "childdevelopmentmosholu.org",
+      "childdevelopmentmosholu.com",
+      "childdevelopmentmosholu.nyc",
+      "childdevelopment.org",
+      "childdevelopment.com",
+      "childdevelopment.nyc",
+      "cdmm.org",
+      "cdmm.com",
+      "cdmm.nyc"
+    ],
+    "signals": [
+      "child",
+      "development",
+      "mosholu",
+      "montefiore"
+    ]
+  },
+  {
+    "provider": "New York Junior Tennis League Inc",
+    "siteCount": 18,
+    "boroughs": [
+      "Bronx",
+      "Brooklyn",
+      "Manhattan",
+      "Queens"
+    ],
+    "website": "https://www.nyjtl.org/",
+    "resolvedVia": "nyjtl.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "newyorkjuniortennisleague.org",
+      "newyorkjuniortennisleague.com",
+      "newyorkjuniortennisleague.nyc",
+      "newyorkjuniortennis.org",
+      "newyorkjuniortennis.com",
+      "newyorkjuniortennis.nyc",
+      "newyorkjunior.org",
+      "newyorkjunior.com",
+      "newyorkjunior.nyc",
+      "newyork.org",
+      "newyork.com",
+      "newyork.nyc",
+      "nyjtl.org",
+      "nyjtl.com",
+      "nyjtl.nyc"
+    ],
+    "signals": [
+      "york",
+      "junior",
+      "tennis",
+      "league"
+    ]
+  },
+  {
+    "provider": "SCAN-HARBOR INC",
+    "siteCount": 18,
+    "boroughs": [
+      "Bronx",
+      "Manhattan"
+    ],
+    "website": "https://scan-harbor.org/",
+    "resolvedVia": "scanharbor.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "scanharbor.org",
+      "scanharbor.com",
+      "scanharbor.nyc"
+    ],
+    "signals": [
+      "scan",
+      "harbor"
+    ]
+  },
+  {
+    "provider": "Grand Street Settlement Inc",
+    "siteCount": 16,
+    "boroughs": [
+      "Brooklyn",
+      "Manhattan"
+    ],
+    "website": "https://grandsettlement.org/",
+    "resolvedVia": "grandsettlement.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "grandstreetsettlement.org",
+      "grandstreetsettlement.com",
+      "grandstreetsettlement.nyc",
+      "grandstreet.org",
+      "grandstreet.com",
+      "grandstreet.nyc",
+      "gss.org",
+      "gss.com",
+      "gss.nyc"
+    ],
+    "signals": [
+      "grand",
+      "street",
+      "settlement"
+    ]
+  },
+  {
+    "provider": "Commonpoint NY Inc",
+    "siteCount": 15,
+    "boroughs": [
+      "Bronx",
+      "Queens"
+    ],
+    "website": "https://www.commonpoint.org/",
+    "resolvedVia": "commonpoint.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "commonpointny.org",
+      "commonpointny.com",
+      "commonpointny.nyc",
+      "commonpoint.org",
+      "commonpoint.com",
+      "commonpoint.nyc"
+    ],
+    "signals": [
+      "commonpoint"
+    ]
+  },
+  {
+    "provider": "Police Athletic League Inc",
+    "siteCount": 14,
+    "boroughs": [
+      "Bronx",
+      "Brooklyn",
+      "Manhattan",
+      "Queens",
+      "Staten Island"
+    ],
+    "website": "https://palnyc.org/",
+    "resolvedVia": "palnyc.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "policeathleticleague.org",
+      "policeathleticleague.com",
+      "policeathleticleague.nyc",
+      "policeathletic.org",
+      "policeathletic.com",
+      "policeathletic.nyc",
+      "pal.org",
+      "pal.com",
+      "pal.nyc"
+    ],
+    "signals": [
+      "police",
+      "athletic",
+      "league"
+    ]
+  },
+  {
+    "provider": "The Children's Aid Society",
+    "siteCount": 13,
+    "boroughs": [
+      "Bronx",
+      "Manhattan",
+      "Staten Island"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "childrensaidsociety.org",
+      "childrensaidsociety.com",
+      "childrensaidsociety.nyc",
+      "childrensaid.org",
+      "childrensaid.com",
+      "childrensaid.nyc",
+      "childrens.org",
+      "childrens.com",
+      "childrens.nyc",
+      "csa.org",
+      "csa.com",
+      "csa.nyc"
+    ],
+    "signals": [
+      "children"
+    ]
+  },
+  {
+    "provider": "The Greater Ridgewood Youth Council, Inc.",
+    "siteCount": 13,
+    "boroughs": [
+      "Brooklyn",
+      "Queens"
+    ],
+    "website": "https://www.greaterridgewoodyouthcouncil.org/",
+    "resolvedVia": "greaterridgewoodyouthcouncil.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "greaterridgewoodyouthcouncil.org",
+      "greaterridgewoodyouthcouncil.com",
+      "greaterridgewoodyouthcouncil.nyc",
+      "greaterridgewoodyouth.org",
+      "greaterridgewoodyouth.com",
+      "greaterridgewoodyouth.nyc",
+      "greaterridgewood.org",
+      "greaterridgewood.com",
+      "greaterridgewood.nyc",
+      "gry.org",
+      "gry.com",
+      "gry.nyc"
+    ],
+    "signals": [
+      "greater",
+      "ridgewood",
+      "youth"
+    ]
+  },
+  {
+    "provider": "Good Shepherd Services",
+    "siteCount": 12,
+    "boroughs": [
+      "Bronx",
+      "Brooklyn"
+    ],
+    "website": "https://goodshepherds.org/",
+    "resolvedVia": "goodshepherds.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "goodshepherdservices.org",
+      "goodshepherdservices.com",
+      "goodshepherdservices.nyc",
+      "goodshepherd.org",
+      "goodshepherd.com",
+      "goodshepherd.nyc"
+    ],
+    "signals": [
+      "good",
+      "shepherd"
+    ]
+  },
+  {
+    "provider": "United Activities Unlimited, Inc.",
+    "siteCount": 12,
+    "boroughs": [
+      "Staten Island"
+    ],
+    "website": "https://unitedactivities.org/",
+    "resolvedVia": "unitedactivities.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "unitedactivitiesunlimited.org",
+      "unitedactivitiesunlimited.com",
+      "unitedactivitiesunlimited.nyc",
+      "unitedactivities.org",
+      "unitedactivities.com",
+      "unitedactivities.nyc",
+      "uau.org",
+      "uau.com",
+      "uau.nyc"
+    ],
+    "signals": [
+      "united",
+      "activities",
+      "unlimited"
+    ]
+  },
+  {
+    "provider": "Brooklyn Bureau of Community Service",
+    "siteCount": 9,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "brooklynbureaucommunityservice.org",
+      "brooklynbureaucommunityservice.com",
+      "brooklynbureaucommunityservice.nyc",
+      "brooklynbureau.org",
+      "brooklynbureau.com",
+      "brooklynbureau.nyc",
+      "brooklyn.org",
+      "brooklyn.com",
+      "brooklyn.nyc"
+    ],
+    "signals": [
+      "brooklyn",
+      "bureau"
+    ]
+  },
+  {
+    "provider": "Chinese-American Planning Council Inc",
+    "siteCount": 9,
+    "boroughs": [
+      "Brooklyn",
+      "Manhattan",
+      "Queens"
+    ],
+    "website": "https://cpc-nyc.org/",
+    "resolvedVia": "cpc-nyc.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "chineseamericanplanningcouncil.org",
+      "chineseamericanplanningcouncil.com",
+      "chineseamericanplanningcouncil.nyc",
+      "chineseamericanplanning.org",
+      "chineseamericanplanning.com",
+      "chineseamericanplanning.nyc",
+      "chineseamerican.org",
+      "chineseamerican.com",
+      "chineseamerican.nyc",
+      "cap.org",
+      "cap.com",
+      "cap.nyc",
+      "chinese.org",
+      "chinese.com",
+      "chinese.nyc"
+    ],
+    "signals": [
+      "chinese",
+      "american",
+      "planning"
+    ]
+  },
+  {
+    "provider": "East Side House Inc",
+    "siteCount": 9,
+    "boroughs": [
+      "Bronx"
+    ],
+    "website": "https://www.eastsidehouse.org/",
+    "resolvedVia": "eastsidehouse.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "eastsidehouse.org",
+      "eastsidehouse.com",
+      "eastsidehouse.nyc",
+      "eastside.org",
+      "eastside.com",
+      "eastside.nyc",
+      "esh.org",
+      "esh.com",
+      "esh.nyc"
+    ],
+    "signals": [
+      "east",
+      "side",
+      "house"
+    ]
+  },
+  {
+    "provider": "Queens Community House Inc",
+    "siteCount": 9,
+    "boroughs": [
+      "Queens"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "queenscommunityhouse.org",
+      "queenscommunityhouse.com",
+      "queenscommunityhouse.nyc",
+      "queenshouse.org",
+      "queenshouse.com",
+      "queenshouse.nyc",
+      "queenscommunity.org",
+      "queenscommunity.com",
+      "queenscommunity.nyc",
+      "queens.org",
+      "queens.com",
+      "queens.nyc"
+    ],
+    "signals": [
+      "queens",
+      "house"
+    ]
+  },
+  {
+    "provider": "Research Foundation of the City University of New York",
+    "siteCount": 9,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "researchcityuniversitynewyork.org",
+      "researchcityuniversitynewyork.com",
+      "researchcityuniversitynewyork.nyc",
+      "researchcityuniversity.org",
+      "researchcityuniversity.com",
+      "researchcityuniversity.nyc",
+      "researchfoundation.org",
+      "researchfoundation.com",
+      "researchfoundation.nyc",
+      "rcuny.org",
+      "rcuny.com",
+      "rcuny.nyc",
+      "research.org",
+      "research.com",
+      "research.nyc"
+    ],
+    "signals": [
+      "research",
+      "city",
+      "university",
+      "york"
+    ]
+  },
+  {
+    "provider": "University Settlement Society of New York",
+    "siteCount": 9,
+    "boroughs": [
+      "Brooklyn",
+      "Manhattan"
+    ],
+    "website": "https://www.universitysettlement.org/",
+    "resolvedVia": "universitysettlement.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "universitysettlementnewyork.org",
+      "universitysettlementnewyork.com",
+      "universitysettlementnewyork.nyc",
+      "universitysettlementsocietynew.org",
+      "universitysettlementsocietynew.com",
+      "universitysettlementsocietynew.nyc",
+      "universitysettlementnew.org",
+      "universitysettlementnew.com",
+      "universitysettlementnew.nyc",
+      "universitysettlement.org",
+      "universitysettlement.com",
+      "universitysettlement.nyc",
+      "usny.org",
+      "usny.com",
+      "usny.nyc"
+    ],
+    "signals": [
+      "university",
+      "settlement",
+      "york"
+    ]
+  },
+  {
+    "provider": "BronxWorks Inc",
+    "siteCount": 8,
+    "boroughs": [
+      "Bronx"
+    ],
+    "website": "https://bronxworks.org/",
+    "resolvedVia": "bronxworks.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "bronxworks.org",
+      "bronxworks.com",
+      "bronxworks.nyc"
+    ],
+    "signals": [
+      "bronxworks"
+    ]
+  },
+  {
+    "provider": "Coalition for Hispanic Family Services",
+    "siteCount": 8,
+    "boroughs": [
+      "Brooklyn",
+      "Queens"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "coalitionhispanicfamily.org",
+      "coalitionhispanicfamily.com",
+      "coalitionhispanicfamily.nyc",
+      "coalitionhispanic.org",
+      "coalitionhispanic.com",
+      "coalitionhispanic.nyc",
+      "chf.org",
+      "chf.com",
+      "chf.nyc",
+      "coalition.org",
+      "coalition.com",
+      "coalition.nyc"
+    ],
+    "signals": [
+      "coalition",
+      "hispanic",
+      "family"
+    ]
+  },
+  {
+    "provider": "NIA Community Services Network Inc",
+    "siteCount": 8,
+    "boroughs": [
+      "Brooklyn",
+      "Staten Island"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "niacommunityservicesnetwork.org",
+      "niacommunityservicesnetwork.com",
+      "niacommunityservicesnetwork.nyc",
+      "nianetwork.org",
+      "nianetwork.com",
+      "nianetwork.nyc",
+      "niacommunity.org",
+      "niacommunity.com",
+      "niacommunity.nyc"
+    ],
+    "signals": [
+      "network"
+    ]
+  },
+  {
+    "provider": "ST. NICKS ALLIANCE CORP.",
+    "siteCount": 8,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": "https://stnicksalliance.org/",
+    "resolvedVia": "stnicksalliance.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "stnicksalliance.org",
+      "stnicksalliance.com",
+      "stnicksalliance.nyc",
+      "stnicks.org",
+      "stnicks.com",
+      "stnicks.nyc",
+      "sna.org",
+      "sna.com",
+      "sna.nyc"
+    ],
+    "signals": [
+      "nicks",
+      "alliance"
+    ]
+  },
+  {
+    "provider": "Childrens Arts & Science Workshops, Inc.",
+    "siteCount": 7,
+    "boroughs": [
+      "Bronx",
+      "Manhattan"
+    ],
+    "website": "https://caswkids.org/",
+    "resolvedVia": "caswkids.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "childrensartsscienceworkshops.org",
+      "childrensartsscienceworkshops.com",
+      "childrensartsscienceworkshops.nyc",
+      "childrensartsscience.org",
+      "childrensartsscience.com",
+      "childrensartsscience.nyc",
+      "childrensarts.org",
+      "childrensarts.com",
+      "childrensarts.nyc",
+      "casw.org",
+      "casw.com",
+      "casw.nyc",
+      "childrens.org",
+      "childrens.com",
+      "childrens.nyc"
+    ],
+    "signals": [
+      "childrens",
+      "arts",
+      "science",
+      "workshops"
+    ]
+  },
+  {
+    "provider": "Phipps Neighborhoods, Inc.",
+    "siteCount": 7,
+    "boroughs": [
+      "Bronx"
+    ],
+    "website": "https://www.phippsny.org/programs-services/",
+    "resolvedVia": "phippsneighborhoods.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "phippsneighborhoods.org",
+      "phippsneighborhoods.com",
+      "phippsneighborhoods.nyc",
+      "phipps.org",
+      "phipps.com",
+      "phipps.nyc"
+    ],
+    "signals": [
+      "phipps",
+      "neighborhoods"
+    ]
+  },
+  {
+    "provider": "Bergen Basin Community Development Corporation",
+    "siteCount": 6,
+    "boroughs": [
+      "Brooklyn",
+      "Queens"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "bergenbasindevelopment.org",
+      "bergenbasindevelopment.com",
+      "bergenbasindevelopment.nyc",
+      "bergenbasin.org",
+      "bergenbasin.com",
+      "bergenbasin.nyc",
+      "bbd.org",
+      "bbd.com",
+      "bbd.nyc",
+      "bergen.org",
+      "bergen.com",
+      "bergen.nyc"
+    ],
+    "signals": [
+      "bergen",
+      "basin",
+      "development"
+    ],
+    "matchedSignals": []
+  },
+  {
+    "provider": "Brooklyn Chinese-American Association Inc",
+    "siteCount": 6,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "brooklynchineseamerican.org",
+      "brooklynchineseamerican.com",
+      "brooklynchineseamerican.nyc",
+      "brooklynchinese.org",
+      "brooklynchinese.com",
+      "brooklynchinese.nyc",
+      "bca.org",
+      "bca.com",
+      "bca.nyc",
+      "brooklyn.org",
+      "brooklyn.com",
+      "brooklyn.nyc"
+    ],
+    "signals": [
+      "brooklyn",
+      "chinese",
+      "american"
+    ]
+  },
+  {
+    "provider": "Community Association of Progressive Dominicans Inc",
+    "siteCount": 6,
+    "boroughs": [
+      "Bronx",
+      "Manhattan"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "progressivedominicans.org",
+      "progressivedominicans.com",
+      "progressivedominicans.nyc",
+      "communityassociation.org",
+      "communityassociation.com",
+      "communityassociation.nyc",
+      "progressive.org",
+      "progressive.com",
+      "progressive.nyc"
+    ],
+    "signals": [
+      "progressive",
+      "dominicans"
+    ]
+  },
+  {
+    "provider": "Cypress Hills Local Development Corporation, Inc.",
+    "siteCount": 6,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": "https://www.cypresshills.org/",
+    "resolvedVia": "cypresshills.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "cypresshillslocaldevelopment.org",
+      "cypresshillslocaldevelopment.com",
+      "cypresshillslocaldevelopment.nyc",
+      "cypresshillslocal.org",
+      "cypresshillslocal.com",
+      "cypresshillslocal.nyc",
+      "cypresshills.org",
+      "cypresshills.com",
+      "cypresshills.nyc",
+      "chld.org",
+      "chld.com",
+      "chld.nyc",
+      "cypress.org",
+      "cypress.com",
+      "cypress.nyc"
+    ],
+    "signals": [
+      "cypress",
+      "hills",
+      "local",
+      "development"
+    ]
+  },
+  {
+    "provider": "HANAC INC",
+    "siteCount": 6,
+    "boroughs": [
+      "Queens"
+    ],
+    "website": "https://hanac.org/",
+    "resolvedVia": "hanac.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "hanac.org",
+      "hanac.com",
+      "hanac.nyc"
+    ],
+    "signals": [
+      "hanac"
+    ]
+  },
+  {
+    "provider": "Aspira of New York, Inc.",
+    "siteCount": 5,
+    "boroughs": [
+      "Bronx"
+    ],
+    "website": "https://aspira.org/",
+    "resolvedVia": "aspira.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "aspiranewyork.org",
+      "aspiranewyork.com",
+      "aspiranewyork.nyc",
+      "aspiranew.org",
+      "aspiranew.com",
+      "aspiranew.nyc",
+      "any.org",
+      "any.com",
+      "any.nyc",
+      "aspira.org",
+      "aspira.com",
+      "aspira.nyc"
+    ],
+    "signals": [
+      "aspira",
+      "york"
+    ]
+  },
+  {
+    "provider": "Bergen Beach Youth Organization, Inc.",
+    "siteCount": 5,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "bergenbeachyouthorganization.org",
+      "bergenbeachyouthorganization.com",
+      "bergenbeachyouthorganization.nyc",
+      "bergenbeachyouth.org",
+      "bergenbeachyouth.com",
+      "bergenbeachyouth.nyc",
+      "bergenbeach.org",
+      "bergenbeach.com",
+      "bergenbeach.nyc",
+      "bbyo.org",
+      "bbyo.com",
+      "bbyo.nyc",
+      "bergen.org",
+      "bergen.com",
+      "bergen.nyc"
+    ],
+    "signals": [
+      "bergen",
+      "beach",
+      "youth",
+      "organization"
+    ]
+  },
+  {
+    "provider": "Center for Family Life In Sunset Park, Inc.",
+    "siteCount": 5,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "centerfamilylifeinsunsetpark.org",
+      "centerfamilylifeinsunsetpark.com",
+      "centerfamilylifeinsunsetpark.nyc",
+      "familylifeinsunsetpark.org",
+      "familylifeinsunsetpark.com",
+      "familylifeinsunsetpark.nyc",
+      "centerfamilylifein.org",
+      "centerfamilylifein.com",
+      "centerfamilylifein.nyc",
+      "familylifein.org",
+      "familylifein.com",
+      "familylifein.nyc",
+      "centerfamily.org",
+      "centerfamily.com",
+      "centerfamily.nyc",
+      "flisp.org",
+      "flisp.com",
+      "flisp.nyc"
+    ],
+    "signals": [
+      "family",
+      "life",
+      "sunset",
+      "park"
+    ]
+  },
+  {
+    "provider": "Jewish Community Center of Staten Island, Inc.",
+    "siteCount": 5,
+    "boroughs": [
+      "Staten Island"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "jewishstatenisland.org",
+      "jewishstatenisland.com",
+      "jewishstatenisland.nyc",
+      "jewishcommunitycenterstaten.org",
+      "jewishcommunitycenterstaten.com",
+      "jewishcommunitycenterstaten.nyc",
+      "jewishcommunity.org",
+      "jewishcommunity.com",
+      "jewishcommunity.nyc",
+      "jsi.org",
+      "jsi.com",
+      "jsi.nyc",
+      "jewish.org",
+      "jewish.com",
+      "jewish.nyc"
+    ],
+    "signals": [
+      "jewish",
+      "staten",
+      "island"
+    ]
+  },
+  {
+    "provider": "Southern Queens Park Assoc. Inc.",
+    "siteCount": 5,
+    "boroughs": [
+      "Queens"
+    ],
+    "website": "https://www.sqpa.org/",
+    "resolvedVia": "sqpa.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "southernqueensparkassoc.org",
+      "southernqueensparkassoc.com",
+      "southernqueensparkassoc.nyc",
+      "southernqueenspark.org",
+      "southernqueenspark.com",
+      "southernqueenspark.nyc",
+      "southernqueens.org",
+      "southernqueens.com",
+      "southernqueens.nyc",
+      "sqpa.org",
+      "sqpa.com",
+      "sqpa.nyc",
+      "southern.org",
+      "southern.com",
+      "southern.nyc"
+    ],
+    "signals": [
+      "southern",
+      "queens",
+      "park",
+      "assoc"
+    ]
+  },
+  {
+    "provider": "St Vincent's Services Inc",
+    "siteCount": 5,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "stvincentsservices.org",
+      "stvincentsservices.com",
+      "stvincentsservices.nyc",
+      "stvincents.org",
+      "stvincents.com",
+      "stvincents.nyc",
+      "stvincent.org",
+      "stvincent.com",
+      "stvincent.nyc",
+      "svs.org",
+      "svs.com",
+      "svs.nyc"
+    ],
+    "signals": [
+      "vincent"
+    ]
+  },
+  {
+    "provider": "Sunnyside Community Services Inc",
+    "siteCount": 5,
+    "boroughs": [
+      "Queens"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "sunnysidecommunityservices.org",
+      "sunnysidecommunityservices.com",
+      "sunnysidecommunityservices.nyc",
+      "sunnyside.org",
+      "sunnyside.com",
+      "sunnyside.nyc",
+      "sunnysidecommunity.org",
+      "sunnysidecommunity.com",
+      "sunnysidecommunity.nyc",
+      "scs.org",
+      "scs.com",
+      "scs.nyc"
+    ],
+    "signals": [
+      "sunnyside"
+    ]
+  },
+  {
+    "provider": "The Salvation Army",
+    "siteCount": 5,
+    "boroughs": [
+      "Brooklyn",
+      "Manhattan"
+    ],
+    "website": "https://www.salvationarmyusa.org/usa-eastern-territory/greater-new-york/",
+    "resolvedVia": "salvationarmy-newyork.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "salvationarmy.org",
+      "salvationarmy.com",
+      "salvationarmy.nyc",
+      "salvation.org",
+      "salvation.com",
+      "salvation.nyc"
+    ],
+    "signals": [
+      "salvation",
+      "army"
+    ]
+  },
+  {
+    "provider": "Catholic Charities Community Services, Archdiocese of NY",
+    "siteCount": 4,
+    "boroughs": [
+      "Bronx",
+      "Manhattan"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "catholiccharitiesarchdiocese.org",
+      "catholiccharitiesarchdiocese.com",
+      "catholiccharitiesarchdiocese.nyc",
+      "catholiccharities.org",
+      "catholiccharities.com",
+      "catholiccharities.nyc",
+      "cca.org",
+      "cca.com",
+      "cca.nyc",
+      "catholic.org",
+      "catholic.com",
+      "catholic.nyc"
+    ],
+    "signals": [
+      "catholic",
+      "charities",
+      "archdiocese"
+    ]
+  },
+  {
+    "provider": "Directions For Our Youth Inc",
+    "siteCount": 4,
+    "boroughs": [
+      "Bronx"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "directionsouryouth.org",
+      "directionsouryouth.com",
+      "directionsouryouth.nyc",
+      "directionsour.org",
+      "directionsour.com",
+      "directionsour.nyc",
+      "doy.org",
+      "doy.com",
+      "doy.nyc",
+      "directions.org",
+      "directions.com",
+      "directions.nyc"
+    ],
+    "signals": [
+      "directions",
+      "youth"
+    ]
+  },
+  {
+    "provider": "El Puente De Williamsburg, Inc.",
+    "siteCount": 4,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "elpuentedewilliamsburg.org",
+      "elpuentedewilliamsburg.com",
+      "elpuentedewilliamsburg.nyc",
+      "elpuentede.org",
+      "elpuentede.com",
+      "elpuentede.nyc",
+      "elpuente.org",
+      "elpuente.com",
+      "elpuente.nyc",
+      "epdw.org",
+      "epdw.com",
+      "epdw.nyc"
+    ],
+    "signals": [
+      "puente",
+      "williamsburg"
+    ]
+  },
+  {
+    "provider": "Henry Street Settlement",
+    "siteCount": 4,
+    "boroughs": [
+      "Manhattan"
+    ],
+    "website": "https://www.henrystreet.org/",
+    "resolvedVia": "henrystreet.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "henrystreetsettlement.org",
+      "henrystreetsettlement.com",
+      "henrystreetsettlement.nyc",
+      "henrystreet.org",
+      "henrystreet.com",
+      "henrystreet.nyc",
+      "hss.org",
+      "hss.com",
+      "hss.nyc",
+      "henry.org",
+      "henry.com",
+      "henry.nyc"
+    ],
+    "signals": [
+      "henry",
+      "street",
+      "settlement"
+    ]
+  },
+  {
+    "provider": "Inwood Community Services, Inc.",
+    "siteCount": 4,
+    "boroughs": [
+      "Manhattan"
+    ],
+    "website": "https://www.inwoodcommunityservices.org/",
+    "resolvedVia": "inwoodcommunityservices.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "inwoodcommunityservices.org",
+      "inwoodcommunityservices.com",
+      "inwoodcommunityservices.nyc",
+      "inwood.org",
+      "inwood.com",
+      "inwood.nyc",
+      "inwoodcommunity.org",
+      "inwoodcommunity.com",
+      "inwoodcommunity.nyc",
+      "ics.org",
+      "ics.com",
+      "ics.nyc"
+    ],
+    "signals": [
+      "inwood"
+    ]
+  },
+  {
+    "provider": "Jacob A Riis Neighborhood Settlement",
+    "siteCount": 4,
+    "boroughs": [
+      "Queens"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "jacobriisneighborhood.org",
+      "jacobriisneighborhood.com",
+      "jacobriisneighborhood.nyc",
+      "jacobriis.org",
+      "jacobriis.com",
+      "jacobriis.nyc",
+      "jrns.org",
+      "jrns.com",
+      "jrns.nyc",
+      "jacob.org",
+      "jacob.com",
+      "jacob.nyc"
+    ],
+    "signals": [
+      "jacob",
+      "riis",
+      "neighborhood",
+      "settlement"
+    ]
+  },
+  {
+    "provider": "Kips Bay Boys and Girls Club Inc",
+    "siteCount": 4,
+    "boroughs": [
+      "Bronx"
+    ],
+    "website": "https://www.kipsbay.org/",
+    "resolvedVia": "kipsbay.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "kipsbayboysgirlsclub.org",
+      "kipsbayboysgirlsclub.com",
+      "kipsbayboysgirlsclub.nyc",
+      "kipsbayboysgirls.org",
+      "kipsbayboysgirls.com",
+      "kipsbayboysgirls.nyc",
+      "kipsbayboys.org",
+      "kipsbayboys.com",
+      "kipsbayboys.nyc",
+      "kipsbay.org",
+      "kipsbay.com",
+      "kipsbay.nyc",
+      "kbbgc.org",
+      "kbbgc.com",
+      "kbbgc.nyc"
+    ],
+    "signals": [
+      "kips",
+      "boys",
+      "girls",
+      "club"
+    ]
+  },
+  {
+    "provider": "New York City Mission Society",
+    "siteCount": 4,
+    "boroughs": [
+      "Bronx",
+      "Manhattan"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "newyorkcitymissionsociety.org",
+      "newyorkcitymissionsociety.com",
+      "newyorkcitymissionsociety.nyc",
+      "newyorkcitymission.org",
+      "newyorkcitymission.com",
+      "newyorkcitymission.nyc",
+      "newyorkcity.org",
+      "newyorkcity.com",
+      "newyorkcity.nyc",
+      "newyork.org",
+      "newyork.com",
+      "newyork.nyc",
+      "nycm.org",
+      "nycm.com",
+      "nycm.nyc"
+    ],
+    "signals": [
+      "york",
+      "city",
+      "mission"
+    ]
+  },
+  {
+    "provider": "The Children's Village",
+    "siteCount": 4,
+    "boroughs": [
+      "Bronx",
+      "Manhattan"
+    ],
+    "website": "https://childrensvillage.org/",
+    "resolvedVia": "childrensvillage.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "childrensvillage.org",
+      "childrensvillage.com",
+      "childrensvillage.nyc",
+      "childrens.org",
+      "childrens.com",
+      "childrens.nyc",
+      "csv.org",
+      "csv.com",
+      "csv.nyc"
+    ],
+    "signals": [
+      "children",
+      "village"
+    ]
+  },
+  {
+    "provider": "The Flatbush Development Corp",
+    "siteCount": 4,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "flatbushdevelopment.org",
+      "flatbushdevelopment.com",
+      "flatbushdevelopment.nyc",
+      "flatbush.org",
+      "flatbush.com",
+      "flatbush.nyc"
+    ],
+    "signals": [
+      "flatbush",
+      "development"
+    ]
+  },
+  {
+    "provider": "The Young Women's Christian Association of the City of NY",
+    "siteCount": 4,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "youngwomenschristiancity.org",
+      "youngwomenschristiancity.com",
+      "youngwomenschristiancity.nyc",
+      "youngwomenschristian.org",
+      "youngwomenschristian.com",
+      "youngwomenschristian.nyc",
+      "youngwomens.org",
+      "youngwomens.com",
+      "youngwomens.nyc",
+      "youngwomen.org",
+      "youngwomen.com",
+      "youngwomen.nyc",
+      "ywscc.org",
+      "ywscc.com",
+      "ywscc.nyc",
+      "young.org",
+      "young.com",
+      "young.nyc"
+    ],
+    "signals": [
+      "young",
+      "women",
+      "christian",
+      "city"
+    ]
+  },
+  {
+    "provider": "Union Settlement Association Inc",
+    "siteCount": 4,
+    "boroughs": [
+      "Manhattan"
+    ],
+    "website": "https://www.unionsettlement.org/",
+    "resolvedVia": "unionsettlement.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "unionsettlementassociation.org",
+      "unionsettlementassociation.com",
+      "unionsettlementassociation.nyc",
+      "unionsettlement.org",
+      "unionsettlement.com",
+      "unionsettlement.nyc",
+      "union.org",
+      "union.com",
+      "union.nyc"
+    ],
+    "signals": [
+      "union",
+      "settlement"
+    ]
+  },
+  {
+    "provider": "Center for Community Alternatives Inc.",
+    "siteCount": 3,
+    "boroughs": [
+      "Bronx",
+      "Brooklyn"
+    ],
+    "website": "https://communityalternatives.org/",
+    "resolvedVia": "communityalternatives.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "centercommunityalternatives.org",
+      "centercommunityalternatives.com",
+      "centercommunityalternatives.nyc",
+      "alternatives.org",
+      "alternatives.com",
+      "alternatives.nyc",
+      "centercommunity.org",
+      "centercommunity.com",
+      "centercommunity.nyc",
+      "cca.org",
+      "cca.com",
+      "cca.nyc"
+    ],
+    "signals": [
+      "alternatives"
+    ]
+  },
+  {
+    "provider": "Federation of Italian-American Organizations of Brooklyn LTD",
+    "siteCount": 3,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "federationitalianamerican.org",
+      "federationitalianamerican.com",
+      "federationitalianamerican.nyc",
+      "federationitalian.org",
+      "federationitalian.com",
+      "federationitalian.nyc",
+      "fiaob.org",
+      "fiaob.com",
+      "fiaob.nyc",
+      "federation.org",
+      "federation.com",
+      "federation.nyc"
+    ],
+    "signals": [
+      "federation",
+      "italian",
+      "american",
+      "organizations",
+      "brooklyn"
+    ]
+  },
+  {
+    "provider": "Friends of Crown Heights Educational Centers Inc",
+    "siteCount": 3,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "friendscrownheightseducational.org",
+      "friendscrownheightseducational.com",
+      "friendscrownheightseducational.nyc",
+      "friendscrownheights.org",
+      "friendscrownheights.com",
+      "friendscrownheights.nyc",
+      "friendscrown.org",
+      "friendscrown.com",
+      "friendscrown.nyc",
+      "fchec.org",
+      "fchec.com",
+      "fchec.nyc",
+      "friends.org",
+      "friends.com",
+      "friends.nyc"
+    ],
+    "signals": [
+      "friends",
+      "crown",
+      "heights",
+      "educational",
+      "centers"
+    ]
+  },
+  {
+    "provider": "Graham Windham",
+    "siteCount": 3,
+    "boroughs": [
+      "Bronx",
+      "Manhattan"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "grahamwindham.org",
+      "grahamwindham.com",
+      "grahamwindham.nyc",
+      "graham.org",
+      "graham.com",
+      "graham.nyc"
+    ],
+    "signals": [
+      "graham",
+      "windham"
+    ]
+  },
+  {
+    "provider": "Harriman Summer Camp, S-11",
+    "siteCount": 3,
+    "boroughs": [
+      "Brooklyn",
+      "Queens"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "harrimansummercamps11.org",
+      "harrimansummercamps11.com",
+      "harrimansummercamps11.nyc",
+      "harrimansummercamps.org",
+      "harrimansummercamps.com",
+      "harrimansummercamps.nyc",
+      "harrimansummercamp.org",
+      "harrimansummercamp.com",
+      "harrimansummercamp.nyc",
+      "harrimansummer.org",
+      "harrimansummer.com",
+      "harrimansummer.nyc",
+      "hscs1.org",
+      "hscs1.com",
+      "hscs1.nyc",
+      "harriman.org",
+      "harriman.com",
+      "harriman.nyc"
+    ],
+    "signals": [
+      "harriman",
+      "summer",
+      "camp"
+    ]
+  },
+  {
+    "provider": "Italian American Civil Rights League Canarsie Inc",
+    "siteCount": 3,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "italianamericancivilrights.org",
+      "italianamericancivilrights.com",
+      "italianamericancivilrights.nyc",
+      "italianamericancivil.org",
+      "italianamericancivil.com",
+      "italianamericancivil.nyc",
+      "italianamerican.org",
+      "italianamerican.com",
+      "italianamerican.nyc",
+      "iacrlc.org",
+      "iacrlc.com",
+      "iacrlc.nyc",
+      "italian.org",
+      "italian.com",
+      "italian.nyc"
+    ],
+    "signals": [
+      "italian",
+      "american",
+      "civil",
+      "rights",
+      "league",
+      "canarsie"
+    ],
+    "matchedSignals": []
+  },
+  {
+    "provider": "Neighborhood Initiatives Development Corporation",
+    "siteCount": 3,
+    "boroughs": [
+      "Bronx"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "neighborhoodinitiatives.org",
+      "neighborhoodinitiatives.com",
+      "neighborhoodinitiatives.nyc",
+      "nid.org",
+      "nid.com",
+      "nid.nyc",
+      "neighborhood.org",
+      "neighborhood.com",
+      "neighborhood.nyc"
+    ],
+    "signals": [
+      "neighborhood",
+      "initiatives",
+      "development"
+    ]
+  },
+  {
+    "provider": "RiseBoro Community Partnership Inc",
+    "siteCount": 3,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "riseborocommunitypartnership.org",
+      "riseborocommunitypartnership.com",
+      "riseborocommunitypartnership.nyc",
+      "riseboropartnership.org",
+      "riseboropartnership.com",
+      "riseboropartnership.nyc",
+      "riseborocommunity.org",
+      "riseborocommunity.com",
+      "riseborocommunity.nyc",
+      "riseboro.org",
+      "riseboro.com",
+      "riseboro.nyc"
+    ],
+    "signals": [
+      "riseboro",
+      "partnership"
+    ]
+  },
+  {
+    "provider": "The Educational Alliance Inc",
+    "siteCount": 3,
+    "boroughs": [
+      "Manhattan"
+    ],
+    "website": "https://edalliance.org/",
+    "resolvedVia": "educationalalliance.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "educationalalliance.org",
+      "educationalalliance.com",
+      "educationalalliance.nyc",
+      "educational.org",
+      "educational.com",
+      "educational.nyc"
+    ],
+    "signals": [
+      "educational",
+      "alliance"
+    ]
+  },
+  {
+    "provider": "Woodside On The Move, Inc.",
+    "siteCount": 3,
+    "boroughs": [
+      "Queens"
+    ],
+    "website": "https://www.woodsideonthemove.org/",
+    "resolvedVia": "woodsideonthemove.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "woodsideonmove.org",
+      "woodsideonmove.com",
+      "woodsideonmove.nyc",
+      "woodsideon.org",
+      "woodsideon.com",
+      "woodsideon.nyc",
+      "wom.org",
+      "wom.com",
+      "wom.nyc",
+      "woodside.org",
+      "woodside.com",
+      "woodside.nyc"
+    ],
+    "signals": [
+      "woodside",
+      "move"
+    ]
+  },
+  {
+    "provider": "Edith & Carl Marks Jewish Community House of Bensonhurst Inc",
+    "siteCount": 2,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "edithcarlmarksjewish.org",
+      "edithcarlmarksjewish.com",
+      "edithcarlmarksjewish.nyc",
+      "edithcarlmarks.org",
+      "edithcarlmarks.com",
+      "edithcarlmarks.nyc",
+      "edithcarl.org",
+      "edithcarl.com",
+      "edithcarl.nyc",
+      "ecmjhb.org",
+      "ecmjhb.com",
+      "ecmjhb.nyc",
+      "edith.org",
+      "edith.com",
+      "edith.nyc"
+    ],
+    "signals": [
+      "edith",
+      "carl",
+      "marks",
+      "jewish",
+      "house",
+      "bensonhurst"
+    ]
+  },
+  {
+    "provider": "Harlem Dowling-West Side Ctr.For Children & Family Services",
+    "siteCount": 2,
+    "boroughs": [
+      "Manhattan"
+    ],
+    "website": "https://harlemdowling.org/",
+    "resolvedVia": "harlemdowling.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "harlemdowlingwestside.org",
+      "harlemdowlingwestside.com",
+      "harlemdowlingwestside.nyc",
+      "harlemdowlingwest.org",
+      "harlemdowlingwest.com",
+      "harlemdowlingwest.nyc",
+      "harlemdowling.org",
+      "harlemdowling.com",
+      "harlemdowling.nyc",
+      "hdwscf.org",
+      "hdwscf.com",
+      "hdwscf.nyc",
+      "harlem.org",
+      "harlem.com",
+      "harlem.nyc"
+    ],
+    "signals": [
+      "harlem",
+      "dowling",
+      "west",
+      "side",
+      "children",
+      "family"
+    ]
+  },
+  {
+    "provider": "Hudson Guild",
+    "siteCount": 2,
+    "boroughs": [
+      "Manhattan"
+    ],
+    "website": "https://hudsonguild.org/",
+    "resolvedVia": "hudsonguild.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "hudsonguild.org",
+      "hudsonguild.com",
+      "hudsonguild.nyc",
+      "hudson.org",
+      "hudson.com",
+      "hudson.nyc"
+    ],
+    "signals": [
+      "hudson",
+      "guild"
+    ]
+  },
+  {
+    "provider": "Madison Square Boys & Girls Club Inc",
+    "siteCount": 2,
+    "boroughs": [
+      "Bronx",
+      "Brooklyn"
+    ],
+    "website": "https://www.madisonsquare.org/",
+    "resolvedVia": "madisonsquare.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "madisonsquareboysgirlsclub.org",
+      "madisonsquareboysgirlsclub.com",
+      "madisonsquareboysgirlsclub.nyc",
+      "madisonsquareboysgirls.org",
+      "madisonsquareboysgirls.com",
+      "madisonsquareboysgirls.nyc",
+      "madisonsquareboys.org",
+      "madisonsquareboys.com",
+      "madisonsquareboys.nyc",
+      "madisonsquare.org",
+      "madisonsquare.com",
+      "madisonsquare.nyc",
+      "msbgc.org",
+      "msbgc.com",
+      "msbgc.nyc",
+      "madison.org",
+      "madison.com",
+      "madison.nyc"
+    ],
+    "signals": [
+      "madison",
+      "square",
+      "boys",
+      "girls",
+      "club"
+    ]
+  },
+  {
+    "provider": "Maspeth Town Hall, Inc.",
+    "siteCount": 2,
+    "boroughs": [
+      "Queens"
+    ],
+    "website": "https://www.maspethtownhall.org/",
+    "resolvedVia": "maspethtownhall.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "maspethtownhall.org",
+      "maspethtownhall.com",
+      "maspethtownhall.nyc",
+      "maspethtown.org",
+      "maspethtown.com",
+      "maspethtown.nyc",
+      "mth.org",
+      "mth.com",
+      "mth.nyc",
+      "maspeth.org",
+      "maspeth.com",
+      "maspeth.nyc"
+    ],
+    "signals": [
+      "maspeth",
+      "town",
+      "hall"
+    ]
+  },
+  {
+    "provider": "Mosholu Montefiore Community Center, Inc.",
+    "siteCount": 2,
+    "boroughs": [
+      "Bronx"
+    ],
+    "website": "https://www.mmcc.org/",
+    "resolvedVia": "mmcc.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "mosholumontefiore.org",
+      "mosholumontefiore.com",
+      "mosholumontefiore.nyc",
+      "mosholu.org",
+      "mosholu.com",
+      "mosholu.nyc"
+    ],
+    "signals": [
+      "mosholu",
+      "montefiore"
+    ]
+  },
+  {
+    "provider": "Renaissance Youth Center",
+    "siteCount": 2,
+    "boroughs": [
+      "Bronx"
+    ],
+    "website": "https://www.renaissanceyouth.org/",
+    "resolvedVia": "renaissanceyouthcenter.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "renaissanceyouthcenter.org",
+      "renaissanceyouthcenter.com",
+      "renaissanceyouthcenter.nyc",
+      "renaissanceyouth.org",
+      "renaissanceyouth.com",
+      "renaissanceyouth.nyc",
+      "renaissance.org",
+      "renaissance.com",
+      "renaissance.nyc"
+    ],
+    "signals": [
+      "renaissance",
+      "youth"
+    ]
+  },
+  {
+    "provider": "Roads to Success Inc",
+    "siteCount": 2,
+    "boroughs": [
+      "Bronx"
+    ],
+    "website": "https://www.roadstosuccess.org/",
+    "resolvedVia": "roadstosuccess.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "roadstosuccess.org",
+      "roadstosuccess.com",
+      "roadstosuccess.nyc",
+      "roadsto.org",
+      "roadsto.com",
+      "roadsto.nyc",
+      "rts.org",
+      "rts.com",
+      "rts.nyc",
+      "roads.org",
+      "roads.com",
+      "roads.nyc"
+    ],
+    "signals": [
+      "roads",
+      "success"
+    ]
+  },
+  {
+    "provider": "School Settlement Association",
+    "siteCount": 2,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": "http://www.schoolsettlement.nyc/",
+    "resolvedVia": "schoolsettlement.nyc",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "schoolsettlementassociation.org",
+      "schoolsettlementassociation.com",
+      "schoolsettlementassociation.nyc",
+      "schoolsettlement.org",
+      "schoolsettlement.com",
+      "schoolsettlement.nyc"
+    ],
+    "signals": [
+      "school",
+      "settlement"
+    ]
+  },
+  {
+    "provider": "SCO Family of Services",
+    "siteCount": 2,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "scofamilyservices.org",
+      "scofamilyservices.com",
+      "scofamilyservices.nyc",
+      "scofamily.org",
+      "scofamily.com",
+      "scofamily.nyc"
+    ],
+    "signals": [
+      "family"
+    ]
+  },
+  {
+    "provider": "Sesame Flyers International, Inc.",
+    "siteCount": 2,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": "https://sesameflyers.org/",
+    "resolvedVia": "sesameflyers.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "sesameflyersinternational.org",
+      "sesameflyersinternational.com",
+      "sesameflyersinternational.nyc",
+      "sesameflyers.org",
+      "sesameflyers.com",
+      "sesameflyers.nyc",
+      "sfi.org",
+      "sfi.com",
+      "sfi.nyc",
+      "sesame.org",
+      "sesame.com",
+      "sesame.nyc"
+    ],
+    "signals": [
+      "sesame",
+      "flyers",
+      "international"
+    ]
+  },
+  {
+    "provider": "South Asian Youth Action SAYA Inc",
+    "siteCount": 2,
+    "boroughs": [
+      "Queens"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "southasianyouthactionsaya.org",
+      "southasianyouthactionsaya.com",
+      "southasianyouthactionsaya.nyc",
+      "southasianyouthaction.org",
+      "southasianyouthaction.com",
+      "southasianyouthaction.nyc",
+      "southasianyouth.org",
+      "southasianyouth.com",
+      "southasianyouth.nyc",
+      "southasian.org",
+      "southasian.com",
+      "southasian.nyc",
+      "sayas.org",
+      "sayas.com",
+      "sayas.nyc",
+      "south.org",
+      "south.com",
+      "south.nyc"
+    ],
+    "signals": [
+      "south",
+      "asian",
+      "youth",
+      "action",
+      "saya"
+    ]
+  },
+  {
+    "provider": "Stanley M Isaacs Neighborhood Center Inc",
+    "siteCount": 2,
+    "boroughs": [
+      "Manhattan"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "stanleymisaacsneighborhood.org",
+      "stanleymisaacsneighborhood.com",
+      "stanleymisaacsneighborhood.nyc",
+      "stanleymisaacs.org",
+      "stanleymisaacs.com",
+      "stanleymisaacs.nyc",
+      "stanleym.org",
+      "stanleym.com",
+      "stanleym.nyc",
+      "smin.org",
+      "smin.com",
+      "smin.nyc",
+      "stanley.org",
+      "stanley.com",
+      "stanley.nyc"
+    ],
+    "signals": [
+      "stanley",
+      "isaacs",
+      "neighborhood"
+    ]
+  },
+  {
+    "provider": "Team First, Inc.",
+    "siteCount": 2,
+    "boroughs": [
+      "Bronx"
+    ],
+    "website": "https://teamfirst.com/",
+    "resolvedVia": "teamfirst.com",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "teamfirst.org",
+      "teamfirst.com",
+      "teamfirst.nyc"
+    ],
+    "signals": [
+      "team",
+      "first"
+    ]
+  },
+  {
+    "provider": "The Crenulated Company LTD",
+    "siteCount": 2,
+    "boroughs": [
+      "Bronx"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "crenulatedcompany.org",
+      "crenulatedcompany.com",
+      "crenulatedcompany.nyc",
+      "crenulated.org",
+      "crenulated.com",
+      "crenulated.nyc"
+    ],
+    "signals": [
+      "crenulated",
+      "company"
+    ]
+  },
+  {
+    "provider": "YMCA of Greater New York - Virtual Y",
+    "siteCount": 2,
+    "boroughs": [
+      "Manhattan",
+      "Staten Island"
+    ],
+    "website": "https://ymcanyc.org/",
+    "resolvedVia": "ymcanyc.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "ymcagreaternewyorkvirtualy.org",
+      "ymcagreaternewyorkvirtualy.com",
+      "ymcagreaternewyorkvirtualy.nyc",
+      "ymcagreaternewyork.org",
+      "ymcagreaternewyork.com",
+      "ymcagreaternewyork.nyc",
+      "ymcagreaternew.org",
+      "ymcagreaternew.com",
+      "ymcagreaternew.nyc",
+      "ymcagreater.org",
+      "ymcagreater.com",
+      "ymcagreater.nyc",
+      "ygnyvy.org",
+      "ygnyvy.com",
+      "ygnyvy.nyc"
+    ],
+    "signals": [
+      "ymca",
+      "greater",
+      "york",
+      "virtual"
+    ]
+  },
+  {
+    "provider": "82nd Street Academics",
+    "siteCount": 1,
+    "boroughs": [
+      "Queens"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "82ndstreetacademics.org",
+      "82ndstreetacademics.com",
+      "82ndstreetacademics.nyc",
+      "82ndstreet.org",
+      "82ndstreet.com",
+      "82ndstreet.nyc",
+      "8sa.org",
+      "8sa.com",
+      "8sa.nyc"
+    ],
+    "signals": [
+      "82nd",
+      "street",
+      "academics"
+    ],
+    "matchedSignals": []
+  },
+  {
+    "provider": "Boys & Girls Club of Metro Queens, Inc",
+    "siteCount": 1,
+    "boroughs": [
+      "Queens"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "boysgirlsclubmetroqueens.org",
+      "boysgirlsclubmetroqueens.com",
+      "boysgirlsclubmetroqueens.nyc",
+      "boysgirlsclubmetro.org",
+      "boysgirlsclubmetro.com",
+      "boysgirlsclubmetro.nyc",
+      "boysgirlsclub.org",
+      "boysgirlsclub.com",
+      "boysgirlsclub.nyc",
+      "boysgirls.org",
+      "boysgirls.com",
+      "boysgirls.nyc",
+      "bgcmq.org",
+      "bgcmq.com",
+      "bgcmq.nyc"
+    ],
+    "signals": [
+      "boys",
+      "girls",
+      "club",
+      "metro",
+      "queens"
+    ]
+  },
+  {
+    "provider": "Brooklyn Childrens Museum Corp",
+    "siteCount": 1,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": "https://www.brooklynkids.org/",
+    "resolvedVia": "brooklynkids.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "brooklynchildrensmuseum.org",
+      "brooklynchildrensmuseum.com",
+      "brooklynchildrensmuseum.nyc",
+      "brooklynchildrens.org",
+      "brooklynchildrens.com",
+      "brooklynchildrens.nyc",
+      "bcm.org",
+      "bcm.com",
+      "bcm.nyc",
+      "brooklyn.org",
+      "brooklyn.com",
+      "brooklyn.nyc"
+    ],
+    "signals": [
+      "brooklyn",
+      "childrens",
+      "museum"
+    ]
+  },
+  {
+    "provider": "Brooklyn Defender Services",
+    "siteCount": 1,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": "https://bds.org/",
+    "resolvedVia": "bds.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "brooklyndefenderservices.org",
+      "brooklyndefenderservices.com",
+      "brooklyndefenderservices.nyc",
+      "brooklyndefender.org",
+      "brooklyndefender.com",
+      "brooklyndefender.nyc",
+      "brooklyn.org",
+      "brooklyn.com",
+      "brooklyn.nyc"
+    ],
+    "signals": [
+      "brooklyn",
+      "defender"
+    ]
+  },
+  {
+    "provider": "C C M S",
+    "siteCount": 1,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "ccms.org",
+      "ccms.com",
+      "ccms.nyc"
+    ],
+    "signals": []
+  },
+  {
+    "provider": "Casita Maria Inc",
+    "siteCount": 1,
+    "boroughs": [
+      "Bronx"
+    ],
+    "website": "https://www.casitamaria.org/",
+    "resolvedVia": "casitamaria.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "casitamaria.org",
+      "casitamaria.com",
+      "casitamaria.nyc",
+      "casita.org",
+      "casita.com",
+      "casita.nyc"
+    ],
+    "signals": [
+      "casita",
+      "maria"
+    ]
+  },
+  {
+    "provider": "Children of Promise NYC",
+    "siteCount": 1,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": "https://www.cpnyc.org/",
+    "resolvedVia": "cpnyc.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "childrenpromisenyc.org",
+      "childrenpromisenyc.com",
+      "childrenpromisenyc.nyc",
+      "childrenpromise.org",
+      "childrenpromise.com",
+      "childrenpromise.nyc"
+    ],
+    "signals": [
+      "children",
+      "promise"
+    ]
+  },
+  {
+    "provider": "Development Outreach, Inc.",
+    "siteCount": 1,
+    "boroughs": [
+      "Manhattan"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "developmentoutreach.org",
+      "developmentoutreach.com",
+      "developmentoutreach.nyc",
+      "development.org",
+      "development.com",
+      "development.nyc"
+    ],
+    "signals": [
+      "development",
+      "outreach"
+    ]
+  },
+  {
+    "provider": "Fresh Youth Initiatives, Inc.",
+    "siteCount": 1,
+    "boroughs": [
+      "Manhattan"
+    ],
+    "website": "https://freshyouth.org/",
+    "resolvedVia": "freshyouth.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "freshyouthinitiatives.org",
+      "freshyouthinitiatives.com",
+      "freshyouthinitiatives.nyc",
+      "freshyouth.org",
+      "freshyouth.com",
+      "freshyouth.nyc",
+      "fyi.org",
+      "fyi.com",
+      "fyi.nyc",
+      "fresh.org",
+      "fresh.com",
+      "fresh.nyc"
+    ],
+    "signals": [
+      "fresh",
+      "youth",
+      "initiatives"
+    ]
+  },
+  {
+    "provider": "Goddard Riverside Community Center",
+    "siteCount": 1,
+    "boroughs": [
+      "Manhattan"
+    ],
+    "website": "https://goddard.org/",
+    "resolvedVia": "goddard.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "goddardriverside.org",
+      "goddardriverside.com",
+      "goddardriverside.nyc",
+      "goddard.org",
+      "goddard.com",
+      "goddard.nyc"
+    ],
+    "signals": [
+      "goddard",
+      "riverside"
+    ]
+  },
+  {
+    "provider": "Harlem Childrens Zone Inc",
+    "siteCount": 1,
+    "boroughs": [
+      "Manhattan"
+    ],
+    "website": "https://hcz.org/",
+    "resolvedVia": "hcz.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "harlemchildrenszone.org",
+      "harlemchildrenszone.com",
+      "harlemchildrenszone.nyc",
+      "harlemchildrens.org",
+      "harlemchildrens.com",
+      "harlemchildrens.nyc",
+      "hcz.org",
+      "hcz.com",
+      "hcz.nyc",
+      "harlem.org",
+      "harlem.com",
+      "harlem.nyc"
+    ],
+    "signals": [
+      "harlem",
+      "childrens",
+      "zone"
+    ]
+  },
+  {
+    "provider": "Homes for the Homeless Inc",
+    "siteCount": 1,
+    "boroughs": [
+      "Queens"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "homeshomeless.org",
+      "homeshomeless.com",
+      "homeshomeless.nyc",
+      "homes.org",
+      "homes.com",
+      "homes.nyc"
+    ],
+    "signals": [
+      "homes",
+      "homeless"
+    ]
+  },
+  {
+    "provider": "Imani House, Inc.",
+    "siteCount": 1,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": "https://www.imanihouse.org/",
+    "resolvedVia": "imanihouse.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "imanihouse.org",
+      "imanihouse.com",
+      "imanihouse.nyc",
+      "imani.org",
+      "imani.com",
+      "imani.nyc"
+    ],
+    "signals": [
+      "imani",
+      "house"
+    ]
+  },
+  {
+    "provider": "Jewish Institute of Queens",
+    "siteCount": 1,
+    "boroughs": [
+      "Queens"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "jewishinstitutequeens.org",
+      "jewishinstitutequeens.com",
+      "jewishinstitutequeens.nyc",
+      "jewishinstitute.org",
+      "jewishinstitute.com",
+      "jewishinstitute.nyc",
+      "jiq.org",
+      "jiq.com",
+      "jiq.nyc",
+      "jewish.org",
+      "jewish.com",
+      "jewish.nyc"
+    ],
+    "signals": [
+      "jewish",
+      "institute",
+      "queens"
+    ]
+  },
+  {
+    "provider": "Lesbian and Gay Community Services Center, Inc.",
+    "siteCount": 1,
+    "boroughs": [
+      "Manhattan"
+    ],
+    "website": "https://gaycenter.org/",
+    "resolvedVia": "gaycenter.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "lesbiangay.org",
+      "lesbiangay.com",
+      "lesbiangay.nyc",
+      "lesbiangaycommunityservices.org",
+      "lesbiangaycommunityservices.com",
+      "lesbiangaycommunityservices.nyc",
+      "lesbian.org",
+      "lesbian.com",
+      "lesbian.nyc"
+    ],
+    "signals": [
+      "lesbian"
+    ]
+  },
+  {
+    "provider": "Morningside Center for Teaching Social Responsibility, Inc.",
+    "siteCount": 1,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": "https://www.morningsidecenter.org/",
+    "resolvedVia": "morningsidecenter.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "morningsideteachingsocial.org",
+      "morningsideteachingsocial.com",
+      "morningsideteachingsocial.nyc",
+      "morningsidecenter.org",
+      "morningsidecenter.com",
+      "morningsidecenter.nyc",
+      "mtsr.org",
+      "mtsr.com",
+      "mtsr.nyc",
+      "morningside.org",
+      "morningside.com",
+      "morningside.nyc"
+    ],
+    "signals": [
+      "morningside",
+      "teaching",
+      "social",
+      "responsibility"
+    ]
+  },
+  {
+    "provider": "New York Center for Interpersonal Development Inc",
+    "siteCount": 1,
+    "boroughs": [
+      "Staten Island"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "newyorkcenterinterpersonal.org",
+      "newyorkcenterinterpersonal.com",
+      "newyorkcenterinterpersonal.nyc",
+      "newyorkinterpersonal.org",
+      "newyorkinterpersonal.com",
+      "newyorkinterpersonal.nyc",
+      "newyork.org",
+      "newyork.com",
+      "newyork.nyc",
+      "nyid.org",
+      "nyid.com",
+      "nyid.nyc"
+    ],
+    "signals": [
+      "york",
+      "interpersonal",
+      "development"
+    ]
+  },
+  {
+    "provider": "North Brooklyn Development Corporation",
+    "siteCount": 1,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "northbrooklyndevelopment.org",
+      "northbrooklyndevelopment.com",
+      "northbrooklyndevelopment.nyc",
+      "northbrooklyn.org",
+      "northbrooklyn.com",
+      "northbrooklyn.nyc",
+      "nbd.org",
+      "nbd.com",
+      "nbd.nyc",
+      "north.org",
+      "north.com",
+      "north.nyc"
+    ],
+    "signals": [
+      "north",
+      "brooklyn",
+      "development"
+    ]
+  },
+  {
+    "provider": "Northside Center For Child Development, Inc.",
+    "siteCount": 1,
+    "boroughs": [
+      "Manhattan"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "northsidechilddevelopment.org",
+      "northsidechilddevelopment.com",
+      "northsidechilddevelopment.nyc",
+      "northsidecenter.org",
+      "northsidecenter.com",
+      "northsidecenter.nyc",
+      "ncd.org",
+      "ncd.com",
+      "ncd.nyc",
+      "northside.org",
+      "northside.com",
+      "northside.nyc"
+    ],
+    "signals": [
+      "northside",
+      "child",
+      "development"
+    ]
+  },
+  {
+    "provider": "OPUS Dance Theatre and Community Services Inc",
+    "siteCount": 1,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "opusdancetheatre.org",
+      "opusdancetheatre.com",
+      "opusdancetheatre.nyc",
+      "opusdancetheatrecommunity.org",
+      "opusdancetheatrecommunity.com",
+      "opusdancetheatrecommunity.nyc",
+      "opusdance.org",
+      "opusdance.com",
+      "opusdance.nyc",
+      "odt.org",
+      "odt.com",
+      "odt.nyc"
+    ],
+    "signals": [
+      "opus",
+      "dance",
+      "theatre"
+    ]
+  },
+  {
+    "provider": "Partnership With Children, Inc.",
+    "siteCount": 1,
+    "boroughs": [
+      "Manhattan"
+    ],
+    "website": "https://partnershipwithchildren.org/",
+    "resolvedVia": "partnershipwithchildren.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "partnershipwithchildren.org",
+      "partnershipwithchildren.com",
+      "partnershipwithchildren.nyc",
+      "partnershipwith.org",
+      "partnershipwith.com",
+      "partnershipwith.nyc",
+      "pwc.org",
+      "pwc.com",
+      "pwc.nyc",
+      "partnership.org",
+      "partnership.com",
+      "partnership.nyc"
+    ],
+    "signals": [
+      "partnership",
+      "with",
+      "children"
+    ]
+  },
+  {
+    "provider": "Shorefront YM-YWHA of Brighton-Manhattan Beach, Inc",
+    "siteCount": 1,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "shorefrontymywhabrighton.org",
+      "shorefrontymywhabrighton.com",
+      "shorefrontymywhabrighton.nyc",
+      "shorefrontymywha.org",
+      "shorefrontymywha.com",
+      "shorefrontymywha.nyc",
+      "shorefrontym.org",
+      "shorefrontym.com",
+      "shorefrontym.nyc",
+      "syybmb.org",
+      "syybmb.com",
+      "syybmb.nyc",
+      "shorefront.org",
+      "shorefront.com",
+      "shorefront.nyc"
+    ],
+    "signals": [
+      "shorefront",
+      "ywha",
+      "brighton",
+      "manhattan",
+      "beach"
+    ]
+  },
+  {
+    "provider": "Simpson Street Development Association Inc",
+    "siteCount": 1,
+    "boroughs": [
+      "Bronx"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "simpsonstreetdevelopment.org",
+      "simpsonstreetdevelopment.com",
+      "simpsonstreetdevelopment.nyc",
+      "simpsonstreet.org",
+      "simpsonstreet.com",
+      "simpsonstreet.nyc",
+      "ssd.org",
+      "ssd.com",
+      "ssd.nyc",
+      "simpson.org",
+      "simpson.com",
+      "simpson.nyc"
+    ],
+    "signals": [
+      "simpson",
+      "street",
+      "development"
+    ]
+  },
+  {
+    "provider": "Southeast Bronx Neighborhood Centers Inc",
+    "siteCount": 1,
+    "boroughs": [
+      "Bronx"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "southeastbronxneighborhood.org",
+      "southeastbronxneighborhood.com",
+      "southeastbronxneighborhood.nyc",
+      "southeastbronx.org",
+      "southeastbronx.com",
+      "southeastbronx.nyc",
+      "sbnc.org",
+      "sbnc.com",
+      "sbnc.nyc",
+      "southeast.org",
+      "southeast.com",
+      "southeast.nyc"
+    ],
+    "signals": [
+      "southeast",
+      "bronx",
+      "neighborhood",
+      "centers"
+    ]
+  },
+  {
+    "provider": "Stryckers Bay Neighborhood Council, Inc.",
+    "siteCount": 1,
+    "boroughs": [
+      "Manhattan"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "stryckersbayneighborhood.org",
+      "stryckersbayneighborhood.com",
+      "stryckersbayneighborhood.nyc",
+      "stryckersbay.org",
+      "stryckersbay.com",
+      "stryckersbay.nyc",
+      "sbn.org",
+      "sbn.com",
+      "sbn.nyc",
+      "stryckers.org",
+      "stryckers.com",
+      "stryckers.nyc"
+    ],
+    "signals": [
+      "stryckers",
+      "neighborhood"
+    ]
+  },
+  {
+    "provider": "Sunset Park Health Council Inc",
+    "siteCount": 1,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "sunsetparkhealthcouncil.org",
+      "sunsetparkhealthcouncil.com",
+      "sunsetparkhealthcouncil.nyc",
+      "sunsetparkhealth.org",
+      "sunsetparkhealth.com",
+      "sunsetparkhealth.nyc",
+      "sunsetpark.org",
+      "sunsetpark.com",
+      "sunsetpark.nyc",
+      "sph.org",
+      "sph.com",
+      "sph.nyc",
+      "sunset.org",
+      "sunset.com",
+      "sunset.nyc"
+    ],
+    "signals": [
+      "sunset",
+      "park",
+      "health"
+    ],
+    "matchedSignals": []
+  },
+  {
+    "provider": "The Door-A Center of Alternatives Inc",
+    "siteCount": 1,
+    "boroughs": [
+      "Manhattan"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "doorcenteralternatives.org",
+      "doorcenteralternatives.com",
+      "doorcenteralternatives.nyc",
+      "dooralternatives.org",
+      "dooralternatives.com",
+      "dooralternatives.nyc",
+      "doorcenter.org",
+      "doorcenter.com",
+      "doorcenter.nyc"
+    ],
+    "signals": [
+      "door",
+      "alternatives"
+    ]
+  },
+  {
+    "provider": "Variety Boys and Girls Club of Queens Inc",
+    "siteCount": 1,
+    "boroughs": [
+      "Queens"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "varietyboysgirlsclubqueens.org",
+      "varietyboysgirlsclubqueens.com",
+      "varietyboysgirlsclubqueens.nyc",
+      "varietyboysgirlsclub.org",
+      "varietyboysgirlsclub.com",
+      "varietyboysgirlsclub.nyc",
+      "varietyboysgirls.org",
+      "varietyboysgirls.com",
+      "varietyboysgirls.nyc",
+      "varietyboys.org",
+      "varietyboys.com",
+      "varietyboys.nyc",
+      "vbgcq.org",
+      "vbgcq.com",
+      "vbgcq.nyc",
+      "variety.org",
+      "variety.com",
+      "variety.nyc"
+    ],
+    "signals": [
+      "variety",
+      "boys",
+      "girls",
+      "club",
+      "queens"
+    ]
+  },
+  {
+    "provider": "Westhab, Inc.",
+    "siteCount": 1,
+    "boroughs": [
+      "Bronx"
+    ],
+    "website": "https://www.westhab.org/",
+    "resolvedVia": "westhab.org",
+    "confidence": "strong",
+    "locked": false,
+    "candidates": [
+      "westhab.org",
+      "westhab.com",
+      "westhab.nyc"
+    ],
+    "signals": [
+      "westhab"
+    ]
+  },
+  {
+    "provider": "Women In Need, Inc.",
+    "siteCount": 1,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "womeninneed.org",
+      "womeninneed.com",
+      "womeninneed.nyc",
+      "womenin.org",
+      "womenin.com",
+      "womenin.nyc",
+      "win.org",
+      "win.com",
+      "win.nyc",
+      "women.org",
+      "women.com",
+      "women.nyc"
+    ],
+    "signals": [
+      "women",
+      "need"
+    ]
+  },
+  {
+    "provider": "Women's Housing and Economic Development Corporation (WHEDCO",
+    "siteCount": 1,
+    "boroughs": [
+      "Bronx"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "womenshousingeconomic.org",
+      "womenshousingeconomic.com",
+      "womenshousingeconomic.nyc",
+      "womenshousing.org",
+      "womenshousing.com",
+      "womenshousing.nyc",
+      "womens.org",
+      "womens.com",
+      "womens.nyc",
+      "wshedw.org",
+      "wshedw.com",
+      "wshedw.nyc",
+      "women.org",
+      "women.com",
+      "women.nyc"
+    ],
+    "signals": [
+      "women",
+      "housing",
+      "economic",
+      "development",
+      "whedco"
+    ]
+  },
+  {
+    "provider": "Woodycrest Center For Human Development Inc",
+    "siteCount": 1,
+    "boroughs": [
+      "Bronx"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "woodycresthumandevelopment.org",
+      "woodycresthumandevelopment.com",
+      "woodycresthumandevelopment.nyc",
+      "woodycrestcenter.org",
+      "woodycrestcenter.com",
+      "woodycrestcenter.nyc",
+      "whd.org",
+      "whd.com",
+      "whd.nyc",
+      "woodycrest.org",
+      "woodycrest.com",
+      "woodycrest.nyc"
+    ],
+    "signals": [
+      "woodycrest",
+      "human",
+      "development"
+    ]
+  },
+  {
+    "provider": "Yeshivath Kehilath Yakov, Inc.",
+    "siteCount": 1,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "yeshivathkehilathyakov.org",
+      "yeshivathkehilathyakov.com",
+      "yeshivathkehilathyakov.nyc",
+      "yeshivathkehilath.org",
+      "yeshivathkehilath.com",
+      "yeshivathkehilath.nyc",
+      "yky.org",
+      "yky.com",
+      "yky.nyc",
+      "yeshivath.org",
+      "yeshivath.com",
+      "yeshivath.nyc"
+    ],
+    "signals": [
+      "yeshivath",
+      "kehilath",
+      "yakov"
+    ]
+  },
+  {
+    "provider": "Young Dancers In Repertory, Inc.",
+    "siteCount": 1,
+    "boroughs": [
+      "Brooklyn"
+    ],
+    "website": null,
+    "resolvedVia": null,
+    "confidence": "unresolved",
+    "locked": false,
+    "candidates": [
+      "youngdancersinrepertory.org",
+      "youngdancersinrepertory.com",
+      "youngdancersinrepertory.nyc",
+      "youngdancersin.org",
+      "youngdancersin.com",
+      "youngdancersin.nyc",
+      "youngdancers.org",
+      "youngdancers.com",
+      "youngdancers.nyc",
+      "ydir.org",
+      "ydir.com",
+      "ydir.nyc",
+      "young.org",
+      "young.com",
+      "young.nyc"
+    ],
+    "signals": [
+      "young",
+      "dancers",
+      "repertory"
+    ]
+  }
+]

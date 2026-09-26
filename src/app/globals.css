@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* Design tokens from the Figma Make file (STEM Program Discovery Website).
+   Fonts are loaded by next/font in layout.tsx and exposed as CSS variables. */
+@theme inline {
+  --font-display: var(--font-sansita-swashed), cursive;
+  --font-heading: var(--font-fredoka), sans-serif;
+  --font-body: var(--font-nunito), sans-serif;
+}
+
+@theme {
+  --color-teal-50: #ecfdfd;
+  --color-teal-100: #cbf6f7;
+  --color-teal-200: #7fe9ed;
+  --color-teal-300: #35d4dc;
+  --color-teal-400: #16bcc7;
+  --color-teal-500: #0e9aa6;
+  --color-teal-600: #0c7d88;
+  --color-teal-700: #0f636d;
+  --color-teal-800: #124f58;
+  --color-teal-900: #12414a;
+
+  --color-orange: #f7801f;
+  --color-orange-dark: #e0680a;
+  --color-ink: #10222a;
+}
+
+/* The design writes weights as `font-600`, which Tailwind 4 does not generate
+   on its own (it only knows font-semibold, font-bold, ...). */
+@utility font-500 { font-weight: 500; }
+@utility font-600 { font-weight: 600; }
+@utility font-700 { font-weight: 700; }
+@utility font-800 { font-weight: 800; }
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  /* Deep teal gradient matching brand reference */
+  background: radial-gradient(120% 90% at 15% 0%, #135b5d 0%, #0d494b 45%, #08383a 100%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-orange);
+  color: #fff;
+}
+
+/* Hide scrollbars until scrolling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+*:hover,
+*:focus-within {
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes nova-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_comment": "Domains that passed automatic verification but belong to a DIFFERENT organization. Keyed by provider, because a domain wrong for one provider may be right for another. Stage 20 clears a blocked website and never accepts it again; stages 30 and 60 skip it as a second line of defence. Add an entry, then re-run from stage 20.",
+  "Bergen Basin Community Development Corporation": {
+    "domains": ["bergenbasin.com"],
+    "why": "Bergen Basin Realty, a Brooklyn real estate agency"
+  },
+  "Italian American Civil Rights League Canarsie Inc": {
+    "domains": ["italianamerican.com"],
+    "why": "Italian American Community Center in Albany, NY"
+  },
+  "Sunset Park Health Council Inc": {
+    "domains": ["sunsetpark.org"],
+    "why": "a Sunset Park neighbourhood blog"
+  },
+  "82nd Street Academics": {
+    "domains": ["82ndstreet.org"],
+    "why": "82nd Street Partnership, the Jackson Heights business improvement district"
+  }
+}

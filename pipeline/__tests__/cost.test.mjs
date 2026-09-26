@@ -1,0 +1,55 @@
+/**
+ * Guards the bug where every program was emitted as free and attributed to
+ * NYC OpenData, which publishes no cost field at all.
+ */
+import { test } from "node:test";
+import assert from "node:assert/strict";
+import { deriveCost } from "../stages/60-build.mjs";
+
+test("cost is unknown when no source stated one", () => {
+  const c = deriveCost({ contract: "91000A", programArea: "Cornerstone", extracted: null });
+  assert.equal(c.tier, "unknown");
+  assert.equal(c.source, "not-published");
+});
+
+test("never attributes a price to OpenData", () => {
+  for (const area of ["Compass", "Cornerstone", "Beacon"]) {
+    const c = deriveCost({ contract: "X1", programArea: area, extracted: null });
+    assert.notEqual(c.source, "opendata");
+    assert.equal(c.tier, "unknown");
+  }
+});
+
+test("uses a tier the provider's own site stated", () => {
+  const c = deriveCost({
+    contract: "X1",
+    programArea: "Compass",
+    extracted: { costTier: "free", method: "gemini" },
+  });
+  assert.equal(c.tier, "free");
+  assert.equal(c.source, "provider-website");
+});
+
+test("treats an extracted 'unknown' as no answer", () => {
+  const c = deriveCost({
+    contract: "X1", programArea: "Compass",
+    extracted: { costTier: "unknown", method: "keyword" },
+  });
+  assert.equal(c.tier, "unknown");
+  assert.equal(c.source, "not-published");
+});
+
+test("publiclyFunded reflects the DYCD contract, independent of price", () => {
+  assert.equal(deriveCost({ contract: "91000A", extracted: null }).publiclyFunded, true);
+  assert.equal(deriveCost({ contract: "NULL", extracted: null }).publiclyFunded, false);
+  assert.equal(deriveCost({ contract: null, extracted: null }).publiclyFunded, false);
+});
+
+test("a paid provider is still reported as publicly funded", () => {
+  const c = deriveCost({
+    contract: "X1", programArea: "Beacon",
+    extracted: { costTier: "paid", method: "gemini" },
+  });
+  assert.equal(c.tier, "paid");
+  assert.equal(c.publiclyFunded, true);
+});

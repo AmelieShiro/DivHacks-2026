@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "2.5.0",
+  "generatedAt": "2026-09-26T22:45:16.331Z",
+  "programYear": "2026",
+  "counts": {
+    "programs": 565,
+    "schools": 2189,
+    "zips": 192,
+    "withWebsite": 365,
+    "withTools": 314,
+    "withSubjects": 0,
+    "withPhotos": 352,
+    "withCarouselPhoto": 292,
+    "inSchoolBuilding": 444,
+    "inK5SchoolBuilding": 393,
+    "onSharedCampus": 176,
+    "publiclyFunded": 565,
+    "costConfirmed": 270
+  },
+  "sources": {
+    "programs": "NYC OpenData DYCD Program Sites (ebkm-iyma)",
+    "schools": "NYC OpenData DOE School Locations (wg9x-4ke6)",
+    "enrichment": "provider websites, extracted with Google Gemini"
+  },
+  "subjectGroups": {
+    "Science": [
+      "biology",
+      "chemistry",
+      "physics",
+      "earth & environmental science",
+      "general science",
+      "gardening"
+    ],
+    "Technology": [
+      "computer science",
+      "coding",
+      "robotics",
+      "game design",
+      "electronics",
+      "3d design & printing",
+      "technology & digital media"
+    ],
+    "Engineering": [
+      "engineering",
+      "maker & building"
+    ],
+    "Math & strategy": [
+      "mathematics",
+      "chess",
+      "financial literacy"
+    ],
+    "Arts": [
+      "visual arts",
+      "music",
+      "dance & theater",
+      "animation",
+      "filmmaking & video",
+      "crafts & sewing"
+    ],
+    "Literacy & languages": [
+      "literacy & writing",
+      "languages",
+      "social studies"
+    ],
+    "Health & movement": [
+      "sports & fitness",
+      "health & nutrition",
+      "cooking"
+    ],
+    "Social-emotional": [
+      "leadership & social-emotional"
+    ]
+  }
+}
