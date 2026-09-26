@@ -115,6 +115,7 @@ async function main() {
     `${rows.length} providers · ${withSite} with a verified website · ${viaGemini} read by Gemini.`,
     "All values describe the provider's website as a whole, not an individual site.",
     "",
+    "",
   ].join("\n");
 
   const csvPath = path.join(ROOT, "data", "scraped-table.csv");

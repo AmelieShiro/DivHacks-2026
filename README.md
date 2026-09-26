@@ -107,6 +107,7 @@ Suggested footnote for the site:
 ```bash
 npm test                            # 94 unit + contract tests
 node scripts/inspect.mjs            # per-stage checks + visual inspector (data/cache/inspect.html)
+node scripts/export-table.mjs       # all scraped data, one row per provider -> data/scraped-table.{csv,md}
 node pipeline/run.mjs --list        # stages
 node pipeline/run.mjs --from 20     # re-run enrichment only
 node pipeline/run.mjs 30 --limit 5  # smoke test
