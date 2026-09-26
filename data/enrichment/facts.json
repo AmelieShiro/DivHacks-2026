@@ -5,17 +5,45 @@
     "hasK5Programming": true,
     "summary": "",
     "stemTools": [
-      "coding",
       "science lab"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "general science",
+      "crafts & sewing",
+      "sports & fitness",
+      "health & nutrition",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "general science",
+        "quote": "They enjoy all sorts of games, dive into science experiments, crack puzzles, build teamwork, unleash their artistic side, engage in play and physical"
+      },
+      {
+        "subject": "crafts & sewing",
+        "quote": "activities, and sports LUNCH Food and Friendship EARLY AFTERNOON Creativity time with arts and crafts, music and movement LATE AFTERNOON Afternoon adventures with play, and Social Emotional"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Learn more about swimming and sports programs at the Northeast Bronx Y this summer &gt; Brooklyn Bedford-Stuyvesant"
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "Fun health, fitness, and nutrition know-how to keep you energized!"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "Aid, Risk Management, Positive Youth Development Principles, YMCA Camp Standards, Social Emotional Learning, Diversity and Inclusion Practices, Camp Games and Songs."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "newamericans@ymcanyc.org",
     "contactPhone": "",
-    "evidence": [],
+    "evidence": [
+      "They enjoy all sorts of games, dive into science experiments, crack puzzles, build teamwork, unleash their artistic side, engage in play and physical"
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -25,18 +53,69 @@
     "hasK5Programming": true,
     "summary": "",
     "stemTools": [
-      "coding",
-      "science lab",
-      "digital art"
+      "digital art",
+      "cooking",
+      "animation"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "visual arts",
+      "music",
+      "dance & theater",
+      "animation",
+      "literacy & writing",
+      "sports & fitness",
+      "health & nutrition",
+      "cooking",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "visual arts",
+        "quote": "Our performing and visual arts curriculum focuses on developmental consideration for each grade level (K-2, 3-5, 6-8,"
+      },
+      {
+        "subject": "music",
+        "quote": "Programs for Elementary School #GetReel Film Festival Annual Step Competition Art Day Music Production Spring Arts Showcase This is an opportunity for students to collaborate on a story based"
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "participate in a day of workshops around fashion design, visual arts, music, dance and theater arts."
+      },
+      {
+        "subject": "animation",
+        "quote": "Our Video Close Exciting Opportunities for Every Student Using the art of stop-motion animation we empower the next generation of story-tellers and film-makers within New York Edge"
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "Read More Making Every Minute Count For Students See All Programs Academics Through literacy, STEM and supplementary academic activities, we help students make the most of their"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Learn More About Summer Camp Sports & Wellness Sports, nutrition, and education teach vital lessons about hard work and"
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "Learn More About Summer Camp Sports & Wellness Sports, nutrition, and education teach vital lessons about hard work and determination, while showing"
+      },
+      {
+        "subject": "cooking",
+        "quote": "This is supplemented through the development of culinary skills and daily recipes from our master cookbook."
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "The underlying thread for all NYE programs is the social emotional development of our students, which opens the door to learning."
+      }
+    ],
     "activities": [],
     "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "info@newyorkedge.org",
     "contactPhone": "(718) 786-7110",
-    "evidence": [],
+    "evidence": [
+      "High School Programs for Elementary School Summer Arts Literacy STEM Maker's Club Summer Digital Art Experience The art department creates all experiences, events and projects for summer in",
+      "This is supplemented through the development of culinary skills and daily recipes from our master cookbook.",
+      "Our Video Close Exciting Opportunities for Every Student Using the art of stop-motion animation we empower the next generation of story-tellers and film-makers within New York Edge"
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -48,13 +127,46 @@
     "stemTools": [
       "robotics"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "robotics"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "robotics",
+        "quote": "in problem-solving and skills development in middle schoolers after participating in a robotics program at one of our community centers."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "info@CAMBA.org",
     "contactPhone": "718-287-2600",
+    "evidence": [
+      "in problem-solving and skills development in middle schoolers after participating in a robotics program at one of our community centers."
+    ],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "The Child Center of NY Inc",
+    "website": "https://www.childcenterny.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "approach: Our research-based methods help youth ages 5-24 develop cognitive, academic, social-emotional, and physical skills."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "info@childcenterny.org",
+    "contactPhone": "718-358-8288",
     "evidence": [],
     "confidence": "low",
     "method": "keyword"
@@ -65,17 +177,35 @@
     "hasK5Programming": true,
     "summary": "",
     "stemTools": [
-      "coding",
       "engineering"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "engineering",
+      "dance & theater",
+      "sports & fitness"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "engineering",
+        "quote": "swim, free swim, boating, fishing, art, drama, dance, fitness, Native American culture, engineering, orienteering, challenge and adventure, music, pottery and much more!"
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "We offer instructional swim, free swim, boating, fishing, art, drama, dance, fitness, Native American culture, engineering, orienteering, challenge and"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "We offer instructional swim, free swim, boating, fishing, art, drama, dance, fitness, Native American culture, engineering, orienteering, challenge and adventure, music,"
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "",
     "contactPhone": "718-882-4000",
-    "evidence": [],
+    "evidence": [
+      "swim, free swim, boating, fishing, art, drama, dance, fitness, Native American culture, engineering, orienteering, challenge and adventure, music, pottery and much more!"
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -84,13 +214,18 @@
     "website": "https://www.nyjtl.org/",
     "hasK5Programming": true,
     "summary": "",
-    "stemTools": [
-      "coding"
+    "stemTools": [],
+    "subjects": [
+      "sports & fitness"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "sports & fitness",
+        "quote": "7/6 Monday – Friday: 9am-1pm 100 Donizetti Place, Bronx, NY 10475 (On your right after Basketball courts) Site Director: Ms."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "tc@nyjtl.org",
     "contactPhone": "347-417-8100",
@@ -103,13 +238,23 @@
     "website": "https://scan-harbor.org/",
     "hasK5Programming": true,
     "summary": "",
-    "stemTools": [
-      "coding"
+    "stemTools": [],
+    "subjects": [
+      "sports & fitness",
+      "leadership & social-emotional"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "sports & fitness",
+        "quote": "Through after-school programs, fitness initiatives, and Stay Connected Success!"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "Learn More Young Women Empowerment Equips girls and young women with the confidence, leadership skills, and mentorship needed to achieve their goals, advocate for themselves, and create"
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "info@scan-harbor.org",
     "contactPhone": "(212) 289-8030",
@@ -141,17 +286,41 @@
     "summary": "",
     "stemTools": [
       "robotics",
-      "coding",
-      "science lab"
+      "cooking"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "robotics",
+      "dance & theater",
+      "sports & fitness",
+      "cooking"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "robotics",
+        "quote": "to fly across a zipline, score the game-winning goal, or turn your recycled art into a robot, you can design a path that’s perfect for you!"
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "creative core will be nourished with an afternoon of Education, Art, Music, Dance and Drama."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "About Contact Us Join Give Community Happens Here Search Latest Stay active with youth sports and swim classes!"
+      },
+      {
+        "subject": "cooking",
+        "quote": "activities following their summer school program including swimming, creative arts, culinary arts, STEM, physical fitness, theme days, and more."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "dvargasadames@commonpoint.org",
     "contactPhone": "718-268-5011",
-    "evidence": [],
+    "evidence": [
+      "to fly across a zipline, score the game-winning goal, or turn your recycled art into a robot, you can design a path that’s perfect for you!",
+      "activities following their summer school program including swimming, creative arts, culinary arts, STEM, physical fitness, theme days, and more."
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -161,19 +330,100 @@
     "hasK5Programming": true,
     "summary": "",
     "stemTools": [
-      "coding",
-      "science lab",
       "engineering",
       "chess"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "engineering",
+      "chess",
+      "dance & theater",
+      "literacy & writing",
+      "sports & fitness",
+      "health & nutrition",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "engineering",
+        "quote": "hydroponic greenhouse classroom is part of PAL's STEAM program (Science, Technology, Engineering, Art and Math) to help young people learn more about sustainability in the environment."
+      },
+      {
+        "subject": "chess",
+        "quote": "PAL after-school programs offer an array of engaging STEAM activities, including a chess program , designed to inspire youth and build academic skills; a hydroponic classroom"
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "an introduction to illustration, instrumental music, dance, performance poetry, and theater arts."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "based on a schedule of different activities and academics including STEAM and literacy learning, visual and performing arts, and physical education."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Learn More Sports and Recreation Team sports/clinics for kids and teens to stay active and learn"
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "PAL children engage in physical activity while learning about healthy lifestyles and nutrition."
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "PAL after-school programs feature positive youth development and SEL (social-emotional learning) along with literacy, sports and other activities."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "Jclark@palynyc.org",
     "contactPhone": "800-725-4543",
-    "evidence": [],
+    "evidence": [
+      "hydroponic greenhouse classroom is part of PAL's STEAM program (Science, Technology, Engineering, Art and Math) to help young people learn more about sustainability in the environment.",
+      "PAL after-school programs offer an array of engaging STEAM activities, including a chess program , designed to inspire youth and build academic skills; a hydroponic classroom"
+    ],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "The Children's Aid Society",
+    "website": "https://www.childrensaidnyc.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [
+      "robotics"
+    ],
+    "subjects": [
+      "robotics",
+      "sports & fitness",
+      "health & nutrition",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "robotics",
+        "quote": "in the coming academic year Education and Leadership After-School Programs Whether it’s robotics club, a sports team, or homework help, all Children’s Aid community schools and centers"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "year Education and Leadership After-School Programs Whether it’s robotics club, a sports team, or homework help, all Children’s Aid community schools and centers provide quality"
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "Health and Nutrition For children and youth to thrive in school and life, they need to grow up strong and"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "Browse Our Focus Areas Academic and Social-Emotional Learning Our mission is anchored in the idea that all children should be able to reach"
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "",
+    "contactPhone": "718.625.8300",
+    "evidence": [
+      "in the coming academic year Education and Leadership After-School Programs Whether it’s robotics club, a sports team, or homework help, all Children’s Aid community schools and centers"
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -182,14 +432,28 @@
     "website": "https://www.greaterridgewoodyouthcouncil.org/",
     "hasK5Programming": true,
     "summary": "",
-    "stemTools": [
-      "coding",
-      "science lab"
+    "stemTools": [],
+    "subjects": [
+      "literacy & writing",
+      "sports & fitness",
+      "leadership & social-emotional"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "literacy & writing",
+        "quote": "Beyond STEM learning, it strives to integrate literacy into all instruction and offers homework help, basic arts instruction, and physical"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Greater Ridgewood Youth Council Check out some highlights from our GRYC Basketball Championship 2026!"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "appropriate practices, focusing on promoting the cognitive, physical, and, social emotional development of the children we serve."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "jmahon@thegryc.org",
     "contactPhone": "718-456-5437",
@@ -202,13 +466,18 @@
     "website": "https://goodshepherds.org/",
     "hasK5Programming": true,
     "summary": "",
-    "stemTools": [
-      "coding"
+    "stemTools": [],
+    "subjects": [
+      "sports & fitness"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "sports & fitness",
+        "quote": "In addition to soccer drills, GOAL-E participants attend workshops focusing on teamwork, conflict resolution,"
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "",
     "contactPhone": "212 243 7070",
@@ -221,16 +490,75 @@
     "website": "https://unitedactivities.org/",
     "hasK5Programming": true,
     "summary": "",
-    "stemTools": [
-      "coding"
+    "stemTools": [],
+    "subjects": [
+      "literacy & writing",
+      "leadership & social-emotional"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "literacy & writing",
+        "quote": "family and social services, fatherhood programs, college preparatory activities, literacy classes , educational enrichment and summer camps."
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "UAU’s Beacons provide an array of activities and services from academic support and leadership development to recreation and physical activity to civic engagement and cultural exploration that"
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "SMatteo@unitedactivities.org",
     "contactPhone": "(718) 987-8111",
+    "evidence": [],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Brooklyn Bureau of Community Service",
+    "website": "https://wearebcs.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [
+      "financial literacy",
+      "visual arts",
+      "crafts & sewing",
+      "literacy & writing",
+      "sports & fitness",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "financial literacy",
+        "quote": "The program offers intensive family support services to the community, including financial literacy and health and wellness programs."
+      },
+      {
+        "subject": "visual arts",
+        "quote": "The ENYFC is a safe space for families to set clear goals for change while drawing from their own strengths and abilities."
+      },
+      {
+        "subject": "crafts & sewing",
+        "quote": "The curriculum provides student homework assistance, arts and crafts, step and cheer opportunities, organized sports, and STEAM programming."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "Cumbo Children's Enrichment Center This program promotes literacy through reading, writing and creative arts for children aged 3 to 4."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Sep 10 12 1 Open post by wearebcs with ID 18107081903238831 Support your local Brooklyn soccer teams, AND BCS, when you buy tickets to a Brooklyn Football Club match."
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "Middle School Our Middle School After School Programs promote creativity and leadership skills, literacy and critical thinking, fitness and community services, and more."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "info@WeAreBCS.org",
+    "contactPhone": "718.310.5600",
     "evidence": [],
     "confidence": "low",
     "method": "keyword"
@@ -244,7 +572,7 @@
     "subjects": [],
     "subjectEvidence": [],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "info@cpc-nyc.org",
     "contactPhone": "212-941-0920",
@@ -270,17 +598,71 @@
     "method": "keyword"
   },
   {
+    "provider": "Queens Community House Inc",
+    "website": "https://qchnyc.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [],
+    "subjectEvidence": [],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "info@qchnyc.org",
+    "contactPhone": "718-592-5757",
+    "evidence": [],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Research Foundation of the City University of New York",
+    "website": "https://www.rfcuny.org/RfWebsite/",
+    "hasK5Programming": false,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [],
+    "subjectEvidence": [],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "questions@rfcuny.org",
+    "contactPhone": "212-417-8300",
+    "evidence": [],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
     "provider": "University Settlement Society of New York",
     "website": "https://www.universitysettlement.org/",
     "hasK5Programming": true,
     "summary": "",
-    "stemTools": [
-      "coding"
+    "stemTools": [],
+    "subjects": [
+      "computer science",
+      "financial literacy",
+      "sports & fitness",
+      "leadership & social-emotional"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "computer science",
+        "quote": "Our programs are for everyone, held in our dance studio, music studio, computer lab, and classrooms."
+      },
+      {
+        "subject": "financial literacy",
+        "quote": "“I got behind on my rent, and University Settlement was there for me, helping me take financial literacy classes."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Gymnasium at 184 A full-sized basketball court on the top floor of our Eldridge Street headquarters."
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "programs where we center children’s voices and choices and support their academic and social-emotional development."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "info@universitysettlement.org",
     "contactPhone": "(212) 453-4500",
@@ -293,13 +675,23 @@
     "website": "https://bronxworks.org/",
     "hasK5Programming": true,
     "summary": "",
-    "stemTools": [
-      "coding"
+    "stemTools": [],
+    "subjects": [
+      "sports & fitness",
+      "health & nutrition"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "sports & fitness",
+        "quote": "Aquatics Participants learn how to swim and use the swimming pool at the BronxWorks Carolyn McLaughlin Community Center."
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "Health Programs seek to change the health landscape of the Bronx by providing health and nutrition education, access to fresh food options, interventions, and advocacy."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "",
     "contactPhone": "800-662-1220",
@@ -308,19 +700,133 @@
     "method": "keyword"
   },
   {
+    "provider": "Coalition for Hispanic Family Services",
+    "website": "https://www.hispanicfamilyservicesny.org/",
+    "hasK5Programming": false,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [
+      "social studies"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "social studies",
+        "quote": "230 School for Civics and the Community 73-10 34th Ave."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "trosario@hispanicfamilyseupportservicesny.org",
+    "contactPhone": "718-497-6090",
+    "evidence": [],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "NIA Community Services Network Inc",
+    "website": "https://www.niabklyn.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [
+      "robotics",
+      "gardening",
+      "animation"
+    ],
+    "subjects": [
+      "gardening",
+      "robotics",
+      "visual arts",
+      "music",
+      "dance & theater",
+      "animation",
+      "literacy & writing",
+      "sports & fitness",
+      "health & nutrition",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "gardening",
+        "quote": "cover various content including our Annual STEM Fair, Science Olympiad Team, hydroponic gardening, robotics, and much more."
+      },
+      {
+        "subject": "robotics",
+        "quote": "content including our Annual STEM Fair, Science Olympiad Team, hydroponic gardening, robotics, and much more."
+      },
+      {
+        "subject": "visual arts",
+        "quote": "Providing programs that include extra time for help with homework, performing and visual arts, physical education, and more enables us to close the opportunity gap that many students"
+      },
+      {
+        "subject": "music",
+        "quote": "Each year, we offer over 220 days of instruction in dance, step, musical theater, chorus, drama, and improv."
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "year, we offer over 220 days of instruction in dance, step, musical theater, chorus, drama, and improv."
+      },
+      {
+        "subject": "animation",
+        "quote": "Performing Arts View fullsize Students participate in drawing, painting, photography, animation, and film-making activities."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "ExpandEd day, and after-school services, featuring enrichment in arts, science, literacy, sports, leadership, and community building."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "day, and after-school services, featuring enrichment in arts, science, literacy, sports, leadership, and community building."
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "Understanding Child Development Behavior, Transitioning to High School, Healthy Nutrition, Internet Safety, and more."
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "Social Emotional Support NIA creates a strong support system that nurtures students' social and emotional"
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "senja@niabklyn.org",
+    "contactPhone": "718.236.5266",
+    "evidence": [
+      "content including our Annual STEM Fair, Science Olympiad Team, hydroponic gardening, robotics, and much more.",
+      "cover various content including our Annual STEM Fair, Science Olympiad Team, hydroponic gardening, robotics, and much more.",
+      "Performing Arts View fullsize Students participate in drawing, painting, photography, animation, and film-making activities."
+    ],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
     "provider": "ST. NICKS ALLIANCE CORP.",
     "website": "https://stnicksalliance.org/",
     "hasK5Programming": true,
     "summary": "",
-    "stemTools": [
-      "coding",
-      "science lab",
-      "gardening"
+    "stemTools": [],
+    "subjects": [
+      "literacy & writing",
+      "sports & fitness",
+      "leadership & social-emotional"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "literacy & writing",
+        "quote": "in a unique experience that combines high-quality youth services with intensive literacy activities."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Literacy STEM Projects Field Trips and Pool Days Visual, Performing and Digital Arts Sports and Recreation Cooking Fashion and More!"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "They will also receive paid work experience, community service experience, and leadership development."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "",
     "contactPhone": "",
@@ -333,15 +839,28 @@
     "website": "https://caswkids.org/",
     "hasK5Programming": true,
     "summary": "",
-    "stemTools": [
-      "coding",
-      "science lab",
-      "engineering"
+    "stemTools": [],
+    "subjects": [
+      "mathematics",
+      "visual arts",
+      "leadership & social-emotional"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "mathematics",
+        "quote": "School and College Prep, Project-Based Activities, Science, Technology, Engineering, and Mathematics (STEM), Creative and Performance Arts, Entrepreneurship, and Youth Councils."
+      },
+      {
+        "subject": "visual arts",
+        "quote": "Inside the SYEP 2026 Bronx Community Art Project The SYEP 2026 Shakespeare Steps mural is complete!..."
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "activities that foster positive youth development, social emotional learning (SEL) and leadership skills are especially beneficial."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "rrss@caswkids.org",
     "contactPhone": "",
@@ -355,34 +874,97 @@
     "hasK5Programming": true,
     "summary": "",
     "stemTools": [
-      "coding",
       "science lab",
       "engineering"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "general science",
+      "engineering",
+      "financial literacy",
+      "visual arts",
+      "dance & theater",
+      "literacy & writing",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "general science",
+        "quote": "STEM Technology Exploration Hands-on science, technology, engineering, and math activities fuel curiosity and expose students to new"
+      },
+      {
+        "subject": "engineering",
+        "quote": "STEM Technology Exploration Hands-on science, technology, engineering, and math activities fuel curiosity and expose students to new possibilities."
+      },
+      {
+        "subject": "financial literacy",
+        "quote": "Services include life skills coaching, medication support, and money management assistance."
+      },
+      {
+        "subject": "visual arts",
+        "quote": "Creative Arts Children explore music, dance, drama, spoken word, and visual arts — developing self-expression and creative confidence."
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "Creative Arts Children explore music, dance, drama, spoken word, and visual arts — developing self-expression and creative confidence."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "Our Approach Academic Enrichment Project-based learning, literacy activities, and homework support help students stay on track with schoolwork and"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "where communities thrive, these programs focus on each student’s academic progress, social-emotional development, physical wellness, and creative self-expression."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "info@phippsny.org",
     "contactPhone": "(212) 243-9090",
+    "evidence": [
+      "STEM Technology Exploration Hands-on science, technology, engineering, and math activities fuel curiosity and expose students to new",
+      "STEM Technology Exploration Hands-on science, technology, engineering, and math activities fuel curiosity and expose students to new possibilities."
+    ],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Brooklyn Chinese-American Association Inc",
+    "website": "https://www.bca.net/eng/home.html",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [
+      "health & nutrition"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "health & nutrition",
+        "quote": "outreach and education services to educate the community about the importance of nutrition and to enable low-income households to purchase the food they need to maintain proper"
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "services@bca.net",
+    "contactPhone": "(718) 438-0008",
     "evidence": [],
     "confidence": "low",
     "method": "keyword"
   },
   {
-    "provider": "Bergen Basin Community Development Corporation",
-    "website": "https://www.bergenbasin.com/",
+    "provider": "Community Association of Progressive Dominicans Inc",
+    "website": "https://acdp.org/",
     "hasK5Programming": true,
     "summary": "",
     "stemTools": [],
     "subjects": [],
     "subjectEvidence": [],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
-    "contactEmail": "",
-    "contactPhone": "718-763-4110",
+    "contactEmail": "ymarasco@acdp.org",
+    "contactPhone": "212.781.5500",
     "evidence": [],
     "confidence": "low",
     "method": "keyword"
@@ -392,13 +974,28 @@
     "website": "https://www.cypresshills.org/",
     "hasK5Programming": true,
     "summary": "",
-    "stemTools": [
-      "science lab"
+    "stemTools": [],
+    "subjects": [
+      "literacy & writing",
+      "sports & fitness",
+      "leadership & social-emotional"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "literacy & writing",
+        "quote": "activities, literacy development, and family-centered support in a safe and welcoming environment."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "programs that support students beyond the classroom through homework help, STEM, arts, sports, leadership activities, and enrichment opportunities for Kindergarten through 8th grade"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "initiative focused on sexual health education, HIV prevention, wellness outreach, and leadership development across East New York."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "",
     "contactPhone": "(718) 647-2800",
@@ -411,14 +1008,18 @@
     "website": "https://hanac.org/",
     "hasK5Programming": false,
     "summary": "",
-    "stemTools": [
-      "coding",
-      "gardening"
+    "stemTools": [],
+    "subjects": [
+      "sports & fitness"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "sports & fitness",
+        "quote": "and North Queensview NORC, including nutrition, health and wellness workshops, fitness and exercise classes, education and recreation services, medical prescription costs, food"
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "HANACPR@goodmanmedia.com",
     "contactPhone": "800-662-1220",
@@ -432,8 +1033,49 @@
     "hasK5Programming": false,
     "summary": "",
     "stemTools": [],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "heritage, ASPIRA empowers youth from all underserved communities through education, leadership development, and community engagement to achieve their full potential."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "",
+    "contactPhone": "",
+    "evidence": [],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Jewish Community Center of Staten Island, Inc.",
+    "website": "https://www.sijcc.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [
+      "visual arts",
+      "sports & fitness",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "visual arts",
+        "quote": "Whether exploring visual arts, hands-on activities, creative learning experiences, or new hobbies, participants are"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "From youth sports and swim lessons to music, arts, and enrichment, there are opportunities for kids to"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "spaces where young people can build confidence, discover new interests, strengthen leadership skills, and form meaningful connections with their peers and mentors."
+      }
+    ],
     "activities": [],
     "costTier": "unknown",
     "hoursText": "",
@@ -461,13 +1103,54 @@
     "method": "keyword"
   },
   {
+    "provider": "Sunnyside Community Services Inc",
+    "website": "https://scsny.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [
+      "chess"
+    ],
+    "subjects": [
+      "chess",
+      "literacy & writing",
+      "sports & fitness",
+      "health & nutrition"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "chess",
+        "quote": "drop-in activities including performing arts and music, athletics, computers, reading, chess, and more."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "In addition to receiving help with homework, students develop literacy, math, and science skills as they complete project-based learning activities such as"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "343 offer opportunities for your family to participate in a broad range of educational, fitness, and cultural activities."
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "Students learn important concepts related to nutrition as they practice preparing healthy meals."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "info@scsny.org",
+    "contactPhone": "718-784-6173",
+    "evidence": [
+      "drop-in activities including performing arts and music, athletics, computers, reading, chess, and more."
+    ],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
     "provider": "The Salvation Army",
     "website": "https://www.salvationarmyusa.org/usa-eastern-territory/greater-new-york/",
     "hasK5Programming": true,
     "summary": "",
-    "stemTools": [
-      "coding"
-    ],
+    "stemTools": [],
     "subjects": [],
     "subjectEvidence": [],
     "activities": [],
@@ -480,23 +1163,125 @@
     "method": "keyword"
   },
   {
+    "provider": "Catholic Charities Community Services, Archdiocese of NY",
+    "website": "https://catholiccharitiesny.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [
+      "financial literacy",
+      "crafts & sewing",
+      "literacy & writing",
+      "sports & fitness",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "financial literacy",
+        "quote": "We work with you to create a budget, set realistic financial goals, and provide financial literacy classes to empower you with the know-how you need to improve your financial situation."
+      },
+      {
+        "subject": "crafts & sewing",
+        "quote": "Our programs offer OSHA approved safety and skills classes in knitting, sewing, and a variety of other occupations."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "meals, health care, education, and family development services that promotes language, literacy, social, and emotional development."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "programs 9,327 youth in dropout prevention programs 4,992 youth in after school, sports, and camp programs Our Programs and Services Adoption Services Our agencies are committed"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "Assistance for Day Laborers We provide educational workshops, leadership training, and opportunities to empower and expand the skill sets of day laborers."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "",
+    "contactPhone": "(888) 744-7900",
+    "evidence": [],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Directions For Our Youth Inc",
+    "website": "https://www.dfoy.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [],
+    "subjectEvidence": [],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "info@dfoy.org",
+    "contactPhone": "(212) 362-4020",
+    "evidence": [],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "El Puente De Williamsburg, Inc.",
+    "website": "https://www.elpuente.org/",
+    "hasK5Programming": false,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "Community Led Action Learn More El Puente has been at the forefront of community leadership development, advocacy and education since its inception."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "info@elpuente.org",
+    "contactPhone": "(718)-387-0404",
+    "evidence": [],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
     "provider": "Henry Street Settlement",
     "website": "https://www.henrystreet.org/",
     "hasK5Programming": true,
     "summary": "",
     "stemTools": [
-      "coding",
-      "science lab",
       "video production"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "filmmaking & video",
+      "sports & fitness",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "filmmaking & video",
+        "quote": "Artists, specialists and volunteers present diverse offerings, including video production, theater, dance, leadership, math clubs, fashion design, rugby, soccer and basketball."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Athletics Community Enrichment Services We provide afterschool and summer sports activities including basketball, baseball, soccer, and football."
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "&#8211; Thurs.), STEM, athletics at BGR, social emotional learning, arts crafts, computers, music, and other community events."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "",
     "contactPhone": "212.766.9200",
-    "evidence": [],
+    "evidence": [
+      "Artists, specialists and volunteers present diverse offerings, including video production, theater, dance, leadership, math clubs, fashion design, rugby, soccer and basketball."
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -505,17 +1290,43 @@
     "website": "https://www.inwoodcommunityservices.org/",
     "hasK5Programming": true,
     "summary": "",
-    "stemTools": [
-      "coding",
-      "gardening"
+    "stemTools": [],
+    "subjects": [
+      "sports & fitness",
+      "leadership & social-emotional"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "sports & fitness",
+        "quote": "selecting the best high school; healthy living;, biking with Bike New York; dance; fitness, and strategies for academic achievement."
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "Themes include: practical principles for successful living; youth leadership skills; selecting the best high school; healthy living;, biking with Bike New York; dance;"
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "cindya@inwoodcs.org",
     "contactPhone": "(212) 942-0043",
+    "evidence": [],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Jacob A Riis Neighborhood Settlement",
+    "website": "https://www.riissettlement.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [],
+    "subjectEvidence": [],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "",
+    "contactPhone": "",
     "evidence": [],
     "confidence": "low",
     "method": "keyword"
@@ -529,16 +1340,62 @@
       "digital art",
       "video production",
       "chess",
-      "gardening"
+      "animation"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "technology & digital media",
+      "chess",
+      "visual arts",
+      "music",
+      "dance & theater",
+      "animation",
+      "filmmaking & video",
+      "sports & fitness"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "technology & digital media",
+        "quote": "edit, and showcase their own audio and video projects, developing valuable skills in digital media and self-expression."
+      },
+      {
+        "subject": "chess",
+        "quote": "lessons and compete in tournaments for activities such as table tennis, billiards, and chess."
+      },
+      {
+        "subject": "visual arts",
+        "quote": "Program offers a comprehensive introduction to various artistic disciplines, including drawing, painting, sculpture, and digital art."
+      },
+      {
+        "subject": "music",
+        "quote": "Sign-up Kips Bay Performing Arts Company Dance, theater, and choir are all a part of our performing arts program."
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "Dance Drama Stay Up to Date Name Email Submit Thanks for subscribing!"
+      },
+      {
+        "subject": "animation",
+        "quote": "They explore various forms of digital art, including graphic design, animation, and video production."
+      },
+      {
+        "subject": "filmmaking & video",
+        "quote": "They explore various forms of digital art, including graphic design, animation, and video production."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Explore our wide variety of activities, sports, work opportunities, and more: ​ &bull; Art &bull; Performing Arts &bull; Sports"
+      }
+    ],
     "activities": [],
     "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "",
     "contactPhone": "",
-    "evidence": [],
+    "evidence": [
+      "to various artistic disciplines, including drawing, painting, sculpture, and digital art.",
+      "They explore various forms of digital art, including graphic design, animation, and video production.",
+      "lessons and compete in tournaments for activities such as table tennis, billiards, and chess."
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -548,17 +1405,91 @@
     "hasK5Programming": true,
     "summary": "",
     "stemTools": [
-      "robotics",
-      "coding",
-      "science lab"
+      "robotics"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "robotics",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "robotics",
+        "quote": "ACTS @ The Eliza , located Manhattan, offers a STEM Robotics lab, Teaching Kitchen, Performance space, sensory room and early education programing."
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "suggests that TMI significantly reduce recidivism while providing skill-building and social emotional support."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "",
     "contactPhone": "",
+    "evidence": [
+      "ACTS @ The Eliza , located Manhattan, offers a STEM Robotics lab, Teaching Kitchen, Performance space, sensory room and early education programing."
+    ],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "The Flatbush Development Corp",
+    "website": "https://www.fdconline.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [
+      "robotics"
+    ],
+    "subjects": [
+      "computer science",
+      "robotics",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "computer science",
+        "quote": "club based enrichment activities for middle school students, and granting access to the computer lab, gym, food pantry, family-oriented events, as well as referral services to the community"
+      },
+      {
+        "subject": "robotics",
+        "quote": "Read more about Glenwood Community Center FDC Youth: Robotics!"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "Positive interactions with educators and students promote social-emotional development and a sense of community that is amplified by civic engagement opportunities."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "",
+    "contactPhone": "718-859-3800",
+    "evidence": [
+      "Read more about Glenwood Community Center FDC Youth: Robotics!"
+    ],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "The Young Women's Christian Association of the City of NY",
+    "website": "https://ywcanyc.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "New York City families through afterschool programs in schools across the boroughs and leadership development for young girls through our Girls Initiatives program."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "info@ywcanyc.org",
+    "contactPhone": "212.755.4500",
     "evidence": [],
     "confidence": "low",
     "method": "keyword"
@@ -570,20 +1501,76 @@
     "summary": "",
     "stemTools": [
       "robotics",
-      "coding",
-      "electronics",
-      "science lab",
-      "engineering",
-      "gardening"
+      "engineering"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "robotics",
+      "engineering",
+      "financial literacy",
+      "visual arts",
+      "music",
+      "dance & theater",
+      "crafts & sewing",
+      "literacy & writing",
+      "sports & fitness",
+      "health & nutrition",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "robotics",
+        "quote": "including the Esperanza Family Night Community Forum, cooking and nutrition classes, a robotics program, music and dance activities, and a spoken-word forum."
+      },
+      {
+        "subject": "engineering",
+        "quote": "We also offered Leadership Development and Science, Technology, Engineering, Art, and Math (STEAM) curricula, encouraging our students to develop key leadership"
+      },
+      {
+        "subject": "financial literacy",
+        "quote": "Our partners include Chase Bank, which provides financial literacy curriculums and workshops for parents; Asphalt Green to assist students with achieving"
+      },
+      {
+        "subject": "visual arts",
+        "quote": "our popular circus arts programming in conjunction with Marquis Studios and an enriching visual arts program."
+      },
+      {
+        "subject": "music",
+        "quote": "In addition, we offer high-quality dance, yoga, Zumba, drumming, creative arts, cooking, improvisational theater, technology, and drama activities during"
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "yoga, Zumba, drumming, creative arts, cooking, improvisational theater, technology, and drama activities during after-school programming."
+      },
+      {
+        "subject": "crafts & sewing",
+        "quote": "and sandwiches, planning trips and parties, calling bingo numbers, and assisting in arts and crafts activities."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "In the summers, we engaged the Rising Stars children in our highly successful literacy-building Theme Teams program—multi-week learning projects organized around a specific"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "In addition, we offer high-quality dance, yoga, Zumba, drumming, creative arts, cooking, improvisational theater, technology, and drama"
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "enrichment activities, including the Esperanza Family Night Community Forum, cooking and nutrition classes, a robotics program, music and dance activities, and a spoken-word forum."
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "We also offered Leadership Development and Science, Technology, Engineering, Art, and Math (STEAM) curricula, encouraging our"
+      }
+    ],
     "activities": [],
     "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "info@unionsettlement.org",
     "contactPhone": "(212) 828-6000",
-    "evidence": [],
+    "evidence": [
+      "including the Esperanza Family Night Community Forum, cooking and nutrition classes, a robotics program, music and dance activities, and a spoken-word forum.",
+      "We also offered Leadership Development and Science, Technology, Engineering, Art, and Math (STEAM) curricula, encouraging our students to develop key leadership"
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -596,7 +1583,7 @@
     "subjects": [],
     "subjectEvidence": [],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "cca@communityalternatives.org",
     "contactPhone": "718-858-9658",
@@ -605,20 +1592,228 @@
     "method": "keyword"
   },
   {
-    "provider": "Italian American Civil Rights League Canarsie Inc",
-    "website": "https://italianamerican.com/",
-    "hasK5Programming": false,
+    "provider": "Federation of Italian-American Organizations of Brooklyn LTD",
+    "website": "https://fiaobrooklyn.org/",
+    "hasK5Programming": true,
     "summary": "",
     "stemTools": [
-      "gardening"
+      "cooking"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "visual arts",
+      "music",
+      "dance & theater",
+      "crafts & sewing",
+      "sports & fitness",
+      "cooking"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "visual arts",
+        "quote": "Join us as we dive deep into the world of art and learn about various mediums such as painting, drawing, sculpting, and more."
+      },
+      {
+        "subject": "music",
+        "quote": "Piano Lessons Piano lessons for kids are a great way to introduce them to music and develop"
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "Drama Production Have you ever been fascinated by the magic of theater production?"
+      },
+      {
+        "subject": "crafts & sewing",
+        "quote": "Drop-In Kids Arts Crafts Our weekly drop-in kids’ arts and crafts classes are designed for kids ages 4-6!"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Brooklyn offers members access to social services, health and wellness programs, swimming, sports, arts and culture."
+      },
+      {
+        "subject": "cooking",
+        "quote": "Our cooking classes are designed to help kids develop fine motor skills and expand culinary creativity for all."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "",
-    "contactPhone": "",
+    "contactPhone": "(718) 259-2828",
+    "evidence": [
+      "Our cooking classes are designed to help kids develop fine motor skills and expand culinary creativity for all."
+    ],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Friends of Crown Heights Educational Centers Inc",
+    "website": "https://fochnyc.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [
+      "robotics",
+      "coding",
+      "engineering"
+    ],
+    "subjects": [
+      "coding",
+      "robotics",
+      "engineering",
+      "visual arts",
+      "literacy & writing",
+      "social studies",
+      "sports & fitness",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "coding",
+        "quote": "offered are robotics, creative writing, music (steel pan), table tennis, computer coding, website design and visual art."
+      },
+      {
+        "subject": "robotics",
+        "quote": "Among the activities offered are robotics, creative writing, music (steel pan), table tennis, computer coding, website design and"
+      },
+      {
+        "subject": "engineering",
+        "quote": "or group projects that stimulate participants’ exploration of Science, Technology, Engineering and Math."
+      },
+      {
+        "subject": "visual arts",
+        "quote": "creative writing, music (steel pan), table tennis, computer coding, website design and visual art."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "learning activities including the visual and performing arts, social studies, literacy, science, social-emotional development, physical education and math."
+      },
+      {
+        "subject": "social studies",
+        "quote": "of age-appropriate learning activities including the visual and performing arts, social studies, literacy, science, social-emotional development, physical education and math."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Activities include organized sports and recreation, field trips to parks, museums, and notable landmarks around the city,"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "activities including the visual and performing arts, social studies, literacy, science, social-emotional development, physical education and math."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "feedback@fochdaycare.org",
+    "contactPhone": "(718) 638-8686",
+    "evidence": [
+      "Among the activities offered are robotics, creative writing, music (steel pan), table tennis, computer coding, website design and",
+      "offered are robotics, creative writing, music (steel pan), table tennis, computer coding, website design and visual art.",
+      "or group projects that stimulate participants’ exploration of Science, Technology, Engineering and Math."
+    ],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Graham Windham",
+    "website": "https://www.graham-windham.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [
+      "sports & fitness",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "sports & fitness",
+        "quote": "volunteering is hearing participants say that they feel better after a [trauma-informed yoga] class."
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "Our advocacy efforts include community leadership development and policy reform."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "email@address.com",
+    "contactPhone": "718-618-5559",
+    "evidence": [],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Neighborhood Initiatives Development Corporation",
+    "website": "https://www.nidcny.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [
+      "literacy & writing",
+      "sports & fitness",
+      "health & nutrition",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "literacy & writing",
+        "quote": "Literacy – strengthening academic skills in reading and other key subjects to ensure kids stay on"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "enrich school experiences, and cover a broad range of competencies, including literacy , sports , leadership , and community service."
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "More Families Helping families create healthy habits and stable environments to allow children and youth to thrive."
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "Our Youth Programming invests Bronx youth through a combination of academic support , social-emotional growth , civic and leadership development , creative enrichment , and life-skills"
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "hello@nidcny.org",
+    "contactPhone": "(718) 231-9800",
+    "evidence": [],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "RiseBoro Community Partnership Inc",
+    "website": "https://riseboro.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [
+      "mathematics",
+      "social studies",
+      "sports & fitness",
+      "health & nutrition"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "mathematics",
+        "quote": "instruction in the following subjects, Language Arts – Reading, Language Arts –Writing, Mathematics, Science and Social Studies."
+      },
+      {
+        "subject": "social studies",
+        "quote": "Instruction is based on the content of the test, which includes Math, Reading, Writing, Social Studies, and Science."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Each center offers a wide variety of physical activities, including Yoga, Zumba, ballroom dance, stretching, Tai Chi, chair aerobics and falls prevention classes"
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "Food and Nutrition The food and nutrition programs at RiseBoro invite our communities to build a vibrant,"
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "",
+    "contactPhone": "(800) 662-1220",
     "evidence": [],
     "confidence": "low",
     "method": "keyword"
@@ -628,13 +1823,33 @@
     "website": "https://edalliance.org/",
     "hasK5Programming": true,
     "summary": "",
-    "stemTools": [
-      "coding"
+    "stemTools": [],
+    "subjects": [
+      "general science",
+      "crafts & sewing",
+      "sports & fitness",
+      "leadership & social-emotional"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "general science",
+        "quote": "children from under-resourced schools discover their own potential through tutoring, science enrichment, counseling, performing arts, sports, and more."
+      },
+      {
+        "subject": "crafts & sewing",
+        "quote": "that awaken curiosity, from building solar-powered cars in science electives to arts and crafts, dance classes, and field trips to places like the Bronx Zoo."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "their own potential through tutoring, science enrichment, counseling, performing arts, sports, and more."
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "Our robust team of social workers ensures that social-emotional learning concepts are present in all aspects of our work and that participants have"
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "info@edalliance.org",
     "contactPhone": "(646) 395-4406",
@@ -660,24 +1875,71 @@
     "method": "keyword"
   },
   {
+    "provider": "Edith & Carl Marks Jewish Community House of Bensonhurst Inc",
+    "website": "https://www.jchb.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "115 Yana Tolmacheva Director of Teen Services and Leadership Development 718-331-6800 Ext."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "",
+    "contactPhone": "718-331-6800",
+    "evidence": [],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
     "provider": "Harlem Dowling-West Side Ctr.For Children & Family Services",
     "website": "https://harlemdowling.org/",
     "hasK5Programming": true,
     "summary": "",
     "stemTools": [
       "robotics",
-      "coding",
-      "science lab",
       "engineering"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "robotics",
+      "engineering",
+      "mathematics",
+      "literacy & writing"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "robotics",
+        "quote": "and STEAM (Science, Technology, Engineering, Arts, & Mathematics) activities such as a robotics."
+      },
+      {
+        "subject": "engineering",
+        "quote": "Programming includes Health & Nutrition, Literacy, and STEAM (Science, Technology, Engineering, Arts, & Mathematics) activities such as a robotics."
+      },
+      {
+        "subject": "mathematics",
+        "quote": "Health & Nutrition, Literacy, and STEAM (Science, Technology, Engineering, Arts, & Mathematics) activities such as a robotics."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "Programming includes Health & Nutrition, Literacy, and STEAM (Science, Technology, Engineering, Arts, & Mathematics) activities such as a"
+      }
+    ],
     "activities": [],
     "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "info@harlemdowling.org",
     "contactPhone": "212-749-3656",
-    "evidence": [],
+    "evidence": [
+      "and STEAM (Science, Technology, Engineering, Arts, & Mathematics) activities such as a robotics.",
+      "Programming includes Health & Nutrition, Literacy, and STEAM (Science, Technology, Engineering, Arts, & Mathematics) activities such as a robotics."
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -687,18 +1949,84 @@
     "hasK5Programming": true,
     "summary": "",
     "stemTools": [
-      "coding",
       "engineering",
-      "video production"
+      "video production",
+      "cooking"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "computer science",
+      "engineering",
+      "mathematics",
+      "visual arts",
+      "dance & theater",
+      "filmmaking & video",
+      "crafts & sewing",
+      "literacy & writing",
+      "sports & fitness",
+      "health & nutrition",
+      "cooking",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "computer science",
+        "quote": "skills in the areas of photography and video production, audio arts, engineering, and computer literacy."
+      },
+      {
+        "subject": "engineering",
+        "quote": "improve participant skills in the areas of photography and video production, audio arts, engineering, and computer literacy."
+      },
+      {
+        "subject": "mathematics",
+        "quote": "that offer opportunities for students in grades K-8 to practice basic literacy and math skills while developing problem solving, teamwork, and critical thinking skills."
+      },
+      {
+        "subject": "visual arts",
+        "quote": "opportunities for everyone in our community to explore their interests in performing and visual arts, both as active participants and new audience members."
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "- Mondays 3pm-6pm Fulton Center - Tuesdays, Wednesdays, Thursdays, Fridays 4pm-7pm Our dance program focuses on various types of dance including hip hop freestyle and choreographed, modern"
+      },
+      {
+        "subject": "filmmaking & video",
+        "quote": "solutions, introduce and improve participant skills in the areas of photography and video production, audio arts, engineering, and computer literacy."
+      },
+      {
+        "subject": "crafts & sewing",
+        "quote": "Activities Include: Yoga Tai chi Painting Zumba Bingo Sewing and more."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "and enrichment activities, including: &bull; Live performances, theater tickets, creative writing, cultural trips throughout NYC and the tri-state area &bull; Crafts, jewelry making,"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Activities Include: Yoga Tai chi Painting Zumba Bingo Sewing and more."
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "Health and Recreation: Designed to promote healthy habits, team sports, nutrition and cooking workshops, along with other fun and engaging movement"
+      },
+      {
+        "subject": "cooking",
+        "quote": "Culinary Arts Thursdays 4pm-7pm Our culinary arts program provides basic cooking techniques and"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "fosters independence in children, promoting the development of school readiness and social-emotional skills."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "newsletter@hudsonguild.org",
     "contactPhone": "(212) 760-9800",
-    "evidence": [],
+    "evidence": [
+      "improve participant skills in the areas of photography and video production, audio arts, engineering, and computer literacy.",
+      "solutions, introduce and improve participant skills in the areas of photography and video production, audio arts, engineering, and computer literacy.",
+      "Culinary Arts Thursdays 4pm-7pm Our culinary arts program provides basic cooking techniques and"
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -707,11 +2035,21 @@
     "website": "https://www.madisonsquare.org/",
     "hasK5Programming": false,
     "summary": "",
-    "stemTools": [
-      "science lab"
+    "stemTools": [],
+    "subjects": [
+      "music",
+      "sports & fitness"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "music",
+        "quote": "Learn More Madison Makes Music From recording original songs to learning violin and attending music classes, members are discovering new ways to express themselves"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Across our Clubhouses, members are diving into hands-on STEM projects, creative arts, sports, field trips, and other exciting activities that spark curiosity, build confidence, and"
+      }
+    ],
     "activities": [],
     "costTier": "unknown",
     "hoursText": "",
@@ -726,11 +2064,21 @@
     "website": "https://www.maspethtownhall.org/",
     "hasK5Programming": true,
     "summary": "",
-    "stemTools": [
-      "coding"
+    "stemTools": [],
+    "subjects": [
+      "visual arts",
+      "sports & fitness"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "visual arts",
+        "quote": "We will be painting a Fall Vase."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Learn More martial arts Soo Bahk Do is a style of martial arts that strenghtens physical stamina, flexibility,"
+      }
+    ],
     "activities": [],
     "costTier": "unknown",
     "hoursText": "",
@@ -746,17 +2094,35 @@
     "hasK5Programming": true,
     "summary": "",
     "stemTools": [
-      "coding",
       "engineering"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "engineering",
+      "dance & theater",
+      "sports & fitness"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "engineering",
+        "quote": "swim, free swim, boating, fishing, art, drama, dance, fitness, Native American culture, engineering, orienteering, challenge and adventure, music, pottery and much more!"
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "We offer instructional swim, free swim, boating, fishing, art, drama, dance, fitness, Native American culture, engineering, orienteering, challenge and"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "We offer instructional swim, free swim, boating, fishing, art, drama, dance, fitness, Native American culture, engineering, orienteering, challenge and adventure, music,"
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "",
     "contactPhone": "718-882-4000",
-    "evidence": [],
+    "evidence": [
+      "swim, free swim, boating, fishing, art, drama, dance, fitness, Native American culture, engineering, orienteering, challenge and adventure, music, pottery and much more!"
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -766,19 +2132,36 @@
     "hasK5Programming": true,
     "summary": "",
     "stemTools": [
-      "robotics",
-      "coding",
       "science lab",
       "engineering"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "general science",
+      "engineering",
+      "social studies"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "general science",
+        "quote": "STEM Dive into hands-on science, technology, engineering, and math projects that prepare you for the future."
+      },
+      {
+        "subject": "engineering",
+        "quote": "STEM Dive into hands-on science, technology, engineering, and math projects that prepare you for the future."
+      },
+      {
+        "subject": "social studies",
+        "quote": "Updates RYC Phone + Address --> --> Empowering youth through education, music, STEM and civics programming."
+      }
+    ],
     "activities": [],
     "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "",
     "contactPhone": "(718) 450-3466",
-    "evidence": [],
+    "evidence": [
+      "STEM Dive into hands-on science, technology, engineering, and math projects that prepare you for the future."
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -789,17 +2172,68 @@
     "summary": "",
     "stemTools": [
       "coding",
-      "science lab",
-      "engineering"
+      "engineering",
+      "cooking"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "coding",
+      "engineering",
+      "financial literacy",
+      "visual arts",
+      "dance & theater",
+      "literacy & writing",
+      "sports & fitness",
+      "cooking",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "coding",
+        "quote": "imagination Martial Arts and Sports Physical activities to promote fitness and teamwork Coding Introduction to coding and technology Community Building Cheers, group games, and"
+      },
+      {
+        "subject": "engineering",
+        "quote": "and DIY projects Cooking Interactive cooking sessions to develop culinary skills Engineering / Makers Instruction Hands-on STEAM activities RTS Leaders Role Models Our dedicated team"
+      },
+      {
+        "subject": "financial literacy",
+        "quote": "Financial Literacy We help students build a strong foundation for financial wellness through practical"
+      },
+      {
+        "subject": "visual arts",
+        "quote": "mindset are motivated, tackling challenges with enthusiasm, learning from setbacks, and drawing inspiration from others&#x27; success."
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "Creative Arts Students explore their creativity through painting, crafts, music, drama, and other hands-on arts activities."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "Team and Community Building Strengthening social skills and community connections Literacy and Academic Assistance Support in reading and writing Accumulating Events and Showcases"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "to reinforce classroom learning Arts Crafts Creative projects to inspire imagination Martial Arts and Sports Physical activities to promote fitness and teamwork Coding Introduction to"
+      },
+      {
+        "subject": "cooking",
+        "quote": "Painting, sculpting, and DIY projects Cooking Interactive cooking sessions to develop culinary skills Engineering / Makers Instruction Hands-on STEAM activities RTS Leaders Role Models"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "environment that fosters community, offers enrichment activities, and builds essential social-emotional (SEL) skills."
+      }
+    ],
     "activities": [],
     "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "davidfilpo@roadstosuccess.org",
     "contactPhone": "",
-    "evidence": [],
+    "evidence": [
+      "imagination Martial Arts and Sports Physical activities to promote fitness and teamwork Coding Introduction to coding and technology Community Building Cheers, group games, and",
+      "and DIY projects Cooking Interactive cooking sessions to develop culinary skills Engineering / Makers Instruction Hands-on STEAM activities RTS Leaders Role Models Our dedicated team",
+      "Painting, sculpting, and DIY projects Cooking Interactive cooking sessions to develop culinary skills Engineering / Makers Instruction Hands-on STEAM activities RTS Leaders Role Models"
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -809,17 +2243,45 @@
     "hasK5Programming": true,
     "summary": "",
     "stemTools": [
-      "science lab",
       "digital art"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "technology & digital media",
+      "visual arts",
+      "dance & theater",
+      "literacy & writing",
+      "sports & fitness"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "technology & digital media",
+        "quote": "theme-based literacy and STEM curriculum, field trips, visual arts, performing arts, and digital media."
+      },
+      {
+        "subject": "visual arts",
+        "quote": "Activities include theme-based literacy and STEM curriculum, field trips, visual arts, performing arts, and digital media."
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "Students experience visual and theater arts, music, technology and athletics enrichment to support their development as active,"
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "Elementary after-school services Reading, arts and science School Settlement emphasizes literacy and reading at its after-school centers and summer camps."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Free after-school and summer camp services, including a soccer team, for children in grades K-5, primarily from PS 132."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "",
     "contactPhone": "646-988-3299",
-    "evidence": [],
+    "evidence": [
+      "theme-based literacy and STEM curriculum, field trips, visual arts, performing arts, and digital media."
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -832,7 +2294,7 @@
     "subjects": [],
     "subjectEvidence": [],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "info@sesameflyers.org",
     "contactPhone": "(718) 693 0500",
@@ -841,13 +2303,126 @@
     "method": "keyword"
   },
   {
+    "provider": "South Asian Youth Action SAYA Inc",
+    "website": "https://www.saya.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [
+      "robotics",
+      "coding",
+      "engineering"
+    ],
+    "subjects": [
+      "coding",
+      "robotics",
+      "engineering",
+      "visual arts",
+      "literacy & writing",
+      "sports & fitness",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "coding",
+        "quote": "takes center stage with yoga and meditation sessions, while STEM enthusiasts delve into coding, robotics, and architectural modeling."
+      },
+      {
+        "subject": "robotics",
+        "quote": "stage with yoga and meditation sessions, while STEM enthusiasts delve into coding, robotics, and architectural modeling."
+      },
+      {
+        "subject": "engineering",
+        "quote": "Narissa (High School for Construction Trades, Engineering, and Architecture) SAYA programming has helped me step out of my comfort zone and allowed"
+      },
+      {
+        "subject": "visual arts",
+        "quote": "Sports, Arts, and STEM From visual arts and dance to basketball and volleyball, SAYA youth thrive in various forms of expression"
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "including activities such as painting, storytelling, geography, STEAM, music, literacy, and a range of sports."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Sports, Arts, and STEM From visual arts and dance to basketball and volleyball, SAYA youth"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "also places a strong emphasis on identity development, helping youth build essential leadership skills while fostering connections with peers."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "saya@saya.org",
+    "contactPhone": "(718) 651-3484",
+    "evidence": [
+      "stage with yoga and meditation sessions, while STEM enthusiasts delve into coding, robotics, and architectural modeling.",
+      "takes center stage with yoga and meditation sessions, while STEM enthusiasts delve into coding, robotics, and architectural modeling.",
+      "Narissa (High School for Construction Trades, Engineering, and Architecture) SAYA programming has helped me step out of my comfort zone and allowed"
+    ],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Stanley M Isaacs Neighborhood Center Inc",
+    "website": "https://isaacscenter.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [
+      "engineering"
+    ],
+    "subjects": [
+      "engineering",
+      "mathematics",
+      "literacy & writing",
+      "social studies",
+      "sports & fitness",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "engineering",
+        "quote": "School Age Children and Adolescents Our programs are focused on science, technology, engineering, arts, and math (STEAM) learning that are grade-level appropriate, aligned with Common"
+      },
+      {
+        "subject": "mathematics",
+        "quote": "variety of enrichment activities including STEM (Science, Technology, Engineering and Mathematics), performing arts, project-based learning, arts/crafts and recreation."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "that are grade-level appropriate, aligned with Common Core standards, and incorporate literacy, civics, and fitness."
+      },
+      {
+        "subject": "social studies",
+        "quote": "grade-level appropriate, aligned with Common Core standards, and incorporate literacy, civics, and fitness."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Case Management Our team of highly qualified nurses, social workers, and health and fitness experts provides services to support health and wellbeing, as well as to assist with"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "from low-income and working poor families, who are at high risk of poor educational and social-emotional outcomes, and chronic health issues like asthma and obesity."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "info@isaacscenter.org",
+    "contactPhone": "212-360-7620",
+    "evidence": [
+      "School Age Children and Adolescents Our programs are focused on science, technology, engineering, arts, and math (STEAM) learning that are grade-level appropriate, aligned with Common"
+    ],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
     "provider": "Team First, Inc.",
     "website": "https://teamfirst.com/",
     "hasK5Programming": false,
     "summary": "",
-    "stemTools": [
-      "science lab"
-    ],
+    "stemTools": [],
     "subjects": [],
     "subjectEvidence": [],
     "activities": [],
@@ -865,34 +2440,123 @@
     "hasK5Programming": true,
     "summary": "",
     "stemTools": [
-      "coding",
       "science lab"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "general science",
+      "crafts & sewing",
+      "sports & fitness",
+      "health & nutrition",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "general science",
+        "quote": "They enjoy all sorts of games, dive into science experiments, crack puzzles, build teamwork, unleash their artistic side, engage in play and physical"
+      },
+      {
+        "subject": "crafts & sewing",
+        "quote": "activities, and sports LUNCH Food and Friendship EARLY AFTERNOON Creativity time with arts and crafts, music and movement LATE AFTERNOON Afternoon adventures with play, and Social Emotional"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Learn more about swimming and sports programs at the Northeast Bronx Y this summer &gt; Brooklyn Bedford-Stuyvesant"
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "Fun health, fitness, and nutrition know-how to keep you energized!"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "Aid, Risk Management, Positive Youth Development Principles, YMCA Camp Standards, Social Emotional Learning, Diversity and Inclusion Practices, Camp Games and Songs."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "newamericans@ymcanyc.org",
     "contactPhone": "",
-    "evidence": [],
+    "evidence": [
+      "They enjoy all sorts of games, dive into science experiments, crack puzzles, build teamwork, unleash their artistic side, engage in play and physical"
+    ],
     "confidence": "low",
     "method": "keyword"
   },
   {
     "provider": "82nd Street Academics",
-    "website": "https://82ndstreet.org/",
-    "hasK5Programming": false,
+    "website": "https://www.82ndst.com/",
+    "hasK5Programming": true,
     "summary": "",
-    "stemTools": [],
-    "subjects": [],
-    "subjectEvidence": [],
+    "stemTools": [
+      "science lab"
+    ],
+    "subjects": [
+      "general science",
+      "sports & fitness"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "general science",
+        "quote": "Club Themes: Multicultural Cooking Classes, Cultural Dance, Science Experiments, Studio Art."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Enriching Activities: A variety of engaging activities, including arts, sports, and STEM projects, designed to spark curiosity and creativity."
+      }
+    ],
     "activities": [],
     "costTier": "unknown",
     "hoursText": "",
-    "contactEmail": "info@82ndstreet.org",
-    "contactPhone": "(718) 335-9421",
-    "evidence": [],
+    "contactEmail": "host@82ndst.com",
+    "contactPhone": "718-457-0429",
+    "evidence": [
+      "Club Themes: Multicultural Cooking Classes, Cultural Dance, Science Experiments, Studio Art."
+    ],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Boys & Girls Club of Metro Queens, Inc",
+    "website": "https://www.metroqueens.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [
+      "engineering",
+      "animation"
+    ],
+    "subjects": [
+      "engineering",
+      "animation",
+      "literacy & writing",
+      "sports & fitness"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "engineering",
+        "quote": "creative STEM programming to engage youth and spark an interest in science, technology, engineering, and math."
+      },
+      {
+        "subject": "animation",
+        "quote": "[ { \"shape\": \"underlineCurve\", \"isFront\": false, \"isAnimationEnabled\": true, \"animation\": \"draw\", \"duration\": 0.5, \"direction\": \"right\", \"color\": { \"type\": \"THEME_COLOR\" },"
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "LITERACY Our Literacy programming is pivotal in fostering growth by equipping young people with"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "From academic support and creative arts to sports, leadership, and community service, every Club member discovers their potential and"
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "",
+    "contactPhone": "718-441-6050",
+    "evidence": [
+      "creative STEM programming to engage youth and spark an interest in science, technology, engineering, and math.",
+      "[ { \"shape\": \"underlineCurve\", \"isFront\": false, \"isAnimationEnabled\": true, \"animation\": \"draw\", \"duration\": 0.5, \"direction\": \"right\", \"color\": { \"type\": \"THEME_COLOR\" },"
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -902,16 +2566,35 @@
     "hasK5Programming": true,
     "summary": "",
     "stemTools": [
-      "science lab"
+      "cooking"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "chemistry",
+      "maker & building",
+      "cooking"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "chemistry",
+        "quote": "This month in Nature&#8217;s Engineers, explore chemistry through your senses and discover some surprising reactions."
+      },
+      {
+        "subject": "maker & building",
+        "quote": "You Go Plan Your Visit Know Before You Go Exhibits Programs ColorLab Art Studio STEM Makerspace Café Admissions How do I purchase tickets for Brooklyn Children’s Museum?"
+      },
+      {
+        "subject": "cooking",
+        "quote": "LEARN MORE ABOUT CRISP CRISP (Culinary Residency Incubator Support Program) supports culinary vendors, organizations and entrepreneurs with residencies, workshops, and a platform at"
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "hello@brooklynkids.org",
     "contactPhone": "(718) 735-4400",
-    "evidence": [],
+    "evidence": [
+      "LEARN MORE ABOUT CRISP CRISP (Culinary Residency Incubator Support Program) supports culinary vendors, organizations and entrepreneurs with residencies, workshops, and a platform at"
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -921,18 +2604,25 @@
     "hasK5Programming": false,
     "summary": "",
     "stemTools": [
-      "coding",
-      "electronics",
-      "science lab"
+      "electronics"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "electronics"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "electronics",
+        "quote": "of Information Act (FOIA) claims, as well as Petitions for Review before the Second Circuit Court of Appeals."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "info@bds.org",
     "contactPhone": "(718) 254-0700",
-    "evidence": [],
+    "evidence": [
+      "of Information Act (FOIA) claims, as well as Petitions for Review before the Second Circuit Court of Appeals."
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -941,13 +2631,11 @@
     "website": "https://www.casitamaria.org/",
     "hasK5Programming": true,
     "summary": "",
-    "stemTools": [
-      "coding"
-    ],
+    "stemTools": [],
     "subjects": [],
     "subjectEvidence": [],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "ncordero@casitamaria.org",
     "contactPhone": "(718) 589-2230",
@@ -960,14 +2648,33 @@
     "website": "https://www.cpnyc.org/",
     "hasK5Programming": true,
     "summary": "",
-    "stemTools": [
-      "coding",
-      "science lab"
+    "stemTools": [],
+    "subjects": [
+      "financial literacy",
+      "literacy & writing",
+      "sports & fitness",
+      "health & nutrition"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "financial literacy",
+        "quote": "arts and culture to workshops tailored to developing skills such as professionalism, financial literacy, advocacy, organization, civic engagement as well as de-escalation and conflict"
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "programming centered on therapeutic services, educational services (STEM and STEM literacy), physical education, art, leadership, and recreational activities."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Theme park visits that turn into core memories, basketball games, and the kind of joy that reminds children that they deserve to simply be kids."
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "2PM-6PM 323 STUDENTS ACCESSIBLE NUTRITION Scholars receive a hot meal, fresh fruit and snack every day AS Top About AS Features 2"
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "info@cpnyc.org",
     "contactPhone": "718.483.9290",
@@ -983,14 +2690,48 @@
     "stemTools": [
       "coding"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "coding",
+      "mathematics",
+      "music",
+      "literacy & writing",
+      "sports & fitness",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "coding",
+        "quote": "insurances and managed care and experience with Article 31 mental health billing and coding."
+      },
+      {
+        "subject": "mathematics",
+        "quote": "Department employs evidence-based curricula to strengthen children’s reading and math skills at all grade levels."
+      },
+      {
+        "subject": "music",
+        "quote": "Guitar, choir, and Samba drumming groups are offered for grades K through 12."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "We provide in-school and afterschool literacy and educational enrichment programs at all of our sites."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "FYI bridges the opportunity gap for low-income students through arts, music, sports, recreation, and social-emotional learning activities across all age groups."
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "year-round programs strengthen children’s academic skills, support mental health and social-emotional wellness, and address youth needs from a whole-family approach."
+      }
+    ],
     "activities": [],
     "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "jroman@freshyouth.org",
     "contactPhone": "(212) 781-1113",
-    "evidence": [],
+    "evidence": [
+      "insurances and managed care and experience with Article 31 mental health billing and coding."
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -1001,17 +2742,46 @@
     "summary": "",
     "stemTools": [
       "coding",
-      "science lab",
       "engineering"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "coding",
+      "engineering",
+      "music",
+      "sports & fitness",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "coding",
+        "quote": "These are some of the activities offered year-round: art/crafts chorus coding dance games sports storytelling high school access middle school access Registration for"
+      },
+      {
+        "subject": "engineering",
+        "quote": "Activities range from sports and arts to science, technology, engineering, and math (STEM) activities."
+      },
+      {
+        "subject": "music",
+        "quote": "These are some of the activities offered year-round: art/crafts chorus coding dance games sports storytelling high school access middle school access"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "are some of the activities offered year-round: art/crafts chorus coding dance games sports storytelling high school access middle school access Registration for the 2026-2027"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "The program supports social-emotional growth through group activities and theme-based projects."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "LSNCAFTERSCHOOL@GMAIL.COM",
     "contactPhone": "212-873-6600",
-    "evidence": [],
+    "evidence": [
+      "These are some of the activities offered year-round: art/crafts chorus coding dance games sports storytelling high school access middle school access Registration for",
+      "Activities range from sports and arts to science, technology, engineering, and math (STEM) activities."
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -1020,14 +2790,56 @@
     "website": "https://hcz.org/",
     "hasK5Programming": true,
     "summary": "",
-    "stemTools": [
-      "robotics",
-      "coding",
-      "science lab",
-      "engineering"
+    "stemTools": [],
+    "subjects": [
+      "technology & digital media",
+      "mathematics",
+      "music",
+      "crafts & sewing",
+      "literacy & writing",
+      "social studies",
+      "sports & fitness",
+      "health & nutrition",
+      "leadership & social-emotional"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "technology & digital media",
+        "quote": "In Countee Cullen High School Program For students interested in broadcasting or media arts, look no further than Countee Cullen."
+      },
+      {
+        "subject": "mathematics",
+        "quote": "techniques, and developmentally appropriate activities to foster early literacy and math skills."
+      },
+      {
+        "subject": "music",
+        "quote": "A Cut Above Offerings Personal Social Development Workshops in dance, music production, vocal music, STEAM, athletics, literature, and entrepreneurship Community service"
+      },
+      {
+        "subject": "crafts & sewing",
+        "quote": "Activities include singing, arts and crafts, storytime, and learning social skills."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "discipline techniques, and developmentally appropriate activities to foster early literacy and math skills."
+      },
+      {
+        "subject": "social studies",
+        "quote": "Our services include: Targeted academic supports Enrichment activities in STEM, civics, and art Health and wellness workshops for students and families Real-world relevant"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Health and Wellness: Scholars and their families can take fitness and nutrition courses and health educators provide individual tailored wellness learning."
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "Health and Wellness: Scholars and their families can take fitness and nutrition courses and health educators provide individual tailored wellness learning."
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "retreats in New York and New Jersey Support for transitioning to middle and high school Character Development workshops Trips Academic Support Homework assistance from our Academic Support Unit"
+      }
+    ],
     "activities": [],
     "costTier": "unknown",
     "hoursText": "",
@@ -1038,23 +2850,100 @@
     "method": "keyword"
   },
   {
+    "provider": "Homes for the Homeless Inc",
+    "website": "https://www.hfhnyc.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [
+      "cooking"
+    ],
+    "subjects": [
+      "crafts & sewing",
+      "literacy & writing",
+      "sports & fitness",
+      "cooking"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "crafts & sewing",
+        "quote": "to offer the quintessential camp experience, our program balances structured sports, arts and crafts, and other specialized activities with exciting weekly field trips that encourage"
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "day includes breakfast, hot lunch, and snacks, along with activities that support early literacy, hands-on learning, creativity, and active play."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Afterschool provides children, ages 5–16, with homework help, enrichment in STEAM, sports, and leadership, plus field trips tailored to their interests—all within a setting that"
+      },
+      {
+        "subject": "cooking",
+        "quote": "the children, families, and volunteers are doing in everything from afterschool to our Culinary Center."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "Contact@HFHnyc.org",
+    "contactPhone": "(212) 529-5252",
+    "evidence": [
+      "the children, families, and volunteers are doing in everything from afterschool to our Culinary Center."
+    ],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
     "provider": "Imani House, Inc.",
     "website": "https://www.imanihouse.org/",
     "hasK5Programming": true,
     "summary": "",
-    "stemTools": [
-      "coding",
-      "science lab",
-      "chess",
-      "math enrichment"
+    "stemTools": [],
+    "subjects": [
+      "music",
+      "dance & theater",
+      "crafts & sewing",
+      "literacy & writing"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "music",
+        "quote": "Brooklyn, NY Afterschool Program Steel Pan Drumming Summer Camp Fun!!"
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "Program Tutor & Student Afterschool Program African Drumming Class Afterschool Program Drama Performance Summer Camp Fun!!"
+      },
+      {
+        "subject": "crafts & sewing",
+        "quote": "closing holidays), karate, archery, several dance disciplines, drama, creative writing, arts and crafts and much more."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "summer and school closing holidays), karate, archery, several dance disciplines, drama, creative writing, arts and crafts and much more."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "",
     "contactPhone": "(718) 638-2059",
+    "evidence": [],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Jewish Institute of Queens",
+    "website": "https://jiq.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [],
+    "subjectEvidence": [],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "info@jiq.org",
+    "contactPhone": "718-426-9369",
     "evidence": [],
     "confidence": "low",
     "method": "keyword"
@@ -1064,13 +2953,18 @@
     "website": "https://gaycenter.org/",
     "hasK5Programming": false,
     "summary": "",
-    "stemTools": [
-      "coding"
+    "stemTools": [],
+    "subjects": [
+      "visual arts"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjectEvidence": [
+      {
+        "subject": "visual arts",
+        "quote": "External Groups --> The LGBT+ Male Figurative Drawing Group 11:00 a.m."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "",
     "contactPhone": "212.620.7310",
@@ -1084,14 +2978,197 @@
     "hasK5Programming": true,
     "summary": "",
     "stemTools": [],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "Passion was eager to bring Morningside’s work in restorative practices (RP), equity and social emotional learning (SEL) into the schools she works with."
+      }
+    ],
     "activities": [],
     "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "",
     "contactPhone": "",
     "evidence": [],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "New York Center for Interpersonal Development Inc",
+    "website": "https://nycid.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [
+      "sports & fitness",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "sports & fitness",
+        "quote": "to each school’s wants and needs, activities can include Academic Prep Classes, Sports Clubs, Social and Arts Enrichment; can be provided in Elementary, Middle, and High"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "Now Search for: Home Charles Di Bartolo 2021-08-15T11:30:22-04:00 Youth Development and Social-Emotional Learning We focus on social emotional leaning and Trauma informed care, as we use our"
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "",
+    "contactPhone": "(718) 815-4557",
+    "evidence": [],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Northside Center For Child Development, Inc.",
+    "website": "https://www.northsidecenter.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [
+      "robotics",
+      "lego",
+      "coding",
+      "chess"
+    ],
+    "subjects": [
+      "coding",
+      "robotics",
+      "maker & building",
+      "mathematics",
+      "chess",
+      "literacy & writing",
+      "sports & fitness"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "coding",
+        "quote": "All students learn to code, build websites and use Scholastic Keys, with children’s versions of Microsoft Office :"
+      },
+      {
+        "subject": "robotics",
+        "quote": "For the second year, the Center is offering LEGO WeDo Robotics , an interactive, hands-on program for primary school students, ages seven to 11."
+      },
+      {
+        "subject": "maker & building",
+        "quote": "For the second year, the Center is offering LEGO WeDo Robotics , an interactive, hands-on program for primary school students, ages seven"
+      },
+      {
+        "subject": "mathematics",
+        "quote": "Barnes and Noble, The New York Aquarium at Coney Island and The National Museum of Mathematics."
+      },
+      {
+        "subject": "chess",
+        "quote": "The Library is also home to: The Northside Chess Program , which offers children the opportunity to learn and play chess recreationally"
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "where developing and special needs children can improve in their cognitive, social, literacy and physical development."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "designed to ensure the development of motor skills, appropriate socialization, sports skills, and fun."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "rugarcia@northsidecenter.org",
+    "contactPhone": "(212) 426-3400",
+    "evidence": [
+      "For the second year, the Center is offering LEGO WeDo Robotics , an interactive, hands-on program for primary school students, ages seven to 11.",
+      "For the second year, the Center is offering LEGO WeDo Robotics , an interactive, hands-on program for primary school students, ages seven",
+      "All students learn to code, build websites and use Scholastic Keys, with children’s versions of Microsoft Office :",
+      "The Library is also home to: The Northside Chess Program , which offers children the opportunity to learn and play chess recreationally"
+    ],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "OPUS Dance Theatre and Community Services Inc",
+    "website": "https://www.opusdancetheatrenyc.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [
+      "robotics",
+      "coding",
+      "engineering",
+      "digital art",
+      "chess",
+      "animation"
+    ],
+    "subjects": [
+      "coding",
+      "robotics",
+      "technology & digital media",
+      "engineering",
+      "chess",
+      "music",
+      "dance & theater",
+      "animation",
+      "literacy & writing",
+      "sports & fitness"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "coding",
+        "quote": "• Flight Simulation • Aerodynamics Basics • Robotics • Coding Programming • STEM Projects Animation Media Arts Bridging art and technology."
+      },
+      {
+        "subject": "robotics",
+        "quote": "Merging aviation, robotics, and team sports, Drone Soccer challenges students to build, program, and pilot drones in"
+      },
+      {
+        "subject": "technology & digital media",
+        "quote": "• Aerodynamics Basics • Robotics • Coding Programming • STEM Projects Animation Media Arts Bridging art and technology."
+      },
+      {
+        "subject": "engineering",
+        "quote": "• Drone Piloting • Team Strategy • Drone Maintenance • Competitive Matches • Robotics Engineering Aviation STEM Taking learning to new heights."
+      },
+      {
+        "subject": "chess",
+        "quote": "in dance, music, drama, creative communication, martial arts, animation, aviation, chess, and entrepreneurship, Opus equips young people with both artistic discipline and"
+      },
+      {
+        "subject": "music",
+        "quote": "Our music program focuses on percussion, piano, and music theory, with a special emphasis on African"
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "Through multi-disciplinary programs in dance, music, drama, creative communication, martial arts, animation, aviation, chess, and entrepreneurship,"
+      },
+      {
+        "subject": "animation",
+        "quote": "Rental Events Contact Donate Harlem’s Creative Education Hub From dance and music to animation, aviation, and STEM, Opus is where youth and professionals come to learn, create, and"
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "Vocal-Creative Communication An intensive creative writing elective, aligned with the NYS ELA standards, which provides students with a forum to"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Through multi-disciplinary programs in dance, music, drama, creative communication, martial arts, animation, aviation, chess, and entrepreneurship, Opus equips young people with both"
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "jgrant@opusdancetheatrenyc.org",
+    "contactPhone": "",
+    "evidence": [
+      "Merging aviation, robotics, and team sports, Drone Soccer challenges students to build, program, and pilot drones in",
+      "• Flight Simulation • Aerodynamics Basics • Robotics • Coding Programming • STEM Projects Animation Media Arts Bridging art and technology.",
+      "• Drone Piloting • Team Strategy • Drone Maintenance • Competitive Matches • Robotics Engineering Aviation STEM Taking learning to new heights.",
+      "• 2d 3D Animation • Digital Storytelling • Character Design • Video Editing • Graphic Design Music Drums Exploring the rhythm of life.",
+      "in dance, music, drama, creative communication, martial arts, animation, aviation, chess, and entrepreneurship, Opus equips young people with both artistic discipline and",
+      "Rental Events Contact Donate Harlem’s Creative Education Hub From dance and music to animation, aviation, and STEM, Opus is where youth and professionals come to learn, create, and"
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -1101,25 +3178,81 @@
     "hasK5Programming": true,
     "summary": "",
     "stemTools": [
-      "coding",
-      "science lab",
       "engineering"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "engineering",
+      "literacy & writing",
+      "social studies",
+      "health & nutrition",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "engineering",
+        "quote": "in Industrial Engineering from Columbia University and an MBA from the Fuqua School of Business at Duke University."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "services organizations, including Education Through Music, Community Service Society, Literacy Inc., Youth Communications, and Women in Need (WIN)."
+      },
+      {
+        "subject": "social studies",
+        "quote": "of National Growth, Site Director, and Program Manager, and taught middle school ELA and Social Studies in Boston Public Schools."
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "from North Carolina Central University and a master&#8217;s degree in applied nutrition from Northeastern University."
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "He is active in the ongoing work of leadership development and is an alumnus of the American Express Leadership Academy, 2015; member of the Forbes"
+      }
+    ],
     "activities": [],
     "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "info@partnershipwithchildren.org",
     "contactPhone": "212-689-9500",
+    "evidence": [
+      "in Industrial Engineering from Columbia University and an MBA from the Fuqua School of Business at Duke University."
+    ],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Shorefront YM-YWHA of Brighton-Manhattan Beach, Inc",
+    "website": "https://www.shorefronty.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [
+      "crafts & sewing",
+      "sports & fitness"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "crafts & sewing",
+        "quote": "school bus transportation from local schools hot kosher dinner homework assistance arts & crafts, science swimming, sports, & outdoor activities Monday to Friday, pick-up at school"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "from local schools hot kosher dinner homework assistance arts & crafts, science swimming, sports, & outdoor activities Monday to Friday, pick-up at school dismissal time."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "info@shorefronty.org",
+    "contactPhone": "718-646-1444",
     "evidence": [],
     "confidence": "low",
     "method": "keyword"
   },
   {
-    "provider": "Sunset Park Health Council Inc",
-    "website": "https://www.sunsetpark.org/",
-    "hasK5Programming": false,
+    "provider": "Simpson Street Development Association Inc",
+    "website": "https://sisda.org/",
+    "hasK5Programming": true,
     "summary": "",
     "stemTools": [],
     "subjects": [],
@@ -1127,9 +3260,99 @@
     "activities": [],
     "costTier": "unknown",
     "hoursText": "",
-    "contactEmail": "",
-    "contactPhone": "",
+    "contactEmail": "beaconhr@sisda.org",
+    "contactPhone": "(718) 589-1510",
     "evidence": [],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Southeast Bronx Neighborhood Centers Inc",
+    "website": "https://sebnc.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [
+      "engineering",
+      "gardening",
+      "cooking"
+    ],
+    "subjects": [
+      "gardening",
+      "computer science",
+      "crafts & sewing",
+      "sports & fitness"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "gardening",
+        "quote": "SEBNC Community Garden Located on the corner of Prospect Avenue East 168th Street, Bronx, NY 10459."
+      },
+      {
+        "subject": "computer science",
+        "quote": "middle, and high school students, offering services that include academic support, computer literacy, leadership and personal development, and community activities."
+      },
+      {
+        "subject": "crafts & sewing",
+        "quote": "trips such as movies and bowling, dining out, special events, community service, and arts and crafts."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Spivey\" is a high school junior with a B-plus average and is the captain of the basketball team, the first junior in his school to be so honored."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "info@sebnc.org",
+    "contactPhone": "718-542-2727",
+    "evidence": [
+      "STEM Activities: Interactive science, technology, engineering, and math projects stimulate curiosity and critical thinking.",
+      "SEBNC Community Garden Located on the corner of Prospect Avenue East 168th Street, Bronx, NY 10459.",
+      "Cooking Adventures: Fun and interactive cooking sessions that promote healthy eating and culinary skills."
+    ],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "The Door-A Center of Alternatives Inc",
+    "website": "https://www.door.org/",
+    "hasK5Programming": false,
+    "summary": "",
+    "stemTools": [
+      "cooking"
+    ],
+    "subjects": [
+      "sports & fitness",
+      "health & nutrition",
+      "cooking",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "sports & fitness",
+        "quote": "Primary Care Services —checkups; physical exams for work, sports, or school; sick visits; vaccinations; seasonal flu shots; and referrals."
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "of comprehensive health services— including primary care, dental, eye care, dermatology, nutrition, and sexual/reproductive care services—to any Door member, no matter your ability to pay"
+      },
+      {
+        "subject": "cooking",
+        "quote": "Our Culinary Arts Training Program gives young people the opportunity to build hands-on skills,"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "Contact Us The Door offers a range of opportunities for young people to learn key leadership skills that you can apply in everyday life."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "info@door.org",
+    "contactPhone": "(212) 941-9090",
+    "evidence": [
+      "Our Culinary Arts Training Program gives young people the opportunity to build hands-on skills,"
+    ],
     "confidence": "low",
     "method": "keyword"
   },
@@ -1141,15 +3364,203 @@
     "stemTools": [
       "robotics",
       "coding",
-      "science lab"
+      "cooking"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
+    "subjects": [
+      "coding",
+      "robotics",
+      "dance & theater",
+      "literacy & writing",
+      "sports & fitness",
+      "cooking",
+      "leadership & social-emotional"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "coding",
+        "quote": "These include hands-on culinary and cooking classes, exciting robotics and coding sessions, enriching music and arts/drama lessons, sports activities, and more."
+      },
+      {
+        "subject": "robotics",
+        "quote": "These include hands-on culinary and cooking classes, exciting robotics and coding sessions, enriching music and arts/drama lessons, sports activities, and more."
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "and cooking classes, exciting robotics and coding sessions, enriching music and arts/drama lessons, sports activities, and more."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "After-School After-school programs offer educational support, recreation, and STEM- and literacy-based activities to elementary, middle, and high school students across NYC and"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "classes, exciting robotics and coding sessions, enriching music and arts/drama lessons, sports activities, and more."
+      },
+      {
+        "subject": "cooking",
+        "quote": "These include hands-on culinary and cooking classes, exciting robotics and coding sessions, enriching music and"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "Free programming for our youngest community members focuses on academic support, social-emotional development, and enrichment activities."
+      }
+    ],
     "activities": [],
-    "costTier": "free",
+    "costTier": "unknown",
     "hoursText": "",
     "contactEmail": "mail@westhab.org",
     "contactPhone": "(914) 345-2800",
+    "evidence": [
+      "These include hands-on culinary and cooking classes, exciting robotics and coding sessions, enriching music and arts/drama lessons, sports activities, and more.",
+      "These include hands-on culinary and cooking classes, exciting robotics and coding sessions, enriching music and"
+    ],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Women In Need, Inc.",
+    "website": "https://winnyc.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [],
+    "subjectEvidence": [],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "info@winnyc.org",
+    "contactPhone": "212-695-4758",
+    "evidence": [],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Women's Housing and Economic Development Corporation (WHEDCO",
+    "website": "https://whedco.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [
+      "chess"
+    ],
+    "subjects": [
+      "computer science",
+      "chess",
+      "visual arts",
+      "music",
+      "dance & theater",
+      "sports & fitness"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "computer science",
+        "quote": "learning and deep engagement across a range of subjects, including arts, music, and computer science."
+      },
+      {
+        "subject": "chess",
+        "quote": "programming, including visual arts, Latin percussion, violin, dance and drama classes; chess club; and physical fitness activities."
+      },
+      {
+        "subject": "visual arts",
+        "quote": "ELA and STEM project-based learning activities; arts enrichment programming, including visual arts, Latin percussion, violin, dance and drama classes; chess club; and physical fitness"
+      },
+      {
+        "subject": "music",
+        "quote": "activities; arts enrichment programming, including visual arts, Latin percussion, violin, dance and drama classes; chess club; and physical fitness activities."
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "arts enrichment programming, including visual arts, Latin percussion, violin, dance and drama classes; chess club; and physical fitness activities."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "visual arts, Latin percussion, violin, dance and drama classes; chess club; and physical fitness activities."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "",
+    "contactPhone": "718-839-1100",
+    "evidence": [
+      "programming, including visual arts, Latin percussion, violin, dance and drama classes; chess club; and physical fitness activities."
+    ],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Woodycrest Center For Human Development Inc",
+    "website": "https://woodycrestcenterforhumandevelopment.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [
+      "computer science",
+      "music",
+      "dance & theater",
+      "crafts & sewing",
+      "literacy & writing"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "computer science",
+        "quote": "the following services; homework help, tutoring, educational and STEM workshops, computer skills, drama, dance, arts and crafts, recreation and cultural teams and game room."
+      },
+      {
+        "subject": "music",
+        "quote": "STEM workshops, computer skills training, drama, dance, arts and crafts, African drum, guitar, keyboarding, recreation and cultural teams and game room."
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "services; homework help, tutoring, educational and STEM workshops, computer skills, drama, dance, arts and crafts, recreation and cultural teams and game room."
+      },
+      {
+        "subject": "crafts & sewing",
+        "quote": "homework help, tutoring, educational and STEM workshops, computer skills, drama, dance, arts and crafts, recreation and cultural teams and game room."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "Monday to Friday 2:30 PM to 5:30 PM and provides the following services; homework help, literacy enrichment and STEM workshops, computer skills training, drama, dance, arts and crafts,"
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "",
+    "contactPhone": "",
+    "evidence": [],
+    "confidence": "low",
+    "method": "keyword"
+  },
+  {
+    "provider": "Young Dancers In Repertory, Inc.",
+    "website": "https://youngdancersinrep.org/",
+    "hasK5Programming": true,
+    "summary": "",
+    "stemTools": [],
+    "subjects": [
+      "visual arts",
+      "crafts & sewing",
+      "sports & fitness"
+    ],
+    "subjectEvidence": [
+      {
+        "subject": "visual arts",
+        "quote": "School and Summer Program Year-round after school dance, theater, music, sports and visual arts programming as well as academic assistance."
+      },
+      {
+        "subject": "crafts & sewing",
+        "quote": "all grades will have a schedule of 40-45 minute time slots to do homework help, arts and crafts, dance, theater, and or games."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Free After School and Summer Program Year-round after school dance, theater, music, sports and visual arts programming as well as academic assistance."
+      }
+    ],
+    "activities": [],
+    "costTier": "unknown",
+    "hoursText": "",
+    "contactEmail": "ydr@youngdancersinrep.org",
+    "contactPhone": "347-702-7155",
     "evidence": [],
     "confidence": "low",
     "method": "keyword"

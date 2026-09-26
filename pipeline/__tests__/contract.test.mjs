@@ -38,13 +38,27 @@ describe("dist/ contract", { skip: built ? false : "run `npm run pipeline` first
 
   test("no price is ever attributed to OpenData", () => {
     // OpenData publishes no cost field; claiming otherwise is the bug this guards.
-    const allowed = new Set(["provider-website", "not-published"]);
+    const allowed = new Set(["dycd-program-rules", "provider-website", "not-published"]);
     for (const p of programs) assert.ok(allowed.has(p.cost.source), `${p.id}: ${p.cost.source}`);
   });
 
   test("a stated price always has a source that could state it", () => {
     for (const p of programs) {
-      if (p.cost.tier !== "unknown") assert.equal(p.cost.source, "provider-website", p.id);
+      if (p.cost.tier === "unknown") continue;
+      if (p.cost.source === "dycd-program-rules") {
+        assert.equal(p.programArea, "Compass", `${p.id}: DYCD's no-cost rule is for COMPASS only`);
+      } else {
+        assert.equal(p.cost.source, "provider-website", p.id);
+        assert.equal(p.enrichment.method, "gemini", `${p.id}: keyword matches never set a price`);
+      }
+    }
+  });
+
+  test("every tool and subject from keywords carries a quote", () => {
+    for (const p of programs) {
+      if (p.enrichment.method !== "keyword") continue;
+      if (p.enrichment.stemTools.length) assert.ok(p.enrichment.evidence.length > 0, p.id);
+      assert.equal(p.enrichment.subjects.length, p.enrichment.subjectEvidence.length, p.id);
     }
   });
 

@@ -6,7 +6,9 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
-import { validateSubjects, SUBJECT_VOCAB, SUBJECT_GROUPS } from "../stages/40-extract.mjs";
+import {
+  validateSubjects, SUBJECT_VOCAB, SUBJECT_GROUPS, SUBJECT_KEYWORDS, keywordExtract, quoteAround,
+} from "../stages/40-extract.mjs";
 import { paths } from "../config.mjs";
 
 const PAGE = `
@@ -89,6 +91,65 @@ test("specific activities are subjects too, each under exactly one filter headin
   const all = Object.values(SUBJECT_GROUPS).flat();
   assert.equal(new Set(all).size, all.length, "no subject is listed under two headings");
   assert.deepEqual(all, SUBJECT_VOCAB);
+});
+
+const CRAWLED = [
+  { url: "https://example.org/", kind: "home", text:
+    "Welcome to our Brooklyn center. Enter your zip code to find a site. Our after-school programming runs daily. " +
+    "Kids&#8217; Robotics Club meets Tuesdays with LEGO kits. Students also practice chess and creative writing. " +
+    "Free tax preparation for adults every spring." },
+];
+
+test("keyword fallback ships subjects, each with a verbatim sentence as its quote", () => {
+  const r = keywordExtract(CRAWLED);
+  assert.ok(r.subjects.includes("robotics"));
+  assert.ok(r.subjects.includes("chess"));
+  assert.ok(r.subjects.includes("literacy & writing"));
+  for (const { quote } of r.subjectEvidence) assert.ok(CRAWLED[0].text.includes(quote), quote);
+  assert.equal(r.method, "keyword");
+});
+
+test("keyword fallback does not read 'zip code' or 'programming' as coding", () => {
+  const r = keywordExtract(CRAWLED);
+  assert.ok(!r.stemTools.includes("coding"));
+  assert.ok(!r.subjects.includes("coding"));
+});
+
+test("keyword fallback backs every tool with a quote and never sets a price", () => {
+  const r = keywordExtract(CRAWLED);
+  assert.ok(r.stemTools.includes("robotics"));
+  assert.ok(r.evidence.length > 0);
+  assert.equal(r.costTier, "unknown", "the word 'free' is on the page but is not a price");
+});
+
+test("quotes never split an HTML entity", () => {
+  // The 90-char reach lands inside "&#8217;", so a naive cut would start
+  // the quote at "8217;" and it would no longer match the decoded page.
+  const lead = "Kids&#8217;";
+  const text = `intro ${lead} ${"w ".repeat(42)}robotics lab is open`;
+  const i = text.indexOf("robotics");
+  assert.ok(i - 90 > text.indexOf(lead) && i - 90 < text.indexOf(lead) + lead.length, "fixture must cut the entity");
+  const q = quoteAround(text, i, "robotics".length);
+  const at = text.indexOf(q);
+  assert.ok(at >= 0);
+  assert.ok(at === 0 || text[at - 1] === " ", q);
+  assert.ok(!q.startsWith("8217;") && !q.startsWith("#"), q);
+});
+
+test("keyword fallback skips adult services and menus, and uses a later clean match", () => {
+  const pages = [{ url: "https://example.org/", kind: "home", text:
+    "Home About Programs Adult Literacy Youth Services Senior Centers Food Pantry Careers Donate Contact. " +
+    "We offer English literacy classes and citizenship preparation for adults. " +
+    "Our Supplemental Nutrition Assistance Program (SNAP) team can help. " +
+    "In our after-school program, children build literacy skills through read-alouds." }];
+  const r = keywordExtract(pages);
+  assert.deepEqual(r.subjectEvidence.find((e) => e.subject === "literacy & writing")?.quote,
+    "In our after-school program, children build literacy skills through read-alouds.");
+  assert.ok(!r.subjects.includes("health & nutrition"));
+});
+
+test("every subject has a keyword pattern", () => {
+  assert.deepEqual(Object.keys(SUBJECT_KEYWORDS).sort(), [...SUBJECT_VOCAB].sort());
 });
 
 test("dist/meta.json ships the filter headings", { skip: built ? false : "dist/ not built" }, () => {

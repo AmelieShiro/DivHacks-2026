@@ -91,9 +91,9 @@
       "Manhattan",
       "Queens"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.childcenterny.org/",
+    "resolvedVia": "childcenterny.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "childcenterny.org",
@@ -108,7 +108,11 @@
     ],
     "signals": [
       "child"
-    ]
+    ],
+    "matched": [
+      "child"
+    ],
+    "source": "known"
   },
   {
     "provider": "Child Development Ctr of the Mosholu Montefiore Comm Center",
@@ -290,9 +294,9 @@
       "Manhattan",
       "Staten Island"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.childrensaidnyc.org/",
+    "resolvedVia": "childrensaidnyc.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "childrensaidsociety.org",
@@ -310,7 +314,11 @@
     ],
     "signals": [
       "children"
-    ]
+    ],
+    "matched": [
+      "children"
+    ],
+    "source": "known"
   },
   {
     "provider": "The Greater Ridgewood Youth Council, Inc.",
@@ -400,9 +408,9 @@
     "boroughs": [
       "Brooklyn"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://wearebcs.org/",
+    "resolvedVia": "wearebcs.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "brooklynbureaucommunityservice.org",
@@ -418,7 +426,11 @@
     "signals": [
       "brooklyn",
       "bureau"
-    ]
+    ],
+    "matched": [
+      "brooklyn"
+    ],
+    "source": "known"
   },
   {
     "provider": "Chinese-American Planning Council Inc",
@@ -488,9 +500,9 @@
     "boroughs": [
       "Queens"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://qchnyc.org/",
+    "resolvedVia": "qchnyc.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "queenscommunityhouse.org",
@@ -509,7 +521,12 @@
     "signals": [
       "queens",
       "house"
-    ]
+    ],
+    "matched": [
+      "queens",
+      "house"
+    ],
+    "source": "known"
   },
   {
     "provider": "Research Foundation of the City University of New York",
@@ -517,9 +534,9 @@
     "boroughs": [
       "Brooklyn"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.rfcuny.org/RfWebsite/",
+    "resolvedVia": "rfcuny.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "researchcityuniversitynewyork.org",
@@ -543,7 +560,14 @@
       "city",
       "university",
       "york"
-    ]
+    ],
+    "matched": [
+      "research",
+      "city",
+      "university",
+      "york"
+    ],
+    "source": "known"
   },
   {
     "provider": "University Settlement Society of New York",
@@ -605,9 +629,9 @@
       "Brooklyn",
       "Queens"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.hispanicfamilyservicesny.org/",
+    "resolvedVia": "hispanicfamilyservicesny.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "coalitionhispanicfamily.org",
@@ -627,7 +651,13 @@
       "coalition",
       "hispanic",
       "family"
-    ]
+    ],
+    "matched": [
+      "coalition",
+      "hispanic",
+      "family"
+    ],
+    "source": "known"
   },
   {
     "provider": "NIA Community Services Network Inc",
@@ -636,9 +666,9 @@
       "Brooklyn",
       "Staten Island"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.niabklyn.org/",
+    "resolvedVia": "niabklyn.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "niacommunityservicesnetwork.org",
@@ -653,7 +683,11 @@
     ],
     "signals": [
       "network"
-    ]
+    ],
+    "matched": [
+      "network"
+    ],
+    "source": "known"
   },
   {
     "provider": "ST. NICKS ALLIANCE CORP.",
@@ -768,8 +802,7 @@
       "bergen",
       "basin",
       "development"
-    ],
-    "matchedSignals": []
+    ]
   },
   {
     "provider": "Brooklyn Chinese-American Association Inc",
@@ -777,9 +810,9 @@
     "boroughs": [
       "Brooklyn"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.bca.net/eng/home.html",
+    "resolvedVia": "www.bca.net/eng/home.html",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "brooklynchineseamerican.org",
@@ -799,7 +832,13 @@
       "brooklyn",
       "chinese",
       "american"
-    ]
+    ],
+    "matched": [
+      "brooklyn",
+      "chinese",
+      "american"
+    ],
+    "source": "known"
   },
   {
     "provider": "Community Association of Progressive Dominicans Inc",
@@ -808,9 +847,9 @@
       "Bronx",
       "Manhattan"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://acdp.org/",
+    "resolvedVia": "acdp.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "progressivedominicans.org",
@@ -826,7 +865,12 @@
     "signals": [
       "progressive",
       "dominicans"
-    ]
+    ],
+    "matched": [
+      "progressive",
+      "dominicans"
+    ],
+    "source": "known"
   },
   {
     "provider": "Cypress Hills Local Development Corporation, Inc.",
@@ -987,9 +1031,9 @@
     "boroughs": [
       "Staten Island"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.sijcc.org/",
+    "resolvedVia": "sijcc.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "jewishstatenisland.org",
@@ -1012,7 +1056,13 @@
       "jewish",
       "staten",
       "island"
-    ]
+    ],
+    "matched": [
+      "jewish",
+      "staten",
+      "island"
+    ],
+    "source": "known"
   },
   {
     "provider": "Southern Queens Park Assoc. Inc.",
@@ -1082,9 +1132,9 @@
     "boroughs": [
       "Queens"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://scsny.org/",
+    "resolvedVia": "scsny.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "sunnysidecommunityservices.org",
@@ -1102,7 +1152,11 @@
     ],
     "signals": [
       "sunnyside"
-    ]
+    ],
+    "matched": [
+      "sunnyside"
+    ],
+    "source": "known"
   },
   {
     "provider": "The Salvation Army",
@@ -1135,9 +1189,9 @@
       "Bronx",
       "Manhattan"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://catholiccharitiesny.org/",
+    "resolvedVia": "catholiccharitiesny.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "catholiccharitiesarchdiocese.org",
@@ -1157,7 +1211,13 @@
       "catholic",
       "charities",
       "archdiocese"
-    ]
+    ],
+    "matched": [
+      "catholic",
+      "charities",
+      "archdiocese"
+    ],
+    "source": "known"
   },
   {
     "provider": "Directions For Our Youth Inc",
@@ -1165,9 +1225,9 @@
     "boroughs": [
       "Bronx"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.dfoy.org/",
+    "resolvedVia": "dfoy.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "directionsouryouth.org",
@@ -1186,7 +1246,12 @@
     "signals": [
       "directions",
       "youth"
-    ]
+    ],
+    "matched": [
+      "directions",
+      "youth"
+    ],
+    "source": "known"
   },
   {
     "provider": "El Puente De Williamsburg, Inc.",
@@ -1194,9 +1259,9 @@
     "boroughs": [
       "Brooklyn"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.elpuente.org/",
+    "resolvedVia": "elpuente.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "elpuentedewilliamsburg.org",
@@ -1215,7 +1280,11 @@
     "signals": [
       "puente",
       "williamsburg"
-    ]
+    ],
+    "matched": [
+      "puente"
+    ],
+    "source": "known"
   },
   {
     "provider": "Henry Street Settlement",
@@ -1281,9 +1350,9 @@
     "boroughs": [
       "Queens"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.riissettlement.org/",
+    "resolvedVia": "riissettlement.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "jacobriisneighborhood.org",
@@ -1304,7 +1373,14 @@
       "riis",
       "neighborhood",
       "settlement"
-    ]
+    ],
+    "matched": [
+      "jacob",
+      "riis",
+      "neighborhood",
+      "settlement"
+    ],
+    "source": "known"
   },
   {
     "provider": "Kips Bay Boys and Girls Club Inc",
@@ -1407,9 +1483,9 @@
     "boroughs": [
       "Brooklyn"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.fdconline.org/",
+    "resolvedVia": "fdconline.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "flatbushdevelopment.org",
@@ -1422,7 +1498,12 @@
     "signals": [
       "flatbush",
       "development"
-    ]
+    ],
+    "matched": [
+      "flatbush",
+      "development"
+    ],
+    "source": "known"
   },
   {
     "provider": "The Young Women's Christian Association of the City of NY",
@@ -1430,9 +1511,9 @@
     "boroughs": [
       "Brooklyn"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://ywcanyc.org/",
+    "resolvedVia": "ywcanyc.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "youngwomenschristiancity.org",
@@ -1459,7 +1540,13 @@
       "women",
       "christian",
       "city"
-    ]
+    ],
+    "matched": [
+      "young",
+      "women",
+      "city"
+    ],
+    "source": "known"
   },
   {
     "provider": "Union Settlement Association Inc",
@@ -1522,9 +1609,9 @@
     "boroughs": [
       "Brooklyn"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://fiaobrooklyn.org/",
+    "resolvedVia": "fiaobrooklyn.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "federationitalianamerican.org",
@@ -1546,7 +1633,15 @@
       "american",
       "organizations",
       "brooklyn"
-    ]
+    ],
+    "matched": [
+      "federation",
+      "italian",
+      "american",
+      "organizations",
+      "brooklyn"
+    ],
+    "source": "known"
   },
   {
     "provider": "Friends of Crown Heights Educational Centers Inc",
@@ -1554,9 +1649,9 @@
     "boroughs": [
       "Brooklyn"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://fochnyc.org/",
+    "resolvedVia": "fochnyc.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "friendscrownheightseducational.org",
@@ -1581,7 +1676,15 @@
       "heights",
       "educational",
       "centers"
-    ]
+    ],
+    "matched": [
+      "friends",
+      "crown",
+      "heights",
+      "educational",
+      "centers"
+    ],
+    "source": "known"
   },
   {
     "provider": "Graham Windham",
@@ -1590,9 +1693,9 @@
       "Bronx",
       "Manhattan"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.graham-windham.org/",
+    "resolvedVia": "graham-windham.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "grahamwindham.org",
@@ -1605,7 +1708,12 @@
     "signals": [
       "graham",
       "windham"
-    ]
+    ],
+    "matched": [
+      "graham",
+      "windham"
+    ],
+    "source": "known"
   },
   {
     "provider": "Harriman Summer Camp, S-11",
@@ -1678,8 +1786,7 @@
       "rights",
       "league",
       "canarsie"
-    ],
-    "matchedSignals": []
+    ]
   },
   {
     "provider": "Neighborhood Initiatives Development Corporation",
@@ -1687,9 +1794,9 @@
     "boroughs": [
       "Bronx"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.nidcny.org/",
+    "resolvedVia": "nidcny.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "neighborhoodinitiatives.org",
@@ -1706,7 +1813,13 @@
       "neighborhood",
       "initiatives",
       "development"
-    ]
+    ],
+    "matched": [
+      "neighborhood",
+      "initiatives",
+      "development"
+    ],
+    "source": "known"
   },
   {
     "provider": "RiseBoro Community Partnership Inc",
@@ -1714,9 +1827,9 @@
     "boroughs": [
       "Brooklyn"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://riseboro.org/",
+    "resolvedVia": "riseboro.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "riseborocommunitypartnership.org",
@@ -1735,7 +1848,12 @@
     "signals": [
       "riseboro",
       "partnership"
-    ]
+    ],
+    "matched": [
+      "riseboro",
+      "partnership"
+    ],
+    "source": "known"
   },
   {
     "provider": "The Educational Alliance Inc",
@@ -1795,9 +1913,9 @@
     "boroughs": [
       "Brooklyn"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.jchb.org/",
+    "resolvedVia": "jchb.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "edithcarlmarksjewish.org",
@@ -1823,7 +1941,16 @@
       "jewish",
       "house",
       "bensonhurst"
-    ]
+    ],
+    "matched": [
+      "edith",
+      "carl",
+      "marks",
+      "jewish",
+      "house",
+      "bensonhurst"
+    ],
+    "source": "known"
   },
   {
     "provider": "Harlem Dowling-West Side Ctr.For Children & Family Services",
@@ -2112,9 +2239,9 @@
     "boroughs": [
       "Queens"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.saya.org/",
+    "resolvedVia": "saya.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "southasianyouthactionsaya.org",
@@ -2142,7 +2269,15 @@
       "youth",
       "action",
       "saya"
-    ]
+    ],
+    "matched": [
+      "south",
+      "asian",
+      "youth",
+      "action",
+      "saya"
+    ],
+    "source": "known"
   },
   {
     "provider": "Stanley M Isaacs Neighborhood Center Inc",
@@ -2150,9 +2285,9 @@
     "boroughs": [
       "Manhattan"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://isaacscenter.org/",
+    "resolvedVia": "isaacscenter.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "stanleymisaacsneighborhood.org",
@@ -2175,7 +2310,13 @@
       "stanley",
       "isaacs",
       "neighborhood"
-    ]
+    ],
+    "matched": [
+      "stanley",
+      "isaacs",
+      "neighborhood"
+    ],
+    "source": "known"
   },
   {
     "provider": "Team First, Inc.",
@@ -2261,9 +2402,9 @@
     "boroughs": [
       "Queens"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.82ndst.com/",
+    "resolvedVia": "82ndst.com",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "82ndstreetacademics.org",
@@ -2281,7 +2422,12 @@
       "street",
       "academics"
     ],
-    "matchedSignals": []
+    "matched": [
+      "82nd",
+      "street",
+      "academics"
+    ],
+    "source": "known"
   },
   {
     "provider": "Boys & Girls Club of Metro Queens, Inc",
@@ -2289,9 +2435,9 @@
     "boroughs": [
       "Queens"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.metroqueens.org/",
+    "resolvedVia": "metroqueens.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "boysgirlsclubmetroqueens.org",
@@ -2316,7 +2462,15 @@
       "club",
       "metro",
       "queens"
-    ]
+    ],
+    "matched": [
+      "boys",
+      "girls",
+      "club",
+      "metro",
+      "queens"
+    ],
+    "source": "known"
   },
   {
     "provider": "Brooklyn Childrens Museum Corp",
@@ -2549,9 +2703,9 @@
     "boroughs": [
       "Queens"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.hfhnyc.org/",
+    "resolvedVia": "hfhnyc.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "homeshomeless.org",
@@ -2564,7 +2718,12 @@
     "signals": [
       "homes",
       "homeless"
-    ]
+    ],
+    "matched": [
+      "homes",
+      "homeless"
+    ],
+    "source": "known"
   },
   {
     "provider": "Imani House, Inc.",
@@ -2595,9 +2754,9 @@
     "boroughs": [
       "Queens"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://jiq.org/",
+    "resolvedVia": "jiq.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "jewishinstitutequeens.org",
@@ -2617,7 +2776,13 @@
       "jewish",
       "institute",
       "queens"
-    ]
+    ],
+    "matched": [
+      "jewish",
+      "institute",
+      "queens"
+    ],
+    "source": "known"
   },
   {
     "provider": "Lesbian and Gay Community Services Center, Inc.",
@@ -2681,9 +2846,9 @@
     "boroughs": [
       "Staten Island"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://nycid.org/",
+    "resolvedVia": "nycid.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "newyorkcenterinterpersonal.org",
@@ -2703,7 +2868,13 @@
       "york",
       "interpersonal",
       "development"
-    ]
+    ],
+    "matched": [
+      "york",
+      "interpersonal",
+      "development"
+    ],
+    "source": "known"
   },
   {
     "provider": "North Brooklyn Development Corporation",
@@ -2741,9 +2912,9 @@
     "boroughs": [
       "Manhattan"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.northsidecenter.org/",
+    "resolvedVia": "northsidecenter.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "northsidechilddevelopment.org",
@@ -2763,7 +2934,12 @@
       "northside",
       "child",
       "development"
-    ]
+    ],
+    "matched": [
+      "northside",
+      "child"
+    ],
+    "source": "known"
   },
   {
     "provider": "OPUS Dance Theatre and Community Services Inc",
@@ -2771,9 +2947,9 @@
     "boroughs": [
       "Brooklyn"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.opusdancetheatrenyc.org/",
+    "resolvedVia": "opusdancetheatrenyc.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "opusdancetheatre.org",
@@ -2793,7 +2969,13 @@
       "opus",
       "dance",
       "theatre"
-    ]
+    ],
+    "matched": [
+      "opus",
+      "dance",
+      "theatre"
+    ],
+    "source": "known"
   },
   {
     "provider": "Partnership With Children, Inc.",
@@ -2831,9 +3013,9 @@
     "boroughs": [
       "Brooklyn"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.shorefronty.org/",
+    "resolvedVia": "shorefronty.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "shorefrontymywhabrighton.org",
@@ -2858,7 +3040,15 @@
       "brighton",
       "manhattan",
       "beach"
-    ]
+    ],
+    "matched": [
+      "shorefront",
+      "ywha",
+      "brighton",
+      "manhattan",
+      "beach"
+    ],
+    "source": "known"
   },
   {
     "provider": "Simpson Street Development Association Inc",
@@ -2866,9 +3056,9 @@
     "boroughs": [
       "Bronx"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://sisda.org/",
+    "resolvedVia": "sisda.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "simpsonstreetdevelopment.org",
@@ -2888,7 +3078,13 @@
       "simpson",
       "street",
       "development"
-    ]
+    ],
+    "matched": [
+      "simpson",
+      "street",
+      "development"
+    ],
+    "source": "known"
   },
   {
     "provider": "Southeast Bronx Neighborhood Centers Inc",
@@ -2896,9 +3092,9 @@
     "boroughs": [
       "Bronx"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://sebnc.org/",
+    "resolvedVia": "sebnc.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "southeastbronxneighborhood.org",
@@ -2919,7 +3115,14 @@
       "bronx",
       "neighborhood",
       "centers"
-    ]
+    ],
+    "matched": [
+      "southeast",
+      "bronx",
+      "neighborhood",
+      "centers"
+    ],
+    "source": "known"
   },
   {
     "provider": "Stryckers Bay Neighborhood Council, Inc.",
@@ -2981,8 +3184,7 @@
       "sunset",
       "park",
       "health"
-    ],
-    "matchedSignals": []
+    ]
   },
   {
     "provider": "The Door-A Center of Alternatives Inc",
@@ -2990,9 +3192,9 @@
     "boroughs": [
       "Manhattan"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.door.org/",
+    "resolvedVia": "door.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "doorcenteralternatives.org",
@@ -3008,7 +3210,11 @@
     "signals": [
       "door",
       "alternatives"
-    ]
+    ],
+    "matched": [
+      "door"
+    ],
+    "source": "known"
   },
   {
     "provider": "Variety Boys and Girls Club of Queens Inc",
@@ -3073,9 +3279,9 @@
     "boroughs": [
       "Brooklyn"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://winnyc.org/",
+    "resolvedVia": "winnyc.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "womeninneed.org",
@@ -3094,7 +3300,12 @@
     "signals": [
       "women",
       "need"
-    ]
+    ],
+    "matched": [
+      "women",
+      "need"
+    ],
+    "source": "known"
   },
   {
     "provider": "Women's Housing and Economic Development Corporation (WHEDCO",
@@ -3102,9 +3313,9 @@
     "boroughs": [
       "Bronx"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://whedco.org/",
+    "resolvedVia": "whedco.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "womenshousingeconomic.org",
@@ -3129,7 +3340,14 @@
       "economic",
       "development",
       "whedco"
-    ]
+    ],
+    "matched": [
+      "women",
+      "housing",
+      "development",
+      "whedco"
+    ],
+    "source": "known"
   },
   {
     "provider": "Woodycrest Center For Human Development Inc",
@@ -3137,9 +3355,9 @@
     "boroughs": [
       "Bronx"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://woodycrestcenterforhumandevelopment.org/",
+    "resolvedVia": "woodycrestcenterforhumandevelopment.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "woodycresthumandevelopment.org",
@@ -3159,7 +3377,13 @@
       "woodycrest",
       "human",
       "development"
-    ]
+    ],
+    "matched": [
+      "woodycrest",
+      "human",
+      "development"
+    ],
+    "source": "known"
   },
   {
     "provider": "Yeshivath Kehilath Yakov, Inc.",
@@ -3197,9 +3421,9 @@
     "boroughs": [
       "Brooklyn"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://youngdancersinrep.org/",
+    "resolvedVia": "youngdancersinrep.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "youngdancersinrepertory.org",
@@ -3222,6 +3446,12 @@
       "young",
       "dancers",
       "repertory"
-    ]
+    ],
+    "matched": [
+      "young",
+      "dancers",
+      "repertory"
+    ],
+    "source": "known"
   }
 ]
