@@ -274,6 +274,17 @@ export async function run({ limit } = {}) {
   }
 
   const file = path.join(paths.work, "facts.json");
+  // A --limit run refreshes only the first N providers; keep earlier facts for
+  // the rest so a quota-bounded run does not truncate the dataset.
+  if (limit) {
+    let previous = [];
+    try {
+      previous = JSON.parse(await readFile(file, "utf8"));
+    } catch { /* first run */ }
+    const done = new Set(out.map((o) => o.provider));
+    const live = new Set(crawl.filter((c) => c.pages?.length).map((c) => c.provider));
+    out.push(...previous.filter((p) => !done.has(p.provider) && live.has(p.provider)));
+  }
   await writeFile(file, JSON.stringify(out, null, 2) + "\n");
   const withTools = out.filter((o) => o.stemTools?.length).length;
   log.ok(`${out.length} providers, ${withTools} with evidenced STEM tools -> ${file}`);
