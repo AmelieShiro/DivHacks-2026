@@ -3,351 +3,798 @@
     "provider": "YMCA of Greater New York/Corporate",
     "website": "https://ymcanyc.org/",
     "hasK5Programming": true,
-    "summary": "",
-    "stemTools": [
-      "coding",
-      "science lab"
+    "stemTools": [],
+    "costTier": "sliding-scale",
+    "confidence": "high",
+    "activities": [
+      "Traditional Summer Camp",
+      "Kinder Camp",
+      "Swim Camp",
+      "Teen Camp",
+      "Sports Camp",
+      "Basketball Camp",
+      "Dance Camp",
+      "STEAM Camp",
+      "Language Camp",
+      "Art Camp",
+      "Trip Camp",
+      "Jewelry Camp",
+      "Soccer Academy",
+      "Basketball Academy",
+      "Big Messy Art Camp",
+      "Zookeepers Camp",
+      "Ready Camper One",
+      "Swim lessons",
+      "Arts and crafts",
+      "Sports"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
-    "costTier": "free",
-    "hoursText": "",
     "contactEmail": "newamericans@ymcanyc.org",
     "contactPhone": "",
     "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
+    "hoursText": "",
+    "subjects": [
+      "visual arts",
+      "music",
+      "sports & fitness",
+      "languages",
+      "general science"
+    ],
+    "summary": "The YMCA of Greater New York offers extensive K-5 programming including summer camps, swim lessons, sports, and afterschool activities across all five boroughs.",
+    "subjectEvidence": [
+      {
+        "subject": "visual arts",
+        "quote": "Creativity time with arts and crafts, music and movement"
+      },
+      {
+        "subject": "music",
+        "quote": "Creativity time with arts and crafts, music and movement"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Exciting group games, team building activities, and sports"
+      },
+      {
+        "subject": "languages",
+        "quote": "Chinese Language Immersion Camp"
+      },
+      {
+        "subject": "general science",
+        "quote": "Hands-on activities, such as: group challenges, STEM experiments, and themed explorations"
+      }
+    ],
+    "droppedSubjects": 0,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
   },
   {
     "provider": "New York Edge, Inc.",
     "website": "https://newyorkedge.org/",
     "hasK5Programming": true,
-    "summary": "",
     "stemTools": [
-      "coding",
-      "science lab",
-      "digital art"
+      "coding"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
     "costTier": "unknown",
-    "hoursText": "",
+    "confidence": "high",
+    "activities": [
+      "stop-motion animation",
+      "reading and writing",
+      "sports",
+      "games",
+      "arts",
+      "cooking",
+      "music production",
+      "fashion design",
+      "dance",
+      "theater arts",
+      "filmmaking"
+    ],
     "contactEmail": "info@newyorkedge.org",
     "contactPhone": "(718) 786-7110",
-    "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
+    "evidence": [
+      "Makers Clubs at New York Edge sites give students the guidance and tools to explore STEAM concepts like programming and design in fun, hands-on ways."
+    ],
+    "hoursText": "",
+    "subjects": [
+      "coding",
+      "engineering",
+      "music",
+      "dance & theater",
+      "visual arts",
+      "filmmaking & video",
+      "health & nutrition",
+      "cooking",
+      "sports & fitness",
+      "mathematics",
+      "literacy & writing"
+    ],
+    "summary": "New York Edge provides after-school and summer programming across New York City featuring academics, STEAM, arts, and sports for K-12 students.",
+    "subjectEvidence": [
+      {
+        "subject": "coding",
+        "quote": "Makers Clubs at New York Edge sites give students the guidance and tools to explore STEAM concepts like programming and design in fun, hands-on ways."
+      },
+      {
+        "subject": "engineering",
+        "quote": "Through our STEAM curriculum, students learn to question, test, observe, collaborate, and explain their findings in all activities."
+      },
+      {
+        "subject": "music",
+        "quote": "Students are introduced to the world of music production, covering topics such as digital audio workstations (DAWs), mixing, mastering, and sound design."
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "Students participate in a day of workshops around fashion design, visual arts, music, dance and theater arts."
+      },
+      {
+        "subject": "visual arts",
+        "quote": "Students participate in a day of workshops around fashion design, visual arts, music, dance and theater arts."
+      },
+      {
+        "subject": "filmmaking & video",
+        "quote": "Using the art of stop-motion animation we empower the next generation of story-tellers and film-makers within New York Edge"
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "Food Explorers is a seasonal nutrition education program that develops healthier habits through the exploration of food."
+      },
+      {
+        "subject": "cooking",
+        "quote": "Participants learn about nutrition basics, kitchen equipment usage, and cultural career influences of cuisine."
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Sports programming includes daily instruction in a variety of activities ranging from esports to martial arts to tennis and everything in between."
+      },
+      {
+        "subject": "mathematics",
+        "quote": "Students in our tutoring improve their ELA and Math scores by 18%."
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "Through literacy, STEM and supplementary academic activities, we help students make the most of their academic potential."
+      }
+    ],
+    "droppedSubjects": 0,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
   },
   {
     "provider": "CAMBA, Inc.",
     "website": "https://camba.org/",
-    "hasK5Programming": true,
-    "summary": "",
-    "stemTools": [
-      "robotics"
-    ],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
-    "costTier": "free",
-    "hoursText": "",
-    "contactEmail": "info@CAMBA.org",
-    "contactPhone": "718-287-2600",
-    "evidence": [],
+    "hasK5Programming": false,
+    "stemTools": [],
+    "costTier": "unknown",
     "confidence": "low",
-    "method": "keyword"
+    "activities": [],
+    "contactEmail": "",
+    "contactPhone": "",
+    "evidence": [],
+    "hoursText": "",
+    "subjects": [],
+    "summary": "",
+    "subjectEvidence": [],
+    "droppedSubjects": 0,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
   },
   {
     "provider": "Child Development Ctr of the Mosholu Montefiore Comm Center",
     "website": "https://www.mmcc.org/",
     "hasK5Programming": true,
-    "summary": "",
-    "stemTools": [
-      "coding",
-      "engineering"
+    "stemTools": [],
+    "costTier": "unknown",
+    "confidence": "high",
+    "activities": [
+      "sports",
+      "arts",
+      "technology",
+      "activity groups",
+      "homework help",
+      "instructional swim",
+      "free swim",
+      "boating",
+      "fishing",
+      "art",
+      "drama",
+      "dance",
+      "fitness",
+      "engineering",
+      "orienteering",
+      "challenge and adventure",
+      "music",
+      "pottery"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
-    "costTier": "free",
-    "hoursText": "",
-    "contactEmail": "",
+    "contactEmail": "frontdesk@mmcc.org",
     "contactPhone": "718-882-4000",
     "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
+    "hoursText": "",
+    "subjects": [
+      "engineering"
+    ],
+    "summary": "Mosholu Montefiore Community Center offers after-school programs, camps, and enrichment activities for children including K-5 programming.",
+    "subjectEvidence": [
+      {
+        "subject": "engineering",
+        "quote": "engineering"
+      }
+    ],
+    "droppedSubjects": 3,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
   },
   {
     "provider": "New York Junior Tennis League Inc",
     "website": "https://www.nyjtl.org/",
     "hasK5Programming": true,
-    "summary": "",
-    "stemTools": [
-      "coding"
-    ],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
+    "stemTools": [],
     "costTier": "free",
-    "hoursText": "",
-    "contactEmail": "tc@nyjtl.org",
+    "confidence": "high",
+    "activities": [
+      "tennis instruction",
+      "tennis tournaments",
+      "events"
+    ],
+    "contactEmail": "ctp@nyjtl.org",
     "contactPhone": "347-417-8100",
     "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
+    "hoursText": "",
+    "subjects": [],
+    "summary": "New York Junior Tennis & Learning provides free year-round tennis instruction, tournaments, and programs for children and teens ages 5-18 across New York City.",
+    "subjectEvidence": [],
+    "droppedSubjects": 0,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
   },
   {
     "provider": "SCAN-HARBOR INC",
     "website": "https://scan-harbor.org/",
     "hasK5Programming": true,
-    "summary": "",
-    "stemTools": [
-      "coding"
-    ],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
+    "stemTools": [],
     "costTier": "free",
-    "hoursText": "",
+    "confidence": "high",
+    "activities": [
+      "Academic tutoring",
+      "Enrichment activities",
+      "Recreation",
+      "Cultural programs",
+      "Creative arts",
+      "Mentoring",
+      "Performing arts",
+      "Theater",
+      "Dance",
+      "Vocal and instrumental music"
+    ],
     "contactEmail": "info@scan-harbor.org",
     "contactPhone": "(212) 289-8030",
     "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
+    "hoursText": "",
+    "subjects": [
+      "visual arts",
+      "music",
+      "dance & theater",
+      "leadership & social-emotional"
+    ],
+    "summary": "SCAN-Harbor provides after-school programs, academic tutoring, recreation, and performing arts for elementary and middle school students in NYC.",
+    "subjectEvidence": [
+      {
+        "subject": "visual arts",
+        "quote": "creative arts"
+      },
+      {
+        "subject": "music",
+        "quote": "vocal and instrumental musical."
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "theater, dance, vocal and instrumental musical."
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "leadership development and cultural expression."
+      }
+    ],
+    "droppedSubjects": 0,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
   },
   {
     "provider": "Grand Street Settlement Inc",
     "website": "https://grandsettlement.org/",
     "hasK5Programming": false,
-    "summary": "",
     "stemTools": [],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
     "costTier": "unknown",
-    "hoursText": "",
-    "contactEmail": "",
+    "confidence": "high",
+    "activities": [],
     "contactPhone": "212-674-1740",
     "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
+    "hoursText": "",
+    "subjects": [],
+    "summary": "Grand Street Settlement offers vital programs and services for early childhood, youth, older adults, and families in New York City.",
+    "subjectEvidence": [],
+    "droppedSubjects": 0,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
   },
   {
     "provider": "Commonpoint NY Inc",
     "website": "https://www.commonpoint.org/",
     "hasK5Programming": true,
-    "summary": "",
-    "stemTools": [
-      "robotics",
-      "coding",
-      "science lab"
-    ],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
+    "stemTools": [],
     "costTier": "free",
-    "hoursText": "",
-    "contactEmail": "dvargasadames@commonpoint.org",
-    "contactPhone": "718-268-5011",
+    "confidence": "high",
+    "activities": [
+      "Homework help",
+      "Reading support",
+      "Art and dance",
+      "Sports and fitness",
+      "Music and beatmaking in our recording studio",
+      "Swimming",
+      "STEM"
+    ],
+    "contactEmail": "kidskornerbx@commonpoint.org",
+    "contactPhone": "718-619-8838",
     "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
+    "hoursText": "Operates from 2-6pm, Monday through Friday.",
+    "subjects": [
+      "visual arts",
+      "dance & theater",
+      "sports & fitness",
+      "music"
+    ],
+    "summary": "Commonpoint offers free after-school programming for K-5 students featuring homework help, arts, sports, music, swimming, and STEM activities.",
+    "subjectEvidence": [
+      {
+        "subject": "visual arts",
+        "quote": "Art and dance"
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "Art and dance"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "Sports and fitness"
+      },
+      {
+        "subject": "music",
+        "quote": "Music and beatmaking in our recording studio"
+      }
+    ],
+    "droppedSubjects": 1,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
   },
   {
     "provider": "Police Athletic League Inc",
     "website": "https://palnyc.org/",
     "hasK5Programming": true,
-    "summary": "",
-    "stemTools": [
-      "coding",
-      "science lab",
-      "engineering",
-      "chess"
-    ],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
+    "stemTools": [],
     "costTier": "free",
-    "hoursText": "",
-    "contactEmail": "Jclark@palynyc.org",
-    "contactPhone": "800-725-4543",
+    "confidence": "high",
+    "activities": [
+      "chess program",
+      "hydroponic classroom",
+      "STEM club",
+      "illustration",
+      "instrumental music",
+      "dance",
+      "performance poetry",
+      "theater arts",
+      "talent shows",
+      "sports fundamentals",
+      "team-based athletic tournaments"
+    ],
+    "contactEmail": "programs@palynyc.org",
+    "contactPhone": "1-800-725-4543",
     "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
+    "hoursText": "Monday through Friday, from 8am to 6pm",
+    "subjects": [
+      "chess",
+      "gardening",
+      "engineering",
+      "visual arts",
+      "music",
+      "dance & theater",
+      "literacy & writing",
+      "sports & fitness",
+      "health & nutrition",
+      "leadership & social-emotional"
+    ],
+    "summary": "The Police Athletic League provides free after-school, summer camp, and recreational programs for K-5 and older youth across New York City featuring STEAM, arts, sports, and mentorship.",
+    "subjectEvidence": [
+      {
+        "subject": "chess",
+        "quote": "including a chess program , designed to inspire youth and build academic skills"
+      },
+      {
+        "subject": "gardening",
+        "quote": "a hydroponic classroom that grows edible vegetables"
+      },
+      {
+        "subject": "engineering",
+        "quote": "STEAM (Science, Technology, Engineering, Art and Math)"
+      },
+      {
+        "subject": "visual arts",
+        "quote": "visual and performing arts"
+      },
+      {
+        "subject": "music",
+        "quote": "instrumental music"
+      },
+      {
+        "subject": "dance & theater",
+        "quote": "dance, performance poetry, and theater arts"
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "literacy learning"
+      },
+      {
+        "subject": "sports & fitness",
+        "quote": "physical education"
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "learning about healthy lifestyles and nutrition"
+      },
+      {
+        "subject": "leadership & social-emotional",
+        "quote": "SEL (social-emotional learning)"
+      }
+    ],
+    "droppedSubjects": 0,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
   },
   {
     "provider": "The Greater Ridgewood Youth Council, Inc.",
     "website": "https://www.greaterridgewoodyouthcouncil.org/",
     "hasK5Programming": true,
-    "summary": "",
-    "stemTools": [
-      "coding",
-      "science lab"
+    "stemTools": [],
+    "costTier": "sliding-scale",
+    "confidence": "high",
+    "activities": [
+      "homework help",
+      "sports",
+      "arts",
+      "nutritional programming"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
-    "costTier": "free",
-    "hoursText": "",
     "contactEmail": "jmahon@thegryc.org",
     "contactPhone": "718-456-5437",
     "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
+    "hoursText": "8 AM to 6 PM, Mon. to Fri.",
+    "subjects": [
+      "literacy & writing",
+      "visual arts",
+      "health & nutrition"
+    ],
+    "summary": "The Greater Ridgewood Youth Council offers K-5 after-school programs featuring STEM learning, literacy integration, homework help, arts, and physical activity.",
+    "subjectEvidence": [
+      {
+        "subject": "literacy & writing",
+        "quote": "it strives to integrate literacy into all instruction"
+      },
+      {
+        "subject": "visual arts",
+        "quote": "offers homework help, basic arts instruction"
+      },
+      {
+        "subject": "health & nutrition",
+        "quote": "physical activity, including nutritional programming to promote healthy living"
+      }
+    ],
+    "droppedSubjects": 0,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
   },
   {
     "provider": "Good Shepherd Services",
     "website": "https://goodshepherds.org/",
     "hasK5Programming": true,
-    "summary": "",
-    "stemTools": [
-      "coding"
-    ],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
+    "stemTools": [],
     "costTier": "free",
-    "hoursText": "",
+    "confidence": "high",
+    "activities": [
+      "elementary after-school programs",
+      "summer camps"
+    ],
     "contactEmail": "",
     "contactPhone": "212 243 7070",
     "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
+    "hoursText": "",
+    "subjects": [],
+    "summary": "Good Shepherd Services provides elementary after-school programs and free summer camps for K-5 children across New York City.",
+    "subjectEvidence": [],
+    "droppedSubjects": 0,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
   },
   {
     "provider": "United Activities Unlimited, Inc.",
     "website": "https://unitedactivities.org/",
     "hasK5Programming": true,
-    "summary": "",
-    "stemTools": [
-      "coding"
-    ],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
+    "stemTools": [],
     "costTier": "free",
-    "hoursText": "",
+    "confidence": "high",
+    "activities": [
+      "afterschool programs",
+      "community centers",
+      "workforce development programs",
+      "employment training",
+      "prevention education and counseling",
+      "family and social services",
+      "fatherhood programs",
+      "college preparatory activities",
+      "summer camps",
+      "educational enrichment"
+    ],
     "contactEmail": "SMatteo@unitedactivities.org",
     "contactPhone": "(718) 987-8111",
     "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
+    "hoursText": "Monday- Friday",
+    "subjects": [
+      "literacy & writing"
+    ],
+    "summary": "United Activities Unlimited offers comprehensive educational supports, enrichment activities, and after-school programs for youth and families in Staten Island.",
+    "subjectEvidence": [
+      {
+        "subject": "literacy & writing",
+        "quote": "literacy classes"
+      }
+    ],
+    "droppedSubjects": 0,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
   },
   {
     "provider": "Chinese-American Planning Council Inc",
     "website": "https://cpc-nyc.org/",
     "hasK5Programming": true,
-    "summary": "",
     "stemTools": [],
-    "subjects": [],
-    "subjectEvidence": [],
+    "costTier": "unknown",
+    "confidence": "high",
     "activities": [],
-    "costTier": "free",
-    "hoursText": "",
     "contactEmail": "info@cpc-nyc.org",
     "contactPhone": "212-941-0920",
     "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
+    "hoursText": "",
+    "subjects": [],
+    "summary": "The Chinese-American Planning Council provides community-based education, family support, and economic empowerment services across New York City.",
+    "subjectEvidence": [],
+    "droppedSubjects": 0,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
   },
   {
     "provider": "East Side House Inc",
     "website": "https://www.eastsidehouse.org/",
     "hasK5Programming": true,
-    "summary": "",
     "stemTools": [],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
     "costTier": "unknown",
-    "hoursText": "",
-    "contactEmail": "",
+    "confidence": "high",
+    "activities": [
+      "preventive, remedial, and enrichment services",
+      "early childhood programs",
+      "workforce development"
+    ],
     "contactPhone": "(718) 665-5250",
     "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
+    "hoursText": "",
+    "subjects": [],
+    "summary": "East Side House Settlement offers a continuum of community programs in the Bronx and Northern Manhattan, including early childhood education and K-8 enrichment services.",
+    "subjectEvidence": [],
+    "droppedSubjects": 0,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
   },
   {
     "provider": "University Settlement Society of New York",
     "website": "https://www.universitysettlement.org/",
     "hasK5Programming": true,
-    "summary": "",
-    "stemTools": [
-      "coding"
+    "stemTools": [],
+    "costTier": "sliding-scale",
+    "confidence": "high",
+    "activities": [
+      "After-school programs",
+      "Summer camp and Summer rising",
+      "Art activities",
+      "Aquatic lessons",
+      "Technology classes"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
-    "costTier": "free",
-    "hoursText": "",
     "contactEmail": "info@universitysettlement.org",
-    "contactPhone": "(212) 453-4500",
+    "contactPhone": "+1 (212) 453-4500",
     "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
+    "hoursText": "",
+    "subjects": [
+      "financial literacy",
+      "visual arts"
+    ],
+    "summary": "University Settlement offers free or affordable K-5 after-school programs, summer camps, early childhood education, and community social services across NYC.",
+    "subjectEvidence": [
+      {
+        "subject": "financial literacy",
+        "quote": "Empowering tenants through case management, counseling, financial literacy, and affordable housing services."
+      },
+      {
+        "subject": "visual arts",
+        "quote": "The arts change lives, and we’re committed to making sure our neighbors can participate in free or low-cost art activities as a central aspect of our mission."
+      }
+    ],
+    "droppedSubjects": 0,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
   },
   {
     "provider": "BronxWorks Inc",
     "website": "https://bronxworks.org/",
     "hasK5Programming": true,
-    "summary": "",
-    "stemTools": [
-      "coding"
-    ],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
+    "stemTools": [],
     "costTier": "free",
-    "hoursText": "",
-    "contactEmail": "",
-    "contactPhone": "800-662-1220",
+    "confidence": "high",
+    "activities": [
+      "after-school programs",
+      "summer camp programs",
+      "early childhood learning centers",
+      "cooking classes"
+    ],
+    "contactPhone": "(646) 393-4000",
     "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
+    "hoursText": "",
+    "subjects": [
+      "health & nutrition"
+    ],
+    "summary": "BronxWorks offers after-school programs, early childhood education, and community services supporting youth and families across the Bronx.",
+    "subjectEvidence": [
+      {
+        "subject": "health & nutrition",
+        "quote": "providing cooking classes and other demonstrations offering nutrition education."
+      }
+    ],
+    "droppedSubjects": 0,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
+  },
+  {
+    "provider": "Coalition for Hispanic Family Services",
+    "website": "https://www.hispanicfamilyservicesny.org/",
+    "hasK5Programming": true,
+    "stemTools": [],
+    "costTier": "free",
+    "confidence": "high",
+    "activities": [],
+    "contactPhone": "718-497-6090",
+    "evidence": [],
+    "hoursText": "",
+    "subjects": [],
+    "summary": "Coalition for Hispanic Family Services provides community-based family support, mental health services, and youth programs in Brooklyn and Queens.",
+    "subjectEvidence": [],
+    "droppedSubjects": 0,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
+  },
+  {
+    "provider": "NIA Community Services Network Inc",
+    "website": "http://nianetwork.org/",
+    "hasK5Programming": false,
+    "stemTools": [],
+    "costTier": "unknown",
+    "confidence": "high",
+    "activities": [],
+    "evidence": [],
+    "subjects": [],
+    "summary": "Website placeholder page for NIA Community Services Network Inc hosted by BlueHost.",
+    "subjectEvidence": [],
+    "droppedSubjects": 0,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
   },
   {
     "provider": "ST. NICKS ALLIANCE CORP.",
     "website": "https://stnicksalliance.org/",
     "hasK5Programming": true,
-    "summary": "",
-    "stemTools": [
-      "coding",
-      "science lab",
-      "gardening"
-    ],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
+    "stemTools": [],
     "costTier": "free",
-    "hoursText": "",
-    "contactEmail": "",
-    "contactPhone": "",
+    "confidence": "high",
+    "activities": [
+      "Theme-based Literacy",
+      "STEM Projects",
+      "Field Trips and Pool Days",
+      "Visual, Performing and Digital Arts",
+      "Sports and Recreation",
+      "Cooking",
+      "Fashion"
+    ],
     "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
+    "hoursText": "",
+    "subjects": [
+      "general science",
+      "mathematics",
+      "visual arts",
+      "technology & digital media",
+      "literacy & writing"
+    ],
+    "summary": "St. Nicks Alliance offers free after-school centers and summer camps for elementary and middle school students featuring literacy, STEM, arts, and cooking.",
+    "subjectEvidence": [
+      {
+        "subject": "general science",
+        "quote": "STEM activities that connect reading with science and math."
+      },
+      {
+        "subject": "mathematics",
+        "quote": "STEM activities that connect reading with science and math."
+      },
+      {
+        "subject": "visual arts",
+        "quote": "Visual, Performing and Digital Arts"
+      },
+      {
+        "subject": "technology & digital media",
+        "quote": "Visual, Performing and Digital Arts"
+      },
+      {
+        "subject": "literacy & writing",
+        "quote": "Theme-based Literacy"
+      }
+    ],
+    "droppedSubjects": 1,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
   },
   {
     "provider": "Childrens Arts & Science Workshops, Inc.",
     "website": "https://caswkids.org/",
     "hasK5Programming": true,
-    "summary": "",
     "stemTools": [
-      "coding",
-      "science lab",
-      "engineering"
+      "coding"
     ],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
     "costTier": "free",
+    "confidence": "high",
+    "activities": [
+      "Academic Support",
+      "Life Skills / Interpersonal Skill Development",
+      "Healthy Living",
+      "High School and College Prep",
+      "Project-Based Activities",
+      "Creative and Performance Arts",
+      "Entrepreneurship",
+      "Youth Councils",
+      "Recreational activities",
+      "Service learning",
+      "Civic engagement"
+    ],
+    "evidence": [
+      "CASW provides free art, coding, and job programs for youth"
+    ],
     "hoursText": "",
-    "contactEmail": "rrss@caswkids.org",
-    "contactPhone": "",
-    "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
+    "subjects": [
+      "coding",
+      "engineering",
+      "mathematics",
+      "visual arts"
+    ],
+    "summary": "Children's Arts & Science Workshops offers free after-school, art, coding, and youth employment programs for K-12 students in the Bronx and upper Manhattan.",
+    "subjectEvidence": [
+      {
+        "subject": "coding",
+        "quote": "CASW provides free art, coding, and job programs for youth"
+      },
+      {
+        "subject": "engineering",
+        "quote": "Science, Technology, Engineering, and Mathematics (STEM)"
+      },
+      {
+        "subject": "mathematics",
+        "quote": "Science, Technology, Engineering, and Mathematics (STEM)"
+      },
+      {
+        "subject": "visual arts",
+        "quote": "Creative and Performance Arts"
+      }
+    ],
+    "droppedSubjects": 0,
+    "droppedUnevidenced": 0,
+    "method": "gemini"
   },
   {
     "provider": "Phipps Neighborhoods, Inc.",
@@ -366,23 +813,6 @@
     "hoursText": "",
     "contactEmail": "info@phippsny.org",
     "contactPhone": "(212) 243-9090",
-    "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
-  },
-  {
-    "provider": "Bergen Basin Community Development Corporation",
-    "website": "https://www.bergenbasin.com/",
-    "hasK5Programming": true,
-    "summary": "",
-    "stemTools": [],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
-    "costTier": "free",
-    "hoursText": "",
-    "contactEmail": "",
-    "contactPhone": "718-763-4110",
     "evidence": [],
     "confidence": "low",
     "method": "keyword"
@@ -605,25 +1035,6 @@
     "method": "keyword"
   },
   {
-    "provider": "Italian American Civil Rights League Canarsie Inc",
-    "website": "https://italianamerican.com/",
-    "hasK5Programming": false,
-    "summary": "",
-    "stemTools": [
-      "gardening"
-    ],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
-    "costTier": "free",
-    "hoursText": "",
-    "contactEmail": "",
-    "contactPhone": "",
-    "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
-  },
-  {
     "provider": "The Educational Alliance Inc",
     "website": "https://edalliance.org/",
     "hasK5Programming": true,
@@ -677,27 +1088,6 @@
     "hoursText": "",
     "contactEmail": "info@harlemdowling.org",
     "contactPhone": "212-749-3656",
-    "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
-  },
-  {
-    "provider": "Hudson Guild",
-    "website": "https://hudsonguild.org/",
-    "hasK5Programming": true,
-    "summary": "",
-    "stemTools": [
-      "coding",
-      "engineering",
-      "video production"
-    ],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
-    "costTier": "free",
-    "hoursText": "",
-    "contactEmail": "newsletter@hudsonguild.org",
-    "contactPhone": "(212) 760-9800",
     "evidence": [],
     "confidence": "low",
     "method": "keyword"
@@ -875,23 +1265,6 @@
     "hoursText": "",
     "contactEmail": "newamericans@ymcanyc.org",
     "contactPhone": "",
-    "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
-  },
-  {
-    "provider": "82nd Street Academics",
-    "website": "https://82ndstreet.org/",
-    "hasK5Programming": false,
-    "summary": "",
-    "stemTools": [],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
-    "costTier": "unknown",
-    "hoursText": "",
-    "contactEmail": "info@82ndstreet.org",
-    "contactPhone": "(718) 335-9421",
     "evidence": [],
     "confidence": "low",
     "method": "keyword"
@@ -1112,23 +1485,6 @@
     "hoursText": "",
     "contactEmail": "info@partnershipwithchildren.org",
     "contactPhone": "212-689-9500",
-    "evidence": [],
-    "confidence": "low",
-    "method": "keyword"
-  },
-  {
-    "provider": "Sunset Park Health Council Inc",
-    "website": "https://www.sunsetpark.org/",
-    "hasK5Programming": false,
-    "summary": "",
-    "stemTools": [],
-    "subjects": [],
-    "subjectEvidence": [],
-    "activities": [],
-    "costTier": "unknown",
-    "hoursText": "",
-    "contactEmail": "",
-    "contactPhone": "",
     "evidence": [],
     "confidence": "low",
     "method": "keyword"

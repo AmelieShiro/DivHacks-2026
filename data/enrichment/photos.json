@@ -718,122 +718,6 @@
     ]
   },
   {
-    "provider": "CAMBA, Inc.",
-    "website": "https://camba.org/",
-    "photos": [
-      {
-        "url": "https://camba.org/wp-content/uploads/2019/04/programs-housing-inset02-homelessness-800x500.jpg",
-        "page": "https://camba.org/program/housing/",
-        "alt": "",
-        "width": 800,
-        "height": 500,
-        "mime": "image/jpeg",
-        "aspect": 1.6,
-        "orientation": "landscape",
-        "carouselReady": false,
-        "judged": false
-      },
-      {
-        "url": "https://camba.org/wp-content/uploads/2019/04/programs-housing-inset01-emergency-housing-800x500.jpeg",
-        "page": "https://camba.org/program/housing/",
-        "alt": "",
-        "width": 800,
-        "height": 500,
-        "mime": "image/jpeg",
-        "aspect": 1.6,
-        "orientation": "landscape",
-        "carouselReady": false,
-        "judged": false
-      },
-      {
-        "url": "https://camba.org/wp-content/uploads/2019/04/programs-housing-inset04-supportive-housing-800x500.jpg",
-        "page": "https://camba.org/program/housing/",
-        "alt": "",
-        "width": 800,
-        "height": 500,
-        "mime": "image/jpeg",
-        "aspect": 1.6,
-        "orientation": "landscape",
-        "carouselReady": false,
-        "judged": false
-      }
-    ],
-    "rejected": [
-      {
-        "url": "https://camba.org/wp-content/uploads/2020/01/igive.png",
-        "page": "https://camba.org/",
-        "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://camba.org/wp-content/uploads/2018/11/GX-Gold-Participant-M-300x220.png",
-        "page": "https://camba.org/",
-        "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://camba.org/wp-content/uploads/2019/04/education-and-youth-development.png",
-        "page": "https://camba.org/impact/education-youth-development/",
-        "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://camba.org/wp-content/uploads/2018/11/Legal-Services.png",
-        "page": "https://camba.org/impact/legal-services/",
-        "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://camba.org/wp-content/uploads/2018/11/Housing-Stability.png",
-        "page": "https://camba.org/programs/",
-        "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://camba.org/wp-content/uploads/2018/11/Family-and-Community-Support.png",
-        "page": "https://camba.org/programs/",
-        "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://camba.org/wp-content/uploads/2018/11/Health.png",
-        "page": "https://camba.org/programs/",
-        "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://camba.org/wp-content/uploads/2018/11/Economic-Development.png",
-        "page": "https://camba.org/programs/",
-        "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://camba.org/wp-content/uploads/2019/04/program-finder.png",
-        "page": "https://camba.org/programs/",
-        "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      }
-    ]
-  },
-  {
     "provider": "Child Development Ctr of the Mosholu Montefiore Comm Center",
     "website": "https://www.mmcc.org/",
     "photos": [
@@ -2311,7 +2195,7 @@
         "alt": "20140731_014.JPG",
         "width": 2500,
         "height": 1951,
-        "mime": "image/webp",
+        "mime": "image/jpeg",
         "aspect": 1.281,
         "orientation": "landscape",
         "carouselReady": true,
@@ -2335,7 +2219,7 @@
         "alt": "B_W_JumpRope_edited.jpg",
         "width": 2500,
         "height": 1784,
-        "mime": "image/webp",
+        "mime": "image/jpeg",
         "aspect": 1.401,
         "orientation": "landscape",
         "carouselReady": true,
@@ -2347,7 +2231,7 @@
         "alt": "B_W_HoolaHoops_Edited.jpg",
         "width": 2500,
         "height": 1760,
-        "mime": "image/webp",
+        "mime": "image/jpeg",
         "aspect": 1.42,
         "orientation": "landscape",
         "carouselReady": true,
@@ -2359,7 +2243,7 @@
         "alt": "PAL Show Stoppers 2019 GMA MS (Dance).jpg",
         "width": 2500,
         "height": 1730,
-        "mime": "image/webp",
+        "mime": "image/jpeg",
         "aspect": 1.445,
         "orientation": "landscape",
         "carouselReady": true,
@@ -2371,7 +2255,7 @@
         "alt": "PAL-July25_69 Obstacle Course.jpg",
         "width": 2500,
         "height": 1713,
-        "mime": "image/webp",
+        "mime": "image/jpeg",
         "aspect": 1.459,
         "orientation": "landscape",
         "carouselReady": true,
@@ -2383,7 +2267,7 @@
         "alt": "New South Bronx Center West Side Story.jpg",
         "width": 2500,
         "height": 1669,
-        "mime": "image/webp",
+        "mime": "image/jpeg",
         "aspect": 1.498,
         "orientation": "landscape",
         "carouselReady": true,
@@ -2395,7 +2279,7 @@
         "alt": "PS 41 Aladdin.jpg",
         "width": 2500,
         "height": 1669,
-        "mime": "image/webp",
+        "mime": "image/jpeg",
         "aspect": 1.498,
         "orientation": "landscape",
         "carouselReady": true,
@@ -2407,7 +2291,7 @@
         "alt": "Teens_Basketball_Stock_Website_2.jpg",
         "width": 2500,
         "height": 1669,
-        "mime": "image/webp",
+        "mime": "image/jpeg",
         "aspect": 1.498,
         "orientation": "landscape",
         "carouselReady": true,
@@ -2419,7 +2303,7 @@
         "alt": "191024_LightsOn-0987.jpg",
         "width": 2500,
         "height": 1667,
-        "mime": "image/webp",
+        "mime": "image/jpeg",
         "aspect": 1.5,
         "orientation": "landscape",
         "carouselReady": true,
@@ -2431,7 +2315,7 @@
         "alt": "Photo Jul 16, 12 37 13 PM.jpg",
         "width": 2500,
         "height": 1667,
-        "mime": "image/webp",
+        "mime": "image/jpeg",
         "aspect": 1.5,
         "orientation": "landscape",
         "carouselReady": true,
@@ -5069,6 +4953,246 @@
     "rejected": []
   },
   {
+    "provider": "Coalition for Hispanic Family Services",
+    "website": "https://www.hispanicfamilyservicesny.org/",
+    "photos": [
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/6d2c596a-a02e-4462-b5a2-0c1d6bea18eb/940A5280.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/school-based-early-support-program",
+        "alt": "Two children, a girl and a boy, sitting on the floor playing a game",
+        "width": 2500,
+        "height": 2000,
+        "mime": "image/jpeg",
+        "aspect": 1.25,
+        "orientation": "landscape",
+        "carouselReady": true,
+        "judged": false
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/e8f35090-c4a0-4838-8973-1264cf430b69/940A5203+%281%29.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/school-based-early-support-program",
+        "alt": "Two boys, one younger and one older, in a public indoor setting, each holding a slice of pizza.",
+        "width": 2500,
+        "height": 2000,
+        "mime": "image/jpeg",
+        "aspect": 1.25,
+        "orientation": "landscape",
+        "carouselReady": true,
+        "judged": false
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/134850c8-1cfa-470c-a700-f43124df9f6c/940A0174.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/health-services",
+        "alt": "Group of children indoors, holding decorated sugar skull cutouts for Día de los Muertos, wearing casual clothes, some with face masks, with colorful Día de los Muertos decorations in the background.",
+        "width": 2048,
+        "height": 2048,
+        "mime": "image/jpeg",
+        "aspect": 1,
+        "orientation": "square",
+        "carouselReady": true,
+        "judged": false
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/535e1b22-d688-4019-acd3-240456f3b9e3/940A9901.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/bonding-links",
+        "alt": "Children on a soccer field gathered in a circle, smiling and talking, wearing white shirts with orange and black shoes, with a green field and a chain-link fence in the background.",
+        "width": 2048,
+        "height": 2048,
+        "mime": "image/jpeg",
+        "aspect": 1,
+        "orientation": "square",
+        "carouselReady": true,
+        "judged": false
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/e35cd7ec-d66f-4254-be3d-466f1ec19df7/940A6999.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/programs",
+        "alt": "Group of people at an outdoor event, including women, children, and a man, gathered around a table with informational materials and pink bags, with a chain-link fence and balloons in the background.",
+        "width": 2500,
+        "height": 1667,
+        "mime": "image/jpeg",
+        "aspect": 1.5,
+        "orientation": "landscape",
+        "carouselReady": true,
+        "judged": false
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/5ceeb276-f94d-48e8-b7b2-a9c87555d6d9/BoxofDreamsPhotography_0091+%281%29.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/health-services",
+        "alt": "A group of children and a young man playing jump rope outdoors on a basketball court. The background shows a mural-covered wall with graffiti and a black metal fence surrounded by trees and buildings.",
+        "width": 2500,
+        "height": 1667,
+        "mime": "image/jpeg",
+        "aspect": 1.5,
+        "orientation": "landscape",
+        "carouselReady": true,
+        "judged": false
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/7d6ba830-7bf2-4abc-9485-ebc05527aff9/940A5220.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/bonding-links",
+        "alt": "Young boy playing Connect 4 game at a table with other children nearby.",
+        "width": 2500,
+        "height": 1667,
+        "mime": "image/jpeg",
+        "aspect": 1.5,
+        "orientation": "landscape",
+        "carouselReady": true,
+        "judged": false
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/a35b57f8-ddd4-41bf-93eb-8ae7e6834683/Coalitioin_25th0128.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/",
+        "alt": "Child Care + Youth Development",
+        "width": 2500,
+        "height": 1666,
+        "mime": "image/jpeg",
+        "aspect": 1.501,
+        "orientation": "landscape",
+        "carouselReady": true,
+        "judged": false
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/fff58ba3-8b22-4ddd-91b0-95cd6358c30c/Coalitioin_25th0128+%281%29.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/programs",
+        "alt": "A group of women dressed in black and red dance costumes performing a dance on stage with gray curtains in the background. The women are holding colorful ribbons.",
+        "width": 2500,
+        "height": 1666,
+        "mime": "image/jpeg",
+        "aspect": 1.501,
+        "orientation": "landscape",
+        "carouselReady": true,
+        "judged": false
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/34bf9cd1-b158-43f3-b203-7a4ee5cdcf8d/BoxofDreamsPhotography062.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/programs",
+        "alt": "Children dressed in colorful costumes, including pink wig, large sunglasses, feather boas, and animal print hats, participating in a fun activity.",
+        "width": 2400,
+        "height": 1714,
+        "mime": "image/jpeg",
+        "aspect": 1.4,
+        "orientation": "landscape",
+        "carouselReady": true,
+        "judged": false
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/4643b35d-28ce-4fb3-a453-b75f02be0f69/940A7028.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/cftss",
+        "alt": "A young boy with a black and orange hat with a cartoon design, reaching across a table, surrounded by adults and colorful items, possibly in a classroom or event setting.",
+        "width": 2500,
+        "height": 1562,
+        "mime": "image/jpeg",
+        "aspect": 1.601,
+        "orientation": "landscape",
+        "carouselReady": true,
+        "judged": false
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/7ed8981f-32f4-4a15-8db0-70e2adc06f0f/3333+%281%29.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/programs",
+        "alt": "Crowd of people gathered in an outdoor urban area, with children sitting and standing, some interacting, and adults supervising. Street signs for Central Avenue and Palmetto Street are visible in the background, along with a fence and trees",
+        "width": 2500,
+        "height": 1406,
+        "mime": "image/jpeg",
+        "aspect": 1.778,
+        "orientation": "landscape",
+        "carouselReady": true,
+        "judged": false
+      }
+    ],
+    "rejected": [
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/f1addbee-5ee8-46da-b9e7-18e0ae334cba/Become+a+foster+parent.png",
+        "page": "https://www.hispanicfamilyservicesny.org/",
+        "alt": "Close-up of a young girl with curly hair, looking thoughtfully to her right, with one hand touching her chin and a slight smile, against a blue background.",
+        "width": 2500,
+        "height": 1250,
+        "reason": "over-limit"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/5c5f8037-bbcb-4368-aff0-c8197dd64703/940A0139.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/health-services",
+        "alt": "Children and adults seated at a table participating in arts and crafts activities in a classroom setting.",
+        "width": 2048,
+        "height": 1463,
+        "reason": "over-limit"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/6f950db8-876c-4811-9e42-5acb004af885/JEFF6154.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/",
+        "alt": "Group of children wearing yellow t-shirts with a sun and",
+        "width": 2048,
+        "height": 1365,
+        "reason": "over-limit"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/fbcc016a-1a7b-462e-ad46-a21ec09340e9/940A0321.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/bonding-links",
+        "alt": "An adult male and a young girl are sitting on the floor of a gym, engaging in a conversation or lesson. The boy is sitting with his legs extended, supporting himself with one hand on the ground, and looking at the man. The man is seated wit",
+        "width": 2048,
+        "height": 1364,
+        "reason": "over-limit"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/d41b9104-4ae6-40b5-89a9-aa51b820890c/940A0015+%281%29.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/",
+        "alt": "Family + Community",
+        "width": 2048,
+        "height": 1280,
+        "reason": "over-limit"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/8c60b757-f20d-4e38-9093-9396d8bacf59/BoxofDreamsPhotography_0136.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/",
+        "alt": "Two young children in animal hats sitting together indoors at night. One wears a bear hat and the other wears a gray bunny hat. They are smiling, with the bunny-hat child showing a tongue peek, and are close together.",
+        "width": 2430,
+        "height": 1065,
+        "reason": "over-limit"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/569398ee-57e2-4456-a657-c4b9573159c0/BoxofDreamsPhotography_0098.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/school-based-early-support-program",
+        "alt": "Three young girls at a school book fair, holding books and smiling, with colorful posters and classroom decorations in the background.",
+        "width": 2500,
+        "height": 944,
+        "reason": "over-limit"
+      },
+      {
+        "url": "http://static1.squarespace.com/static/63dd6e29506933141adca6d4/t/68b9eab5ad4f9e037802a15e/1675456546029/coaliton.jpg?format=1500w",
+        "page": "https://www.hispanicfamilyservicesny.org/",
+        "alt": "og:image",
+        "width": 1500,
+        "height": 1463,
+        "reason": "over-limit"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/125f2dce-10cf-45ae-9ce6-9ae87bea93ae/940A5206.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/",
+        "alt": "Our Programs general photo",
+        "width": 2499,
+        "height": 809,
+        "reason": "over-limit"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/61a1bf52-50e8-4b71-b230-d08d18a44bbe/940A0181+%282%29+%281%29.jpg",
+        "page": "https://www.hispanicfamilyservicesny.org/",
+        "alt": "Mental Health + Well Being",
+        "width": 1920,
+        "height": 1033,
+        "reason": "over-limit"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/63dd6e29506933141adca6d4/b9a1e3d6-1e23-4bd9-9771-b903e1140a83/Family+Support+2.jpeg",
+        "page": "https://www.hispanicfamilyservicesny.org/",
+        "alt": "Who we are photo two",
+        "width": 786,
+        "height": 602,
+        "reason": "over-limit"
+      }
+    ]
+  },
+  {
     "provider": "ST. NICKS ALLIANCE CORP.",
     "website": "https://stnicksalliance.org/",
     "photos": [
@@ -5852,125 +5976,6 @@
     ]
   },
   {
-    "provider": "Bergen Basin Community Development Corporation",
-    "website": "https://www.bergenbasin.com/",
-    "photos": [],
-    "rejected": [
-      {
-        "url": "https://idx-acnt-ihouseprd.b-cdn.net/AR991813/file_manager/banner/banner_image_original_1549556528.jpg",
-        "page": "https://www.bergenbasin.com/",
-        "alt": "Banner Image",
-        "width": null,
-        "height": null,
-        "reason": "robots"
-      },
-      {
-        "url": "https://idx-acnt-ihouseprd.b-cdn.net/AR991813/file_manager/banner/banner_image_original_1549556547.jpg",
-        "page": "https://www.bergenbasin.com/",
-        "alt": "Banner Image",
-        "width": null,
-        "height": null,
-        "reason": "robots"
-      },
-      {
-        "url": "https://idx-acnt-ihouseprd.b-cdn.net/AR991813/file_manager/banner/banner_image_original_1549556604.jpg",
-        "page": "https://www.bergenbasin.com/",
-        "alt": "Banner Image",
-        "width": null,
-        "height": null,
-        "reason": "robots"
-      },
-      {
-        "url": "https://idx-acnt-ihouseprd.b-cdn.net/AR991813/file_manager/shutterstock_1071209330.png?width=324&amp;height=215&amp;aspect_ratio=324%3A215",
-        "page": "https://www.bergenbasin.com/",
-        "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "robots"
-      },
-      {
-        "url": "https://idx-acnt-ihouseprd.b-cdn.net/AR991813/file_manager/shutterstock_419994541.png?width=324&amp;height=215&amp;aspect_ratio=324%3A215",
-        "page": "https://www.bergenbasin.com/",
-        "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "robots"
-      },
-      {
-        "url": "https://idx-acnt-ihouseprd.b-cdn.net/AR991813/file_manager/shutterstock_1100056154.png?width=324&amp;height=215&amp;aspect_ratio=324%3A215",
-        "page": "https://www.bergenbasin.com/",
-        "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "robots"
-      },
-      {
-        "url": "https://idx-acnt-ihouseprd.b-cdn.net/AR991813/file_manager/Saved%20Search%20Photos/Standard%20Homes/ANYHOUSE%20USA%202-2%20400%20X%20400-min.jpg",
-        "page": "https://www.bergenbasin.com/",
-        "alt": "Homes for Sale in Mill Basin, NY",
-        "width": null,
-        "height": null,
-        "reason": "robots"
-      },
-      {
-        "url": "https://idx-acnt-ihouseprd.b-cdn.net/AR991813/file_manager/Saved%20Search%20Photos/Standard%20Homes/ANYHOUSE%20USA%205-1%20%28400X400%29-min.jpg",
-        "page": "https://www.bergenbasin.com/",
-        "alt": "Homes for Sale in Bergen Beach, NY",
-        "width": null,
-        "height": null,
-        "reason": "robots"
-      },
-      {
-        "url": "https://idx-acnt-ihouseprd.b-cdn.net/AR991813/file_manager/Saved%20Search%20Photos/Standard%20Homes/ANYHOUSE%20USA%204-1%20%28400X400%29-min.jpg",
-        "page": "https://www.bergenbasin.com/",
-        "alt": "Homes for Sale in Marine Park, NY",
-        "width": null,
-        "height": null,
-        "reason": "robots"
-      },
-      {
-        "url": "https://idx-acnt-ihouseprd.b-cdn.net/AR991813/file_manager/Saved%20Search%20Photos/Standard%20Homes/ANYHOUSE%20USA%202-4%20400%20X%20400-min.jpg",
-        "page": "https://www.bergenbasin.com/",
-        "alt": "Homes for Sale in Old Mill Basin, NY",
-        "width": null,
-        "height": null,
-        "reason": "robots"
-      },
-      {
-        "url": "https://idx-acnt-ihouseprd.b-cdn.net/AR991813/file_manager/Saved%20Search%20Photos/Rural%20Homes/Rural15_400x400.jpg",
-        "page": "https://www.bergenbasin.com/",
-        "alt": "Homes for Sale in Madison, NY",
-        "width": null,
-        "height": null,
-        "reason": "robots"
-      },
-      {
-        "url": "https://idx-acnt-ihouseprd.b-cdn.net/AR991813/file_manager/Saved%20Search%20Photos/Standard%20Homes/ANYHOUSE%20USE%206-2%20%28400X400%29-min.jpg",
-        "page": "https://www.bergenbasin.com/",
-        "alt": "Homes for Sale in Sheepshead Bay, NY",
-        "width": null,
-        "height": null,
-        "reason": "robots"
-      },
-      {
-        "url": "https://idx-acnt-ihouseprd.b-cdn.net/AR991813/file_manager/Saved%20Search%20Photos/City%20Homes/City14_400x400.jpg",
-        "page": "https://www.bergenbasin.com/",
-        "alt": "Homes for Sale in Midwood, NY",
-        "width": null,
-        "height": null,
-        "reason": "robots"
-      },
-      {
-        "url": "https://idx-acnt-ihouseprd.b-cdn.net/AR991813/file_manager/Saved%20Search%20Photos/City%20Homes/city10_400x400.jpg",
-        "page": "https://www.bergenbasin.com/",
-        "alt": "Homes for Sale in Canarsie, NY",
-        "width": null,
-        "height": null,
-        "reason": "robots"
-      }
-    ]
-  },
-  {
     "provider": "Cypress Hills Local Development Corporation, Inc.",
     "website": "https://www.cypresshills.org/",
     "photos": [],
@@ -6278,90 +6283,18 @@
     ]
   },
   {
-    "provider": "Aspira of New York, Inc.",
-    "website": "https://aspira.org/",
+    "provider": "Bergen Beach Youth Organization, Inc.",
+    "website": "https://www.bergenbeachbaseball.com/",
     "photos": [
       {
-        "url": "https://aspira.org/wp-content/uploads/2020/11/Estudiantes-del-primer-taller-scaled.jpg",
-        "page": "https://aspira.org/",
-        "alt": "",
-        "width": 2560,
-        "height": 1920,
+        "url": "https://res.cloudinary.com/jersey-watch/image/upload/c_scale,w_500,h_500/f_jpg/q_auto/v1667847886/cvzai75wemlrrzgwsgtp.png?_a=BAVAS2ID0",
+        "page": "https://www.bergenbeachbaseball.com/",
+        "alt": "og:image",
+        "width": 500,
+        "height": 500,
         "mime": "image/jpeg",
-        "aspect": 1.333,
-        "orientation": "landscape",
-        "carouselReady": true,
-        "judged": false
-      },
-      {
-        "url": "https://aspira.org/wp-content/uploads/2025/07/Areito-ceremony-NY.png",
-        "page": "https://aspira.org/",
-        "alt": "",
-        "width": 1366,
-        "height": 768,
-        "mime": "image/png",
-        "aspect": 1.779,
-        "orientation": "landscape",
-        "carouselReady": true,
-        "judged": false
-      },
-      {
-        "url": "https://aspira.org/wp-content/uploads/2025/06/Dr-Pantoja-BW-2.png",
-        "page": "https://aspira.org/",
-        "alt": "",
-        "width": 1366,
-        "height": 768,
-        "mime": "image/png",
-        "aspect": 1.779,
-        "orientation": "landscape",
-        "carouselReady": true,
-        "judged": false
-      },
-      {
-        "url": "https://aspira.org/wp-content/uploads/2026/01/Meaningful-Economics-Entrepreneurship-2025-Competition.jpeg",
-        "page": "https://aspira.org/",
-        "alt": "",
-        "width": 1000,
-        "height": 750,
-        "mime": "image/jpeg",
-        "aspect": 1.333,
-        "orientation": "landscape",
-        "carouselReady": true,
-        "judged": false
-      },
-      {
-        "url": "https://aspira.org/wp-content/uploads/2026/02/Are-you-an-Aspirante-Banner.png",
-        "page": "https://aspira.org/",
-        "alt": "",
-        "width": 1366,
-        "height": 400,
-        "mime": "image/png",
-        "aspect": 3.415,
-        "orientation": "landscape",
-        "carouselReady": false,
-        "judged": false
-      },
-      {
-        "url": "https://aspira.org/wp-content/uploads/2026/01/kids-podcast.jpg",
-        "page": "https://aspira.org/",
-        "alt": "",
-        "width": 640,
-        "height": 480,
-        "mime": "image/jpeg",
-        "aspect": 1.333,
-        "orientation": "landscape",
-        "carouselReady": false,
-        "judged": false
-      },
-      {
-        "url": "https://aspira.org/wp-content/uploads/2026/02/Dr.-Pantoja-1.jpg",
-        "page": "https://aspira.org/",
-        "alt": "",
-        "width": 404,
-        "height": 523,
-        "mime": "image/jpeg",
-        "aspect": 0.772,
-        "orientation": "portrait",
+        "aspect": 1,
+        "orientation": "square",
         "carouselReady": false,
         "judged": false
       }
@@ -7948,447 +7881,6 @@
     ]
   },
   {
-    "provider": "Italian American Civil Rights League Canarsie Inc",
-    "website": "https://italianamerican.com/",
-    "photos": [
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2020/05/photo-sep-11-7-29-33-pm.jpg",
-        "page": "https://italianamerican.com/",
-        "alt": "Boccee Court",
-        "width": 3264,
-        "height": 2448,
-        "mime": "image/jpeg",
-        "aspect": 1.333,
-        "orientation": "landscape",
-        "carouselReady": true,
-        "judged": false
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/10-19-2019-colombus-gala-349.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "TOASTING THE COLUMBUS GALA",
-        "width": 3010,
-        "height": 2003,
-        "mime": "image/jpeg",
-        "aspect": 1.503,
-        "orientation": "landscape",
-        "carouselReady": true,
-        "judged": false
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2020/06/pavilion.jpg",
-        "page": "https://italianamerican.com/",
-        "alt": "IACC Pavilion",
-        "width": 1600,
-        "height": 1200,
-        "mime": "image/jpeg",
-        "aspect": 1.333,
-        "orientation": "landscape",
-        "carouselReady": true,
-        "judged": false
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2026/09/monday-buffet-2026.png",
-        "page": "https://italianamerican.com/",
-        "alt": "September Monday Night Buffet- September 21",
-        "width": 1640,
-        "height": 924,
-        "mime": "image/png",
-        "aspect": 1.775,
-        "orientation": "landscape",
-        "carouselReady": true,
-        "judged": false
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2026/09/board-nomination-w.png",
-        "page": "https://italianamerican.com/",
-        "alt": "General Membership- Elections",
-        "width": 1640,
-        "height": 924,
-        "mime": "image/png",
-        "aspect": 1.775,
-        "orientation": "landscape",
-        "carouselReady": true,
-        "judged": false
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/12698493_1144578602227164_1632907879196467201_o.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "DINNER DANCES",
-        "width": 1504,
-        "height": 1004,
-        "mime": "image/jpeg",
-        "aspect": 1.498,
-        "orientation": "landscape",
-        "carouselReady": true,
-        "judged": false
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/07/36619547_10216633609371958_443409644795199488_n.jpg",
-        "page": "https://italianamerican.com/",
-        "alt": "Swimming Pool",
-        "width": 960,
-        "height": 720,
-        "mime": "image/jpeg",
-        "aspect": 1.333,
-        "orientation": "landscape",
-        "carouselReady": true,
-        "judged": false
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/07/19510123_10213389570953025_3655320757386097889_n.jpg",
-        "page": "https://italianamerican.com/",
-        "alt": "Sons of Italy Lion",
-        "width": 960,
-        "height": 720,
-        "mime": "image/jpeg",
-        "aspect": 1.333,
-        "orientation": "landscape",
-        "carouselReady": true,
-        "judged": false
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2026/09/chair-yoga-2026-f.png",
-        "page": "https://italianamerican.com/",
-        "alt": "Chair Yoga- Starts September 17th",
-        "width": 1080,
-        "height": 1920,
-        "mime": "image/png",
-        "aspect": 0.563,
-        "orientation": "portrait",
-        "carouselReady": false,
-        "judged": false
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2026/09/italian-language-2026-f.png",
-        "page": "https://italianamerican.com/",
-        "alt": "Learn Italian- Starting September 28TH",
-        "width": 1080,
-        "height": 1920,
-        "mime": "image/png",
-        "aspect": 0.563,
-        "orientation": "portrait",
-        "carouselReady": false,
-        "judged": false
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2026/09/columbus-gala-2026bannerw.png",
-        "page": "https://italianamerican.com/",
-        "alt": "Columbus Day Grand Gala-October 17th",
-        "width": 1080,
-        "height": 1920,
-        "mime": "image/png",
-        "aspect": 0.563,
-        "orientation": "portrait",
-        "carouselReady": false,
-        "judged": false
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2026/06/christmas-arthur-avenue-.png",
-        "page": "https://italianamerican.com/",
-        "alt": "Christmas Time on Arthur Avenue -December 12th",
-        "width": 1080,
-        "height": 1920,
-        "mime": "image/png",
-        "aspect": 0.563,
-        "orientation": "portrait",
-        "carouselReady": false,
-        "judged": false
-      }
-    ],
-    "rejected": [
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/37559691_10216788686688794_5862265626122256384_n.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "MAKING PIZZA",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/37590463_10204596928960811_7836673233238622208_n.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "FRIDAY NIGHT IN THE PAVILION",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/37976132_10216845370105844_6723098435131539456_n.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "FRIDAY NIGHT COOKING",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/57121061_2391763610841984_557260719481946112_n.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "ARTHUR AVENUE TRIPS",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/img_0225.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "FERRAGOSTO BONFIRES",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/img_0647.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "VENICE CARNEVALE",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/jim-frank-cain-at-pool.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "FRIENDS AT THE POOL",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/photo-aug-10-11-50-43-am.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "MANGIA",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/photo-aug-10-4-44-47-pm.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "FERRAGOSTO FUN",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/photo-aug-12-3-27-07-pm.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "FERRAGOSOTO KITCHEN FUN",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/photo-aug-10-12-06-16-pm-1.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "FERAGOSTO PIG ROAST",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/photo-aug-12-3-27-21-pm.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "GRILLING BURGERS",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2026/03/playground-website-banner.png",
-        "page": "https://italianamerican.com/",
-        "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "too-large"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2020/05/iacc-lion.png",
-        "page": "https://italianamerican.com/",
-        "alt": "IACC LION",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/07/36534396_1970265612991788_6580941765027561472_n.jpg",
-        "page": "https://italianamerican.com/",
-        "alt": "IACC Building",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/07/10-19-2019-colombus-gala-20.jpg",
-        "page": "https://italianamerican.com/",
-        "alt": "Columbus Day Grand Gala",
-        "width": null,
-        "height": null,
-        "reason": "too-large"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/07/10-19-2019-colombus-gala-27.jpg",
-        "page": "https://italianamerican.com/",
-        "alt": "Food",
-        "width": null,
-        "height": null,
-        "reason": "too-large"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/07/10-9-2016-i.a.c.c.-columbus-day-gala-0191.jpg",
-        "page": "https://italianamerican.com/",
-        "alt": "Alfio The Singer",
-        "width": null,
-        "height": null,
-        "reason": "too-large"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2020/05/thumbnails/crown-png_s_125x89.png",
-        "page": "https://italianamerican.com/",
-        "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2022/01/shutterstock_1864534369.jpg",
-        "page": "https://italianamerican.com/our-programs-activites/",
-        "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "too-large"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2022/01/photo-aug-25-11-39-52-am.jpg",
-        "page": "https://italianamerican.com/our-programs-activites/",
-        "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "too-large"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/07/10-19-2019-colombus-gala-112.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "Columbus Gala Committee",
-        "width": null,
-        "height": null,
-        "reason": "too-large"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/07/10-9-2016-i.a.c.c.-columbus-day-gala-0248.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "ALFIO AT COLUMBUS GALA",
-        "width": null,
-        "height": null,
-        "reason": "too-large"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/2-22-2020-columbus-day-gala-32.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "CARNEVALE SICILY STYLE",
-        "width": null,
-        "height": null,
-        "reason": "too-large"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/10-19-2019-colombus-gala-535.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "COLUMBUS GALA 2019",
-        "width": null,
-        "height": null,
-        "reason": "too-large"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/35884093_10216545524129882_582779774477271040_n.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "YANKEE BUS TRIPS",
-        "width": 960,
-        "height": 720,
-        "reason": "duplicate-file",
-        "duplicateOf": "https://italianamerican.com/mt-content/uploads/2022/01/35884093_10216545524129882_582779774477271040_n.jpg"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/07/iacc-lion-vi.jpg",
-        "page": "https://italianamerican.com/",
-        "alt": "VI LION",
-        "width": 960,
-        "height": 720,
-        "reason": "over-limit"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/07/18952628_10213156189518635_3788348931175023130_n.jpg",
-        "page": "https://italianamerican.com/",
-        "alt": "St. Anthony Shrine",
-        "width": 720,
-        "height": 960,
-        "reason": "over-limit"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2020/05/photo-apr-22-9-22-12-pm.jpg",
-        "page": "https://italianamerican.com/",
-        "alt": "Roman Garden",
-        "width": 960,
-        "height": 720,
-        "reason": "over-limit"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2022/01/57121061_2391763610841984_557260719481946112_n.jpg",
-        "page": "https://italianamerican.com/our-programs-activites/",
-        "alt": "",
-        "width": 720,
-        "height": 960,
-        "reason": "over-limit"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2022/01/35884093_10216545524129882_582779774477271040_n.jpg",
-        "page": "https://italianamerican.com/our-programs-activites/",
-        "alt": "",
-        "width": 960,
-        "height": 720,
-        "reason": "over-limit"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/175260_196760300342337_2697558_o.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "Festa Italiana",
-        "width": 960,
-        "height": 720,
-        "reason": "over-limit"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/11898653_1056770171008008_6077636471283607151_n.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "CLUB CELEBRATIONS",
-        "width": 720,
-        "height": 960,
-        "reason": "over-limit"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/09/216694_245100885508278_8285483_n.jpg",
-        "page": "https://italianamerican.com/photo-gallery/",
-        "alt": "FESTA ITALIANA FUN",
-        "width": 720,
-        "height": 629,
-        "reason": "over-limit"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2022/02/chair-yoga-web.jpg",
-        "page": "https://italianamerican.com/our-programs-activites/",
-        "alt": "",
-        "width": 640,
-        "height": 436,
-        "reason": "over-limit"
-      },
-      {
-        "url": "https://italianamerican.com/mt-content/uploads/2021/07/bocce.jpg",
-        "page": "https://italianamerican.com/our-programs-activites/",
-        "alt": "",
-        "width": 640,
-        "height": 427,
-        "reason": "over-limit"
-      }
-    ]
-  },
-  {
     "provider": "The Educational Alliance Inc",
     "website": "https://edalliance.org/",
     "photos": [
@@ -9310,397 +8802,6 @@
         "url": "https://harlemdowling.org/images/blog/news-06-370x240.jpg",
         "page": "https://harlemdowling.org/programs.html",
         "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      }
-    ]
-  },
-  {
-    "provider": "Hudson Guild",
-    "website": "https://hudsonguild.org/",
-    "photos": [],
-    "rejected": [
-      {
-        "url": "https://hudsonguild.org/images/loaderB.gif",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "filename"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/641da27f637405a50265106920d3944a.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "stephen-headshot.png",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/69cc4c7787ca377ab844c84642136325.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "joaquin-headshot.png",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/b1c9688edc0e94d82ed0ffb0b44896b4.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "1-0030.png",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/a37e716c55ffca798c3aeef8d81dc58d.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "melvin-headshot.png",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/2d07d93494b023606e584f825832d52c.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "coach-headshot.png",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/f89f640722b9edb1e798248f1c9bc889.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "isaiah-headshot.png",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/3c14a79b828992e4536be53691117e76.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "2-0033.png",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/bb863f6491a372e67566e0a11e2d6d7c.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "shanessa-headshot.png",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/2c597e0ff0fafa4fbf0fdd3832b2f3e8.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "3-0012.png",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/81a49b69deabfa63c4eae659b54d0f54.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "james-headshot.png",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/0df599d236b65a7eedad3f5213676459.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "benny-headshot.png",
-        "width": null,
-        "height": null,
-        "reason": "shortlist-full"
-      },
-      {
-        "url": "https://hudsonguild.org/get/files/image/galleries/bbb-accredited-charity-seal-300x114.png?166x63",
-        "page": "https://hudsonguild.org/",
-        "alt": "",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/5ea523ef67e67cf869477a73039c2427.jpg",
-        "page": "https://hudsonguild.org/Our-Programs",
-        "alt": "Our_Programs_Page.jpg",
-        "width": null,
-        "height": null,
-        "reason": "aspect"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/1a6ecc8130843ed68c4265d35400f7b4.png",
-        "page": "https://hudsonguild.org/Mental-Health-Services",
-        "alt": "fulton_flowers-03.png",
-        "width": null,
-        "height": null,
-        "reason": "aspect"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/c702dd4c05046554cd80a80ca6f049b5.png",
-        "page": "https://hudsonguild.org/Mental-Health-Services",
-        "alt": "1-0032.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/f77d55bcda9e9e81a5da1e60e00474fb.png",
-        "page": "https://hudsonguild.org/Mental-Health-Services",
-        "alt": "2-0036.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/ec62de0642b4d48394214f4d66185c22.png",
-        "page": "https://hudsonguild.org/Mental-Health-Services",
-        "alt": "3-0016.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/01b5d40cf6d7175bd1088626d68b9647.png",
-        "page": "https://hudsonguild.org/Mental-Health-Services",
-        "alt": "4-0011.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/7e33160a6cd82e0ce77c603b28165e28.png",
-        "page": "https://hudsonguild.org/Mental-Health-Services",
-        "alt": "5-0009.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/b068c7e980db80e4d682599ea96ce4f4.png",
-        "page": "https://hudsonguild.org/Mental-Health-Services",
-        "alt": "6-0008.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/2ccd0e6891be4a9b31b8947a73a40b08.png",
-        "page": "https://hudsonguild.org/Mental-Health-Services",
-        "alt": "7-0008.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/56000c451dd08eb8710936e5a137eaf5.png",
-        "page": "https://hudsonguild.org/Mental-Health-Services",
-        "alt": "8-0008.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/d4b0973732a072979121e707e53b3187.png",
-        "page": "https://hudsonguild.org/Mental-Health-Services",
-        "alt": "9-0007.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/fea482087ced2ddd295559e2c145af9b.png",
-        "page": "https://hudsonguild.org/Mental-Health-Services",
-        "alt": "10-0006.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/9ef69af6483ca277b5e6a3b5be42e8b3.png",
-        "page": "https://hudsonguild.org/Mental-Health-Services",
-        "alt": "11-0006.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/f9a9d54745d7d1459cd3db5bb9c60936.png",
-        "page": "https://hudsonguild.org/Mental-Health-Services",
-        "alt": "MENTAL-HEALTH-CLINICIANS.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/a930e241d0e651fb458e22b5bff7ce50.png",
-        "page": "https://hudsonguild.org/adult-services",
-        "alt": "oac.png",
-        "width": null,
-        "height": null,
-        "reason": "aspect"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/e923645330fca0b4baafa3ecd6eadcbb.png",
-        "page": "https://hudsonguild.org/adult-services",
-        "alt": "NYFE_LOGO_2.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/380a7be22c72e6feb4ee9214c1cfc785.png",
-        "page": "https://hudsonguild.org/youth-development-education",
-        "alt": "afterschool_webheader.png",
-        "width": null,
-        "height": null,
-        "reason": "aspect"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/432163f475e942b0572b7eb4f5b88bc7.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "web-header-new-teen.png",
-        "width": null,
-        "height": null,
-        "reason": "aspect"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/0254aaeb4dac5b3faa0140301a5e779d.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "teen-services-webpage-photos_(1).png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/601db6ca09ed0c49e5d71cb5e26fdcb3.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "teen-services-webpage-photos_(2).png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/42a8b7c1616c8d4f8ab164a906b217a7.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "Untitled_design_(1)-0007.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/148fca0057e7de88b37d9b9fae91d357.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "4-0009.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/39b3041ab0e976ab1ebd72d90a5c5950.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "teen-services-webpage-photos_(3).png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/30c50ab6d0dd6b027c453471f008390d.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "teen-services-webpage-photos_(4).png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/bea1234f94d6acb7bf66f2eb2d120771.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "teen-services-webpage-photos_(5).png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/eaa30a3b4dba1d7e59554c3d17460b7c.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "5-0007.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/43989c912a5653adaa85baf48ea3e8be.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "teen-services-webpage-photos_(6).png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/620db1f58a3cf87a51e2fe64dad2f2b8.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "Untitled_design_(2)-0001.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/9244abf371be18a1c706a3081baab03d.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "6-0006.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/38ee265c3189f80b3b60f4ea637bdf16.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "teen-services-webpage-photos_(7).png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/6e47ddac2dbc2fb748cfd3dfa843705f.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "sheldon-headshot.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/36c22a4c220e80ed81802ecaf201acb2.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "shanya-headshot.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/049428d8dd75b869eae430ebe735d86a.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "emily-headshot.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/37833899cb38ab62e78d08221ec5f21e.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "brad-headshot.png",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://hudsonguild.org/files/_cache/98081f2c8ffd3e44c1af135365b53faf.png",
-        "page": "https://hudsonguild.org/TeenServices",
-        "alt": "rachel-headshot.png",
         "width": null,
         "height": null,
         "reason": "too-small"
@@ -12006,85 +11107,6 @@
         "duplicateOf": "https://ymcanyc.org/sites/default/files/styles/hero_banner_retina_2x/public/2026-05/3147c9a3-404b-4032-93e7-e0ed85735229.jpeg.webp?itok=uh1BjLTy"
       }
     ]
-  },
-  {
-    "provider": "82nd Street Academics",
-    "website": "https://82ndstreet.org/",
-    "photos": [
-      {
-        "url": "https://images.squarespace-cdn.com/content/v1/632b16b1b2fbef211c64574c/1664833481344-IJ7TWUD9NTGXQANUS13O/82STP_Neighborhood_02.jpg",
-        "page": "https://82ndstreet.org/",
-        "alt": "82STP_Neighborhood_02.jpg",
-        "width": 2222,
-        "height": 1667,
-        "mime": "image/jpeg",
-        "aspect": 1.333,
-        "orientation": "landscape",
-        "carouselReady": true,
-        "judged": false
-      },
-      {
-        "url": "https://images.squarespace-cdn.com/content/v1/632b16b1b2fbef211c64574c/1664833494647-3YPKF00HHE06ZO22Q4L1/82STP_Neighborhood_01.jpg",
-        "page": "https://82ndstreet.org/",
-        "alt": "82STP_Neighborhood_01.jpg",
-        "width": 2222,
-        "height": 1667,
-        "mime": "image/jpeg",
-        "aspect": 1.333,
-        "orientation": "landscape",
-        "carouselReady": true,
-        "judged": false
-      },
-      {
-        "url": "https://images.squarespace-cdn.com/content/v1/632b16b1b2fbef211c64574c/1664833505628-ZWE5KY650NDLO26F0SK1/82STP_Events_01.jpg",
-        "page": "https://82ndstreet.org/",
-        "alt": "82STP_Events_01.jpg",
-        "width": 2222,
-        "height": 1667,
-        "mime": "image/jpeg",
-        "aspect": 1.333,
-        "orientation": "landscape",
-        "carouselReady": true,
-        "judged": false
-      },
-      {
-        "url": "https://images.squarespace-cdn.com/content/v1/632b16b1b2fbef211c64574c/46db4d64-cf42-4d65-a337-1064fe31fa7f/82STP_Street.jpg",
-        "page": "https://82ndstreet.org/",
-        "alt": "82STP_Street.jpg",
-        "width": 2000,
-        "height": 1500,
-        "mime": "image/jpeg",
-        "aspect": 1.333,
-        "orientation": "landscape",
-        "carouselReady": true,
-        "judged": false
-      },
-      {
-        "url": "https://images.squarespace-cdn.com/content/v1/632b16b1b2fbef211c64574c/4f42150a-2845-4c9a-8ea5-6c5b0aba4f92/82STP_Sidewalk-Seating.jpg",
-        "page": "https://82ndstreet.org/",
-        "alt": "82STP_Sidewalk-Seating.jpg",
-        "width": 2000,
-        "height": 1500,
-        "mime": "image/jpeg",
-        "aspect": 1.333,
-        "orientation": "landscape",
-        "carouselReady": true,
-        "judged": false
-      },
-      {
-        "url": "https://images.squarespace-cdn.com/content/v1/632b16b1b2fbef211c64574c/bd530701-3929-4a4b-b817-9aa182a65d47/82STP_Planting-with-JH-Beautification.jpg",
-        "page": "https://82ndstreet.org/",
-        "alt": "82STP_Planting-with-JH-Beautification.jpg",
-        "width": 2000,
-        "height": 1500,
-        "mime": "image/jpeg",
-        "aspect": 1.333,
-        "orientation": "landscape",
-        "carouselReady": true,
-        "judged": false
-      }
-    ],
-    "rejected": []
   },
   {
     "provider": "Brooklyn Childrens Museum Corp",
@@ -15163,29 +14185,6 @@
         "width": 402,
         "height": 450,
         "reason": "over-limit"
-      }
-    ]
-  },
-  {
-    "provider": "Sunset Park Health Council Inc",
-    "website": "https://www.sunsetpark.org/",
-    "photos": [],
-    "rejected": [
-      {
-        "url": "https://www.sunsetpark.org/wp-content/uploads/2016/11/cropped-nyctbussp.jpg",
-        "page": "https://www.sunsetpark.org/",
-        "alt": "Sunset Park",
-        "width": null,
-        "height": null,
-        "reason": "too-small"
-      },
-      {
-        "url": "https://www.sunsetpark.org/wp-content/uploads/2016/11/Altar-in-Sunset-Park-optimi.jpg",
-        "page": "https://www.sunsetpark.org/",
-        "alt": "altar-in-sunset-park-optimi",
-        "width": null,
-        "height": null,
-        "reason": "too-large"
       }
     ]
   },

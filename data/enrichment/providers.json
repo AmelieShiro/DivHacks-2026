@@ -605,9 +605,9 @@
       "Brooklyn",
       "Queens"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.hispanicfamilyservicesny.org/",
+    "resolvedVia": "hispanicfamilyservicesny.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "coalitionhispanicfamily.org",
@@ -627,7 +627,13 @@
       "coalition",
       "hispanic",
       "family"
-    ]
+    ],
+    "matched": [
+      "coalition",
+      "hispanic",
+      "family"
+    ],
+    "source": "gemini"
   },
   {
     "provider": "NIA Community Services Network Inc",
@@ -636,9 +642,9 @@
       "Brooklyn",
       "Staten Island"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "http://nianetwork.org/",
+    "resolvedVia": "nianetwork.org",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "niacommunityservicesnetwork.org",
@@ -653,7 +659,11 @@
     ],
     "signals": [
       "network"
-    ]
+    ],
+    "matched": [
+      "network"
+    ],
+    "source": "generated"
   },
   {
     "provider": "ST. NICKS ALLIANCE CORP.",
@@ -768,8 +778,7 @@
       "bergen",
       "basin",
       "development"
-    ],
-    "matchedSignals": []
+    ]
   },
   {
     "provider": "Brooklyn Chinese-American Association Inc",
@@ -916,9 +925,9 @@
     "boroughs": [
       "Brooklyn"
     ],
-    "website": null,
-    "resolvedVia": null,
-    "confidence": "unresolved",
+    "website": "https://www.bergenbeachbaseball.com/",
+    "resolvedVia": "bergenbeachbaseball.com",
+    "confidence": "strong",
     "locked": false,
     "candidates": [
       "bergenbeachyouthorganization.org",
@@ -942,7 +951,13 @@
       "beach",
       "youth",
       "organization"
-    ]
+    ],
+    "matched": [
+      "bergen",
+      "beach",
+      "organization"
+    ],
+    "source": "gemini"
   },
   {
     "provider": "Center for Family Life In Sunset Park, Inc.",
@@ -1678,8 +1693,7 @@
       "rights",
       "league",
       "canarsie"
-    ],
-    "matchedSignals": []
+    ]
   },
   {
     "provider": "Neighborhood Initiatives Development Corporation",
@@ -2280,8 +2294,7 @@
       "82nd",
       "street",
       "academics"
-    ],
-    "matchedSignals": []
+    ]
   },
   {
     "provider": "Boys & Girls Club of Metro Queens, Inc",
@@ -2981,8 +2994,7 @@
       "sunset",
       "park",
       "health"
-    ],
-    "matchedSignals": []
+    ]
   },
   {
     "provider": "The Door-A Center of Alternatives Inc",
