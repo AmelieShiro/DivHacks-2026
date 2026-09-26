@@ -5,8 +5,12 @@
  */
 export type Cost = "Free" | "Low-cost" | "Sliding scale" | "Paid" | "Ask provider";
 
-/** The design's subject filter options. Cards may carry more subjects. */
-export type Subject = "Biology" | "Chemistry" | "Coding" | "Engineering" | "Robotics";
+/** A subject filter heading ("Science") and the subjects under it that at
+ *  least one program actually has, with how many programs have each. */
+export type SubjectGroup = {
+  heading: string;
+  options: { label: string; count: number }[];
+};
 
 export type CardProgram = {
   id: string;

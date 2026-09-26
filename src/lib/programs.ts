@@ -7,13 +7,15 @@
  * is a documented DYCD fact about the program type or an honest "Ask
  * provider" — never an invented schedule, price or availability.
  */
-import type { Program, ZipStat } from "../../pipeline/schema/program";
+import type { Meta, Program, ZipStat } from "../../pipeline/schema/program";
 import programsJson from "../../dist/programs.json";
 import zipsJson from "../../dist/zips.json";
-import type { CardProgram, Cost, ZipCentroids } from "./types";
+import metaJson from "../../dist/meta.json";
+import type { CardProgram, Cost, SubjectGroup, ZipCentroids } from "./types";
 
 const programs = programsJson as unknown as Program[];
 const zips = zipsJson as unknown as ZipStat[];
+const meta = metaJson as unknown as Meta;
 
 /** DYCD's enrollment portal, for programs whose provider has no known website. */
 export const DISCOVER_DYCD = "https://discoverdycd.dycdconnect.nyc/";
@@ -135,6 +137,23 @@ export function getFeatured(n = 8): CardProgram[] {
     .filter((p) => (seen.has(p.provider ?? "") ? false : (seen.add(p.provider ?? ""), true)))
     .slice(0, n)
     .map(toCard);
+}
+
+/**
+ * Subject filter options, under the dataset's own headings. A subject no
+ * program has is left out, so every option a parent can pick returns results.
+ */
+export function getSubjectGroups(cards: CardProgram[]): SubjectGroup[] {
+  const counts = new Map<string, number>();
+  for (const c of cards) for (const s of c.subjects) counts.set(s, (counts.get(s) ?? 0) + 1);
+  return Object.entries(meta.subjectGroups)
+    .map(([heading, subjects]) => ({
+      heading,
+      options: subjects
+        .map((s) => ({ label: label(s), count: counts.get(label(s)) ?? 0 }))
+        .filter((o) => o.count > 0),
+    }))
+    .filter((g) => g.options.length > 0);
 }
 
 export function getZipCentroids(): ZipCentroids {
