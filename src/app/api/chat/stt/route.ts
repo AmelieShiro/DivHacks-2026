@@ -43,8 +43,6 @@ export async function POST(req: Request) {
 
   const form = new FormData();
   form.append("model", "grok-voice-transcribe-2.0");
-  form.append("format", "true");
-  form.append("language", "en");
   for (const term of KEYTERMS) form.append("keyterm", term);
   form.append("file", file, file.name || "question.wav");
 
@@ -60,10 +58,10 @@ export async function POST(req: Request) {
     );
   }
 
-  const data = (await res.json()) as { text?: string };
+  const data = (await res.json()) as { text?: string; language?: string };
   const text = data.text?.trim() ?? "";
   if (!text) {
     return NextResponse.json({ error: "I didn’t catch a question. Try again." }, { status: 422 });
   }
-  return NextResponse.json({ text });
+  return NextResponse.json({ text, language: data.language || "en" });
 }

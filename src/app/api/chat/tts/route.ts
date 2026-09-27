@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import { rateLimit } from "@/lib/chat/rateLimit";
+import { ttsLanguage } from "@/lib/chat/grokTranslate";
 
-/** Speak a catalog answer with Grok TTS. The API key never leaves the server. */
+/** Speak a catalog answer with Grok Voice TTS in the language that was asked. */
 export async function POST(req: Request) {
   // Before any paid work: this route spends an xAI quota on every call.
   const allowed = rateLimit(req);
@@ -20,9 +21,10 @@ export async function POST(req: Request) {
     );
   }
 
-  const body = (await req.json()) as { text?: string };
+  const body = (await req.json()) as { text?: string; language?: string };
   const text = body.text?.trim().slice(0, 1500) ?? "";
   if (!text) return NextResponse.json({ error: "Nothing to say." }, { status: 400 });
+  const language = ttsLanguage(body.language || "auto");
 
   const res = await fetch("https://api.x.ai/v1/tts", {
     method: "POST",
@@ -33,7 +35,7 @@ export async function POST(req: Request) {
     body: JSON.stringify({
       text,
       voice_id: "eve",
-      language: "en",
+      language,
       text_normalization: true,
     }),
   });

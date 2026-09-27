@@ -51,20 +51,33 @@ export async function blobToWav(blob: Blob): Promise<Blob> {
   return new Blob([wav], { type: "audio/wav" });
 }
 
-export async function transcribeWav(wav: Blob): Promise<{ text?: string; error?: string }> {
+export async function transcribeWav(
+  wav: Blob,
+): Promise<{ text?: string; language?: string; error?: string }> {
   const form = new FormData();
   form.append("file", wav, "question.wav");
   const res = await fetch("/api/chat/stt", { method: "POST", body: form });
-  const data = (await res.json()) as { text?: string; error?: string };
+  const data = (await res.json()) as { text?: string; language?: string; error?: string };
   if (!res.ok) return { error: data.error || "Could not transcribe." };
-  return { text: data.text };
+  return { text: data.text, language: data.language || "en" };
 }
 
-export async function speakText(text: string): Promise<HTMLAudioElement | null> {
+export async function translateText(text: string, target: string): Promise<string> {
+  if (!target || target.toLowerCase().startsWith("en")) return text;
+  const res = await fetch("/api/chat/translate", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text, target }),
+  });
+  const data = (await res.json()) as { text?: string };
+  return data.text?.trim() || text;
+}
+
+export async function speakText(text: string, language = "en"): Promise<HTMLAudioElement | null> {
   const res = await fetch("/api/chat/tts", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ text }),
+    body: JSON.stringify({ text, language }),
   });
   if (!res.ok) return null;
   const url = URL.createObjectURL(await res.blob());
