@@ -1,11 +1,10 @@
 # NOVA
 
-Zero-friction discovery of K–5 STEM after-school programs in New York City.
+Nova is a web app that allows users to enter their ZIP code and discover nearby STEM opportunities. 
 
-Finding hands-on STEM programming for an elementary-school kid in NYC means
-crossing 311, DiscoverDYCD and a scatter of commercial directories. The city's
-own data says where programs are but nothing about what they're like;
-commercial directories only list what's expensive. NOVA joins them.
+Nova helps NYC families discover hands-on STEM programs, one ZIP code at a time. Nova was built to help 
+students from Title I and low-income communities access hands-on STEM opportunities.
+
 
 ## Repo layout
 
@@ -78,11 +77,6 @@ URL are in `cost.note`. The other 195 (Beacon, Cornerstone, ...) are
 `"unknown"` unless Gemini reads a price off the provider's site. Keyword
 matches never set a price. `cost.tier: "unknown"` must not be rendered as "Free".
 
-**OSIS lookup is by school, not student ID.** An OSIS is a private student
-identifier with no public mapping. School name and DBN lookup gives the same
-"what's already in my kid's school" feature — 444 of 565 programs run inside an
-identified DOE building, 393 of them a school that actually serves K–5.
-
 ## What to trust
 
 Every field in `dist/programs.json` falls into one of three tiers. The site
@@ -120,7 +114,7 @@ Suggested footnote for the site:
 > Program names, addresses, ages and seats come from NYC Open Data (DYCD).
 > Descriptions, STEM activities, contact details, cost and photos were
 > gathered automatically from each provider's website and may be out of date
-> or refer to the organization as a whole. Please confirm with the provider
+> or refer to the organization as a whole. Stock images were used. Please confirm with the provider
 > before enrolling.
 
 ## Development
