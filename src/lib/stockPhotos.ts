@@ -4,8 +4,9 @@
  * children or an activity. They illustrate the subject, not this program or
  * place; each carries a credit linking to its source.
  *
- * Files live in public/stock/, resized to 1200x800. Every one is public
- * domain, CC BY 2.0 or CC BY-SA 4.0; the latter two require the credit below.
+ * Files live in public/stock/. Every one is public domain or CC BY / CC BY-SA
+ * (credit required, given below). None is from a military setting: see
+ * scripts/lib/stock-filters.mjs.
  */
 export type StockPhoto = { src: string; alt: string; credit: string; source: string };
 
@@ -14,9 +15,9 @@ const COMMONS = "https://commons.wikimedia.org/wiki/File:";
 export const STOCK_PHOTOS = {
   robotics: {
     src: "/stock/robotics.jpg",
-    alt: "Children testing a LEGO robot on a competition mat",
-    credit: "Cpl. Joey Holeman, USMC · Public domain",
-    source: `${COMMONS}DoDEA_Okinawa_schools_compete_at_robotics_competition_141206-M-PU373-025.jpg`,
+    alt: "A boy wiring up a LEGO robot with his teacher",
+    credit: "Jannua · CC BY-SA 4.0",
+    source: `${COMMONS}Kids_Constructing_Robotics_7.jpg`,
   },
   coding: {
     src: "/stock/coding.jpg",
@@ -38,9 +39,9 @@ export const STOCK_PHOTOS = {
   },
   science: {
     src: "/stock/science.jpg",
-    alt: "A girl doing a hands-on science experiment",
-    credit: "U.S. Marine Corps · Public domain",
-    source: `${COMMONS}USMC-100522-M-1298M-021.jpg`,
+    alt: "Children looking into a microscope with their teacher",
+    credit: "Blue Plover · CC BY-SA 3.0",
+    source: `${COMMONS}Students_use_microscope_LPB_Laos.jpg`,
   },
   gardening: {
     src: "/stock/gardening.jpg",
@@ -56,9 +57,9 @@ export const STOCK_PHOTOS = {
   },
   cooking: {
     src: "/stock/cooking.jpg",
-    alt: "Children in chef hats learning to cook with a chef",
-    credit: "Petty Officer 2nd Class Kegan Kay, U.S. Navy · Public domain",
-    source: `${COMMONS}Cooking_contest_140418-N-OX321-101.jpg`,
+    alt: "Two children with the dish they are cooking and a cookbook",
+    credit: "woodley wonderworks · CC BY 2.0",
+    source: `${COMMONS}HomeschooledChildrenCooking.jpg`,
   },
   art: {
     src: "/stock/art.jpg",
@@ -68,15 +69,15 @@ export const STOCK_PHOTOS = {
   },
   music: {
     src: "/stock/music.jpg",
-    alt: "A teacher leading an elementary music class",
-    credit: "Spc. Paul Durrance, U.S. Army · Public domain",
-    source: `${COMMONS}Music_class_140210-A-FV345-241.jpg`,
+    alt: "A smiling boy playing a drum",
+    credit: "Sir Amugi · CC BY-SA 4.0",
+    source: `${COMMONS}Children_learning_to_play_the_local_drum_in_northern_Region_of_Ghana_03.jpg`,
   },
   dance: {
     src: "/stock/dance.jpg",
-    alt: "Children dancing together in a school gym",
-    credit: "Airman 1st Class Justin Veazie, U.S. Air Force · Public domain",
-    source: `${COMMONS}Children_dancing_to_Gangnam_Style.jpg`,
+    alt: "Young girls in a ballet class",
+    credit: "Tommy Wong · CC BY 2.0",
+    source: `${COMMONS}Girls_in_a_ballet_class;_November_2006_(02).jpg`,
   },
   reading: {
     src: "/stock/reading.jpg",
@@ -86,15 +87,15 @@ export const STOCK_PHOTOS = {
   },
   sports: {
     src: "/stock/sports.jpg",
-    alt: "Young children at basketball practice with a coach",
-    credit: "U.S. Navy · Public domain",
-    source: `${COMMONS}US_Navy_091206-N-2013O-017_Lade_Majic,_Harlem_Ambassadors_basketball_team_coach_and_player,_demonstrates_proper_passing_techniques_to_children_during_a_basketball_camp_sponsored_by_Yokosuka_Morale,_Welfare_and_Recreation_Youth.jpg`,
+    alt: "Boys playing basketball on an outdoor court",
+    credit: "Kikaputv · CC BY-SA 4.0",
+    source: `${COMMONS}Basketball_at_Simiyu_Tanzania_50.jpg`,
   },
   default: {
     src: "/stock/default.jpg",
-    alt: "A class of children raising their hands",
-    credit: "Petty Officer 2nd Class Samuel Weldin, U.S. Navy · Public domain",
-    source: `${COMMONS}Misawa_Sailors_Visit_Japanese_After_School_Program_for_the_Holidays_161219-N-OK605-167.jpg`,
+    alt: "Children raising their hands during an outdoor lesson",
+    credit: "Joshua Tree National Park · Public domain",
+    source: `${COMMONS}Students_raise_hands_(25564212661).jpg`,
   },
 } satisfies Record<string, StockPhoto>;
 
@@ -129,36 +130,60 @@ export function stockFor(subjects: string[]): StockPhoto {
   return STOCK_PHOTOS[subjectKey(subjects)];
 }
 
-/**
- * Provider photos were never looked at by a person or a model, and most are
- * site banners: "Donate", housing, senior services, staff. Without a vision
- * model the only evidence is the caption, file name and page, so a photo is
- * used only when those point to children or an activity and nothing points
- * elsewhere.
- */
+type ProviderPhoto = {
+  url: string;
+  caption: string | null;
+  sourcePage: string;
+  width: number;
+  height: number;
+  judged: boolean;
+  kind: string | null;
+};
+
+/** Words tying a photo to children or an activity. */
 const ABOUT_KIDS =
   /\b(kids?|child|children|students?|youth|camp|after ?school|compass|sonyc|classroom|stem|steam|robot(ics)?|chess|lego|art|painting|science|gardening|summer|elementary|play(ing)?|learn(ing)?)\b/i;
-const NOT_KIDS =
-  /\b(seniors?|older|adults?|staff|board|gala|donate|donation|give|homeless(ness)?|housing|clinic|health|food|pantry|logo|banner|contact|help|office|building|ceo|director|team|volunteers?|jobs?|careers?|tenants?|rent|legal|scholarship|award|calendar|flyer|map|hero|slides?|slider|header|quote|apply|how ?to|history|mother|father|podcast|justice|leaders|category|rally)\b/i;
-/** File names written as one run-together word ("HOWTOAPPLYFORAFTERSCHOOL..."). */
-const NOT_KIDS_ANYWHERE = /howtoapply|register|enroll|flyer|logo/i;
+/**
+ * Words tying a photo to a provider's adult services or fundraising. These
+ * agencies also run senior centres, housing, clinics and job training, and a
+ * picture from those pages is not what a parent should see on a K-5 card.
+ * Layout words ("banner", "hero", "slider") are deliberately NOT here: a
+ * homepage hero is often the provider's best photo of kids.
+ */
+const ADULT_OR_FUNDRAISING =
+  /\b(seniors?|older|elderly|adults?|staff|board|gala|donate|donation|homeless(ness)?|housing|clinic|health|food|pantry|ceo|director|volunteers?|jobs?|careers?|workforce|employment|tenants?|rent|legal|immigration|scholarship|podcast|justice|rally)\b/i;
+/** Graphics rather than photographs, often written as one run-together word. */
+const GRAPHIC =
+  /logo|icon|circle|bubble|ellipse|shape|blob|wave|pattern|texture|background|\bbg\b|vector|illustration|graphic|placeholder|badge|avatar|sprite|arrow|divider|overlay|mockup|screenshot|rectangle|button|\bcta\b|\bmap\b|quote|flyer|howtoapply|register|enroll|give|\bgroup[-_ ]?\d+|linkedin|youtube|facebook|instagram|twitter|tiktok|newsletter|save[-_+ ]?the[-_+ ]?date|\bstd\b|campaign|category|popup|signup|contact|emptystate|slider[-_ ]?art|social[-_+ ]?post/i;
 
-function photoText(photo: { url: string; caption: string | null; sourcePage: string }): { file: string; text: string } {
+function photoText(photo: ProviderPhoto): { file: string; text: string } {
   const caption = photo.caption && photo.caption !== "og:image" ? photo.caption : "";
   const file = decodeURIComponent(photo.url.split(/[?#]/)[0].split("/").pop() ?? "");
   const page = photo.sourcePage.replace(/^https?:\/\/[^/]+/, "");
   return { file, text: `${caption} ${file} ${page}`.replace(/[_\-./]+/g, " ") };
 }
 
-export function looksLikeKidsPhoto(photo: { url: string; caption: string | null; sourcePage: string }): boolean {
-  const { file, text } = photoText(photo);
-  return ABOUT_KIDS.test(text) && !NOT_KIDS.test(text) && !NOT_KIDS_ANYWHERE.test(file);
+/** A photograph rather than a web graphic: JPEG/WebP, or a large PNG, of a normal shape. */
+function looksLikePhotograph(photo: ProviderPhoto, file: string): boolean {
+  const ext = file.match(/\.([a-z0-9]+)$/i)?.[1]?.toLowerCase() ?? "";
+  const aspect = photo.width / Math.max(photo.height, 1);
+  const format = ["jpg", "jpeg", "webp"].includes(ext) || (ext === "png" && photo.width >= 900);
+  return format && aspect >= 0.75 && aspect <= 2.6;
 }
 
-/** Last-resort provider photos: skip donate banners, logos and flyers. */
-const JUNK = /\b(donate|donation|give now|logo|banner|flyer|gala)\b/i;
-
-export function looksLikeUsablePhoto(photo: { url: string; caption: string | null; sourcePage: string }): boolean {
+/**
+ * How good a provider photo is for a program card, best first, or null to
+ * never use it:
+ *   0  Gemini looked at it and judged it a real program photo
+ *   1  its caption, file name or page points to children or an activity
+ *   2  it is a photograph with nothing pointing to adults, fundraising or graphics
+ * Without a vision model, 1 and 2 rest on text alone, so anything pointing at
+ * adult services or graphics is out even if it also mentions kids.
+ */
+export function providerPhotoRank(photo: ProviderPhoto): 0 | 1 | 2 | null {
+  if (photo.judged) return photo.kind === "program-photo" ? 0 : null;
   const { file, text } = photoText(photo);
-  return !NOT_KIDS_ANYWHERE.test(file) && !JUNK.test(text);
+  if (ADULT_OR_FUNDRAISING.test(text) || GRAPHIC.test(file) || GRAPHIC.test(photo.caption ?? "")) return null;
+  if (ABOUT_KIDS.test(text)) return 1;
+  return looksLikePhotograph(photo, file) ? 2 : null;
 }

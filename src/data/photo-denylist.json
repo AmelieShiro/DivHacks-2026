@@ -1,0 +1,557 @@
+{
+ "_comment": "Provider photos a person reviewed and rejected for program cards (contact sheets of every provider photo shown on a card, 2026-09-26). Matched on the URL without its query string. Applies even to Gemini-approved photos.",
+ "photos": [
+  {
+   "url": "https://scan-harbor.org/wp-content/uploads/2023/03/After-School-Category.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://childrensvillage.org/wp-content/uploads/2026/02/History-Slider-Art.png",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://goodshepherds.org/wp-content/themes/Good-Shepherds/images/linkedin.png",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://childrensvillage.org/wp-content/uploads/2026/07/2026-Summer-NFTV-Slider.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://8hxvw8tw.media.zestyio.com/SAL_EmptyStates_SAL_Insert_1046x856_DarkBlue.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://goodshepherds.org/wp-content/themes/Good-Shepherds/images/youtube.png",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://scan-harbor.org/wp-content/uploads/2025/03/After-School1.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://scan-harbor.org/wp-content/uploads/2025/03/Community-Centers1.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://scan-harbor.org/wp-content/uploads/2025/03/Early-Childhood-Education1.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://wearebcs.org/wp-content/uploads/2026/09/SU4B-popup-signup.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://ymcanyc.org/sites/default/files/styles/ping_pong/public/2025-09/campaign-overview.png.webp",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://harlemdowling.org/images/gallery-simple-1B-677x677.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://scan-harbor.org/wp-content/uploads/2025/03/Family-_-Social-Services1.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://scan-harbor.org/wp-content/uploads/2025/03/Reach-For-The-Stars1.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://scan-harbor.org/wp-content/uploads/2025/03/Young-Women-Empowerment.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://qchnyc.org/sites/default/files/styles/carousel/public/carousel/family_services_banner_2026.png",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://static.wixstatic.com/media/0632b7_2a3fbbf4265e419da493ad15312411a1f000.jpg/v1/fill/w_454,h_341,fp_0.50_0.50,q_90,enc_avif,quality_auto/0632b7_2a3fbbf4265e419da493ad15312411a1f000.webp",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://www.riissettlement.org/wp-content/uploads/2023/09/queens_map_RIIS.png",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://qchnyc.org/sites/default/files/styles/carousel/public/carousel/lgbt_banner_website.png",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://harlemdowling.org/images/gallery-simple-1C-677x677.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://ywcanyc.org/wp-content/plugins/js_composer/assets/vc/vc_gitem_image.png",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://ywcanyc.org/wp-content/uploads/2025/08/candid-seal-platinum-instagram-2025-1024x1024.png",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://scan-harbor.org/wp-content/uploads/2025/03/Tony-Duke-Performing-Arts.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://scan-harbor.org/wp-content/uploads/2025/03/WISH.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://scan-harbor.org/wp-content/uploads/2024/08/Reach-For-The-Stars-2.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://caswkids.org/wp-content/uploads/2024/02/10-e1717961638852.png",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/6a2b0e17af7a1d51e5bf487c/1785939637146-0V4GK1ML7WRDZG4FLHHB/unsplash-image-TLZKlOBOsLs.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/5ec5c4aacdc90a79e3e765a8/cca74929-dc4a-4d47-81a5-4ccbcbe6ccc9/Golf+2026+STD++%287%29.png",
+   "why": "event invitation or flyer"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/5ec5c4aacdc90a79e3e765a8/6ecd7cc1-5f3e-4632-9549-0c34a994c459/CTB+2026+STD+%2825%29.png",
+   "why": "event invitation or flyer"
+  },
+  {
+   "url": "https://www.inwoodcommunityservices.org/wp-content/uploads/2024/11/Turkey-Toy-Drive-Blog.jpg",
+   "why": "event invitation or flyer"
+  },
+  {
+   "url": "https://www.inwoodcommunityservices.org/wp-content/uploads/2024/11/ms278-after-school.jpg",
+   "why": "event invitation or flyer"
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/68d3b9e33ee2b3f4e9b23113/6a9aef7377765dd7b7f0e341_WOTM%2050th%20Anniversary%20-%20Reserve%20Your%20Seat.png",
+   "why": "event invitation or flyer"
+  },
+  {
+   "url": "https://ywcanyc.org/wp-content/uploads/2026/02/GI-Banner-1536x768.png",
+   "why": "event invitation or flyer"
+  },
+  {
+   "url": "https://img1.wsimg.com/isteam/ip/948e2852-39d5-4109-a298-0f4a8bf55082/ps%2075%20after%20school.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25",
+   "why": "event invitation or flyer"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/65b41aeb85ff392dcf522b45/31f3a71a-431f-45cc-90d0-2ed0bff2bbeb/BIG+NEWS+FROM+%28Outdoor+Banner+%2872+in+x+36+in%29%29-6.png",
+   "why": "event invitation or flyer"
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/68acc47c41c28032158848b7/68af80b0472768b814b77589_press-01.jpg",
+   "why": "screenshot or document"
+  },
+  {
+   "url": "http://www.qchnyc.org/sites/default/files/qch_map_of_services_september_2025_0.png",
+   "why": "screenshot or document"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/6717f19d7af7e4192dd41a9f/1741809532840-SDEO22V7YAA16SBO82CO/unsplash-image-yqlvjiFewcM.jpg",
+   "why": "screenshot or document"
+  },
+  {
+   "url": "https://static.wixstatic.com/media/0632b7_03db6895e98b4e009a0d7e88abffba2ff000.jpg/v1/fill/w_454,h_341,fp_0.50_0.50,q_90,enc_avif,quality_auto/0632b7_03db6895e98b4e009a0d7e88abffba2ff000.webp",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://acdp.org/images/1.jpg",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://unitedactivities.org/wp-content/uploads/2019/01/ps18-400x400.jpg",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://riseboro.org/wp-content/uploads/RB-Youth-Center_resized-1024x683.png",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://static.wixstatic.com/media/0632b7_826d69b3f8944413984b11f25c09679df000.jpg/v1/fill/w_454,h_341,fp_0.50_0.50,q_90,enc_avif,quality_auto/0632b7_826d69b3f8944413984b11f25c09679df000.webp",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/6717f19d7af7e4192dd41a9f/1745591434943-PZJ24FL6Z50F4HETKOQI/unsplash-image-qbrLLZYjyEs.jpg",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://www.bca.net/images/services/Social.jpg",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://catholiccharitiesny.org/wp-content/uploads/2026/09/IMG_E3398-scaled.jpg",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://unitedactivities.org/wp-content/uploads/2019/01/is2-400x400.jpg",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://acdp.org/images/main.jpg",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://childrensvillage.org/wp-content/uploads/2025/03/Full-Section.jpg",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://riseboro.org/wp-content/uploads/Studio-Libiskind_Atrium-At-Sumner_%C2%A9HuftonCrow_048-1-2_website-1024x856.jpg",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://gaycenter.org/wp-content/uploads/2025/11/Center-Video-2025.webp",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://www.graham-windham.org/wp-content/uploads/2026/09/testimonials-back.webp",
+   "why": "blank or unreadable image"
+  },
+  {
+   "url": "https://whedco.org/wp-content/uploads/2016/08/Afterschool-2.jpg",
+   "why": "blank or unreadable image"
+  },
+  {
+   "url": "https://8hxvw8tw.media.zesty.site/the-salvation-army-contact-us-4.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/653a6677c181ae248fb61680/670d99f9d1842b78f2345c4c__DSC5729.webp",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://caswkids.org/wp-content/uploads/2026/09/CASWINC_NYCDOECALENDAR_HOLIDAYSANDHALFDAYS2026-27SCHOOLYEARNYC-scaled.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/651c4b877142a1cf38af60e7/69944aaee8d78ec1c0e11ceb_rts-leaders-img-1.png",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/634ff8aa6f66af78a78d27bb/6372b0b93707ad4c0b8612bc_Photo%20Sep%2017%202022%2C%203%2030%2016%20PM.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://bronxworks.org/wp-content/uploads/2021/03/Benefits-and-other-assistance-2.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://www.eastsidehouse.org/wp-content/uploads/2026/01/BFA_48186_6869566-scaled.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://www.northsidecenter.org/wp-content/uploads/2019/07/Kids-Comp-Training-1.jpeg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://ymcanyc.org/sites/default/files/styles/card_image/public/2026-05/260416_rodgers_ymca_day_3_17_082_0.jpeg.webp",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://www.commonpoint.org/wp-content/uploads/2025/08/IMG_0127.jpeg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://aspira.org/wp-content/uploads/2020/11/Estudiantes-del-primer-taller-scaled.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://newyorkedge.org/wp-content/uploads/2024/03/287X_Pfizer_Trip_Boys_2-scaled-aspect-ratio-490-302-scaled.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://aspira.org/wp-content/uploads/2025/07/Areito-ceremony-NY.png",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://www.eastsidehouse.org/wp-content/uploads/2026/01/Image-3-scaled.jpeg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://catholiccharitiesny.org/wp-content/uploads/2026/09/10_IMG_0167-scaled.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://qchnyc.org/sites/default/files/styles/carousel/public/qch-may2016-428.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://qchnyc.org/sites/default/files/styles/carousel/public/carousel/p8150006.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://www.eastsidehouse.org/wp-content/uploads/2026/01/BFA_43323_6094063-scaled.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://partnershipwithchildren.org/wp-content/uploads/2026/08/PXL_20260806_145546381-2-scaled.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://fiaobrooklyn.org/wp-content/uploads/2023/02/Social-Services-.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://www.eastsidehouse.org/wp-content/uploads/2026/01/BFA_48187_6869559-scaled.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/634ff8aa6f66af78a78d27bb/6372b0b8dc39b2e3f4d4bc1a_beacon%20and%20community%20wellness%20newsletter%201.jpeg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/549af14be4b038053fe035c4/1710789013114-ZMS4BRBE9YBCFVYW5ITH/BusinessLunch_2022_Hochul_Website.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/653a6677c181ae248fb61680/67045bfe856d338d98a955ac_Home%20Page%20Hero_3.webp",
+   "why": "portrait of an adult"
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/6953e3e8bf807cdad5892c72/69d02734413d28578e7a19f2_Mame%20Khady%20featured.jpg",
+   "why": "portrait of an adult"
+  },
+  {
+   "url": "https://ymcanyc.org/sites/default/files/styles/card_image/public/2026-05/260417_rodgers_ymca_day_4_6_211.jpeg.webp",
+   "why": "portrait of an adult"
+  },
+  {
+   "url": "https://wearebcs.org/wp-content/uploads/2021/06/WhatIMG2.jpg",
+   "why": "portrait of an adult"
+  },
+  {
+   "url": "https://newyorkedge.org/wp-content/uploads/2025/09/DSC08339-scaled-aspect-ratio-386-256-1.jpg",
+   "why": "portrait of an adult"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/6717f19d7af7e4192dd41a9f/1740171965515-G1YDXKS985TGEXWPPHYG/unsplash-image-LdJrAEnYDa0.jpg",
+   "why": "portrait of an adult"
+  },
+  {
+   "url": "https://aspira.org/wp-content/uploads/2025/06/Dr-Pantoja-BW-2.png",
+   "why": "portrait of an adult"
+  },
+  {
+   "url": "https://aspira.org/wp-content/uploads/2026/02/Dr.-Pantoja-1.jpg",
+   "why": "portrait of an adult"
+  },
+  {
+   "url": "https://www.datocms-assets.com/75767/1784822601-zyva-headshot.jpg",
+   "why": "portrait of an adult"
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/653a6678c181ae248fb616f9/6747716b6b7387774fa0ddf0_CCA%20-%202022-11%20-%20Marvin%20Mayfield.webp",
+   "why": "protest or political event"
+  },
+  {
+   "url": "https://ywcanyc.org/wp-content/uploads/2023/05/47796367582_c68427fbd6_o-1024x684.jpg",
+   "why": "protest or political event"
+  },
+  {
+   "url": "https://www.riissettlement.org/wp-content/uploads/2022/03/IMG_3242-scaled.jpg",
+   "why": "protest or political event"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/549af14be4b038053fe035c4/1710788990775-VWCLB97VDEAXMU7HKTYF/B_W_Hall%26Oats.jpg",
+   "why": "historic photo"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/549af14be4b038053fe035c4/1710788991665-4UG4PUMLK3IP5YW2JH7N/B_W_HoolaHoops_Edited.jpg",
+   "why": "historic photo"
+  },
+  {
+   "url": "https://harlemdowling.org/images/gallery-simple-1-677x677.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://harlemdowling.org/images/gallery-simple-2-677x677.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://static.wixstatic.com/media/nsplsh_43c5d2ba29d14d8d9342d5f1603e2dc9~mv2.jpg/v1/crop/x_0,y_785,w_4000,h_3430/fill/w_491,h_421,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image%20by%20Jamie%20O%E2%80%99Sullivan.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://childrensvillage.org/wp-content/uploads/2025/11/2025-Annual-Report-for-Web.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://img1.wsimg.com/isteam/ip/948e2852-39d5-4109-a298-0f4a8bf55082/Untitled%20Project%20(1).png",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/65b41aeb85ff392dcf522b45/906ca5ff-ac58-4a39-8800-33f7026d940d/Copy+of+El+Puente+Statement.png",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/653a6678c181ae248fb616f9/692381c69a5fd3de4da91c8b_Support-for-Young-People.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/653a6678c181ae248fb616f9/691cd7dfa1cae36b945a3a34_Violence.webp",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/653a6677c181ae248fb61680/668e84b2f5991112fab3de0b_Advocacy%20and%20organizing.webp",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://riseboro.org/wp-content/uploads/20260813-Riseboro-SeniorPicnic-047-1-1024x683.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/6717f19d7af7e4192dd41a9f/1745596614777-EHUN9G8VW7Z95QV1CU7R/DSC_0139.jpeg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://www.riissettlement.org/wp-content/uploads/2023/07/Womens-Day-OAC-scaled-e1715278747976.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://www.graham-windham.org/wp-content/uploads/2024/11/file-1.webp",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://caswkids.org/wp-content/uploads/2026/06/IMG_9618-918x1024.jpg",
+   "why": "portrait of an adult"
+  },
+  {
+   "url": "https://catholiccharitiesny.org/wp-content/uploads/2026/09/Venerable-Archbishop-Fulton-Sheen.jpg",
+   "why": "portrait of an adult"
+  },
+  {
+   "url": "https://www.eastsidehouse.org/wp-content/uploads/2026/01/BFA_43361_6103694-scaled.jpg",
+   "why": "portrait of an adult"
+  },
+  {
+   "url": "https://www.eastsidehouse.org/wp-content/uploads/2026/01/BFA_43361_6103751-scaled.jpg",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/6717f19d7af7e4192dd41a9f/160051b8-57eb-4926-8b90-6e09fef0e41a/unsplash-image-ax_aP8EUwo0.jpg",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://www.eastsidehouse.org/wp-content/uploads/2026/01/BFA_48186_6869456-scaled.jpg",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://www.riissettlement.org/wp-content/uploads/2022/11/IMG_4018-scaled.jpg",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://riseboro.org/wp-content/uploads/Garden-2-1_edited.jpg",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://gaycenter.org/wp-content/uploads/2023/06/Pride-March-Group-for-The-Center.webp",
+   "why": "protest or political event"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/6a2b0e17af7a1d51e5bf487c/e5d0d712-6dd8-4f42-a8f2-9ddf88a9af2b/israel+day+parade.jpg",
+   "why": "protest or political event"
+  },
+  {
+   "url": "https://harlemdowling.org/images/gallery-simple-3-677x677.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://harlemdowling.org/images/gallery-simple-4-677x677.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://childrensvillage.org/wp-content/uploads/2024/03/vid-callout-1024x512.png",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/6a2b0e17af7a1d51e5bf487c/552a0530-e39a-4163-8f17-0d4c31b9345a/UJA_Proud_Partner_stamp_white.png",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/65b41aeb85ff392dcf522b45/fe5a1ea0-926e-4a88-9006-34db2c390e12/saturday+beaocn.png",
+   "why": "event invitation or flyer"
+  },
+  {
+   "url": "https://www.riissettlement.org/wp-content/uploads/2023/07/Citizenship-group-photo-21.jpg",
+   "why": "screenshot or document"
+  },
+  {
+   "url": "https://cdn.prod.website-files.com/653a6677c181ae248fb61680/67116cfd7d033b35c7196f7c_Starsky%20Valles_home_bottom%20carousel.webp",
+   "why": "portrait of an adult"
+  },
+  {
+   "url": "https://www.eastsidehouse.org/wp-content/uploads/2026/01/BFA_43323_6094194-scaled.jpg",
+   "why": "portrait of an adult"
+  },
+  {
+   "url": "https://catholiccharitiesny.org/wp-content/uploads/2026/09/Haircut-Pic-1-article-crop-1024x686.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://www.riissettlement.org/wp-content/uploads/2023/06/Immigrant-Services2-1.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://gaycenter.org/wp-content/uploads/2026/06/The-Center-Go-Magazine-Article-1-e1781794971377-800x500.webp",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://riseboro.org/wp-content/uploads/Untitled-design-3-1024x576.jpg",
+   "why": "building or place, no people"
+  },
+  {
+   "url": "https://harlemdowling.org/images/gallery-simple-5-677x677.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://harlemdowling.org/images/gallery-simple-6-677x677.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/65b41aeb85ff392dcf522b45/130124f1-24ed-4223-95ed-b228f0cd1f53/marcoc.png",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://www.riissettlement.org/wp-content/uploads/2023/06/Immigrant-Services8.jpg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://www.riissettlement.org/wp-content/uploads/2023/07/Pregnancy-And-New-Parent-Program-RIIS-Settlement.jpeg",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://gaycenter.org/wp-content/uploads/2026/06/Thom-Browne-and-Janelle-Monae-e1781110639805-800x500.webp",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://harlemdowling.org/images/gallery-simple-7-677x677.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://harlemdowling.org/images/gallery-simple-8-677x677.jpg",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/65b41aeb85ff392dcf522b45/ce1c2647-dcf8-4c56-842b-5be22c42ea8b/jentausig.png",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://gaycenter.org/wp-content/uploads/2026/05/6-1-1-e1778861266265-720x500.webp",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://gaycenter.org/wp-content/uploads/2026/05/1-3-720x500.webp",
+   "why": "adults only (staff, events, services)"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/65b41aeb85ff392dcf522b45/16a99a30-5b6b-4c4b-83c5-40fc016b19d6/SHIRLEY.png",
+   "why": "graphic or logo"
+  },
+  {
+   "url": "https://images.squarespace-cdn.com/content/v1/65b41aeb85ff392dcf522b45/326a9065-4a4a-409e-9731-23e72a6dc881/Megan+of+El+Puente+Social+Post.png",
+   "why": "graphic or logo"
+  }
+ ]
+}

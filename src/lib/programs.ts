@@ -13,7 +13,8 @@ import zipsJson from "../../dist/zips.json";
 import metaJson from "../../dist/meta.json";
 import type { CardProgram, Cost, SubjectGroup, ZipCentroids } from "./types";
 import stockPoolJson from "../data/stock-pool.json";
-import { looksLikeKidsPhoto, looksLikeUsablePhoto, stockFor, subjectKey } from "./stockPhotos";
+import photoDenylistJson from "../data/photo-denylist.json";
+import { providerPhotoRank, stockFor, subjectKey } from "./stockPhotos";
 
 type PoolPhoto = { subject: string; title: string; src: string; source: string; credit: string };
 const stockPool = stockPoolJson as PoolPhoto[];
@@ -100,6 +101,9 @@ const httpPhotos = (p: Program) =>
 
 const urlKey = (url: string) => url.split(/[?#]/)[0];
 
+/** Provider photos a person reviewed and rejected (logos, invitations, adults-only events...). */
+const deniedPhotos = new Set((photoDenylistJson as { photos: { url: string }[] }).photos.map((p) => urlKey(p.url)));
+
 function fromProvider(p: Program, photo: Program["photos"][number], fallback: ImageFields["fallbackImage"]): ImageFields {
   const caption = photo.caption && photo.caption !== "og:image" ? photo.caption : null;
   return {
@@ -120,20 +124,33 @@ function fromPool(photo: PoolPhoto, fallback: ImageFields["fallbackImage"]): Ima
 }
 
 /**
- * One unused photo per program. Provider photos of children come first,
- * then a distinct Commons photo of the subject, then any leftover Commons
- * photo, then another unused photo from the provider's own site. The 14
- * local subject files are only a last resort so two cards never share a URL
- * unless there is truly nothing left.
+ * Usable photos from the provider's own site, best first: Gemini-approved,
+ * then pointing to children, then plain photographs (see providerPhotoRank).
+ * Within a rank, stage 50's order (hero-ready, suitability, size) is kept.
+ */
+function providerCandidates(p: Program): Program["photos"] {
+  return httpPhotos(p)
+    .filter((ph) => !deniedPhotos.has(urlKey(ph.url)))
+    .map((ph, i) => ({ ph, i, rank: providerPhotoRank(ph) }))
+    .filter((c): c is typeof c & { rank: 0 | 1 | 2 } => c.rank !== null)
+    .sort((a, b) => a.rank - b.rank || a.i - b.i)
+    .map((c) => c.ph);
+}
+
+/**
+ * A photo for every program, preferring the provider's own:
+ *   1. an unused provider photo, so sibling sites differ where they can
+ *   2. a provider photo already used on a sibling site (least-used first):
+ *      a real photo of that organization beats a stranger's photo
+ *   3. an unused Commons photo of the subject, then of any subject
+ *   4. the local subject photo
+ * Commons photos illustrate the subject, not the program, so they are only
+ * used for providers whose site has no usable photo at all.
  */
 function assignImages(list: Program[]): Map<string, ImageFields> {
-  const used = new Set<string>();
-  const take = (url: string) => {
-    const key = urlKey(url);
-    if (used.has(key)) return false;
-    used.add(key);
-    return true;
-  };
+  const used = new Map<string, number>();
+  const uses = (url: string) => used.get(urlKey(url)) ?? 0;
+  const markUsed = (url: string) => used.set(urlKey(url), uses(url) + 1);
 
   const buckets = new Map<string, PoolPhoto[]>();
   for (const photo of stockPool) {
@@ -142,54 +159,51 @@ function assignImages(list: Program[]): Map<string, ImageFields> {
     buckets.set(photo.subject, listFor);
   }
   const takeStock = (key: string): PoolPhoto | undefined => {
-    const preferred = buckets.get(key);
-    while (preferred?.length) {
-      const photo = preferred.shift()!;
-      if (take(photo.src)) return photo;
-    }
-    for (const rest of buckets.values()) {
-      while (rest.length) {
-        const photo = rest.shift()!;
-        if (take(photo.src)) return photo;
+    for (const bucket of [buckets.get(key) ?? [], ...buckets.values()]) {
+      while (bucket.length) {
+        const photo = bucket.shift()!;
+        if (!uses(photo.src)) {
+          markUsed(photo.src);
+          return photo;
+        }
       }
     }
     return undefined;
   };
 
   const out = new Map<string, ImageFields>();
-  const pending: Program[] = [];
+  const candidates = new Map(list.map((p) => [p.id, providerCandidates(p)]));
 
+  // 1. Unused provider photos.
+  const pending: Program[] = [];
   for (const p of list) {
-    const local = stockFor(subjects(p));
-    const kids = httpPhotos(p).find((ph) => looksLikeKidsPhoto(ph) && take(ph.url));
-    if (kids) out.set(p.id, fromProvider(p, kids, local));
-    else pending.push(p);
+    const photo = candidates.get(p.id)!.find((ph) => !uses(ph.url));
+    if (photo) {
+      markUsed(photo.url);
+      out.set(p.id, fromProvider(p, photo, stockFor(subjects(p))));
+    } else pending.push(p);
   }
 
-  const still: Program[] = [];
+  // 2. Share a provider photo with a sibling site.
+  const noPhotos: Program[] = [];
   for (const p of pending) {
+    const photo = [...candidates.get(p.id)!].sort((a, b) => uses(a.url) - uses(b.url))[0];
+    if (photo) {
+      markUsed(photo.url);
+      out.set(p.id, fromProvider(p, photo, stockFor(subjects(p))));
+    } else noPhotos.push(p);
+  }
+
+  // 3-4. Providers with nothing usable: a credited Commons photo of the subject.
+  for (const p of noPhotos) {
     const local = stockFor(subjects(p));
     const stock = takeStock(subjectKey(subjects(p)));
-    if (stock) out.set(p.id, fromPool(stock, local));
-    else still.push(p);
-  }
-
-  const last: Program[] = [];
-  for (const p of still) {
-    const local = stockFor(subjects(p));
-    const other = httpPhotos(p).find((ph) => looksLikeUsablePhoto(ph) && take(ph.url));
-    if (other) out.set(p.id, fromProvider(p, other, local));
-    else last.push(p);
-  }
-
-  for (const p of last) {
-    const local = stockFor(subjects(p));
-    out.set(p.id, {
-      image: local.src,
-      imageAlt: local.alt,
-      imageStock: { credit: local.credit, source: local.source },
-      fallbackImage: local,
-    });
+    out.set(
+      p.id,
+      stock
+        ? fromPool(stock, local)
+        : { image: local.src, imageAlt: local.alt, imageStock: { credit: local.credit, source: local.source }, fallbackImage: local },
+    );
   }
 
   return out;

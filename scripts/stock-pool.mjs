@@ -18,6 +18,7 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { isMilitary } from "./lib/stock-filters.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const WORK = path.join(ROOT, "data", "stock");
@@ -150,7 +151,10 @@ const candFile = path.join(WORK, "candidates.json");
 if (process.argv.includes("--final")) {
   const list = JSON.parse(await readFile(candFile, "utf8"));
   const accepted = new Set(JSON.parse(await readFile(path.join(WORK, "accepted.json"), "utf8")).ids);
-  const pool = list.filter((c) => accepted.has(c.id)).map(({ subject, title, src, source, credit }) => ({ subject, title, src, source, credit }));
+  const reviewed = list.filter((c) => accepted.has(c.id));
+  // Military settings are excluded even when a reviewer accepted the photo.
+  const pool = reviewed.filter((c) => !isMilitary(c)).map(({ subject, title, src, source, credit }) => ({ subject, title, src, source, credit }));
+  console.log(`${reviewed.length - pool.length} reviewed photos dropped for a military setting`);
   await mkdir(path.join(ROOT, "src", "data"), { recursive: true });
   await writeFile(path.join(ROOT, "src", "data", "stock-pool.json"), JSON.stringify(pool, null, 1) + "\n");
   const by = {};
