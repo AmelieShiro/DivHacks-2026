@@ -88,3 +88,14 @@ body {
     transform: translateY(-8px);
   }
 }
+
+/* Tailwind's preflight caps images, which collapses Leaflet tiles. */
+.leaflet-container img.leaflet-tile {
+  max-width: none;
+  max-height: none;
+}
+.nova-pin {
+  background: transparent !important;
+  border: none !important;
+  overflow: visible !important;
+}

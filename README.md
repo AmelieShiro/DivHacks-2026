@@ -32,12 +32,12 @@ npm run dev
 
 `dist/` is checked in, so the site runs without rebuilding the dataset.
 
-`/map` needs `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` in `.env.local`, from a Google
-Cloud project with the Maps JavaScript API enabled. Without it the page still
-lists and filters every program; only the map itself is replaced by a note
-saying which variable to set. Advanced markers also need a map ID, which
-defaults to Google's `DEMO_MAP_ID`; set `NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID` to
-use your own.
+`/map` draws OpenStreetMap tiles (via CARTO) when
+`NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` is unset, so the public site works without a
+Google key — including on nova-for-students.tech. Set that variable, from a
+Google Cloud project with the Maps JavaScript API enabled, to use Google Maps
+instead. Advanced markers also need a map ID, which defaults to Google's
+`DEMO_MAP_ID`; set `NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID` to use your own.
 
 ## The dataset
 
