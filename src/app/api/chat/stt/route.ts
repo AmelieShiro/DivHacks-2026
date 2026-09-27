@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { rateLimit } from "@/lib/chat/rateLimit";
 
 const KEYTERMS = [
   "Nova",
@@ -14,6 +15,15 @@ const KEYTERMS = [
 
 /** Turn a spoken question into text with Grok STT. The API key never leaves the server. */
 export async function POST(req: Request) {
+  // Before any paid work: this route spends an xAI quota on every call.
+  const allowed = rateLimit(req);
+  if (!allowed.ok) {
+    return NextResponse.json(
+      { error: "Too many voice requests. Wait a moment and try again." },
+      { status: 429, headers: { "Retry-After": String(allowed.retryAfterSeconds) } },
+    );
+  }
+
   const key = process.env.XAI_API_KEY;
   if (!key) {
     return NextResponse.json(

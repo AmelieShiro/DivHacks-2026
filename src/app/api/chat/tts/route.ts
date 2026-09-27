@@ -1,7 +1,17 @@
 import { NextResponse } from "next/server";
+import { rateLimit } from "@/lib/chat/rateLimit";
 
 /** Speak a catalog answer with Grok TTS. The API key never leaves the server. */
 export async function POST(req: Request) {
+  // Before any paid work: this route spends an xAI quota on every call.
+  const allowed = rateLimit(req);
+  if (!allowed.ok) {
+    return NextResponse.json(
+      { error: "Too many voice requests. Wait a moment and try again." },
+      { status: 429, headers: { "Retry-After": String(allowed.retryAfterSeconds) } },
+    );
+  }
+
   const key = process.env.XAI_API_KEY;
   if (!key) {
     return NextResponse.json(
