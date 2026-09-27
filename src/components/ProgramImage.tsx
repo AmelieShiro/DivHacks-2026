@@ -66,6 +66,7 @@ export default function ProgramImage({
         referrerPolicy="no-referrer"
         onError={() => setFailed(true)}
         className={className}
+        suppressHydrationWarning
       />
       {stock &&
         (credit === "badge" ? (
@@ -73,6 +74,7 @@ export default function ProgramImage({
             href={stock.source}
             target="_blank"
             rel="noopener noreferrer"
+            suppressHydrationWarning
             onClick={(e) => e.stopPropagation()}
             title={`Stock photo, not taken at this program · ${stock.credit}`}
             aria-label={`Stock photo, not taken at this program. Credit: ${stock.credit}`}
@@ -85,6 +87,7 @@ export default function ProgramImage({
             href={stock.source}
             target="_blank"
             rel="noopener noreferrer"
+            suppressHydrationWarning
             onClick={(e) => e.stopPropagation()}
             title={`Stock photo, not taken at this program · ${stock.credit}`}
             aria-label={`Stock photo, not taken at this program. Credit: ${stock.credit}`}

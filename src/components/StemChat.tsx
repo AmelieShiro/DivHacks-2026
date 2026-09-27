@@ -149,6 +149,7 @@ export default function StemChat({ catalog }: { catalog: ChatCatalog }) {
         aria-expanded={open}
         aria-controls="nova-chat-panel"
         onClick={() => setOpen((value) => !value)}
+        suppressHydrationWarning
       >
         Ask about programs
       </button>

@@ -80,6 +80,7 @@ function FilterDropdown({
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-haspopup="true"
+        suppressHydrationWarning
         className="flex w-full items-center justify-between gap-3 rounded-xl bg-white px-4 py-3 font-heading text-sm font-600 text-ink shadow-md transition-colors hover:bg-teal-50"
       >
         <span className="truncate">{selected.length === 0 ? allLabel : selected.join(", ")}</span>
@@ -207,15 +208,16 @@ export default function ProgramsView({
 
       {/* Controls */}
       <div className="relative z-30 flex flex-col gap-4 mb-8">
-        <form onSubmit={applyZip} className="bg-white rounded-xl p-1.5 shadow-lg flex gap-2 max-w-sm w-full">
+        <form onSubmit={applyZip} className="bg-white rounded-xl p-1.5 shadow-lg flex gap-2 max-w-sm w-full" suppressHydrationWarning>
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
             inputMode="numeric"
             placeholder="Change ZIP code"
             className="w-full px-3 py-2 font-body text-ink placeholder:text-ink/40 focus:outline-none bg-transparent"
+            suppressHydrationWarning
           />
-          <button className="font-heading font-600 text-white bg-orange hover:bg-orange-dark transition-colors rounded-lg px-4 py-2 shrink-0">
+          <button className="font-heading font-600 text-white bg-orange hover:bg-orange-dark transition-colors rounded-lg px-4 py-2 shrink-0" suppressHydrationWarning>
             Update
           </button>
         </form>

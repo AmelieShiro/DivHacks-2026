@@ -94,6 +94,7 @@ function LocateMe({ onLocate }: { onLocate: (point: LatLng) => void }) {
       type="button"
       onClick={locate}
       aria-label="Use my location"
+      suppressHydrationWarning
       className="m-2.5 grid h-10 w-10 place-items-center rounded-lg bg-white text-ink/70 shadow-md ring-1 ring-black/10 transition-colors hover:bg-teal-50 hover:text-ink"
     >
       <svg
@@ -451,6 +452,7 @@ export default function MapView({
               aria-label="ZIP code"
               placeholder="Enter your ZIP code"
               className="w-full bg-transparent py-2.5 font-body text-sm text-ink placeholder:text-ink/45 focus:outline-none"
+              suppressHydrationWarning
             />
             {zip !== "" && (
               <button

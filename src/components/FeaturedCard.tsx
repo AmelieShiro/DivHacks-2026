@@ -9,7 +9,12 @@ const costColor: Record<CardProgram["cost"], string> = {
   "Ask provider": "bg-teal-100 text-teal-800",
 };
 
-export default function ProgramCard({ program }: { program: CardProgram }) {
+/**
+ * Home-carousel card. Kept in a file that no Client Component imports, so the
+ * name/title HTML stays a Server Component and is not compared during hydrate
+ * (ProgramCard is pulled into the client bundle by ProgramsView).
+ */
+export default function FeaturedCard({ program }: { program: CardProgram }) {
   return (
     <article className="group bg-white rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5 flex flex-col transition-transform duration-200 hover:-translate-y-1">
       <div className="relative aspect-[16/10] bg-teal-100 overflow-hidden">
@@ -77,7 +82,6 @@ export default function ProgramCard({ program }: { program: CardProgram }) {
           href={program.signupUrl}
           target="_blank"
           rel="noopener noreferrer"
-          suppressHydrationWarning
           className="mt-1 text-center font-heading font-600 text-white bg-orange hover:bg-orange-dark transition-colors rounded-xl py-2.5"
         >
           View & sign up

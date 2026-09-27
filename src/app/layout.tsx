@@ -31,8 +31,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${sansitaSwashed.variable} ${fredoka.variable} ${nunito.variable}`}>
-      <body>
+    <html lang="en" className={`${sansitaSwashed.variable} ${fredoka.variable} ${nunito.variable}`} suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <div className="min-h-screen flex flex-col">
           <Header />
 
