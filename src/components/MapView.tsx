@@ -179,6 +179,7 @@ function ProgramRow({
                 src={tile.url}
                 alt=""
                 stock={tile.stock}
+                credit="badge"
                 className="h-full w-full object-cover"
                 fallback={<FlaskIcon className="h-6 w-6 text-teal-300" />}
               />

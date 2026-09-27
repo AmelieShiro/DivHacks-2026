@@ -26,12 +26,22 @@ export default function ProgramImage({
   stock,
   className,
   fallback,
+  credit = "pill",
 }: {
   src: string | null;
   alt: string;
   stock: Stock | null;
   className: string;
   fallback?: ReactNode;
+  /**
+   * How the stock credit is shown. "pill" spells out "Stock photo" and suits a
+   * card-sized image, where a parent needs to see at a glance that the picture
+   * is not of this program. "badge" is a corner marker for thumbnails too
+   * small to carry the words; the wording moves into the tooltip and the
+   * accessible label. Either way the credit and the link to the source are
+   * present, which is what CC BY and CC BY-SA require.
+   */
+  credit?: "pill" | "badge";
 }) {
   const [failed, setFailed] = useState(false);
 
@@ -57,18 +67,32 @@ export default function ProgramImage({
         onError={() => setFailed(true)}
         className={className}
       />
-      {stock && (
-        <a
-          href={stock.source}
-          target="_blank"
-          rel="noopener noreferrer"
-          title={`Stock photo, not taken at this program · ${stock.credit}`}
-          aria-label={`Stock photo, not taken at this program. Credit: ${stock.credit}`}
-          className="absolute bottom-3 left-3 font-heading font-600 text-xs bg-white/95 text-teal-800 px-2.5 py-1 rounded-full shadow hover:bg-white"
-        >
-          Stock photo
-        </a>
-      )}
+      {stock &&
+        (credit === "badge" ? (
+          <a
+            href={stock.source}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            title={`Stock photo, not taken at this program · ${stock.credit}`}
+            aria-label={`Stock photo, not taken at this program. Credit: ${stock.credit}`}
+            className="absolute top-1 right-1 grid h-4 w-4 place-items-center rounded-full bg-white/90 font-heading text-[10px] font-700 leading-none text-teal-800 shadow-sm hover:bg-white"
+          >
+            i
+          </a>
+        ) : (
+          <a
+            href={stock.source}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            title={`Stock photo, not taken at this program · ${stock.credit}`}
+            aria-label={`Stock photo, not taken at this program. Credit: ${stock.credit}`}
+            className="absolute bottom-3 left-3 font-heading font-600 text-xs bg-white/95 text-teal-800 px-2.5 py-1 rounded-full shadow hover:bg-white"
+          >
+            Stock photo
+          </a>
+        ))}
     </>
   );
 }
