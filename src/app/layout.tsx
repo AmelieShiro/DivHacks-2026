@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fredoka, Nunito, Sansita_Swashed } from "next/font/google";
 import Header from "@/components/Header";
+import StemChatMount from "@/components/StemChatMount";
 import Wordmark from "@/components/Wordmark";
 import "./globals.css";
 
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             </div>
           </footer>
         </div>
+        <StemChatMount />
       </body>
     </html>
   );
