@@ -16,7 +16,7 @@ import { loadBlocklist, applyBlocklist, isBlocked } from "../lib/blocklist.mjs";
 import { SUBJECT_GROUPS } from "./40-extract.mjs";
 
 const log = makeLogger("60-build");
-export const SCHEMA_VERSION = "2.5.0";
+export const SCHEMA_VERSION = "2.6.0";
 
 /** A DOE point this close means the program runs in that building. */
 export const SCHOOL_RADIUS_M = 120;
@@ -77,10 +77,26 @@ export function pickHostSchool(nearby) {
   return nearby.find((s) => s.servesK5) ?? nearby[0];
 }
 
+export const COMPASS_COST_URL =
+  "https://www.nyc.gov/site/dycd/services/after-school/comprehensive-after-school-system-of-new-york-city-compass.page";
+
 export function deriveCost({ contract, programArea, extracted }) {
   const publiclyFunded = Boolean(contract && contract !== "NULL");
 
-  const fromSite = extracted?.costTier;
+  // A statement from the funder about the program type beats a provider's
+  // site, which describes the whole organization, fee-based programs included.
+  if (programArea === "Compass") {
+    return {
+      tier: "free",
+      source: "dycd-program-rules",
+      publiclyFunded,
+      note: `DYCD: COMPASS programs are "offered at no cost to youth" (${COMPASS_COST_URL}).`,
+    };
+  }
+
+  // Keyword matches are not a price: "free" anywhere on a site says nothing
+  // about this program.
+  const fromSite = extracted?.method === "keyword" ? null : extracted?.costTier;
   if (fromSite && fromSite !== "unknown") {
     return {
       tier: fromSite,
@@ -288,7 +304,10 @@ export async function run() {
     sources: {
       programs: "NYC OpenData DYCD Program Sites (ebkm-iyma)",
       schools: "NYC OpenData DOE School Locations (wg9x-4ke6)",
-      enrichment: "provider websites, extracted with Google Gemini",
+      enrichment: programs.some((p) => p.enrichment.method === "gemini")
+        ? "provider websites, extracted with Google Gemini"
+        : "provider websites, keyword matching (no Gemini key)",
+      compassCost: COMPASS_COST_URL,
     },
     // Shipped with the data so the site can build filter headings without
     // importing pipeline code.

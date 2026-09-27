@@ -85,24 +85,138 @@ const SCHEMA = {
   required: ["hasK5Programming", "stemTools", "costTier", "confidence"],
 };
 
-const KEYWORDS = {
-  robotics: /\brobot(ics)?\b|\bvex\b|\bfirst lego\b/i,
+/**
+ * Keyword fallback patterns. Bare "code" and "programming" are deliberately
+ * absent: on nonprofit sites they almost always mean "zip code" or
+ * "after-school programming". Likewise a bare "STEM" names no tool.
+ */
+export const KEYWORDS = {
+  robotics: /\brobot(ic)?s?\b|\bvex\b|\bfirst lego league\b/i,
   lego: /\blego\b/i,
-  coding: /\bcod(e|ing)\b|\bprogramming\b|\bscratch\b|\bpython\b/i,
+  coding: /\bcoding\b|\blearn(ing)? to code\b|\bscratch (jr|junior|programming)\b|\bpython\b|\bcomputer programming\b/i,
   "3d printing": /\b3-?d print/i,
-  electronics: /\belectronic|circuit|soldering\b/i,
+  electronics: /\belectronics\b|\bcircuits?\b|\bcircuitry\b|\bsoldering\b/i,
   "micro:bit": /micro:?bit/i,
   arduino: /\barduino\b/i,
   "raspberry pi": /raspberry pi/i,
-  "science lab": /\bscience (lab|club|program)\b|\bstem\b|\bsteam\b/i,
+  "science lab": /\bscience (lab|club|experiments?)\b|\bhands-on science\b/i,
   engineering: /\bengineering\b/i,
   "digital art": /\bdigital (art|media)\b|\bgraphic design\b/i,
-  "video production": /\bvideo production|filmmaking\b/i,
-  "game design": /\bgame design\b/i,
+  "video production": /\bvideo production\b|\bfilmmaking\b/i,
+  "game design": /\b(video )?game design\b/i,
   chess: /\bchess\b/i,
-  gardening: /\bgarden(ing)?\b/i,
-  "math enrichment": /\bmath (enrichment|tutoring|club)\b/i,
+  gardening: /\bgardening\b|\b(community|school|urban|rooftop|teaching) garden\b/i,
+  "math enrichment": /\bmath (enrichment|tutoring|club|games)\b/i,
+  cooking: /\bcooking (class|club|program|lesson)s?\b|\bculinary\b/i,
+  animation: /\banimation\b/i,
 };
+
+/**
+ * Subject patterns for the keyword fallback. Each match is shipped with the
+ * sentence it came from, so the quote rule that governs Gemini's subjects
+ * holds here too. Patterns favour phrases over single words so an adult ESL
+ * class or a gala "dance" is less likely to become a child's subject.
+ */
+export const SUBJECT_KEYWORDS = {
+  "biology": /\bbiology\b|\blife sciences?\b|\bmarine science\b|\bzoology\b/i,
+  "chemistry": /\bchemistry\b/i,
+  "physics": /\bphysics\b/i,
+  "earth & environmental science": /\benvironmental (science|education|stewardship)\b|\bearth science\b|\bclimate science\b|\becology\b/i,
+  "general science": /\bscience (club|lab|experiments?|enrichment|class(es)?|activities)\b|\bhands-on science\b/i,
+  "gardening": KEYWORDS.gardening,
+  "computer science": /\bcomputer science\b|\bcomputer (skills|literacy|lab|class(es)?)\b/i,
+  "coding": KEYWORDS.coding,
+  "robotics": KEYWORDS.robotics,
+  "game design": KEYWORDS["game design"],
+  "electronics": KEYWORDS.electronics,
+  "3d design & printing": /\b3-?d (print|design|model)/i,
+  "technology & digital media": /\bdigital (media|literacy)\b|\bmedia (arts|literacy)\b|\btechnology (class|workshop|program|lab)s?\b/i,
+  "engineering": KEYWORDS.engineering,
+  "maker & building": /\bmaker ?space\b|\bmaker (lab|club|projects?)\b|\blego\b|\bwoodworking\b/i,
+  "mathematics": /\bmathematics\b|\bmath (enrichment|tutoring|club|games|skills|help|support)\b/i,
+  "chess": KEYWORDS.chess,
+  "financial literacy": /\bfinancial literacy\b|\bmoney management\b/i,
+  "visual arts": /\bvisual arts?\b|\bpainting\b|\bdrawing\b|\bmurals?\b/i,
+  "music": /\bmusic (class|lesson|program|production|education)s?\b|\bchoir\b|\bchorus\b|\bdrumming\b|\bpiano\b|\bguitar\b|\bviolin\b/i,
+  "dance & theater": /\bdance (class|lesson|program|team)s?\b|\btheat(er|re) (arts|class|program)s?\b|\bdrama\b|\bstep team\b/i,
+  "animation": KEYWORDS.animation,
+  "filmmaking & video": /\bfilmmaking\b|\bvideo production\b|\bfilm (club|making|program)\b/i,
+  "crafts & sewing": /\barts (and|&|&amp;) crafts\b|\bsewing\b|\bknitting\b/i,
+  "literacy & writing": /(?<!(financial|digital|media|computer) )\bliteracy\b|\bcreative writing\b|\bbook clubs?\b|\breading (club|program|skills)\b/i,
+  "languages": /\bforeign languages?\b|\b(spanish|mandarin|chinese|french|arabic) (class|lesson)s?\b/i,
+  "social studies": /\bsocial studies\b|\bcivics\b/i,
+  "sports & fitness": /\bsports\b|\bfitness\b|\bbasketball\b|\bsoccer\b|\bswimming\b|\bmartial arts\b|\byoga\b/i,
+  "health & nutrition": /\bnutrition\b|\bhealthy (eating|habits)\b/i,
+  "cooking": KEYWORDS.cooking,
+  "leadership & social-emotional": /\bsocial[- ]emotional\b|\bleadership (development|skills|training)\b|\bcharacter (development|building|education)\b/i,
+};
+
+/**
+ * The words around a match, cut at sentence ends (or ~90 chars either side)
+ * and only ever at whitespace, so an HTML entity is never split and the quote
+ * stays an exact substring of the page.
+ */
+export function quoteAround(text, index, length) {
+  const REACH = 90;
+  let start = Math.max(0, index - REACH);
+  let end = Math.min(text.length, index + length + REACH);
+  const before = text.slice(start, index);
+  const stop = Math.max(before.lastIndexOf(". "), before.lastIndexOf("! "), before.lastIndexOf("? "));
+  if (stop >= 0) {
+    start += stop + 2;
+  } else if (start > 0) {
+    const sp = text.indexOf(" ", start);
+    start = sp >= 0 && sp < index ? sp + 1 : index;
+  }
+  const after = text.slice(index + length, end);
+  const next = after.search(/[.!?](\s|$)/);
+  if (next >= 0) {
+    end = index + length + next + 1;
+  } else if (end < text.length) {
+    const sp = text.lastIndexOf(" ", end);
+    if (sp > index + length) end = sp;
+  }
+  return text.slice(start, end).trim();
+}
+
+/**
+ * Providers are multi-service agencies: the same site that runs a K-5
+ * program offers adult literacy, SNAP enrolment and job training. A sentence
+ * about those is not evidence of what children do.
+ */
+const NOT_ABOUT_KIDS =
+  /\b(adults?|seniors?|older adults|elderly|residents?|staff|group fitness|esl|english for speakers|english language learners|citizenship|high school equivalency|hse|ged|snap|benefits|job|jobs|workforce|employment|career|careers|apprenticeships?|therapy|therapists?|patients?|tenants|legal|lifeguards?|certification|caregivers|health insurance|medicaid)\b/i;
+
+/** Menus and footers: long runs of Title Case words with no sentence in them. */
+function looksLikeNavigation(quote) {
+  if (/[.!?]$/.test(quote)) return false;
+  const words = quote.split(/\s+/).filter((w) => /^[a-z]/i.test(w));
+  if (words.length < 10) return false;
+  const titled = words.filter((w) => /^[A-Z]/.test(w)).length;
+  return titled / words.length > 0.6;
+}
+
+export function usableQuote(quote) {
+  return quote.length >= 8 && !NOT_ABOUT_KIDS.test(quote) && !looksLikeNavigation(quote);
+}
+
+/** First usable occurrence of each pattern across the pages, with its sentence. */
+export function keywordEvidence(pages, patterns) {
+  const out = [];
+  for (const [name, re] of Object.entries(patterns)) {
+    const all = new RegExp(re.source, re.flags.includes("g") ? re.flags : re.flags + "g");
+    search: for (const page of pages) {
+      const text = page.text ?? "";
+      for (const m of text.matchAll(all)) {
+        const quote = quoteAround(text, m.index, m[0].length);
+        if (!usableQuote(quote)) continue;
+        out.push({ name, quote });
+        break search;
+      }
+    }
+  }
+  return out;
+}
 
 const NAMED_ENTITIES = {
   amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ", rsquo: "'", lsquo: "'",
@@ -153,23 +267,26 @@ export function validateSubjects(raw, text) {
   };
 }
 
-function keywordExtract(text) {
-  const tools = Object.entries(KEYWORDS)
-    .filter(([, re]) => re.test(text))
-    .map(([t]) => t);
+export function keywordExtract(pages) {
+  const text = corpusFor({ pages });
+  const tools = keywordEvidence(pages, KEYWORDS);
+  const { subjects, subjectEvidence } = validateSubjects(
+    keywordEvidence(pages, SUBJECT_KEYWORDS).map(({ name, quote }) => ({ subject: name, quote })),
+    text,
+  );
   return {
     hasK5Programming: /\b(elementary|grades? k|kindergarten|after[-\s]?school)\b/i.test(text),
     summary: "",
-    stemTools: tools,
-    // Subjects need a verbatim quote per subject, which keywords cannot give.
-    subjects: [],
-    subjectEvidence: [],
+    stemTools: tools.map((t) => t.name),
+    subjects,
+    subjectEvidence,
     activities: [],
-    costTier: /\bfree\b/i.test(text) ? "free" : "unknown",
+    // The word "free" somewhere on a provider's site is not a price.
+    costTier: "unknown",
     hoursText: "",
     contactEmail: text.match(/[\w.+-]+@[\w-]+\.[\w.]+/)?.[0] ?? "",
     contactPhone: text.match(/\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}/)?.[0] ?? "",
-    evidence: [],
+    evidence: [...new Set(tools.map((t) => t.quote))],
     confidence: "low",
     method: "keyword",
   };
@@ -194,7 +311,7 @@ export async function run({ limit } = {}) {
   for (const site of targets) {
     const text = corpusFor(site);
     if (!gemini) {
-      out.push({ provider: site.provider, website: site.website, ...keywordExtract(text) });
+      out.push({ provider: site.provider, website: site.website, ...keywordExtract(site.pages) });
       continue;
     }
     const prompt = [
@@ -230,7 +347,7 @@ export async function run({ limit } = {}) {
         cacheKey: { task: "extract", provider: site.provider, len: text.length, prompt, schema: SCHEMA },
       });
       if (!data) {
-        out.push({ provider: site.provider, website: site.website, ...keywordExtract(text) });
+        out.push({ provider: site.provider, website: site.website, ...keywordExtract(site.pages) });
         log.warn(`${site.provider.slice(0, 40)}: no parse, fell back to keywords`);
         continue;
       }
@@ -269,13 +386,14 @@ export async function run({ limit } = {}) {
       );
     } catch (e) {
       log.warn(`${site.provider.slice(0, 40)}: ${e.message}`);
-      out.push({ provider: site.provider, website: site.website, ...keywordExtract(text) });
+      out.push({ provider: site.provider, website: site.website, ...keywordExtract(site.pages) });
     }
   }
 
   const file = path.join(paths.work, "facts.json");
   await writeFile(file, JSON.stringify(out, null, 2) + "\n");
   const withTools = out.filter((o) => o.stemTools?.length).length;
-  log.ok(`${out.length} providers, ${withTools} with evidenced STEM tools -> ${file}`);
-  return { providers: out.length, withTools };
+  const withSubjects = out.filter((o) => o.subjects?.length).length;
+  log.ok(`${out.length} providers, ${withTools} with STEM tools, ${withSubjects} with subjects -> ${file}`);
+  return { providers: out.length, withTools, withSubjects };
 }

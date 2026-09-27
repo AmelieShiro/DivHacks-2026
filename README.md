@@ -55,12 +55,13 @@ sites. Every enriched value ships with its provenance — see
 [the contract](pipeline/README.md#the-contract). Show the badges; it's what
 makes the directory trustworthy.
 
-**Cost is mostly unknown, and says so.** OpenData publishes no price. All 565
-programs are publicly funded (DYCD contract). The 279 `cost.tier: "free"`
-values currently come from the word "free" appearing somewhere on the
-provider's website, not from a statement about that program, so treat them as
-unverified (see [What to trust](#what-to-trust)). `cost.tier: "unknown"` must
-not be rendered as "Free".
+**Cost is free only where someone official said so.** OpenData publishes no
+price. All 565 programs are publicly funded (DYCD contract). The 370 COMPASS
+programs are `cost.tier: "free"` with `cost.source: "dycd-program-rules"`,
+because DYCD states COMPASS is "offered at no cost to youth"; the quote and
+URL are in `cost.note`. The other 195 (Beacon, Cornerstone, ...) are
+`"unknown"` unless Gemini reads a price off the provider's site. Keyword
+matches never set a price. `cost.tier: "unknown"` must not be rendered as "Free".
 
 **OSIS lookup is by school, not student ID.** An OSIS is a private student
 identifier with no public mapping. School name and DBN lookup gives the same
@@ -76,19 +77,24 @@ should show tier 3 values with a "verify with provider" hint and a footnote.
 |---|---|---|---|
 | **1. Official** | name, provider, address, borough, ZIP, lat/lng, age band, program type, funded seats, participants; school name, DBN, grades | NYC OpenData (DYCD, DOE) | Published by the city for the 2026 program year |
 | **2. Computed by us** | host school (`inSchoolBuilding`), `coLocatedSchools`, ZIP program density | Distance between city coordinates (120m) | Reliable, but a nearby school is not proof the program is in it |
-| **3. Verify with provider** | website, STEM tools, summary, hours, email, phone, cost, photos | Crawled from the provider's website, read by keyword matching or Gemini | Describes the **provider**, not the individual site; may be outdated or misread |
+| **3. Verify with provider** | website, STEM tools, subjects, summary, hours, email, phone, photos | Crawled from the provider's website, read by keyword matching or Gemini | Describes the **provider**, not the individual site; may be outdated or misread |
 
 Specific caveats for tier 3:
 
 - **Website** is checked by fetching it and matching the organization's name,
   so it is usually right, but it is the provider's main site, not a page for
   this location.
-- **STEM tools** from `method: "keyword"` are pattern matches with no quote
-  behind them. From `method: "gemini"` each tool has a verbatim quote in
-  `enrichment.evidence`.
+- **STEM tools and subjects** always come with a verbatim quote
+  (`enrichment.evidence`, `enrichment.subjectEvidence`). With
+  `method: "keyword"` the quote is the sentence around a pattern match;
+  sentences about adult services (ESL, SNAP, job training) and menu text are
+  skipped, but the match can still be about the organization rather than K-5.
+  With `method: "gemini"` the model chose the quote and it was checked
+  against the page.
 - **Cost** is not published by the city. DYCD states COMPASS programs are
   ["offered at no cost to youth"](https://www.nyc.gov/site/dycd/services/after-school/comprehensive-after-school-system-of-new-york-city-compass.page),
-  which covers 370 of the 565 programs, but the dataset does not use that yet.
+  which covers 370 of the 565 programs; that is the only source of "free"
+  without a Gemini run.
 - **Photos** come from the provider's own website and may show a different
   location or program. `judged: false` means no one, human or model, has
   looked at the picture.
@@ -105,7 +111,7 @@ Suggested footnote for the site:
 ## Development
 
 ```bash
-npm test                            # 94 unit + contract tests
+npm test                            # 133 unit + contract tests (Node 21: node --test pipeline/__tests__/*.test.mjs)
 node scripts/inspect.mjs            # per-stage checks + visual inspector (data/cache/inspect.html)
 node pipeline/run.mjs --list        # stages
 node pipeline/run.mjs --from 20     # re-run enrichment only

@@ -1,105 +1,117 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import ProgramCard from "@/components/ProgramCard";
-import { withDistance } from "@/lib/geo";
-import type { CardProgram, Subject, ZipCentroids } from "@/lib/types";
+import { RADIUS_MILES, withDistance } from "@/lib/geo";
+import type { CardProgram, SubjectGroup, ZipCentroids } from "@/lib/types";
 
-const PROGRAM_DETAILS = ["Free", "Grades K–2", "Grades 3–5"] as const;
-type ProgramDetail = (typeof PROGRAM_DETAILS)[number];
+/**
+ * Every K-5 row in the dataset serves all of K-5 ("Grades K - 5", "K - 12",
+ * "Ages 4+", "Ages 5 - 20"), so grade-band filters would never narrow the
+ * list. These two do.
+ */
+const PROGRAM_DETAILS = {
+  Free: (p: CardProgram) => p.cost === "Free",
+  "In a school building": (p: CardProgram) => p.tag === "In school",
+} as const;
+type ProgramDetail = keyof typeof PROGRAM_DETAILS;
 
-const SUBJECTS = [
-  "Biology",
-  "Chemistry",
-  "Coding",
-  "Engineering",
-  "Robotics",
-] as const satisfies readonly Subject[];
+type OptionGroup = { heading?: string; options: { label: string; count: number }[] };
 
-function FilterDropdown<T extends string>({
+function FilterDropdown({
   label,
   allLabel,
-  options,
+  groups,
   selected,
   onChange,
 }: {
   label: string;
   allLabel: string;
-  options: readonly T[];
-  selected: T[];
-  onChange: (selected: T[]) => void;
+  groups: OptionGroup[];
+  selected: string[];
+  onChange: (selected: string[]) => void;
 }) {
-  const toggle = (option: T) => {
-    onChange(
-      selected.includes(option)
-        ? selected.filter((item) => item !== option)
-        : [...selected, option],
-    );
-  };
+  const [open, setOpen] = useState(false);
+  const root = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onPointer = (e: PointerEvent) => {
+      if (!root.current?.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    document.addEventListener("pointerdown", onPointer);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("pointerdown", onPointer);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  const toggle = (option: string) =>
+    onChange(selected.includes(option) ? selected.filter((s) => s !== option) : [...selected, option]);
+
+  const row = (isSelected: boolean) =>
+    `flex w-full items-center justify-between gap-3 rounded-lg px-3 py-2 text-left font-body text-sm font-600 transition-colors ${
+      isSelected ? "bg-orange text-white" : "text-ink hover:bg-teal-50"
+    }`;
 
   return (
-    <div>
-      <p className="mb-2 font-heading text-sm font-600 text-white/80">
-        {label}
-      </p>
-      <details className="group relative">
-        <summary className="flex cursor-pointer list-none items-center justify-between gap-3 rounded-xl bg-white px-4 py-3 font-heading text-sm font-600 text-ink shadow-md transition-colors hover:bg-teal-50">
-          <span className="truncate">
-            {selected.length === 0 ? allLabel : selected.join(", ")}
-          </span>
-          <span
-            aria-hidden="true"
-            className="shrink-0 text-orange transition-transform group-open:rotate-180"
-          >
-            ▾
-          </span>
-        </summary>
-        <div className="absolute left-0 right-0 z-20 mt-2 overflow-hidden rounded-xl bg-white p-2 shadow-xl ring-1 ring-black/5">
-          <button
-            type="button"
-            onClick={() => onChange([])}
-            aria-pressed={selected.length === 0}
-            className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-left font-body text-sm font-600 transition-colors ${
-              selected.length === 0
-                ? "bg-orange text-white"
-                : "text-ink hover:bg-teal-50"
-            }`}
-          >
+    <div ref={root} className="relative">
+      <p className="mb-2 font-heading text-sm font-600 text-white/80">{label}</p>
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        aria-haspopup="true"
+        className="flex w-full items-center justify-between gap-3 rounded-xl bg-white px-4 py-3 font-heading text-sm font-600 text-ink shadow-md transition-colors hover:bg-teal-50"
+      >
+        <span className="truncate">{selected.length === 0 ? allLabel : selected.join(", ")}</span>
+        <span aria-hidden="true" className={`shrink-0 text-orange transition-transform ${open ? "rotate-180" : ""}`}>
+          ▾
+        </span>
+      </button>
+      {open && (
+        <div className="absolute left-0 right-0 z-40 mt-2 max-h-80 overflow-y-auto rounded-xl bg-white p-2 shadow-xl ring-1 ring-black/5">
+          <button type="button" onClick={() => onChange([])} aria-pressed={selected.length === 0} className={row(selected.length === 0)}>
             {allLabel}
             {selected.length === 0 && <span aria-hidden="true">✓</span>}
           </button>
-          {options.map((option) => {
-            const isSelected = selected.includes(option);
-            return (
-              <button
-                key={option}
-                type="button"
-                onClick={() => toggle(option)}
-                aria-pressed={isSelected}
-                className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-left font-body text-sm font-600 transition-colors ${
-                  isSelected
-                    ? "bg-orange text-white"
-                    : "text-ink hover:bg-teal-50"
-                }`}
-              >
-                {option}
-                {isSelected && <span aria-hidden="true">✓</span>}
-              </button>
-            );
-          })}
+          {groups.map((g) => (
+            <div key={g.heading ?? "options"}>
+              {g.heading && (
+                <p className="px-3 pb-1 pt-3 font-heading text-xs font-700 uppercase tracking-wide text-ink/50">
+                  {g.heading}
+                </p>
+              )}
+              {g.options.map(({ label: option, count }) => {
+                const isSelected = selected.includes(option);
+                return (
+                  <button key={option} type="button" onClick={() => toggle(option)} aria-pressed={isSelected} className={row(isSelected)}>
+                    <span>{option}</span>
+                    <span className={`text-xs ${isSelected ? "text-white" : "text-ink/50"}`}>
+                      {isSelected ? "✓" : count}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          ))}
         </div>
-      </details>
+      )}
     </div>
   );
 }
 
 export default function ProgramsView({
   programs,
+  subjectGroups,
   centroids,
   zip,
 }: {
   programs: CardProgram[];
+  subjectGroups: SubjectGroup[];
   centroids: ZipCentroids;
   /** From ?zip=, read by the server page. */
   zip: string;
@@ -107,24 +119,46 @@ export default function ProgramsView({
   const router = useRouter();
   const pathname = usePathname();
   const [input, setInput] = useState(zip);
-  const [selectedDetails, setSelectedDetails] = useState<ProgramDetail[]>([]);
-  const [selectedSubjects, setSelectedSubjects] = useState<Subject[]>([]);
+  const [selectedDetails, setSelectedDetails] = useState<string[]>([]);
+  const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
 
-  const { programs: sorted, measured } = useMemo(
+  const { programs: sorted, measured, nearestMiles } = useMemo(
     () => withDistance(programs, zip, centroids),
     [programs, zip, centroids],
+  );
+  const unknownZip = zip.trim() !== "" && !measured;
+
+  // Counts follow the ZIP search, so an option never promises programs that
+  // are outside the radius.
+  const detailGroups: OptionGroup[] = useMemo(
+    () => [{
+      options: (Object.keys(PROGRAM_DETAILS) as ProgramDetail[]).map((label) => ({
+        label,
+        count: sorted.filter(PROGRAM_DETAILS[label]).length,
+      })),
+    }],
+    [sorted],
+  );
+
+  const nearbySubjectGroups: OptionGroup[] = useMemo(
+    () =>
+      subjectGroups
+        .map((g) => ({
+          heading: g.heading,
+          options: g.options
+            .map(({ label }) => ({ label, count: sorted.filter((p) => p.subjects.includes(label)).length }))
+            .filter((o) => o.count > 0 || selectedSubjects.includes(o.label)),
+        }))
+        .filter((g) => g.options.length > 0),
+    [subjectGroups, sorted, selectedSubjects],
   );
 
   const list = useMemo(() => {
     return sorted.filter((p) => {
+      // Within one dropdown, picking several options means "any of these".
       const matchesProgramFilter =
         selectedDetails.length === 0 ||
-        selectedDetails.some(
-          (detail) =>
-            (detail === "Free" && p.cost === "Free") ||
-            (detail === "Grades K–2" && /K|1|2/.test(p.ages)) ||
-            (detail === "Grades 3–5" && /3|4|5/.test(p.ages)),
-        );
+        selectedDetails.some((d) => PROGRAM_DETAILS[d as ProgramDetail]?.(p));
       const matchesSubject =
         selectedSubjects.length === 0 ||
         selectedSubjects.some((subject) => p.subjects.includes(subject));
@@ -143,13 +177,20 @@ export default function ProgramsView({
     <div className="mx-auto max-w-6xl px-5 py-12">
       <div className="text-white mb-6">
         <h1 className="font-heading font-700 text-3xl sm:text-4xl">
-          {zip ? `Programs near ${zip}` : "All programs"}
+          {measured
+            ? `Programs within ${RADIUS_MILES} mile of ${zip}`
+            : "All programs"}
         </h1>
         <p className="font-body text-white/85 mt-1">
           {list.length} hands-on STEM {list.length === 1 ? "program" : "programs"} ·
           {/* Only claim a distance order when a known ZIP gave one. */}
           {measured ? " sorted by distance" : " sorted by name"}
         </p>
+        {unknownZip && (
+          <p className="mt-3 inline-block rounded-lg bg-white/15 px-3 py-2 font-body text-sm text-white">
+            We couldn’t find ZIP {zip}, so all programs are shown. Try a nearby NYC ZIP code.
+          </p>
+        )}
       </div>
 
       {/* Controls */}
@@ -172,14 +213,14 @@ export default function ProgramsView({
             <FilterDropdown
               label="Program details"
               allLabel="All program details"
-              options={PROGRAM_DETAILS}
+              groups={detailGroups}
               selected={selectedDetails}
               onChange={setSelectedDetails}
             />
             <FilterDropdown
               label="Subject"
               allLabel="All subjects"
-              options={SUBJECTS}
+              groups={nearbySubjectGroups}
               selected={selectedSubjects}
               onChange={setSelectedSubjects}
             />
@@ -192,6 +233,17 @@ export default function ProgramsView({
           {list.map((p) => (
             <ProgramCard key={p.id} program={p} />
           ))}
+        </div>
+      ) : measured && sorted.length === 0 ? (
+        <div className="rounded-2xl bg-white p-8 text-center shadow-lg">
+          <p className="font-heading text-xl font-600 text-ink">
+            No programs within {RADIUS_MILES} mile of {zip}
+          </p>
+          <p className="mt-1 font-body text-ink/60">
+            {nearestMiles != null
+              ? `The nearest program is ${nearestMiles.toFixed(1)} miles away. Try a neighboring ZIP code.`
+              : "Try a neighboring ZIP code."}
+          </p>
         </div>
       ) : (
         <div className="rounded-2xl bg-white p-8 text-center shadow-lg">

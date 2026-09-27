@@ -67,7 +67,14 @@ function looksNewYork(text) {
   return NYC_MARKERS.test(text.slice(0, 120_000));
 }
 
-export function verify({ identity, text, host, finalUrl, signals, html }) {
+/**
+ * `curated` marks a domain a person put in known-domains.json. Names made only
+ * of weak words ("The Child Center of NY" -> ["child"]) can never produce a
+ * distinctive hit, so a curated domain is accepted on a majority name match
+ * alone, found in the title or the body (titles like "SISDA'S HOME PAGE"
+ * carry no name). Parking and NYC checks still apply, so a typo still fails.
+ */
+export function verify({ identity, text, host, finalUrl, signals, html, curated = false }) {
   if (!signals.length) return null;
   if (PARKED_HOSTS.test(host) || PARKED_HOSTS.test(finalUrl)) return null;
   if (PARKED_TEXT.test(identity) || PARKED_TEXT.test(html.slice(0, 5000))) return null;
@@ -76,6 +83,12 @@ export function verify({ identity, text, host, finalUrl, signals, html }) {
   const hit = signals.filter((s) => identity.includes(s));
   const distinctive = hit.filter((s) => !WEAK_SIGNALS.has(s));
   const ratio = hit.length / signals.length;
+
+  if (curated) {
+    const body = `${identity} ${text.slice(0, 120_000).toLowerCase()}`;
+    const found = signals.filter((s) => body.includes(s));
+    if (found.length > 0 && found.length / signals.length >= 0.5) return { confidence: "strong", matched: found };
+  }
 
   const hostBase = host.replace(/^www\./, "").split(".")[0];
   const initials = signals.map((w) => w[0]).join("");
@@ -92,7 +105,7 @@ export function verify({ identity, text, host, finalUrl, signals, html }) {
   return null;
 }
 
-async function probe(host, signals) {
+async function probe(host, signals, { curated = false } = {}) {
   for (const scheme of ["https", "http"]) {
     const res = await get(`${scheme}://${host}`);
     if (!res.ok || !res.body) continue;
@@ -105,10 +118,34 @@ async function probe(host, signals) {
       finalUrl: res.url ?? "",
       signals,
       html,
+      curated,
     });
     return ok ? { website: res.url, resolvedVia: host, ...ok } : null;
   }
   return null;
+}
+
+/**
+ * DYCD spells the same provider differently across rows and years ("of NY" /
+ * "of New York", "Inc" / "Inc.", a truncated "(WHEDCO"), so known-domains.json
+ * is matched on a normalised key rather than the exact string.
+ */
+export function providerKey(name) {
+  return name
+    .toLowerCase()
+    .replace(/\([^)]*\)?/g, " ")
+    .replace(/&/g, " and ")
+    .replace(/\bnew york\b/g, "ny")
+    .replace(/\b(the|inc|incorporated|llc|ltd|corp|corporation)\b/g, " ")
+    .replace(/[^a-z0-9]+/g, "");
+}
+
+export function knownFor(known, provider) {
+  const key = providerKey(provider);
+  const hits = Object.entries(known)
+    .filter(([name]) => !name.startsWith("_") && providerKey(name) === key)
+    .flatMap(([, hosts]) => hosts);
+  return [...new Set(hits)];
 }
 
 const ASK_SCHEMA = {
@@ -172,12 +209,14 @@ export async function run({ limit, useGemini = true } = {}) {
 
   // Pass 1 + 2: known domains, then generated candidates.
   await pool(todo, async (p) => {
-    const list = [...(known[p.provider] ?? []), ...p.candidates].filter((h) => allowed(p, h));
+    const curatedHosts = knownFor(known, p.provider);
+    const list = [...curatedHosts, ...p.candidates].filter((h) => allowed(p, h));
     for (const host of list) {
-      const hit = await probe(host, p.signals);
+      const curated = curatedHosts.includes(host);
+      const hit = await probe(host, p.signals, { curated });
       // Check where the redirect LANDED too, not just the host we asked for.
       if (hit && allowed(p, hit.website)) {
-        Object.assign(p, hit, { source: known[p.provider]?.includes(host) ? "known" : "generated" });
+        Object.assign(p, hit, { source: curated ? "known" : "generated" });
         log.ok(`${p.provider.slice(0, 44).padEnd(44)} ${hit.website}`);
         return;
       }

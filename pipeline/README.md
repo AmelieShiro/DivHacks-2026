@@ -200,12 +200,12 @@ them on hover is the cheapest credibility win available.
 - **`zips.json`** — `k5ProgramsNow === 0` is a STEM access desert. That field
   is the heatmap.
 - **`seats`** — real funded seat counts, populated on every record.
-- **`cost`** — read this carefully. OpenData publishes **no** cost field, so
-  `cost.tier` is `"unknown"` unless a provider's own site stated a price
-  (279 of 565 do). What *is* factual is `cost.publiclyFunded`: every K-5 row
-  carries a DYCD contract number, so all 565 are publicly funded. Publicly
-  funded is not the same claim as free to families — do not render `unknown`
-  as "Free".
+- **`cost`** — read this carefully. OpenData publishes **no** cost field.
+  COMPASS programs (370) are `"free"` with `source: "dycd-program-rules"`,
+  on DYCD's published statement. Otherwise `cost.tier` is `"unknown"` unless
+  Gemini read a price off the provider's site (`source: "provider-website"`).
+  `cost.publiclyFunded` is true for all 565 (DYCD contract), but publicly
+  funded is not the same claim as free — do not render `unknown` as "Free".
 - **`photos[]`** — already ordered for the hero band: carousel-ready first,
   then model `suitability`, then size. For the toroidal left-to-right band
   take `photos.filter(p => p.carouselReady)`; 296 programs have at least one.
@@ -236,22 +236,32 @@ was found. Hotlinking is fine for a demo; credit the provider and link back to
 Last full run, **without** a Gemini key:
 
 ```
-20 resolve   59/111 providers      67% of sites
-30 crawl     59 sites              1,644 candidate images
-40 extract   47 providers with tools      (keyword fallback)
-50 images    513 photos                   (size filter only)
+20 resolve   95/111 providers      93% of sites
+30 crawl     95 sites              2,726 candidate images
+40 extract   40 providers with tools, 77 with subjects   (keyword fallback)
+50 images    842 photos                   (size filter only)
 60 build     565 programs · 2,189 schools · 192 ZIPs
-             website 376 · tools 317 · photos 357
+             website 523 · tools 221 · subjects 435 (STEM subject 220) · photos 472
              in-school 444 (of which K-5 393)
-             publicly funded 565 · cost confirmed 279
+             publicly funded 565 · cost confirmed 370 (COMPASS, per DYCD)
 ```
 
-Adding a key should improve 40 and 50 substantially — the keyword classifier is
-deliberately conservative, and no image has been visually reviewed yet.
+Tools dropped from the previous run (317) on purpose: the old patterns read
+"zip code" and "after-school programming" as coding, and any mention of
+"STEM" as a science lab. Adding a key should improve 40 and 50 substantially,
+and no image has been visually reviewed yet.
 
 ## Raising coverage
 
-The 52 unresolved providers are the biggest lever, and the cheapest fix is
-hand-editing `data/enrichment/known-domains.json`. Entries there are still
-verified by fetching, so a wrong guess fails safely rather than corrupting the
-data. Re-run `node pipeline/run.mjs --from 20`.
+The 16 unresolved providers (42 sites) are mostly blocked or gone: a
+Cloudflare challenge (centerforfamilylife.org), refused connections
+(milldev.org, bbyosports.com, nycmissionsociety.org), a 403 (sco.org), or a
+merged org (St Vincent's, now HeartShare). Add candidates to
+`data/enrichment/known-domains.json` and re-run `node pipeline/run.mjs --from 20`.
+
+Entries there are still fetched and checked for parking and New York, so a
+wrong guess fails safely. Because a person chose them, they need only a
+majority of the name's words on the page (title or body), not a distinctive
+one: names like "The Child Center of NY" are made only of common words and
+could never verify otherwise. Keys are matched loosely ("NY"/"New York",
+"Inc"/"Inc.", truncated names).

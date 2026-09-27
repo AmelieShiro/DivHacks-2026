@@ -6,7 +6,7 @@
  */
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { verify } from "../stages/20-resolve.mjs";
+import { verify, knownFor, providerKey } from "../stages/20-resolve.mjs";
 
 const call = ({ text, host, finalUrl, signals }) =>
   verify({
@@ -123,6 +123,51 @@ test("accepts an acronym domain corroborated by a distinctive word", () => {
     signals: ["junior", "tennis", "league"],
   });
   assert.ok(got);
+});
+
+const CHILD_CENTER = "Child Center of NY | Family Services Queens | 118-35 Queens Boulevard, Forest Hills, NY 11375";
+
+test("a generated domain cannot pass on weak name words alone", () => {
+  assert.equal(call({ text: CHILD_CENTER, host: "childcenter.org", signals: ["child"] }), null);
+});
+
+test("a hand-curated domain passes on a majority name match of weak words", () => {
+  // childcenterny.org was in known-domains.json but could never verify,
+  // because "child" is the only signal and it is a weak word.
+  const got = verify({
+    identity: CHILD_CENTER.toLowerCase(), text: CHILD_CENTER, host: "childcenterny.org",
+    finalUrl: "https://www.childcenterny.org/", signals: ["child"], html: CHILD_CENTER, curated: true,
+  });
+  assert.ok(got);
+});
+
+test("a hand-curated domain can match the name in the page body", () => {
+  const body = "Simpson St. Development Association, 997 E. 163rd St., Bronx, NY 10459";
+  const got = verify({
+    identity: "sisda's home page", text: body, host: "sisda.org", finalUrl: "https://sisda.org/",
+    signals: ["simpson", "street", "development"], html: body, curated: true,
+  });
+  assert.ok(got);
+});
+
+test("a hand-curated domain is still rejected when parked", () => {
+  const text = "fiao.org is for sale. Buy this domain. Brooklyn, New York.";
+  assert.equal(verify({
+    identity: text.toLowerCase(), text, host: "fiao.org", finalUrl: "https://fiao.org/",
+    signals: ["federation", "italian", "american"], html: text, curated: true,
+  }), null);
+});
+
+test("known-domains keys match DYCD's spelling variants", () => {
+  const known = {
+    "Catholic Charities Community Services, Archdiocese of New York": ["catholiccharitiesny.org"],
+    "Women's Housing and Economic Development Corporation": ["whedco.org"],
+    "Shorefront YM-YWHA of Brighton-Manhattan Beach, Inc.": ["shorefronty.org"],
+  };
+  assert.deepEqual(knownFor(known, "Catholic Charities Community Services, Archdiocese of NY"), ["catholiccharitiesny.org"]);
+  assert.deepEqual(knownFor(known, "Women's Housing and Economic Development Corporation (WHEDCO"), ["whedco.org"]);
+  assert.deepEqual(knownFor(known, "Shorefront YM-YWHA of Brighton-Manhattan Beach, Inc"), ["shorefronty.org"]);
+  assert.notEqual(providerKey("Queens Community House Inc"), providerKey("Queens Community Services Inc"));
 });
 
 test("rejects when the provider name yields no signals", () => {

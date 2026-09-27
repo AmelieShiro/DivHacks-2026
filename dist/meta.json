@@ -1,26 +1,27 @@
 {
-  "schemaVersion": "2.5.0",
-  "generatedAt": "2026-09-26T22:45:16.331Z",
+  "schemaVersion": "2.6.0",
+  "generatedAt": "2026-09-26T23:37:06.700Z",
   "programYear": "2026",
   "counts": {
     "programs": 565,
     "schools": 2189,
     "zips": 192,
-    "withWebsite": 365,
-    "withTools": 314,
-    "withSubjects": 0,
-    "withPhotos": 352,
-    "withCarouselPhoto": 292,
+    "withWebsite": 523,
+    "withTools": 221,
+    "withSubjects": 435,
+    "withPhotos": 472,
+    "withCarouselPhoto": 403,
     "inSchoolBuilding": 444,
     "inK5SchoolBuilding": 393,
     "onSharedCampus": 176,
     "publiclyFunded": 565,
-    "costConfirmed": 270
+    "costConfirmed": 370
   },
   "sources": {
     "programs": "NYC OpenData DYCD Program Sites (ebkm-iyma)",
     "schools": "NYC OpenData DOE School Locations (wg9x-4ke6)",
-    "enrichment": "provider websites, extracted with Google Gemini"
+    "enrichment": "provider websites, keyword matching (no Gemini key)",
+    "compassCost": "https://www.nyc.gov/site/dycd/services/after-school/comprehensive-after-school-system-of-new-york-city-compass.page"
   },
   "subjectGroups": {
     "Science": [

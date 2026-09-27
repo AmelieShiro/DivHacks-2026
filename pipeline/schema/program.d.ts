@@ -1,5 +1,5 @@
 /**
- * Nova dataset contract — schemaVersion 2.5.0
+ * Nova dataset contract — schemaVersion 2.6.0
  *
  * These types describe the files in `dist/`. The website imports them; the
  * pipeline guarantees them. If a pipeline change breaks one of these shapes,
@@ -76,9 +76,10 @@ export interface Enrichment {
   /** Only tools actually evidenced on the provider's own site. */
   stemTools: StemTool[];
   /**
-   * Subjects taught, for filter chips. Only filled by Gemini (`method:
-   * "gemini"`); always [] otherwise. Each one has a quote in subjectEvidence
-   * that was checked to appear verbatim on the provider's site. Like all
+   * Subjects taught, for filter chips. Each one has a quote in
+   * subjectEvidence that was checked to appear verbatim on the provider's
+   * site: chosen by Gemini (`method: "gemini"`) or the sentence around a
+   * keyword match (`method: "keyword"`, lower confidence). Like all
    * enrichment, describes the PROVIDER, not necessarily this site.
    */
   subjects: Subject[];
@@ -87,7 +88,8 @@ export interface Enrichment {
   hoursText: string | null;
   contactEmail: string | null;
   contactPhone: string | null;
-  /** Verbatim quotes backing `stemTools`. Show these on hover to earn trust. */
+  /** Verbatim quotes backing `stemTools` (Gemini's picks, or the sentence
+   *  around each keyword match). Show these on hover to earn trust. */
   evidence: string[];
   method: EnrichmentMethod;
   confidence: "high" | "medium" | "low" | null;
@@ -126,13 +128,17 @@ export interface Photo {
 
 /**
  * Price. `tier` is "unknown" unless a source actually stated it — OpenData
- * publishes no cost field, so most records are unknown and the UI should say
- * so rather than implying free. `publiclyFunded` is the hard fact: the site
- * runs under a DYCD contract.
+ * publishes no cost field, so the UI should say so rather than implying free.
+ * `publiclyFunded` is the hard fact: the site runs under a DYCD contract.
+ *
+ * - "dycd-program-rules": COMPASS programs, which DYCD states are "offered at
+ *   no cost to youth". `note` carries the quote and URL.
+ * - "provider-website": read by Gemini off the provider's own site. Keyword
+ *   matches never set a price.
  */
 export interface Cost {
   tier: "free" | "sliding-scale" | "paid" | "unknown";
-  source: "provider-website" | "not-published";
+  source: "dycd-program-rules" | "provider-website" | "not-published";
   publiclyFunded: boolean;
   note: string;
 }
