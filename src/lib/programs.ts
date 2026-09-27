@@ -12,6 +12,7 @@ import programsJson from "../../dist/programs.json";
 import zipsJson from "../../dist/zips.json";
 import metaJson from "../../dist/meta.json";
 import type { CardProgram, Cost, SubjectGroup, ZipCentroids } from "./types";
+import { looksLikeKidsPhoto, stockFor } from "./stockPhotos";
 
 const programs = programsJson as unknown as Program[];
 const zips = zipsJson as unknown as ZipStat[];
@@ -88,11 +89,29 @@ function subjects(p: Program): string[] {
   return [...new Set([...p.enrichment.subjects, ...fromTools])].map(label);
 }
 
-function image(p: Program): { image: string | null; imageAlt: string } {
+/**
+ * The provider's own photo when it looks like children or an activity,
+ * otherwise a credited stock photo of the program's main subject.
+ */
+function image(p: Program): Pick<CardProgram, "image" | "imageAlt" | "imageStock" | "fallbackImage"> {
+  const stock = stockFor(subjects(p));
   // Stage 50 sorts photos for the hero band; flyers are never first.
-  const photo = p.photos.find((ph) => ph.kind !== "flyer") ?? null;
-  if (!photo || !/^https?:/i.test(photo.url)) return { image: null, imageAlt: "" };
-  return { image: photo.url, imageAlt: photo.caption || `Photo from ${tidyOrg(p.provider)}'s website` };
+  const photo = p.photos.find((ph) => ph.kind !== "flyer" && /^https?:/i.test(ph.url) && looksLikeKidsPhoto(ph));
+  if (photo) {
+    const caption = photo.caption && photo.caption !== "og:image" ? photo.caption : null;
+    return {
+      image: photo.url,
+      imageAlt: caption ?? `Photo from ${tidyOrg(p.provider)}'s website`,
+      imageStock: null,
+      fallbackImage: stock,
+    };
+  }
+  return {
+    image: stock.src,
+    imageAlt: stock.alt,
+    imageStock: { credit: stock.credit, source: stock.source },
+    fallbackImage: stock,
+  };
 }
 
 export function toCard(p: Program): CardProgram {
@@ -123,20 +142,22 @@ export function getCards(): CardProgram[] {
 }
 
 /**
- * "Programs of the week": programs with a photo and the most evidenced
- * STEM content, one per provider so the carousel is not one organization.
+ * "Programs of the week": the most evidenced STEM content, one per provider
+ * so the carousel is not one organization. Programs with their own relevant
+ * photo come first; stock-photo programs only fill the remaining slots.
  */
 export function getFeatured(n = 8): CardProgram[] {
   const seen = new Set<string>();
   return programs
-    .filter((p) => p.photos.some((ph) => ph.carouselReady && ph.kind !== "flyer"))
+    .map((p) => ({ p, card: toCard(p) }))
     .sort((a, b) =>
-      b.enrichment.subjects.length + b.enrichment.stemTools.length -
-        (a.enrichment.subjects.length + a.enrichment.stemTools.length) ||
-      (b.seats ?? 0) - (a.seats ?? 0))
-    .filter((p) => (seen.has(p.provider ?? "") ? false : (seen.add(p.provider ?? ""), true)))
+      Number(a.card.imageStock !== null) - Number(b.card.imageStock !== null) ||
+      b.p.enrichment.subjects.length + b.p.enrichment.stemTools.length -
+        (a.p.enrichment.subjects.length + a.p.enrichment.stemTools.length) ||
+      (b.p.seats ?? 0) - (a.p.seats ?? 0))
+    .filter(({ p }) => (seen.has(p.provider ?? "") ? false : (seen.add(p.provider ?? ""), true)))
     .slice(0, n)
-    .map(toCard);
+    .map(({ card }) => card);
 }
 
 /**

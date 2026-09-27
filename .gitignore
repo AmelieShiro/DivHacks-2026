@@ -51,3 +51,6 @@ next-env.d.ts
 data/cache/
 data/raw/
 data/enrichment/crawl.json
+
+# stock photo review contact sheets
+data/stock/sheet-*.jpg
