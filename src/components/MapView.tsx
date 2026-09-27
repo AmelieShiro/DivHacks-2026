@@ -82,7 +82,10 @@ function GoogleMap({
 
 export default function MapView({ programs }: { programs: CardProgram[] }) {
   const mapped = useMemo(() => programs.filter((p) => p.lat != null && p.lng != null), [programs]);
-  const [active, setActive] = useState(mapped[0]?.id);
+  // Open on a program shown with its own photo, not a labelled stock one.
+  const [active, setActive] = useState(
+    () => (mapped.find((p) => p.image && !p.imageStock) ?? mapped[0])?.id,
+  );
   const activeProgram = mapped.find((p) => p.id === active) ?? mapped[0];
 
   return (
