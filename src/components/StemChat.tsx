@@ -2,7 +2,7 @@
 
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { answerQuestion, formatProgramLine } from "@/lib/chat/answer.mjs";
-import { blobToWav, speakText, spokenAnswer, transcribeWav } from "@/lib/chat/voice";
+import { blobToWav, speakText, spokenAnswer, transcribeWav, translateText } from "@/lib/chat/voice";
 import type { ChatAnswer, ChatCatalog, ChatProgram } from "@/lib/chat/types";
 
 type Message = {
@@ -37,6 +37,7 @@ export default function StemChat({ catalog }: { catalog: ChatCatalog }) {
   const chunksRef = useRef<Blob[]>([]);
   const streamRef = useRef<MediaStream | null>(null);
   const playerRef = useRef<HTMLAudioElement | null>(null);
+  const lastLanguageRef = useRef("en");
 
   useEffect(() => {
     return () => {
@@ -45,14 +46,26 @@ export default function StemChat({ catalog }: { catalog: ChatCatalog }) {
     };
   }, []);
 
-  function ask(text: string, speak = false) {
+  async function ask(text: string, speak = false, language = lastLanguageRef.current) {
     const trimmed = text.trim();
     if (!trimmed) return;
-    const result: ChatAnswer = answerQuestion(catalog, trimmed);
+    lastLanguageRef.current = language;
+    const english = language.toLowerCase().startsWith("en")
+      ? trimmed
+      : await translateText(trimmed, "en");
+    const result: ChatAnswer = answerQuestion(catalog, english);
+    const spoken = spokenAnswer(
+      result.intro,
+      result.programs.map((program) => program.name),
+    );
+    const voiceLine =
+      speak && !language.toLowerCase().startsWith("en")
+        ? await translateText(spoken, language)
+        : spoken;
     setMessages((current) => [
       ...current,
       { role: "user", intro: trimmed, programs: [] },
-      { role: "bot", intro: result.intro, programs: result.programs },
+      { role: "bot", intro: speak ? voiceLine : result.intro, programs: result.programs },
     ]);
     setQuestion("");
     // Bring the new question to the top of the log rather than jumping to the
@@ -68,12 +81,8 @@ export default function StemChat({ catalog }: { catalog: ChatCatalog }) {
       log.scrollTo({ top, behavior: "smooth" });
     });
     if (speak) {
-      const line = spokenAnswer(
-        result.intro,
-        result.programs.map((program) => program.name),
-      );
       setVoiceStatus("speaking");
-      speakText(line)
+      speakText(voiceLine, language)
         .then((player) => {
           playerRef.current = player;
           if (!player) setVoiceHint("I answered on screen. Speaking needs an xAI API key.");
@@ -119,13 +128,13 @@ export default function StemChat({ catalog }: { catalog: ChatCatalog }) {
     setVoiceStatus("transcribing");
     try {
       const wav = await blobToWav(blob);
-      const { text, error } = await transcribeWav(wav);
+      const { text, language, error } = await transcribeWav(wav);
       if (error || !text) {
         setVoiceHint(error || "I didn’t catch a question. Try again.");
         setVoiceStatus("idle");
         return;
       }
-      ask(text, true);
+      await ask(text, true, language || "en");
     } catch {
       setVoiceHint("I couldn’t hear that. Try again.");
       setVoiceStatus("idle");
@@ -299,7 +308,7 @@ export default function StemChat({ catalog }: { catalog: ChatCatalog }) {
                 {voiceHint ||
                   (voiceStatus === "recording"
                     ? "Ask your question, then tap again."
-                    : "Grok hears you. Answers still come from Nova’s program list.")}
+                    : "Speak any language. Grok Voice hears you and answers in the same language. Facts still come from Nova’s program list.")}
               </p>
             </div>
           )}
