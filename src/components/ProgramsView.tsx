@@ -6,16 +6,31 @@ import ProgramCard from "@/components/ProgramCard";
 import { RADIUS_MILES, withDistance } from "@/lib/geo";
 import type { CardProgram, SubjectGroup, ZipCentroids } from "@/lib/types";
 
+type Rule = (p: CardProgram) => boolean;
+
+const COST: Record<string, Rule> = {
+  Free: (p) => p.cost === "Free",
+  "Ask provider": (p) => p.cost !== "Free",
+};
+
 /**
- * Every K-5 row in the dataset serves all of K-5 ("Grades K - 5", "K - 12",
- * "Ages 4+", "Ages 5 - 20"), so grade-band filters would never narrow the
- * list. These two do.
+ * Every program accepts all of K-5, so K-2 / 3-5 bands would never narrow
+ * the list. What does differ is the age range DYCD publishes for each site.
  */
-const PROGRAM_DETAILS = {
-  Free: (p: CardProgram) => p.cost === "Free",
-  "In a school building": (p: CardProgram) => p.tag === "In school",
-} as const;
-type ProgramDetail = keyof typeof PROGRAM_DETAILS;
+const GRADES: Record<string, Rule> = {
+  "Elementary only (K–5)": (p) => p.ages === "Grades K–5",
+  "All ages (4 and up)": (p) => p.ages === "Ages 4+",
+  "Kids & teens (K–12)": (p) => p.ages === "Grades K–12" || p.ages === "Ages 5–20",
+};
+
+const matchesAny = (rules: Record<string, Rule>, selected: string[], p: CardProgram) =>
+  selected.length === 0 || selected.some((s) => rules[s]?.(p));
+
+const ruleGroups = (rules: Record<string, Rule>, list: CardProgram[]): OptionGroup[] => [{
+  options: Object.entries(rules)
+    .map(([label, rule]) => ({ label, count: list.filter(rule).length }))
+    .filter((o) => o.count > 0),
+}];
 
 type OptionGroup = { heading?: string; options: { label: string; count: number }[] };
 
@@ -119,7 +134,8 @@ export default function ProgramsView({
   const router = useRouter();
   const pathname = usePathname();
   const [input, setInput] = useState(zip);
-  const [selectedDetails, setSelectedDetails] = useState<string[]>([]);
+  const [selectedCost, setSelectedCost] = useState<string[]>([]);
+  const [selectedGrades, setSelectedGrades] = useState<string[]>([]);
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
 
   const { programs: sorted, measured, nearestMiles } = useMemo(
@@ -130,15 +146,8 @@ export default function ProgramsView({
 
   // Counts follow the ZIP search, so an option never promises programs that
   // are outside the radius.
-  const detailGroups: OptionGroup[] = useMemo(
-    () => [{
-      options: (Object.keys(PROGRAM_DETAILS) as ProgramDetail[]).map((label) => ({
-        label,
-        count: sorted.filter(PROGRAM_DETAILS[label]).length,
-      })),
-    }],
-    [sorted],
-  );
+  const costGroups = useMemo(() => ruleGroups(COST, sorted), [sorted]);
+  const gradeGroups = useMemo(() => ruleGroups(GRADES, sorted), [sorted]);
 
   const nearbySubjectGroups: OptionGroup[] = useMemo(
     () =>
@@ -154,18 +163,15 @@ export default function ProgramsView({
   );
 
   const list = useMemo(() => {
-    return sorted.filter((p) => {
-      // Within one dropdown, picking several options means "any of these".
-      const matchesProgramFilter =
-        selectedDetails.length === 0 ||
-        selectedDetails.some((d) => PROGRAM_DETAILS[d as ProgramDetail]?.(p));
-      const matchesSubject =
-        selectedSubjects.length === 0 ||
-        selectedSubjects.some((subject) => p.subjects.includes(subject));
-
-      return matchesProgramFilter && matchesSubject;
-    });
-  }, [sorted, selectedDetails, selectedSubjects]);
+    // Within one dropdown, picking several options means "any of these";
+    // across dropdowns, all must hold.
+    return sorted.filter(
+      (p) =>
+        matchesAny(COST, selectedCost, p) &&
+        matchesAny(GRADES, selectedGrades, p) &&
+        (selectedSubjects.length === 0 || selectedSubjects.some((s) => p.subjects.includes(s))),
+    );
+  }, [sorted, selectedCost, selectedGrades, selectedSubjects]);
 
   const applyZip = (e: React.FormEvent) => {
     e.preventDefault();
@@ -209,13 +215,20 @@ export default function ProgramsView({
         </form>
 
         <div className="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15 backdrop-blur-sm">
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-3">
             <FilterDropdown
-              label="Program details"
-              allLabel="All program details"
-              groups={detailGroups}
-              selected={selectedDetails}
-              onChange={setSelectedDetails}
+              label="Cost"
+              allLabel="Any cost"
+              groups={costGroups}
+              selected={selectedCost}
+              onChange={setSelectedCost}
+            />
+            <FilterDropdown
+              label="Grades"
+              allLabel="Any grades"
+              groups={gradeGroups}
+              selected={selectedGrades}
+              onChange={setSelectedGrades}
             />
             <FilterDropdown
               label="Subject"
@@ -251,7 +264,7 @@ export default function ProgramsView({
             No programs match these filters
           </p>
           <p className="mt-1 font-body text-ink/60">
-            Try another option or choose “All” in either filter.
+            Try another option, or pick “Any” in one of the filters.
           </p>
         </div>
       )}
