@@ -55,7 +55,12 @@ export async function translateWithGrok(text: string, targetLanguage: string): P
       ],
     }),
   });
-  if (!res.ok) return text;
+  if (!res.ok) {
+    // Falling back to English is the right behaviour, but do it loudly: a
+    // silent fallback looks identical to a language Grok simply left alone.
+    console.error(`[translate] xAI ${res.status}: ${(await res.text()).slice(0, 300) || "(no detail)"}`);
+    return text;
+  }
   const data = (await res.json()) as { choices?: { message?: { content?: string } }[] };
   return data.choices?.[0]?.message?.content?.trim() || text;
 }

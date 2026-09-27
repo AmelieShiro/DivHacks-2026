@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { rateLimit } from "@/lib/chat/rateLimit";
 import { ttsLanguage } from "@/lib/chat/grokTranslate";
+import { xaiFailure } from "@/lib/chat/xaiError";
 
 /** Speak a catalog answer with Grok Voice TTS in the language that was asked. */
 export async function POST(req: Request) {
@@ -40,7 +41,8 @@ export async function POST(req: Request) {
     }),
   });
   if (!res.ok) {
-    return NextResponse.json({ error: "Grok could not speak that answer." }, { status: 502 });
+    const failure = await xaiFailure(res, "tts", "Grok could not speak that answer.");
+    return NextResponse.json({ error: failure.message }, { status: failure.status });
   }
 
   return new NextResponse(res.body, {

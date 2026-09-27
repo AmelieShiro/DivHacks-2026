@@ -8,9 +8,12 @@ import Wordmark from "./Wordmark";
  * footer would put a scrollbar on a page that has nothing else to scroll to.
  */
 export default function Footer() {
-  if (usePathname() === "/map") return null;
+  const hide = usePathname() === "/map";
+
   return (
-    <footer className="bg-black/25 border-t border-white/10 text-white/80">
+    <footer
+      className={`bg-black/25 border-t border-white/10 text-white/80 ${hide ? "hidden" : ""}`}
+    >
       <div className="mx-auto max-w-6xl px-5 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
         <Wordmark className="text-2xl" />
         <p className="font-body text-sm text-center sm:text-right">

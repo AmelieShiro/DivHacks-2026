@@ -73,6 +73,12 @@ body {
   display: none;
 }
 
+.nova-wordmark {
+  -webkit-text-stroke: 1.5px #ffffff;
+  paint-order: stroke fill;
+  letter-spacing: -0.02em;
+}
+
 @keyframes nova-float {
   0%,
   100% {

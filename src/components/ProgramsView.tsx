@@ -207,7 +207,7 @@ export default function ProgramsView({
 
       {/* Controls */}
       <div className="relative z-30 flex flex-col gap-4 mb-8">
-        <form onSubmit={applyZip} className="bg-white rounded-xl p-1.5 shadow-lg flex gap-2 max-w-sm w-full">
+        <form onSubmit={applyZip} className="bg-white rounded-xl p-1.5 shadow-lg flex gap-2 max-w-sm w-full" suppressHydrationWarning>
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}

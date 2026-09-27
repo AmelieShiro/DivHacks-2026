@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { rateLimit } from "@/lib/chat/rateLimit";
+import { xaiFailure } from "@/lib/chat/xaiError";
 
 const KEYTERMS = [
   "Nova",
@@ -52,10 +53,12 @@ export async function POST(req: Request) {
     body: form,
   });
   if (!res.ok) {
-    return NextResponse.json(
-      { error: "Grok could not hear that. Try again, a little closer to the mic." },
-      { status: 502 },
+    const failure = await xaiFailure(
+      res,
+      "stt",
+      "Grok could not hear that. Try again, a little closer to the mic.",
     );
+    return NextResponse.json({ error: failure.message }, { status: failure.status });
   }
 
   const data = (await res.json()) as { text?: string; language?: string };
