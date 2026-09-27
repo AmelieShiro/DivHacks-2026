@@ -14,7 +14,7 @@ import metaJson from "../../dist/meta.json";
 import type { CardProgram, Cost, SubjectGroup, ZipCentroids } from "./types";
 import stockPoolJson from "../data/stock-pool.json";
 import photoDenylistJson from "../data/photo-denylist.json";
-import { providerPhotoRank, stockFor, subjectKey } from "./stockPhotos";
+import { providerPhotoRank, STOCK_PHOTOS, stockFor, subjectKey } from "./stockPhotos";
 
 type PoolPhoto = { subject: string; title: string; src: string; source: string; credit: string };
 const stockPool = stockPoolJson as PoolPhoto[];
@@ -94,7 +94,7 @@ function subjects(p: Program): string[] {
   return [...new Set([...p.enrichment.subjects, ...fromTools])].map(label);
 }
 
-type ImageFields = Pick<CardProgram, "image" | "imageAlt" | "imageStock" | "fallbackImage">;
+type ImageFields = Pick<CardProgram, "image" | "imageAlt" | "imageStock">;
 
 const httpPhotos = (p: Program) =>
   p.photos.filter((ph) => ph.kind !== "flyer" && /^https?:/i.test(ph.url));
@@ -104,24 +104,16 @@ const urlKey = (url: string) => url.split(/[?#]/)[0];
 /** Provider photos a person reviewed and rejected (logos, invitations, adults-only events...). */
 const deniedPhotos = new Set((photoDenylistJson as { photos: { url: string }[] }).photos.map((p) => urlKey(p.url)));
 
-function fromProvider(p: Program, photo: Program["photos"][number], fallback: ImageFields["fallbackImage"]): ImageFields {
+function fromProvider(p: Program, photo: Program["photos"][number]): ImageFields {
   const caption = photo.caption && photo.caption !== "og:image" ? photo.caption : null;
-  return {
-    image: photo.url,
-    imageAlt: caption ?? `Photo from ${tidyOrg(p.provider)}'s website`,
-    imageStock: null,
-    fallbackImage: fallback,
-  };
+  return { image: photo.url, imageAlt: caption ?? `Photo from ${tidyOrg(p.provider)}'s website`, imageStock: null };
 }
 
-function fromPool(photo: PoolPhoto, fallback: ImageFields["fallbackImage"]): ImageFields {
-  return {
-    image: photo.src,
-    imageAlt: photo.title.replace(/\.[a-z]+$/i, "").replace(/_/g, " "),
-    imageStock: { credit: photo.credit, source: photo.source },
-    fallbackImage: fallback,
-  };
+function fromStock(photo: { src: string; alt: string; credit: string; source: string }): ImageFields {
+  return { image: photo.src, imageAlt: photo.alt, imageStock: { credit: photo.credit, source: photo.source } };
 }
+
+const poolAlt = (photo: PoolPhoto) => photo.title.replace(/\.[a-z]+$/i, "").replace(/_/g, " ");
 
 /**
  * Usable photos from the provider's own site, best first: Gemini-approved,
@@ -138,74 +130,55 @@ function providerCandidates(p: Program): Program["photos"] {
 }
 
 /**
- * A photo for every program, preferring the provider's own:
- *   1. an unused provider photo, so sibling sites differ where they can
- *   2. a provider photo already used on a sibling site (least-used first):
- *      a real photo of that organization beats a stranger's photo
- *   3. an unused Commons photo of the subject, then of any subject
- *   4. the local subject photo
- * Commons photos illustrate the subject, not the program, so they are only
- * used for providers whose site has no usable photo at all.
+ * A different photo for every program; no image appears on two cards:
+ *   1. an unused photo from the provider's own site
+ *   2. an unused Commons photo of the subject, then of any subject
+ *   3. an unused local subject photo
+ *   4. otherwise no photo (the NOVA placeholder)
+ * Stock photos (2-3) are labelled on the card as not taken at the program.
+ * Commons photos are tracked by their Commons page, not their URL, because a
+ * local subject photo can be a copy of a pool photo at another address.
  */
 function assignImages(list: Program[]): Map<string, ImageFields> {
-  const used = new Map<string, number>();
-  const uses = (url: string) => used.get(urlKey(url)) ?? 0;
-  const markUsed = (url: string) => used.set(urlKey(url), uses(url) + 1);
+  const used = new Set<string>();
+  const claim = (key: string) => (used.has(key) ? false : (used.add(key), true));
+
+  // Local subject photos are the last resort; reserve their Commons pages so
+  // the pool never hands out the same picture at a different address.
+  const localSources = new Set(Object.values(STOCK_PHOTOS).map((s) => s.source));
 
   const buckets = new Map<string, PoolPhoto[]>();
   for (const photo of stockPool) {
+    if (localSources.has(photo.source)) continue;
     const listFor = buckets.get(photo.subject) ?? [];
     listFor.push(photo);
     buckets.set(photo.subject, listFor);
   }
-  const takeStock = (key: string): PoolPhoto | undefined => {
+  const takePool = (key: string): PoolPhoto | undefined => {
     for (const bucket of [buckets.get(key) ?? [], ...buckets.values()]) {
       while (bucket.length) {
         const photo = bucket.shift()!;
-        if (!uses(photo.src)) {
-          markUsed(photo.src);
-          return photo;
-        }
+        if (claim(photo.source)) return photo;
       }
     }
     return undefined;
   };
 
   const out = new Map<string, ImageFields>();
-  const candidates = new Map(list.map((p) => [p.id, providerCandidates(p)]));
-
-  // 1. Unused provider photos.
-  const pending: Program[] = [];
   for (const p of list) {
-    const photo = candidates.get(p.id)!.find((ph) => !uses(ph.url));
-    if (photo) {
-      markUsed(photo.url);
-      out.set(p.id, fromProvider(p, photo, stockFor(subjects(p))));
-    } else pending.push(p);
+    const own = providerCandidates(p).find((ph) => claim(urlKey(ph.url)));
+    if (own) out.set(p.id, fromProvider(p, own));
   }
-
-  // 2. Share a provider photo with a sibling site.
-  const noPhotos: Program[] = [];
-  for (const p of pending) {
-    const photo = [...candidates.get(p.id)!].sort((a, b) => uses(a.url) - uses(b.url))[0];
-    if (photo) {
-      markUsed(photo.url);
-      out.set(p.id, fromProvider(p, photo, stockFor(subjects(p))));
-    } else noPhotos.push(p);
-  }
-
-  // 3-4. Providers with nothing usable: a credited Commons photo of the subject.
-  for (const p of noPhotos) {
+  for (const p of list) {
+    if (out.has(p.id)) continue;
+    const pool = takePool(subjectKey(subjects(p)));
+    if (pool) {
+      out.set(p.id, fromStock({ src: pool.src, alt: poolAlt(pool), credit: pool.credit, source: pool.source }));
+      continue;
+    }
     const local = stockFor(subjects(p));
-    const stock = takeStock(subjectKey(subjects(p)));
-    out.set(
-      p.id,
-      stock
-        ? fromPool(stock, local)
-        : { image: local.src, imageAlt: local.alt, imageStock: { credit: local.credit, source: local.source }, fallbackImage: local },
-    );
+    out.set(p.id, claim(local.source) ? fromStock(local) : { image: null, imageAlt: "", imageStock: null });
   }
-
   return out;
 }
 

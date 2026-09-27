@@ -121,7 +121,6 @@ export default function MapView({ programs }: { programs: CardProgram[] }) {
                 src={activeProgram.image}
                 alt={activeProgram.imageAlt}
                 stock={activeProgram.imageStock}
-                fallback={activeProgram.fallbackImage}
                 className="w-full h-full object-cover"
               />
             </div>

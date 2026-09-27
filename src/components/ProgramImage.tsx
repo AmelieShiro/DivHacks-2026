@@ -5,52 +5,62 @@ import { useState } from "react";
 type Stock = { credit: string; source: string };
 
 /**
- * A program photo: the provider's own, or a stock photo of the subject. When
- * the provider's server refuses its image (some block hotlinking with a 403)
- * the stock photo takes its place. Provider photos come from ~55 domains;
- * next/image would need each one allow-listed, so this is a plain lazy <img>.
+ * A program photo: the provider's own, or a credited stock photo of the
+ * subject. Provider photos come from ~55 domains; next/image would need each
+ * one allow-listed, so this is a plain lazy <img>.
  *
- * Stock photos carry a small credit icon linking to their source: CC BY and
- * CC BY-SA require attributing the photographer. The parent must be
- * `relative` for the icon to sit on the image.
+ * Stock photos are labelled on the image so a parent never mistakes them for
+ * this program, and the label links to the source with the photographer's
+ * credit (CC BY and CC BY-SA require attribution). The parent must be
+ * `relative` for the label to sit on the image.
+ *
+ * When a provider's server refuses its image (some block hotlinking with a
+ * 403) the NOVA placeholder shows instead of another photo, so no photo ever
+ * appears on two cards.
  */
 export default function ProgramImage({
   src,
   alt,
   stock,
-  fallback,
   className,
 }: {
-  src: string;
+  src: string | null;
   alt: string;
   stock: Stock | null;
-  fallback: { src: string; alt: string } & Stock;
   className: string;
 }) {
   const [failed, setFailed] = useState(false);
-  const shown = failed ? { src: fallback.src, alt: fallback.alt, stock: fallback as Stock } : { src, alt, stock };
+
+  if (!src || failed) {
+    return (
+      <div className="w-full h-full grid place-items-center">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/nova-wordmark.png" alt="" className="h-12 w-auto opacity-40" />
+      </div>
+    );
+  }
 
   return (
     <>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={shown.src}
-        alt={shown.alt}
+        src={src}
+        alt={alt}
         loading="lazy"
         referrerPolicy="no-referrer"
         onError={() => setFailed(true)}
         className={className}
       />
-      {shown.stock && (
+      {stock && (
         <a
-          href={shown.stock.source}
+          href={stock.source}
           target="_blank"
           rel="noopener noreferrer"
-          title={`Photo: ${shown.stock.credit}`}
-          aria-label={`Photo credit: ${shown.stock.credit}`}
-          className="absolute bottom-3 left-3 grid h-5 w-5 place-items-center rounded-full bg-white/80 font-body text-[11px] font-700 italic text-ink/60 shadow hover:bg-white hover:text-ink"
+          title={`Stock photo, not taken at this program · ${stock.credit}`}
+          aria-label={`Stock photo, not taken at this program. Credit: ${stock.credit}`}
+          className="absolute bottom-3 left-3 font-heading font-600 text-xs bg-white/95 text-teal-800 px-2.5 py-1 rounded-full shadow hover:bg-white"
         >
-          i
+          Stock photo
         </a>
       )}
     </>

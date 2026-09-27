@@ -28,12 +28,11 @@ export type CardProgram = {
   seats: string;
   /** Filled in on the client from the visitor's ZIP; null until then. */
   distance: string | null;
-  image: string;
+  /** Unique across all cards; null when no unused photo was left. */
+  image: string | null;
   imageAlt: string;
   /** Set when `image` is a credited stock photo rather than the provider's own. */
   imageStock: { credit: string; source: string } | null;
-  /** Stock photo to swap in if the provider's server refuses its image. */
-  fallbackImage: { src: string; alt: string; credit: string; source: string };
   tag?: string;
   /** Where "View & sign up" goes: the provider's site, else discoverDYCD. */
   signupUrl: string;

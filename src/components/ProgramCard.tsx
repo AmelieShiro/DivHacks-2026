@@ -17,7 +17,6 @@ export default function ProgramCard({ program }: { program: CardProgram }) {
           src={program.image}
           alt={program.imageAlt}
           stock={program.imageStock}
-          fallback={program.fallbackImage}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
         {program.tag && (
