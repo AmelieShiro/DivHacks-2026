@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import ProgramCard from "@/components/ProgramCard";
-import { withDistance } from "@/lib/geo";
+import { RADIUS_MILES, withDistance } from "@/lib/geo";
 import type { CardProgram, SubjectGroup, ZipCentroids } from "@/lib/types";
 
 /**
@@ -122,19 +122,35 @@ export default function ProgramsView({
   const [selectedDetails, setSelectedDetails] = useState<string[]>([]);
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
 
-  const { programs: sorted, measured } = useMemo(
+  const { programs: sorted, measured, nearestMiles } = useMemo(
     () => withDistance(programs, zip, centroids),
     [programs, zip, centroids],
   );
+  const unknownZip = zip.trim() !== "" && !measured;
 
+  // Counts follow the ZIP search, so an option never promises programs that
+  // are outside the radius.
   const detailGroups: OptionGroup[] = useMemo(
     () => [{
       options: (Object.keys(PROGRAM_DETAILS) as ProgramDetail[]).map((label) => ({
         label,
-        count: programs.filter(PROGRAM_DETAILS[label]).length,
+        count: sorted.filter(PROGRAM_DETAILS[label]).length,
       })),
     }],
-    [programs],
+    [sorted],
+  );
+
+  const nearbySubjectGroups: OptionGroup[] = useMemo(
+    () =>
+      subjectGroups
+        .map((g) => ({
+          heading: g.heading,
+          options: g.options
+            .map(({ label }) => ({ label, count: sorted.filter((p) => p.subjects.includes(label)).length }))
+            .filter((o) => o.count > 0 || selectedSubjects.includes(o.label)),
+        }))
+        .filter((g) => g.options.length > 0),
+    [subjectGroups, sorted, selectedSubjects],
   );
 
   const list = useMemo(() => {
@@ -161,13 +177,20 @@ export default function ProgramsView({
     <div className="mx-auto max-w-6xl px-5 py-12">
       <div className="text-white mb-6">
         <h1 className="font-heading font-700 text-3xl sm:text-4xl">
-          {zip ? `Programs near ${zip}` : "All programs"}
+          {measured
+            ? `Programs within ${RADIUS_MILES} mile of ${zip}`
+            : "All programs"}
         </h1>
         <p className="font-body text-white/85 mt-1">
           {list.length} hands-on STEM {list.length === 1 ? "program" : "programs"} ·
           {/* Only claim a distance order when a known ZIP gave one. */}
           {measured ? " sorted by distance" : " sorted by name"}
         </p>
+        {unknownZip && (
+          <p className="mt-3 inline-block rounded-lg bg-white/15 px-3 py-2 font-body text-sm text-white">
+            We couldn’t find ZIP {zip}, so all programs are shown. Try a nearby NYC ZIP code.
+          </p>
+        )}
       </div>
 
       {/* Controls */}
@@ -197,7 +220,7 @@ export default function ProgramsView({
             <FilterDropdown
               label="Subject"
               allLabel="All subjects"
-              groups={subjectGroups}
+              groups={nearbySubjectGroups}
               selected={selectedSubjects}
               onChange={setSelectedSubjects}
             />
@@ -210,6 +233,17 @@ export default function ProgramsView({
           {list.map((p) => (
             <ProgramCard key={p.id} program={p} />
           ))}
+        </div>
+      ) : measured && sorted.length === 0 ? (
+        <div className="rounded-2xl bg-white p-8 text-center shadow-lg">
+          <p className="font-heading text-xl font-600 text-ink">
+            No programs within {RADIUS_MILES} mile of {zip}
+          </p>
+          <p className="mt-1 font-body text-ink/60">
+            {nearestMiles != null
+              ? `The nearest program is ${nearestMiles.toFixed(1)} miles away. Try a neighboring ZIP code.`
+              : "Try a neighboring ZIP code."}
+          </p>
         </div>
       ) : (
         <div className="rounded-2xl bg-white p-8 text-center shadow-lg">
