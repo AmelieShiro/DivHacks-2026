@@ -2,7 +2,6 @@ const VALUES = [
   {
     word: "Learn",
     blurb: "Hands-on tools — micro:bit, LEGO Spike, real 3D printers.",
-    org: "with Brooklyn Public Library",
     image:
       "https://images.unsplash.com/photo-1585980243496-fe29a36bd382?w=700&h=560&fit=crop&auto=format",
     alt: "Kids learning robotics together at a table",
@@ -10,7 +9,6 @@ const VALUES = [
   {
     word: "Explore",
     blurb: "Try science, coding & making before choosing a path.",
-    org: "with Harlem Grown STEM",
     image:
       "https://images.unsplash.com/photo-1613271752699-ede48a285196?w=700&h=560&fit=crop&auto=format",
     alt: "Child exploring a science experiment",
@@ -18,7 +16,6 @@ const VALUES = [
   {
     word: "Thrive",
     blurb: "Local programs kids can walk to — free and low-cost.",
-    org: "with El Puente Community Center",
     image:
       "https://images.unsplash.com/photo-1623076189461-f7706b741c04?w=700&h=560&fit=crop&auto=format",
     alt: "A girl coding on a laptop and smiling",
@@ -56,7 +53,6 @@ export default function Mission() {
                 <img src={v.image} alt={v.alt} loading="lazy" className="w-full h-full object-cover" />
               </div>
               <p className="font-body text-white/95 text-lg font-600 mt-4">{v.blurb}</p>
-              <p className="font-body text-teal-50/80 text-sm mt-1">{v.org}</p>
             </div>
           ))}
         </div>
