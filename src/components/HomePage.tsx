@@ -1,11 +1,12 @@
 import Carousel from "@/components/Carousel";
 import ZipSearch from "@/components/ZipSearch";
-import { getFeatured } from "@/lib/programs";
+import { getDatasetSummary, getFeatured } from "@/lib/programs";
 
 /** The design's Home page. Shared by `/` and the catch-all not-found route. */
 export default function HomePage() {
   // No visitor ZIP on the home page, so the distance badge shows the borough.
   const featured = getFeatured().map((p) => ({ ...p, distance: p.borough || null }));
+  const summary = getDatasetSummary();
 
   return (
     <div>
@@ -24,7 +25,7 @@ export default function HomePage() {
         <div className="mt-8 bg-white rounded-3xl p-5 sm:p-6 shadow-2xl ring-1 ring-black/5 max-w-xl mx-auto">
           <ZipSearch />
           <p className="font-body text-sm text-ink/60 mt-4">
-            Over 12,000+ NYC families registered this semester
+            {summary.programs} K–5 programs across all {summary.boroughs} boroughs · {summary.free} confirmed free
           </p>
         </div>
       </section>

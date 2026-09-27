@@ -306,6 +306,18 @@ export function getSubjectGroups(cards: CardProgram[]): SubjectGroup[] {
     .filter((g) => g.options.length > 0);
 }
 
+/**
+ * Counts for the home page, read from the dataset rather than written into the
+ * copy, so the number on the page cannot drift away from what is listed.
+ */
+export function getDatasetSummary(): { programs: number; free: number; boroughs: number } {
+  return {
+    programs: meta.counts.programs,
+    free: meta.counts.costConfirmed,
+    boroughs: new Set(programs.map((p) => p.address.borough).filter(Boolean)).size,
+  };
+}
+
 export function getZipCentroids(): ZipCentroids {
   return Object.fromEntries(zips.map((z) => [z.zip, { lat: z.lat, lng: z.lng }]));
 }

@@ -6,7 +6,7 @@ import { xaiFailure } from "@/lib/chat/xaiError";
 /** Speak a catalog answer with Grok Voice TTS in the language that was asked. */
 export async function POST(req: Request) {
   // Before any paid work: this route spends an xAI quota on every call.
-  const allowed = rateLimit(req);
+  const allowed = await rateLimit(req);
   if (!allowed.ok) {
     return NextResponse.json(
       { error: "Too many voice requests. Wait a moment and try again." },
