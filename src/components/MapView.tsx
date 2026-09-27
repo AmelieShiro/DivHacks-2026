@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 import {
   AdvancedMarker,
@@ -13,6 +14,9 @@ import {
 } from "@vis.gl/react-google-maps";
 import FlaskIcon from "./FlaskIcon";
 import ProgramImage from "./ProgramImage";
+import type { MapBounds } from "./OsmMap";
+
+const OsmMap = dynamic(() => import("./OsmMap"), { ssr: false });
 import { findByZip, nearestZip, SPILLOVER_MILES } from "@/lib/geo";
 import type { CardProgram, SubjectGroup, ZipCentroids } from "@/lib/types";
 
@@ -27,7 +31,7 @@ const ZIP_ZOOM = 13;
 
 type LatLng = { lat: number; lng: number };
 type Camera = { center: LatLng; zoom?: number };
-type Bounds = google.maps.LatLngBoundsLiteral;
+type Bounds = MapBounds;
 
 /* ------------------------------------------------------------------ markers */
 
@@ -559,15 +563,25 @@ export default function MapView({
             </GoogleMap>
           </APIProvider>
         ) : (
-          <div
-            className="absolute inset-0 grid place-items-center p-6 text-center"
-            style={{ background: "radial-gradient(120% 120% at 30% 20%, #16bcc7 0%, #0e9aa6 45%, #0f636d 100%)" }}
-          >
-            <p className="max-w-xs font-body text-white/90">
-              Set <code className="font-600">NEXT_PUBLIC_GOOGLE_MAPS_API_KEY</code> in <code>.env.local</code> to show
-              the map.
-            </p>
-          </div>
+          <>
+            <OsmMap
+              programs={pinned}
+              selectedId={selectedId}
+              onSelect={setSelectedId}
+              camera={camera}
+              center={match.center ?? NYC}
+              zoom={match.center ? ZIP_ZOOM : CITY_ZOOM}
+              onBounds={setBounds}
+            />
+            <div className="absolute right-0 top-0 z-10">
+              <LocateMe
+                onLocate={(point) => {
+                  const near = nearestZip(point, centroids);
+                  if (near) applyZip(near);
+                }}
+              />
+            </div>
+          </>
         )}
 
         {/* "Search as I move the map", as on the reference design. */}
