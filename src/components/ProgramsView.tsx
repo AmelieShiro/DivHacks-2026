@@ -134,8 +134,7 @@ export default function ProgramsView({
   const router = useRouter();
   const pathname = usePathname();
   const [input, setInput] = useState(zip);
-  const [selectedCost, setSelectedCost] = useState<string[]>([]);
-  const [selectedGrades, setSelectedGrades] = useState<string[]>([]);
+  const [selectedDetails, setSelectedDetails] = useState<string[]>([]);
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
 
   const { programs: sorted, measured, nearestMiles } = useMemo(
@@ -145,9 +144,16 @@ export default function ProgramsView({
   const unknownZip = zip.trim() !== "" && !measured;
 
   // Counts follow the ZIP search, so an option never promises programs that
-  // are outside the radius.
-  const costGroups = useMemo(() => ruleGroups(COST, sorted), [sorted]);
-  const gradeGroups = useMemo(() => ruleGroups(GRADES, sorted), [sorted]);
+  // are outside the radius. Cost and grades share one dropdown, but they
+  // still combine the way two dropdowns would: any picked cost AND any
+  // picked grade.
+  const detailGroups = useMemo(
+    () => [
+      ...ruleGroups(COST, sorted).map((g) => ({ ...g, heading: "Cost" })),
+      ...ruleGroups(GRADES, sorted).map((g) => ({ ...g, heading: "Grades" })),
+    ],
+    [sorted],
+  );
 
   const nearbySubjectGroups: OptionGroup[] = useMemo(
     () =>
@@ -163,15 +169,15 @@ export default function ProgramsView({
   );
 
   const list = useMemo(() => {
-    // Within one dropdown, picking several options means "any of these";
-    // across dropdowns, all must hold.
+    const pickedCost = selectedDetails.filter((s) => s in COST);
+    const pickedGrades = selectedDetails.filter((s) => s in GRADES);
     return sorted.filter(
       (p) =>
-        matchesAny(COST, selectedCost, p) &&
-        matchesAny(GRADES, selectedGrades, p) &&
+        matchesAny(COST, pickedCost, p) &&
+        matchesAny(GRADES, pickedGrades, p) &&
         (selectedSubjects.length === 0 || selectedSubjects.some((s) => p.subjects.includes(s))),
     );
-  }, [sorted, selectedCost, selectedGrades, selectedSubjects]);
+  }, [sorted, selectedDetails, selectedSubjects]);
 
   const applyZip = (e: React.FormEvent) => {
     e.preventDefault();
@@ -215,20 +221,13 @@ export default function ProgramsView({
         </form>
 
         <div className="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15 backdrop-blur-sm">
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2">
             <FilterDropdown
-              label="Cost"
-              allLabel="Any cost"
-              groups={costGroups}
-              selected={selectedCost}
-              onChange={setSelectedCost}
-            />
-            <FilterDropdown
-              label="Grades"
-              allLabel="Any grades"
-              groups={gradeGroups}
-              selected={selectedGrades}
-              onChange={setSelectedGrades}
+              label="Program details"
+              allLabel="All program details"
+              groups={detailGroups}
+              selected={selectedDetails}
+              onChange={setSelectedDetails}
             />
             <FilterDropdown
               label="Subject"

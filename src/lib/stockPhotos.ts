@@ -120,10 +120,13 @@ const BY_SUBJECT: [StockKey, RegExp][] = [
   ["sports", /^(sports & fitness|health & nutrition)$/],
 ];
 
-export function stockFor(subjects: string[]): StockPhoto {
+export function subjectKey(subjects: string[]): StockKey {
   const lower = subjects.map((s) => s.toLowerCase());
-  const hit = BY_SUBJECT.find(([, re]) => lower.some((s) => re.test(s)));
-  return STOCK_PHOTOS[hit?.[0] ?? "default"];
+  return BY_SUBJECT.find(([, re]) => lower.some((s) => re.test(s)))?.[0] ?? "default";
+}
+
+export function stockFor(subjects: string[]): StockPhoto {
+  return STOCK_PHOTOS[subjectKey(subjects)];
 }
 
 /**
@@ -140,10 +143,22 @@ const NOT_KIDS =
 /** File names written as one run-together word ("HOWTOAPPLYFORAFTERSCHOOL..."). */
 const NOT_KIDS_ANYWHERE = /howtoapply|register|enroll|flyer|logo/i;
 
-export function looksLikeKidsPhoto(photo: { url: string; caption: string | null; sourcePage: string }): boolean {
+function photoText(photo: { url: string; caption: string | null; sourcePage: string }): { file: string; text: string } {
   const caption = photo.caption && photo.caption !== "og:image" ? photo.caption : "";
   const file = decodeURIComponent(photo.url.split(/[?#]/)[0].split("/").pop() ?? "");
   const page = photo.sourcePage.replace(/^https?:\/\/[^/]+/, "");
-  const text = `${caption} ${file} ${page}`.replace(/[_\-./]+/g, " ");
+  return { file, text: `${caption} ${file} ${page}`.replace(/[_\-./]+/g, " ") };
+}
+
+export function looksLikeKidsPhoto(photo: { url: string; caption: string | null; sourcePage: string }): boolean {
+  const { file, text } = photoText(photo);
   return ABOUT_KIDS.test(text) && !NOT_KIDS.test(text) && !NOT_KIDS_ANYWHERE.test(file);
+}
+
+/** Last-resort provider photos: skip donate banners, logos and flyers. */
+const JUNK = /\b(donate|donation|give now|logo|banner|flyer|gala)\b/i;
+
+export function looksLikeUsablePhoto(photo: { url: string; caption: string | null; sourcePage: string }): boolean {
+  const { file, text } = photoText(photo);
+  return !NOT_KIDS_ANYWHERE.test(file) && !JUNK.test(text);
 }
