@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import {
   AdvancedMarker,
   APIProvider,
+  CollisionBehavior,
   ControlPosition,
   Map as GoogleMap,
   MapControl,
@@ -119,15 +120,17 @@ function LocateMe({ onLocate }: { onLocate: (point: LatLng) => void }) {
 type Tile = { url: string | null; label: string };
 
 /**
- * The thumbnail strip, mirroring the store cards' dish row: a provider photo
- * per evidenced subject or tool, and the flask where there is no photo. Only
- * as many tiles as the dataset actually has something to put in.
+ * The thumbnail strip, mirroring the store cards' dish row: provider photos
+ * captioned with the subjects and tools evidenced on the provider's site.
+ * Always three tiles wide so the list reads as one column; a tile with no
+ * photo is a flask, and a tile with no caption claims nothing.
  */
+const TILES = 3;
+
 function tilesFor(p: CardProgram): Tile[] {
   const labels = [...new Set([...p.tools, ...p.subjects])];
   const captions = labels.length > 0 ? labels : ["DYCD after-school"];
-  const count = Math.min(3, Math.max(captions.length, p.images.length));
-  return Array.from({ length: count }, (_, i) => ({ url: p.images[i] ?? null, label: captions[i] ?? "" }));
+  return Array.from({ length: TILES }, (_, i) => ({ url: p.images[i] ?? null, label: captions[i] ?? "" }));
 }
 
 function ProgramRow({
@@ -164,11 +167,12 @@ function ProgramRow({
         {tilesFor(program).map((tile, i) => (
           <div key={i}>
             <div className="grid aspect-square place-items-center overflow-hidden rounded-lg bg-teal-50 ring-1 ring-black/5">
-              {tile.url ? (
-                <ProgramImage src={tile.url} alt="" className="h-full w-full object-cover" />
-              ) : (
-                <FlaskIcon className="h-6 w-6 text-teal-300" />
-              )}
+              <ProgramImage
+                src={tile.url}
+                alt=""
+                className="h-full w-full object-cover"
+                fallback={<FlaskIcon className="h-6 w-6 text-teal-300" />}
+              />
             </div>
             {tile.label && (
               <p className="mt-1 line-clamp-2 font-body text-[11px] leading-tight text-ink/70">{tile.label}</p>
@@ -369,8 +373,6 @@ export default function MapView({
     return filtered.filter((p) => inBounds(p, view));
   }, [filtered, bounds]);
 
-  const selected = selectedId != null ? filtered.find((p) => p.id === selectedId) : undefined;
-
   const applyZip = useCallback(
     (next: string) => {
       const digits = next.replace(/\D/g, "").slice(0, 5);
@@ -522,6 +524,14 @@ export default function MapView({
                   position={{ lat: p.lat!, lng: p.lng! }}
                   title={p.name}
                   zIndex={p.id === selectedId ? 30 : 10}
+                  /* All five boroughs at once is 565 overlapping pins. Let the
+                     map drop the ones it cannot place, keeping the picked pin
+                     and thinning the rest out as you zoom in. */
+                  collisionBehavior={
+                    p.id === selectedId
+                      ? CollisionBehavior.REQUIRED_AND_HIDES_OPTIONAL
+                      : CollisionBehavior.OPTIONAL_AND_HIDES_LOWER_PRIORITY
+                  }
                   onClick={() => setSelectedId(p.id)}
                 >
                   <FlaskPin active={p.id === selectedId} label={p.name} />
@@ -566,12 +576,6 @@ export default function MapView({
           />
           Search as I move the map
         </label>
-
-        {selected && (
-          <div className="pointer-events-none absolute bottom-4 left-1/2 z-10 -translate-x-1/2 rounded-full bg-ink/90 px-4 py-2 font-heading text-xs font-600 text-white shadow-lg backdrop-blur">
-            {selected.name} · showing in the list
-          </div>
-        )}
       </div>
     </div>
   );
