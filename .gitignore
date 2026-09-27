@@ -54,3 +54,5 @@ data/enrichment/crawl.json
 
 # stock photo review contact sheets
 data/stock/sheet-*.jpg
+# raw Commons search results; regenerate with `node scripts/stock-pool.mjs`
+data/stock/candidates.json
