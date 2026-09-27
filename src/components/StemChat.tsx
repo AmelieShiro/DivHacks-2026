@@ -1,7 +1,8 @@
 "use client";
 
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { answerQuestion, formatProgramLine } from "@/lib/chat/answer.mjs";
+import { blobToWav, speakText, spokenAnswer, transcribeWav } from "@/lib/chat/voice";
 import type { ChatAnswer, ChatCatalog, ChatProgram } from "@/lib/chat/types";
 
 type Message = {
@@ -10,9 +11,15 @@ type Message = {
   programs: ChatProgram[];
 };
 
+type Mode = "text" | "voice";
+type VoiceStatus = "idle" | "recording" | "transcribing" | "speaking";
+
 export default function StemChat({ catalog }: { catalog: ChatCatalog }) {
   const [open, setOpen] = useState(false);
+  const [mode, setMode] = useState<Mode>("text");
   const [question, setQuestion] = useState("");
+  const [voiceStatus, setVoiceStatus] = useState<VoiceStatus>("idle");
+  const [voiceHint, setVoiceHint] = useState("");
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "bot",
@@ -26,8 +33,19 @@ export default function StemChat({ catalog }: { catalog: ChatCatalog }) {
     (found, message, index) => (message.role === "user" ? index : found),
     -1,
   );
+  const recorderRef = useRef<MediaRecorder | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
+  const streamRef = useRef<MediaStream | null>(null);
+  const playerRef = useRef<HTMLAudioElement | null>(null);
 
-  function ask(text: string) {
+  useEffect(() => {
+    return () => {
+      streamRef.current?.getTracks().forEach((track) => track.stop());
+      playerRef.current?.pause();
+    };
+  }, []);
+
+  function ask(text: string, speak = false) {
     const trimmed = text.trim();
     if (!trimmed) return;
     const result: ChatAnswer = answerQuestion(catalog, trimmed);
@@ -49,11 +67,69 @@ export default function StemChat({ catalog }: { catalog: ChatCatalog }) {
         latest.getBoundingClientRect().top - log.getBoundingClientRect().top + log.scrollTop;
       log.scrollTo({ top, behavior: "smooth" });
     });
+    if (speak) {
+      const line = spokenAnswer(
+        result.intro,
+        result.programs.map((program) => program.name),
+      );
+      setVoiceStatus("speaking");
+      speakText(line)
+        .then((player) => {
+          playerRef.current = player;
+          if (!player) setVoiceHint("I answered on screen. Speaking needs an xAI API key.");
+        })
+        .finally(() => setVoiceStatus("idle"));
+    }
   }
 
   function onSubmit(event: FormEvent) {
     event.preventDefault();
     ask(question);
+  }
+
+  async function startRecording() {
+    setVoiceHint("");
+    playerRef.current?.pause();
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      streamRef.current = stream;
+      const recorder = new MediaRecorder(stream);
+      chunksRef.current = [];
+      recorder.ondataavailable = (event) => {
+        if (event.data.size) chunksRef.current.push(event.data);
+      };
+      recorder.start();
+      recorderRef.current = recorder;
+      setVoiceStatus("recording");
+    } catch {
+      setVoiceHint("Please allow the microphone so you can ask out loud.");
+    }
+  }
+
+  async function stopRecording() {
+    const recorder = recorderRef.current;
+    if (!recorder || recorder.state === "inactive") return;
+    const blob = await new Promise<Blob>((resolve) => {
+      recorder.onstop = () => resolve(new Blob(chunksRef.current, { type: recorder.mimeType }));
+      recorder.stop();
+    });
+    streamRef.current?.getTracks().forEach((track) => track.stop());
+    streamRef.current = null;
+    recorderRef.current = null;
+    setVoiceStatus("transcribing");
+    try {
+      const wav = await blobToWav(blob);
+      const { text, error } = await transcribeWav(wav);
+      if (error || !text) {
+        setVoiceHint(error || "I didn’t catch a question. Try again.");
+        setVoiceStatus("idle");
+        return;
+      }
+      ask(text, true);
+    } catch {
+      setVoiceHint("I couldn’t hear that. Try again.");
+      setVoiceStatus("idle");
+    }
   }
 
   return (
@@ -82,14 +158,38 @@ export default function StemChat({ catalog }: { catalog: ChatCatalog }) {
               </p>
               <h2 className="font-heading text-xl font-700 text-ink">{catalog.site.name}</h2>
             </div>
-            <button
-              type="button"
-              className="text-2xl leading-none text-ink/70 hover:text-ink"
-              aria-label="Close chat"
-              onClick={() => setOpen(false)}
-            >
-              ×
-            </button>
+            <div className="flex items-center gap-2">
+              <div className="flex rounded-full bg-white p-0.5 ring-1 ring-black/10" role="group" aria-label="Ask by text or voice">
+                <button
+                  type="button"
+                  aria-pressed={mode === "text"}
+                  onClick={() => setMode("text")}
+                  className={`rounded-full px-2.5 py-1 text-xs font-600 ${
+                    mode === "text" ? "bg-orange text-white" : "text-ink/70 hover:text-ink"
+                  }`}
+                >
+                  Text
+                </button>
+                <button
+                  type="button"
+                  aria-pressed={mode === "voice"}
+                  onClick={() => setMode("voice")}
+                  className={`rounded-full px-2.5 py-1 text-xs font-600 ${
+                    mode === "voice" ? "bg-orange text-white" : "text-ink/70 hover:text-ink"
+                  }`}
+                >
+                  Voice
+                </button>
+              </div>
+              <button
+                type="button"
+                className="text-2xl leading-none text-ink/70 hover:text-ink"
+                aria-label="Close chat"
+                onClick={() => setOpen(false)}
+              >
+                ×
+              </button>
+            </div>
           </header>
 
           <div ref={logRef} className="flex flex-1 flex-col gap-2.5 overflow-auto p-3" role="log" aria-live="polite">
@@ -117,7 +217,7 @@ export default function StemChat({ catalog }: { catalog: ChatCatalog }) {
                         <button
                           type="button"
                           className="w-full text-left"
-                          onClick={() => ask(`Tell me more about ${program.name}`)}
+                          onClick={() => ask(`Tell me more about ${program.name}`, mode === "voice")}
                         >
                           <strong className="block font-heading font-600">{program.name}</strong>
                           <span className="mt-0.5 block text-xs text-ink/60">
@@ -148,7 +248,7 @@ export default function StemChat({ catalog }: { catalog: ChatCatalog }) {
                 className="shrink-0 rounded-full border border-black/10 bg-white px-2.5 py-1 text-xs font-600 text-ink hover:bg-teal-50"
                 onClick={() => {
                   setOpen(true);
-                  ask(suggestion);
+                  ask(suggestion, mode === "voice");
                 }}
               >
                 {suggestion}
@@ -156,25 +256,53 @@ export default function StemChat({ catalog }: { catalog: ChatCatalog }) {
             ))}
           </div>
 
-          <form className="flex gap-2 border-t border-black/5 p-2.5" onSubmit={onSubmit}>
-            <label className="sr-only" htmlFor="nova-chat-input">
-              Your question
-            </label>
-            <input
-              id="nova-chat-input"
-              value={question}
-              onChange={(event) => setQuestion(event.target.value)}
-              autoComplete="off"
-              placeholder="Free robotics in Brooklyn…"
-              className="flex-1 rounded-full border border-black/10 px-3 py-2 text-sm outline-none focus:border-orange"
-            />
-            <button
-              type="submit"
-              className="rounded-full bg-orange px-3.5 font-heading font-600 text-sm text-white hover:bg-orange-dark"
-            >
-              Send
-            </button>
-          </form>
+          {mode === "text" ? (
+            <form className="flex gap-2 border-t border-black/5 p-2.5" onSubmit={onSubmit}>
+              <label className="sr-only" htmlFor="nova-chat-input">
+                Your question
+              </label>
+              <input
+                id="nova-chat-input"
+                value={question}
+                onChange={(event) => setQuestion(event.target.value)}
+                autoComplete="off"
+                placeholder="Free robotics in Brooklyn…"
+                className="flex-1 rounded-full border border-black/10 px-3 py-2 text-sm outline-none focus:border-orange"
+              />
+              <button
+                type="submit"
+                className="rounded-full bg-orange px-3.5 font-heading font-600 text-sm text-white hover:bg-orange-dark"
+              >
+                Send
+              </button>
+            </form>
+          ) : (
+            <div className="border-t border-black/5 p-3">
+              <button
+                type="button"
+                aria-pressed={voiceStatus === "recording"}
+                disabled={voiceStatus === "transcribing" || voiceStatus === "speaking"}
+                onClick={() => (voiceStatus === "recording" ? stopRecording() : startRecording())}
+                className={`flex w-full items-center justify-center gap-2 rounded-2xl py-3 font-heading font-600 text-white ${
+                  voiceStatus === "recording" ? "bg-ink" : "bg-orange hover:bg-orange-dark"
+                } disabled:opacity-60`}
+              >
+                {voiceStatus === "recording"
+                  ? "Tap to send"
+                  : voiceStatus === "transcribing"
+                    ? "Hearing you…"
+                    : voiceStatus === "speaking"
+                      ? "Speaking…"
+                      : "Tap to ask"}
+              </button>
+              <p className="mt-2 text-center text-xs text-ink/55">
+                {voiceHint ||
+                  (voiceStatus === "recording"
+                    ? "Ask your question, then tap again."
+                    : "Grok hears you. Answers still come from Nova’s program list.")}
+              </p>
+            </div>
+          )}
         </section>
       )}
     </div>
