@@ -94,7 +94,7 @@ function subjects(p: Program): string[] {
   return [...new Set([...p.enrichment.subjects, ...fromTools])].map(label);
 }
 
-type ImageFields = Pick<CardProgram, "image" | "imageAlt" | "imageStock">;
+type ImageFields = Pick<CardProgram, "image" | "imageAlt" | "imageStock" | "images">;
 
 const httpPhotos = (p: Program) =>
   p.photos.filter((ph) => ph.kind !== "flyer" && /^https?:/i.test(ph.url));
@@ -106,11 +106,26 @@ const deniedPhotos = new Set((photoDenylistJson as { photos: { url: string }[] }
 
 function fromProvider(p: Program, photo: Program["photos"][number]): ImageFields {
   const caption = photo.caption && photo.caption !== "og:image" ? photo.caption : null;
-  return { image: photo.url, imageAlt: caption ?? `Photo from ${tidyOrg(p.provider)}'s website`, imageStock: null };
+  // The map list shows a thumbnail row. Lead with the card's own photo, then
+  // fill from the same provider's remaining approved photos. Only `image` is
+  // deduplicated across cards, so a trailing thumbnail may recur elsewhere.
+  const extras = providerCandidates(p).filter((ph) => urlKey(ph.url) !== urlKey(photo.url));
+  return {
+    image: photo.url,
+    imageAlt: caption ?? `Photo from ${tidyOrg(p.provider)}'s website`,
+    imageStock: null,
+    images: [photo.url, ...extras.slice(0, 2).map((ph) => ph.url)],
+  };
 }
 
 function fromStock(photo: { src: string; alt: string; credit: string; source: string }): ImageFields {
-  return { image: photo.src, imageAlt: photo.alt, imageStock: { credit: photo.credit, source: photo.source } };
+  // One stock photo per program, so the thumbnail row is just that photo.
+  return {
+    image: photo.src,
+    imageAlt: photo.alt,
+    imageStock: { credit: photo.credit, source: photo.source },
+    images: [photo.src],
+  };
 }
 
 const poolAlt = (photo: PoolPhoto) => photo.title.replace(/\.[a-z]+$/i, "").replace(/_/g, " ");
@@ -177,7 +192,10 @@ function assignImages(list: Program[]): Map<string, ImageFields> {
       continue;
     }
     const local = stockFor(subjects(p));
-    out.set(p.id, claim(local.source) ? fromStock(local) : { image: null, imageAlt: "", imageStock: null });
+    out.set(
+      p.id,
+      claim(local.source) ? fromStock(local) : { image: null, imageAlt: "", imageStock: null, images: [] },
+    );
   }
   return out;
 }

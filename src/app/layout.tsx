@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Fredoka, Nunito, Sansita_Swashed } from "next/font/google";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import StemChatMount from "@/components/StemChatMount";
-import Wordmark from "@/components/Wordmark";
 import "./globals.css";
 
 const sansitaSwashed = Sansita_Swashed({
@@ -38,14 +38,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
           <main className="flex-1">{children}</main>
 
-          <footer className="bg-black/25 border-t border-white/10 text-white/80">
-            <div className="mx-auto max-w-6xl px-5 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <Wordmark className="text-2xl" />
-              <p className="font-body text-sm text-center sm:text-right">
-                Zero-friction STEM discovery for NYC families · Built at DivHacks
-              </p>
-            </div>
-          </footer>
+          <Footer />
         </div>
         <StemChatMount />
       </body>
