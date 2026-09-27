@@ -1,5 +1,5 @@
 /**
- * Nova dataset contract — schemaVersion 2.6.0
+ * NOVA dataset contract — schemaVersion 2.6.0
  *
  * These types describe the files in `dist/`. The website imports them; the
  * pipeline guarantees them. If a pipeline change breaks one of these shapes,

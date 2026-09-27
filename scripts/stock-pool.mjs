@@ -22,7 +22,7 @@ import { isMilitary } from "./lib/stock-filters.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const WORK = path.join(ROOT, "data", "stock");
-const UA = { "User-Agent": "NovaDivHacks/0.1 (student project; https://github.com/AmelieShiro/DivHacks-2026)" };
+const UA = { "User-Agent": "NOVA-DivHacks/0.1 (student project; https://github.com/AmelieShiro/DivHacks-2026)" };
 const OK_LICENSE = /^(CC BY(-SA)? [\d.]+|CC0|Public domain)/i;
 /** Historic photos, artworks and scans are not what a parent expects to see. */
 const NOT_A_PHOTO = /\b(1[0-8]\d\d|19[0-6]\d)\b|painting|oil on|engraving|lithograph|drawing by|NARA|Library of Congress|\bLOC\b|postcard|poster|map of|logo|diagram|\.tif/i;

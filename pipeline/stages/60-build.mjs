@@ -69,7 +69,7 @@ export function schoolsWithin(schools, lat, lng, radiusM = SCHOOL_RADIUS_M) {
  *
  * NYC stacks several schools in one building and clusters them on one campus,
  * so "nearest point" alone picks a high school for an elementary program about
- * one time in five. Nova is a K-5 product, so a school that actually serves
+ * one time in five. NOVA is a K-5 product, so a school that actually serves
  * K-5 wins over a closer one that does not.
  */
 export function pickHostSchool(nearby) {

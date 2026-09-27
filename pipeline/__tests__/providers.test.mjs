@@ -43,7 +43,7 @@ test("signals drop short and generic words", () => {
   assert.ok(!s.includes("inc"), "legal suffix");
 });
 
-// --- school matching (Nova is K-5 only, so the host school must serve K-5) ---
+// --- school matching (NOVA is K-5 only, so the host school must serve K-5) ---
 import { pickHostSchool, schoolsWithin } from "../stages/60-build.mjs";
 
 const S = (dbn, distanceM, servesK5) => ({ dbn, name: dbn, distanceM, servesK5 });

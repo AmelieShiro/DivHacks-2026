@@ -1,10 +1,10 @@
 /**
- * Pulls the raw NYC OpenData sources Nova is built on.
+ * Pulls the raw NYC OpenData sources NOVA is built on.
  *
  *   DYCD Program Sites   ebkm-iyma   (COMPASS / Beacon / Cornerstone after-school sites)
  *   DOE School Locations wg9x-4ke6   (DBN, grades, principal, coordinates)
  *
- * Writes untouched JSON to data/raw/. Run `node scripts/build-dataset.mjs`
+ * Writes untouched JSON to data/raw/. Run `node pipeline/run.mjs --from 10`
  * afterwards to normalize + enrich it into the shape the app reads.
  */
 import { writeFile, mkdir } from "node:fs/promises";

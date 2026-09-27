@@ -1,6 +1,6 @@
-# Nova enrichment pipeline
+# NOVA enrichment pipeline
 
-Turns NYC OpenData records into the enriched dataset the Nova site renders.
+Turns NYC OpenData records into the enriched dataset the NOVA site renders.
 
 **Website team: you only need [The contract](#the-contract).** Everything else
 describes how `dist/` gets produced.
@@ -9,10 +9,10 @@ describes how `dist/` gets produced.
 
 ## Why this exists
 
-NYC OpenData publishes *where* K-5 after-school programs are, and nothing about
+NYC OpenData publishes *where* K–5 after-school programs are, and nothing about
 *what they are like*. Every field a parent actually wants is absent.
 
-Verified against the K-5 rows of `ebkm-iyma`:
+Verified against the K–5 rows of `ebkm-iyma`:
 
 | Field | In OpenData? |
 |---|---|
@@ -153,7 +153,7 @@ Stage 60 writes four files to `dist/`. TypeScript types are in
 
 | File | Shape | What it is |
 |---|---|---|
-| `programs.json` | `Program[]` | the 565 K-5 programs |
+| `programs.json` | `Program[]` | the 565 K–5 programs |
 | `schools.json` | `School[]` | 2,189 DOE schools, DBN + coords |
 | `zips.json` | `ZipStat[]` | 192 ZIP centroids + program density |
 | `meta.json` | `Meta` | version, timestamp, counts, sources |
@@ -189,11 +189,11 @@ them on hover is the cheapest credibility win available.
 ### Useful fields
 
 - **`inSchoolBuilding`** — the host school, set when a DOE point is within 120m
-  (444 of 565). Nova is K-5 only, so a school that serves K-5
+  (444 of 565). NOVA is K–5 only, so a school that serves K–5
   wins over a closer one that does not — NYC stacks several schools per
   building, and nearest-point alone picked a high school for roughly one
-  elementary program in five. 393 now resolve to a K-5 school; the rest
-  carry `servesK5: false`, meaning no K-5 school was in range. **Do not print
+  elementary program in five. 393 now resolve to a K–5 school; the rest
+  carry `servesK5: false`, meaning no K–5 school was in range. **Do not print
   the school name when `servesK5` is false.**
 - **`coLocatedSchools`** — every school within 120m, nearest first.
   176 programs sit on a shared campus (length > 1).
@@ -227,7 +227,7 @@ delivers the same feature and is fully supported by `schools.json`.
 
 `photos[].url` points at the provider's own server, and `sourcePage` is where it
 was found. Hotlinking is fine for a demo; credit the provider and link back to
-`sourcePage`. Do not present the images as Nova's own.
+`sourcePage`. Do not present the images as NOVA's own.
 
 ---
 
@@ -242,7 +242,7 @@ Last full run, **without** a Gemini key:
 50 images    842 photos                   (size filter only)
 60 build     565 programs · 2,189 schools · 192 ZIPs
              website 523 · tools 221 · subjects 435 (STEM subject 220) · photos 472
-             in-school 444 (of which K-5 393)
+             in-school 444 (of which K–5 393)
              publicly funded 565 · cost confirmed 370 (COMPASS, per DYCD)
 ```
 

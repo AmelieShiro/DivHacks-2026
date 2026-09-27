@@ -1,5 +1,5 @@
 /**
- * Shared configuration for the Nova enrichment pipeline.
+ * Shared configuration for the NOVA enrichment pipeline.
  *
  * Everything tunable lives here so a stage never hardcodes a path, a model
  * name or a rate limit. Environment variables win over defaults.
@@ -32,7 +32,7 @@ export const PROGRAM_YEAR = process.env.NOVA_YEAR ?? "2026";
 export const http = {
   userAgent:
     process.env.NOVA_UA ??
-    "Nova/0.1 (+https://github.com/; DivHacks student project)",
+    "NOVA/0.1 (+https://github.com/; DivHacks student project)",
   timeoutMs: Number(process.env.NOVA_HTTP_TIMEOUT ?? 15_000),
   concurrency: Number(process.env.NOVA_CONCURRENCY ?? 6),
   /** Politeness delay between requests to the SAME host. */

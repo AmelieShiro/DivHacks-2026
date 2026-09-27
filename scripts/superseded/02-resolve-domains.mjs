@@ -12,7 +12,7 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const FILE = new URL("../data/enrichment/providers.json", import.meta.url);
 const KNOWN = new URL("../data/enrichment/known-domains.json", import.meta.url);
-const UA = "K-Maker/0.1 (+DivHacks student project; contact via repo)";
+const UA = "NOVA/0.1 (+DivHacks student project; contact via repo)";
 const CONCURRENCY = 6;
 const TIMEOUT_MS = 12_000;
 
