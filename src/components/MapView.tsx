@@ -130,13 +130,13 @@ const TILES = 3;
 function tilesFor(p: CardProgram): Tile[] {
   const labels = [...new Set([...p.tools, ...p.subjects])];
   const captions = labels.length > 0 ? labels : ["DYCD after-school"];
+  // programs.ts fills the row to TILES: the provider's own photos first, then
+  // credited stock. Each entry carries its own credit because a row can mix
+  // the two, and CC BY needs the attribution wherever the photo shows.
   return Array.from({ length: TILES }, (_, i) => ({
-    url: p.images[i] ?? null,
+    url: p.images[i]?.url ?? null,
     label: captions[i] ?? "",
-    // images[0] is the card's main photo and the only one that can be stock;
-    // the rest come from the provider's own site. CC BY and CC BY-SA require
-    // the credit, so the label has to survive into the map's thumbnails.
-    stock: i === 0 ? p.imageStock : null,
+    stock: p.images[i]?.stock ?? null,
   }));
 }
 

@@ -5,6 +5,12 @@
  */
 export type Cost = "Free" | "Low-cost" | "Sliding scale" | "Paid" | "Ask provider";
 
+/** CC BY and CC BY-SA require the photographer's credit wherever the photo shows. */
+export type StockCredit = { credit: string; source: string };
+
+/** One photo on a card, with its credit when it is stock rather than the provider's. */
+export type CardImage = { url: string; stock: StockCredit | null };
+
 /** A subject filter heading ("Science") and the subjects under it that at
  *  least one program actually has, with how many programs have each. */
 export type SubjectGroup = {
@@ -32,9 +38,13 @@ export type CardProgram = {
   image: string | null;
   imageAlt: string;
   /** Set when `image` is a credited stock photo rather than the provider's own. */
-  imageStock: { credit: string; source: string } | null;
-  /** Up to three provider photos, for the map list's thumbnail row. */
-  images: string[];
+  imageStock: StockCredit | null;
+  /**
+   * Exactly three photos for the map list's thumbnail row: the provider's own
+   * first, then credited stock so the row is never ragged. Each carries its
+   * own credit, because a row can mix provider and stock photos.
+   */
+  images: CardImage[];
   tag?: string;
   /** Where "View & sign up" goes: the provider's site, else discoverDYCD. */
   signupUrl: string;

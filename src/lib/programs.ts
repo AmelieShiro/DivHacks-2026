@@ -96,6 +96,10 @@ function subjects(p: Program): string[] {
 
 type ImageFields = Pick<CardProgram, "image" | "imageAlt" | "imageStock" | "images">;
 
+/** Thumbnails per row in the map list. Must match TILES in MapView.tsx, which
+ *  keeps its own copy so the client bundle never imports this module. */
+const MAP_TILES = 3;
+
 const httpPhotos = (p: Program) =>
   p.photos.filter((ph) => ph.kind !== "flyer" && /^https?:/i.test(ph.url));
 
@@ -114,18 +118,17 @@ function fromProvider(p: Program, photo: Program["photos"][number]): ImageFields
     image: photo.url,
     imageAlt: caption ?? `Photo from ${tidyOrg(p.provider)}'s website`,
     imageStock: null,
-    images: [photo.url, ...extras.slice(0, 2).map((ph) => ph.url)],
+    images: [photo.url, ...extras.slice(0, MAP_TILES - 1).map((ph) => ph.url)].map((url) => ({
+      url,
+      stock: null,
+    })),
   };
 }
 
 function fromStock(photo: { src: string; alt: string; credit: string; source: string }): ImageFields {
-  // One stock photo per program, so the thumbnail row is just that photo.
-  return {
-    image: photo.src,
-    imageAlt: photo.alt,
-    imageStock: { credit: photo.credit, source: photo.source },
-    images: [photo.src],
-  };
+  const stock = { credit: photo.credit, source: photo.source };
+  // padTiles tops the row up to MAP_TILES afterwards.
+  return { image: photo.src, imageAlt: photo.alt, imageStock: stock, images: [{ url: photo.src, stock }] };
 }
 
 const poolAlt = (photo: PoolPhoto) => photo.title.replace(/\.[a-z]+$/i, "").replace(/_/g, " ");
@@ -197,6 +200,44 @@ function assignImages(list: Program[]): Map<string, ImageFields> {
       claim(local.source) ? fromStock(local) : { image: null, imageAlt: "", imageStock: null, images: [] },
     );
   }
+
+  // Top every thumbnail row up to MAP_TILES so the map list is never ragged.
+  // There are ~269 gaps and fewer unclaimed pool photos than that, so fillers
+  // may repeat between programs -- but never within one row, and an unclaimed
+  // photo is always preferred over one already standing as a card's main
+  // image. Each filler carries its own credit: the row mixes provider and
+  // stock photos, and CC BY needs the attribution on the stock ones.
+  const buckets2 = new Map<string, PoolPhoto[]>();
+  for (const photo of stockPool) {
+    const listFor = buckets2.get(photo.subject) ?? [];
+    listFor.push(photo);
+    buckets2.set(photo.subject, listFor);
+  }
+  const cursors = new Map<string, number>();
+
+  for (const p of list) {
+    const fields = out.get(p.id)!;
+    if (fields.images.length >= MAP_TILES) continue;
+    const key = subjectKey(subjects(p));
+    const bucket = buckets2.get(key)?.length ? buckets2.get(key)! : stockPool;
+    const inRow = new Set(fields.images.map((i) => i.url));
+    // Rotate the starting point per subject so neighbouring cards in the list
+    // do not all show the same filler.
+    let i = cursors.get(key) ?? 0;
+
+    for (const allowClaimed of [false, true]) {
+      for (let n = 0; n < bucket.length && fields.images.length < MAP_TILES; n++, i++) {
+        const photo = bucket[i % bucket.length];
+        if (inRow.has(photo.src)) continue;
+        if (!allowClaimed && used.has(photo.source)) continue;
+        inRow.add(photo.src);
+        fields.images.push({ url: photo.src, stock: { credit: photo.credit, source: photo.source } });
+      }
+      if (fields.images.length >= MAP_TILES) break;
+    }
+    cursors.set(key, bucket.length ? i % bucket.length : 0);
+  }
+
   return out;
 }
 
