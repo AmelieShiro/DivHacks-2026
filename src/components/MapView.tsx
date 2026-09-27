@@ -114,9 +114,16 @@ export default function MapView({ programs }: { programs: CardProgram[] }) {
         {/* Detail + list */}
         <div className="flex flex-col gap-4">
           <div className="bg-white rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5">
-            <div className="aspect-[16/9] bg-teal-100">
+            <div className="relative aspect-[16/9] bg-teal-100">
               {/* key: reset the fallback state when another program is picked */}
-              <ProgramImage key={activeProgram.id} src={activeProgram.image} alt={activeProgram.imageAlt} className="w-full h-full object-cover" />
+              <ProgramImage
+                key={activeProgram.id}
+                src={activeProgram.image}
+                alt={activeProgram.imageAlt}
+                stock={activeProgram.imageStock}
+                fallback={activeProgram.fallbackImage}
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="p-4">
               <h3 className="font-heading font-700 text-lg text-ink">{activeProgram.name}</h3>

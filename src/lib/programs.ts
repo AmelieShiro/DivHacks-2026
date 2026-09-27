@@ -12,6 +12,11 @@ import programsJson from "../../dist/programs.json";
 import zipsJson from "../../dist/zips.json";
 import metaJson from "../../dist/meta.json";
 import type { CardProgram, Cost, SubjectGroup, ZipCentroids } from "./types";
+import stockPoolJson from "../data/stock-pool.json";
+import { looksLikeKidsPhoto, looksLikeUsablePhoto, stockFor, subjectKey } from "./stockPhotos";
+
+type PoolPhoto = { subject: string; title: string; src: string; source: string; credit: string };
+const stockPool = stockPoolJson as PoolPhoto[];
 
 const programs = programsJson as unknown as Program[];
 const zips = zipsJson as unknown as ZipStat[];
@@ -88,14 +93,109 @@ function subjects(p: Program): string[] {
   return [...new Set([...p.enrichment.subjects, ...fromTools])].map(label);
 }
 
-function image(p: Program): { image: string | null; imageAlt: string } {
-  // Stage 50 sorts photos for the hero band; flyers are never first.
-  const photo = p.photos.find((ph) => ph.kind !== "flyer") ?? null;
-  if (!photo || !/^https?:/i.test(photo.url)) return { image: null, imageAlt: "" };
-  return { image: photo.url, imageAlt: photo.caption || `Photo from ${tidyOrg(p.provider)}'s website` };
+type ImageFields = Pick<CardProgram, "image" | "imageAlt" | "imageStock" | "fallbackImage">;
+
+const httpPhotos = (p: Program) =>
+  p.photos.filter((ph) => ph.kind !== "flyer" && /^https?:/i.test(ph.url));
+
+const urlKey = (url: string) => url.split(/[?#]/)[0];
+
+function fromProvider(p: Program, photo: Program["photos"][number], fallback: ImageFields["fallbackImage"]): ImageFields {
+  const caption = photo.caption && photo.caption !== "og:image" ? photo.caption : null;
+  return {
+    image: photo.url,
+    imageAlt: caption ?? `Photo from ${tidyOrg(p.provider)}'s website`,
+    imageStock: null,
+    fallbackImage: fallback,
+  };
 }
 
-export function toCard(p: Program): CardProgram {
+function fromPool(photo: PoolPhoto, fallback: ImageFields["fallbackImage"]): ImageFields {
+  return {
+    image: photo.src,
+    imageAlt: photo.title.replace(/\.[a-z]+$/i, "").replace(/_/g, " "),
+    imageStock: { credit: photo.credit, source: photo.source },
+    fallbackImage: fallback,
+  };
+}
+
+/**
+ * One unused photo per program. Provider photos of children come first,
+ * then a distinct Commons photo of the subject, then any leftover Commons
+ * photo, then another unused photo from the provider's own site. The 14
+ * local subject files are only a last resort so two cards never share a URL
+ * unless there is truly nothing left.
+ */
+function assignImages(list: Program[]): Map<string, ImageFields> {
+  const used = new Set<string>();
+  const take = (url: string) => {
+    const key = urlKey(url);
+    if (used.has(key)) return false;
+    used.add(key);
+    return true;
+  };
+
+  const buckets = new Map<string, PoolPhoto[]>();
+  for (const photo of stockPool) {
+    const listFor = buckets.get(photo.subject) ?? [];
+    listFor.push(photo);
+    buckets.set(photo.subject, listFor);
+  }
+  const takeStock = (key: string): PoolPhoto | undefined => {
+    const preferred = buckets.get(key);
+    while (preferred?.length) {
+      const photo = preferred.shift()!;
+      if (take(photo.src)) return photo;
+    }
+    for (const rest of buckets.values()) {
+      while (rest.length) {
+        const photo = rest.shift()!;
+        if (take(photo.src)) return photo;
+      }
+    }
+    return undefined;
+  };
+
+  const out = new Map<string, ImageFields>();
+  const pending: Program[] = [];
+
+  for (const p of list) {
+    const local = stockFor(subjects(p));
+    const kids = httpPhotos(p).find((ph) => looksLikeKidsPhoto(ph) && take(ph.url));
+    if (kids) out.set(p.id, fromProvider(p, kids, local));
+    else pending.push(p);
+  }
+
+  const still: Program[] = [];
+  for (const p of pending) {
+    const local = stockFor(subjects(p));
+    const stock = takeStock(subjectKey(subjects(p)));
+    if (stock) out.set(p.id, fromPool(stock, local));
+    else still.push(p);
+  }
+
+  const last: Program[] = [];
+  for (const p of still) {
+    const local = stockFor(subjects(p));
+    const other = httpPhotos(p).find((ph) => looksLikeUsablePhoto(ph) && take(ph.url));
+    if (other) out.set(p.id, fromProvider(p, other, local));
+    else last.push(p);
+  }
+
+  for (const p of last) {
+    const local = stockFor(subjects(p));
+    out.set(p.id, {
+      image: local.src,
+      imageAlt: local.alt,
+      imageStock: { credit: local.credit, source: local.source },
+      fallbackImage: local,
+    });
+  }
+
+  return out;
+}
+
+function toCard(p: Program, img: ImageFields): CardProgram {
   return {
     id: p.id,
     name: p.name ?? "After-school program",
@@ -110,7 +210,7 @@ export function toCard(p: Program): CardProgram {
     days: days(p),
     seats: p.seats ? `${p.seats} funded seats` : "Ask provider",
     distance: null,
-    ...image(p),
+    ...img,
     tag: p.inSchoolBuilding?.servesK5 ? "In school" : undefined,
     signupUrl: p.enrichment.website ?? DISCOVER_DYCD,
     lat: p.lat,
@@ -119,24 +219,28 @@ export function toCard(p: Program): CardProgram {
 }
 
 export function getCards(): CardProgram[] {
-  return programs.map(toCard).sort((a, b) => a.name.localeCompare(b.name));
+  const images = assignImages(programs);
+  return programs.map((p) => toCard(p, images.get(p.id)!)).sort((a, b) => a.name.localeCompare(b.name));
 }
 
 /**
- * "Programs of the week": programs with a photo and the most evidenced
- * STEM content, one per provider so the carousel is not one organization.
+ * "Programs of the week": the most evidenced STEM content, one per provider
+ * so the carousel is not one organization. Programs with their own relevant
+ * photo come first; stock-photo programs only fill the remaining slots.
  */
 export function getFeatured(n = 8): CardProgram[] {
+  const byId = new Map(programs.map((p) => [p.id, p]));
   const seen = new Set<string>();
-  return programs
-    .filter((p) => p.photos.some((ph) => ph.carouselReady && ph.kind !== "flyer"))
+  return getCards()
+    .map((card) => ({ p: byId.get(card.id)!, card }))
     .sort((a, b) =>
-      b.enrichment.subjects.length + b.enrichment.stemTools.length -
-        (a.enrichment.subjects.length + a.enrichment.stemTools.length) ||
-      (b.seats ?? 0) - (a.seats ?? 0))
-    .filter((p) => (seen.has(p.provider ?? "") ? false : (seen.add(p.provider ?? ""), true)))
+      Number(a.card.imageStock !== null) - Number(b.card.imageStock !== null) ||
+      b.p.enrichment.subjects.length + b.p.enrichment.stemTools.length -
+        (a.p.enrichment.subjects.length + a.p.enrichment.stemTools.length) ||
+      (b.p.seats ?? 0) - (a.p.seats ?? 0))
+    .filter(({ p }) => (seen.has(p.provider ?? "") ? false : (seen.add(p.provider ?? ""), true)))
     .slice(0, n)
-    .map(toCard);
+    .map(({ card }) => card);
 }
 
 /**
