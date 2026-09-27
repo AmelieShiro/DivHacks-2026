@@ -27,6 +27,20 @@ const TOPIC_PATTERNS = [
   ["animation", /\banimation\b|\banimated\b/],
   ["gardening", /\bgarden(ing)?\b/],
   ["literacy", /\bliteracy\b|\bwriting\b|\breading\b/],
+  // Topics the dataset carries that had no pattern, so a parent asking for
+  // them fell through to the generic "I didn't find a match" reply.
+  ["electronics", /\belectronics?\b|\bcircuits?\b|\bsoldering\b/],
+  ["lego", /\blego\b|\bduplo\b/],
+  ["video production", /\bvideo\b|\bfilm(making)?\b|\bmovies?\b/],
+  ["digital art", /\bdigital art\b|\bdigital media\b|\bgraphic design\b/],
+  ["sewing", /\bsewing\b|\bknitting\b|\bstitching\b/],
+  ["nutrition", /\bnutrition\b|\bhealthy eating\b/],
+  ["leadership", /\bleadership\b|\bsocial[- ]emotional\b/],
+  ["languages", /\blanguages?\b|\bspanish\b|\bbilingual\b|\bmandarin\b/],
+  // No program currently lists 3D printing. Recognising it anyway turns a
+  // vague fallback into a straight answer, and it starts working by itself
+  // once enrichment finds one.
+  ["3d printing", /\b3-?d\s*(print(ing|er)?|design)\b/],
 ];
 
 const BOROUGHS = [
@@ -233,8 +247,38 @@ function hasFilters(filters) {
     filters.ageGroup != null ||
     filters.topics.length > 0 ||
     filters.places.length > 0 ||
-    filters.hoursKind != null
+    filters.hoursKind != null ||
+    filters.nearZip != null
   );
+}
+
+const NEAR_RADIUS_MILES = 3;
+
+/** Straight-line miles between two coordinates. */
+function milesBetween(a, b) {
+  const R = 3958.8;
+  const rad = (d) => (d * Math.PI) / 180;
+  const dLat = rad(b.lat - a.lat);
+  const dLng = rad(b.lng - a.lng);
+  const h =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+/**
+ * Programs within NEAR_RADIUS_MILES of a ZIP's centroid, nearest first.
+ * Returns null when the ZIP is not one we know.
+ */
+function nearestTo(programs, centroids, zip) {
+  const centre = centroids?.[zip];
+  if (!centre) return null;
+  return programs
+    .filter((p) => p.lat != null && p.lng != null)
+    .map((p) => ({ p, miles: milesBetween(centre, { lat: p.lat, lng: p.lng }) }))
+    .filter((x) => x.miles <= NEAR_RADIUS_MILES)
+    .sort((a, b) => a.miles - b.miles)
+    .map((x) => x.p);
 }
 
 function extractFilters(programs, q) {
@@ -248,6 +292,7 @@ function extractFilters(programs, q) {
     topics: [],
     places: [],
     hoursKind: null,
+    nearZip: null,
   };
 
   if (/\bfree\b|\bno cost\b|\bzero cost\b|\bdoesnt cost\b|\bdoes not cost\b/.test(q)) {
@@ -306,7 +351,16 @@ function extractFilters(programs, q) {
   }
 
   const zip = q.match(/\b(\d{5})\b/);
-  if (zip) places.push(zip[1]);
+  if (zip) {
+    // "near 11213" is a radius, not an exact ZIP. Treating it as an exact
+    // match answers "nothing found" for a ZIP with two programs in it, when
+    // the block next door has what the parent asked for.
+    if (/\b(near|nearby|around|close to|closest to|next to|within)\b/.test(q)) {
+      filters.nearZip = zip[1];
+    } else {
+      places.push(zip[1]);
+    }
+  }
 
   const phraseHits = [];
   for (const program of programs) {
@@ -431,6 +485,12 @@ function filterLabel(filters) {
 }
 
 function placePhrase(filters) {
+  if (filters.nearZip) {
+    const where = filters.places.length
+      ? ` in ${filters.places.map(titleCase).join(" or ")}`
+      : "";
+    return `within ${NEAR_RADIUS_MILES} miles of ${filters.nearZip}${where}`;
+  }
   if (!filters.places.length) return "";
   return `in ${filters.places.map(titleCase).join(" or ")}`;
 }
@@ -528,8 +588,38 @@ export function answerQuestion(catalog, rawQuery) {
   if (named.length && named.length <= 12) return detailResult(named.slice(0, RESULT_LIMIT));
 
   const filters = extractFilters(catalog.programs, q);
+
+  // An age group on its own ("kids", "children") matches nearly every program,
+  // so a question like "is it safe for my kid" used to answer with all 565.
+  // Only treat it as a search when the query is actually asking for a list.
+  const onlyAgeGroup =
+    filters.ageGroup != null &&
+    filters.cost == null &&
+    filters.age == null &&
+    filters.days == null &&
+    filters.hoursKind == null &&
+    filters.afterMin == null &&
+    filters.beforeMin == null &&
+    filters.nearZip == null &&
+    filters.topics.length === 0 &&
+    filters.places.length === 0;
+  if (onlyAgeGroup && !asksForList(q) && !asksWhere(q)) filters.ageGroup = null;
+
+  // "near <ZIP>" narrows by distance first so results stay nearest-first.
+  let pool = catalog.programs;
+  if (filters.nearZip) {
+    const near = nearestTo(catalog.programs, catalog.zipCentroids, filters.nearZip);
+    if (!near) {
+      return {
+        intro: `I don't know ZIP ${filters.nearZip}, so I can't measure distance from it. Try a borough or a neighbourhood instead.`,
+        programs: [],
+      };
+    }
+    pool = near;
+  }
+
   const filtered = hasFilters(filters)
-    ? catalog.programs.filter((program) => matchesProgram(program, filters))
+    ? pool.filter((program) => matchesProgram(program, filters))
     : null;
 
   if (filtered) {

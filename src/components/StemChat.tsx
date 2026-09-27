@@ -21,6 +21,11 @@ export default function StemChat({ catalog }: { catalog: ChatCatalog }) {
     },
   ]);
   const logRef = useRef<HTMLDivElement>(null);
+  /** The question the log scrolls to; the answer then reads from its top. */
+  const lastQuestionIndex = messages.reduce(
+    (found, message, index) => (message.role === "user" ? index : found),
+    -1,
+  );
 
   function ask(text: string) {
     const trimmed = text.trim();
@@ -32,8 +37,17 @@ export default function StemChat({ catalog }: { catalog: ChatCatalog }) {
       { role: "bot", intro: result.intro, programs: result.programs },
     ]);
     setQuestion("");
+    // Bring the new question to the top of the log rather than jumping to the
+    // bottom. An answer can carry eight program cards, and the bottom of the
+    // log is the least useful place to land: the reply's first line, and the
+    // best-matching programs, would already be scrolled out of sight.
     requestAnimationFrame(() => {
-      logRef.current?.scrollTo({ top: logRef.current.scrollHeight });
+      const log = logRef.current;
+      const latest = log?.querySelector<HTMLElement>("[data-latest-question]");
+      if (!log || !latest) return;
+      const top =
+        latest.getBoundingClientRect().top - log.getBoundingClientRect().top + log.scrollTop;
+      log.scrollTo({ top, behavior: "smooth" });
     });
   }
 
@@ -82,6 +96,9 @@ export default function StemChat({ catalog }: { catalog: ChatCatalog }) {
             {messages.map((message, index) => (
               <article
                 key={`${message.role}-${index}`}
+                data-latest-question={
+                  message.role === "user" && index === lastQuestionIndex ? "" : undefined
+                }
                 className={`max-w-[95%] rounded-2xl px-3 py-2 text-sm leading-snug ${
                   message.role === "user"
                     ? "self-end bg-teal-100 text-ink"

@@ -22,6 +22,9 @@ export type ChatProgram = {
   ageMax: number;
   topics: string[];
   signupUrl: string;
+  /** Used to answer "near <ZIP>" with real distance rather than an exact match. */
+  lat: number | null;
+  lng: number | null;
 };
 
 export type ChatCatalog = {
@@ -29,6 +32,8 @@ export type ChatCatalog = {
   suggestions: string[];
   faqs: { phrases: string[]; answer: string }[];
   programs: ChatProgram[];
+  /** ZIP -> centroid, so "near 11213" can be measured instead of guessed. */
+  zipCentroids: Record<string, { lat: number; lng: number }>;
 };
 
 export type ChatAnswer = {

@@ -1,4 +1,4 @@
-import { getCards } from "@/lib/programs";
+import { getCards, getZipCentroids } from "@/lib/programs";
 import type { CardProgram } from "@/lib/types";
 import type { ChatCatalog, ChatProgram, HoursKind } from "./types";
 
@@ -57,8 +57,10 @@ export function cardToChatProgram(card: CardProgram): ChatProgram {
     costLabel: card.costDetail || card.cost,
     ages: card.ages,
     ...ageBounds(card.ages),
-    topics: [...card.subjects, ...card.tools].map((topic) => topic.toLowerCase()),
+    topics: [...new Set([...card.subjects, ...card.tools].map((t) => t.toLowerCase()))],
     signupUrl: card.signupUrl,
+    lat: card.lat,
+    lng: card.lng,
   };
 }
 
@@ -115,7 +117,24 @@ export function getChatCatalog(): ChatCatalog {
         answer:
           "Contact the program provider, not Nova. Ask for a program by name and I can point you to its sign-up page. City enrollment also runs through DiscoverDYCD.",
       },
+      {
+        // Asked often enough that a program list is the wrong answer, and we
+        // have no vetting data of our own to offer.
+        phrases: [
+          "is it safe",
+          "are they safe",
+          "is this safe",
+          "safety",
+          "are these programs safe",
+          "background check",
+          "are the staff vetted",
+          "is my child safe",
+        ],
+        answer:
+          "Nova does not inspect or vet programs, so I can't vouch for any of them. Every program listed holds a DYCD contract with New York City, which carries the city's own requirements, and DYCD publishes evaluation reports for program sites. For anything specific — staffing, ratios, background checks — ask the provider directly; each program card links to them.",
+      },
     ],
     programs: getCards().map(cardToChatProgram),
+    zipCentroids: getZipCentroids(),
   };
 }
