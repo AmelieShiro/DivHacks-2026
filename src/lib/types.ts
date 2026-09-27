@@ -30,6 +30,8 @@ export type CardProgram = {
   distance: string | null;
   image: string | null;
   imageAlt: string;
+  /** Up to three provider photos, for the map list's thumbnail row. */
+  images: string[];
   tag?: string;
   /** Where "View & sign up" goes: the provider's site, else discoverDYCD. */
   signupUrl: string;

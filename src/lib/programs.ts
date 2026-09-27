@@ -88,11 +88,13 @@ function subjects(p: Program): string[] {
   return [...new Set([...p.enrichment.subjects, ...fromTools])].map(label);
 }
 
-function image(p: Program): { image: string | null; imageAlt: string } {
+function image(p: Program): { image: string | null; imageAlt: string; images: string[] } {
   // Stage 50 sorts photos for the hero band; flyers are never first.
-  const photo = p.photos.find((ph) => ph.kind !== "flyer") ?? null;
-  if (!photo || !/^https?:/i.test(photo.url)) return { image: null, imageAlt: "" };
-  return { image: photo.url, imageAlt: photo.caption || `Photo from ${tidyOrg(p.provider)}'s website` };
+  const usable = p.photos.filter((ph) => ph.kind !== "flyer" && /^https?:/i.test(ph.url));
+  const images = usable.slice(0, 3).map((ph) => ph.url);
+  const photo = usable[0];
+  if (!photo) return { image: null, imageAlt: "", images };
+  return { image: photo.url, imageAlt: photo.caption || `Photo from ${tidyOrg(p.provider)}'s website`, images };
 }
 
 export function toCard(p: Program): CardProgram {
