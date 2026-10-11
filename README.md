@@ -56,10 +56,7 @@ Sources: NYC OpenData [DYCD Program Sites](https://data.cityofnewyork.us/resourc
 and [DOE School Locations](https://data.cityofnewyork.us/resource/wg9x-4ke6),
 enriched from provider websites.
 
-The enrichment method is recorded per record and in `dist/meta.json`. The
-current build used **keyword matching, not Gemini** — no `GEMINI_API_KEY` was
-set when it ran. Set one and re-run stages 40–60 to upgrade enrichment to
-model-extracted, quote-backed values.
+The enrichment method is recorded per record and in `dist/meta.json`. 
 
 ## Two things worth knowing
 
