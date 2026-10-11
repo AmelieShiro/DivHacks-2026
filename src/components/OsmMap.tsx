@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { MapContainer, Marker, TileLayer, useMap, useMapEvents } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -54,6 +54,109 @@ function flaskPin(active: boolean, label: string) {
   });
 }
 
+/** Pins closer together than this many pixels merge into one numbered bubble. */
+const CLUSTER_CELL_PX = 56;
+/** From this zoom in, every pin is drawn on its own. */
+const UNCLUSTER_ZOOM = 16;
+
+/** A numbered bubble standing in for several pins, sized by how many. */
+function clusterBubble(count: number) {
+  const size = count < 10 ? 34 : count < 50 ? 42 : 50;
+  return L.divIcon({
+    className: "nova-cluster",
+    iconSize: [size, size],
+    iconAnchor: [size / 2, size / 2],
+    html: `<div style="display:grid;width:${size}px;height:${size}px;place-items:center;border-radius:9999px;background:#f7801f;color:#fff;font:800 ${size < 40 ? 13 : 14}px Nunito,sans-serif;box-shadow:0 0 0 4px rgba(247,128,31,.3),0 2px 6px rgba(0,0,0,.3)">${count}</div>`,
+  });
+}
+
+type Group = { key: string; members: CardProgram[]; lat: number; lng: number };
+
+/**
+ * Groups the pins that would overlap at the current zoom, so the whole city
+ * reads as a few dozen numbered bubbles rather than 565 stacked flasks. The
+ * picked program is never grouped, so its pin and label always show.
+ */
+function groupPins(map: L.Map, programs: CardProgram[], selectedId: string | null): Group[] {
+  const zoom = map.getZoom();
+  const cells = new Map<string, CardProgram[]>();
+  for (const program of programs) {
+    if (program.id === selectedId || zoom >= UNCLUSTER_ZOOM) {
+      cells.set(`pin:${program.id}`, [program]);
+      continue;
+    }
+    const pt = map.project([program.lat!, program.lng!], zoom);
+    const key = `${Math.floor(pt.x / CLUSTER_CELL_PX)}:${Math.floor(pt.y / CLUSTER_CELL_PX)}`;
+    const cell = cells.get(key);
+    if (cell) cell.push(program);
+    else cells.set(key, [program]);
+  }
+  return [...cells].map(([key, members]) => ({
+    key: members.length === 1 ? `pin:${members[0].id}` : key,
+    members,
+    lat: members.reduce((sum, m) => sum + m.lat!, 0) / members.length,
+    lng: members.reduce((sum, m) => sum + m.lng!, 0) / members.length,
+  }));
+}
+
+function Pins({
+  programs,
+  selectedId,
+  onSelect,
+}: {
+  programs: CardProgram[];
+  selectedId: string | null;
+  onSelect: (id: string | null) => void;
+}) {
+  const map = useMap();
+  // Regroup whenever the zoom changes; panning keeps the same grouping.
+  const [zoom, setZoom] = useState(() => map.getZoom());
+  useMapEvents({ zoomend: () => setZoom(map.getZoom()) });
+
+  const groups = useMemo(
+    () => groupPins(map, programs, selectedId),
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- `zoom` is what changes the grouping
+    [map, programs, selectedId, zoom],
+  );
+
+  return groups.map((group) => {
+    if (group.members.length === 1) {
+      const program = group.members[0];
+      const active = program.id === selectedId;
+      return (
+        <Marker
+          key={group.key}
+          position={[program.lat!, program.lng!]}
+          icon={flaskPin(active, program.name)}
+          zIndexOffset={active ? 1000 : 0}
+          title={program.name}
+          eventHandlers={{
+            click: (event) => {
+              L.DomEvent.stopPropagation(event.originalEvent);
+              onSelect(program.id);
+            },
+          }}
+        />
+      );
+    }
+    return (
+      <Marker
+        key={group.key}
+        position={[group.lat, group.lng]}
+        icon={clusterBubble(group.members.length)}
+        title={`${group.members.length} programs here. Click to zoom in.`}
+        eventHandlers={{
+          click: (event) => {
+            L.DomEvent.stopPropagation(event.originalEvent);
+            const bounds = L.latLngBounds(group.members.map((m) => [m.lat!, m.lng!] as [number, number]));
+            map.flyToBounds(bounds, { padding: [60, 60], maxZoom: UNCLUSTER_ZOOM });
+          },
+        }}
+      />
+    );
+  });
+}
+
 function publishBounds(map: L.Map, onBounds: (bounds: MapBounds) => void) {
   const bounds = map.getBounds();
   onBounds({
@@ -97,8 +200,10 @@ function MapBridge({
 }
 
 /**
- * The map used on the public site when no Google Maps key is configured.
- * CARTO's Voyager tiles are OpenStreetMap data and need no API key.
+ * The map shown when no Google Maps key is set, or when Google refuses it.
+ * The tiles are OpenStreetMap's own and need no API key. Their usage policy
+ * suits a demo or light traffic and requires the visible credit; a busy public
+ * site should move to a keyed provider or get the Google key working.
  */
 export default function OsmMap({
   programs,
@@ -117,12 +222,6 @@ export default function OsmMap({
   zoom: number;
   onBounds: (bounds: MapBounds) => void;
 }) {
-  const icons = useMemo(() => {
-    const next = new Map<string, L.DivIcon>();
-    for (const program of programs) next.set(program.id, flaskPin(program.id === selectedId, program.name));
-    return next;
-  }, [programs, selectedId]);
-
   return (
     <MapContainer
       center={[center.lat, center.lng]}
@@ -133,29 +232,12 @@ export default function OsmMap({
       scrollWheelZoom
     >
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
-        url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
-        subdomains="abcd"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        maxZoom={19}
       />
       <MapBridge camera={camera} onBounds={onBounds} onClear={() => onSelect(null)} />
-      {programs.map((program) => {
-        const active = program.id === selectedId;
-        return (
-          <Marker
-            key={program.id}
-            position={[program.lat!, program.lng!]}
-            icon={icons.get(program.id)!}
-            zIndexOffset={active ? 1000 : 0}
-            title={program.name}
-            eventHandlers={{
-              click: (event) => {
-                L.DomEvent.stopPropagation(event.originalEvent);
-                onSelect(program.id);
-              },
-            }}
-          />
-        );
-      })}
+      <Pins programs={programs} selectedId={selectedId} onSelect={onSelect} />
     </MapContainer>
   );
 }
