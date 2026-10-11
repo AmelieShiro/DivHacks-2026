@@ -10,6 +10,7 @@ import {
   ControlPosition,
   Map as GoogleMap,
   MapControl,
+  useApiLoadingStatus,
   useMap,
 } from "@vis.gl/react-google-maps";
 import FlaskIcon from "./FlaskIcon";
@@ -32,6 +33,19 @@ const ZIP_ZOOM = 13;
 type LatLng = { lat: number; lng: number };
 type Camera = { center: LatLng; zoom?: number };
 type Bounds = MapBounds;
+
+/**
+ * Reports when Google refuses to load the map: a bad or restricted key, or a
+ * project without billing. Google then paints a grey "can't load Google Maps"
+ * box, so the caller swaps in the keyless OpenStreetMap map instead.
+ */
+function GoogleFailureWatch({ onFail }: { onFail: () => void }) {
+  const status = useApiLoadingStatus();
+  useEffect(() => {
+    if (status === "AUTH_FAILURE" || status === "FAILED") onFail();
+  }, [status, onFail]);
+  return null;
+}
 
 /* ------------------------------------------------------------------ markers */
 
@@ -354,6 +368,8 @@ export default function MapView({
   const [searchAsIMove, setSearchAsIMove] = useState(true);
   const [bounds, setBounds] = useState<Bounds | null>(null);
   const [camera, setCamera] = useState<Camera | null>(null);
+  const [googleFailed, setGoogleFailed] = useState(false);
+  const onGoogleFail = useCallback(() => setGoogleFailed(true), []);
 
   const cards = useRef(new Map<string, HTMLElement>());
   const listTop = useRef<HTMLDivElement>(null);
@@ -518,8 +534,9 @@ export default function MapView({
 
       {/* Map */}
       <div className="relative h-[55vh] min-h-[280px] w-full bg-teal-800 lg:h-full lg:flex-1">
-        {API_KEY ? (
+        {API_KEY && !googleFailed ? (
           <APIProvider apiKey={API_KEY}>
+            <GoogleFailureWatch onFail={onGoogleFail} />
             <GoogleMap
               className="absolute inset-0"
               mapId={MAP_ID}
